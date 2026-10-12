@@ -104,6 +104,7 @@ them the cooperative-stock fields of their område, kommun and city), `street_na
 | | |
 |---|---|
 | base URL | https://homesight-api.azurewebsites.net |
+| changes | [CHANGELOG.md](CHANGELOG.md) |
 | resource group | `homesight` (Sweden Central), subscription "Azure subscription 1" |
 | endpoints (0.7.0) | `GET /llms.txt`, `GET /health`, `GET /openapi.json`, `GET /brfs`, `GET /brfs/{orgnr}`, `GET /brfs/{orgnr}/financials`, `GET /advertisements`, `GET /cities`, `GET /kommuns`, `GET /areas`, `GET /sales/stats/avg-price-per-sqm` |
 
