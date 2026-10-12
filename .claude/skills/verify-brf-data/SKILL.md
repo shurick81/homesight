@@ -52,7 +52,7 @@ render it with `pdftoppm -f N -l N -r 90 -png FILE out` and read the image.
 |---|---|---|
 | MOVED | box approximate or empty | `--fix` sets it; check it picked the right occurrence for small numbers |
 | PAGE n | wrong page cited | `--fix` sets page and box when there is one match |
-| COLUMN | value read from the previous-year column | take the left (current-year) value |
+| COLUMN | value read from the previous-year column; or a false alarm when a note reference such as "Not 11,12" stands left of the value | take the left (current-year) value. False alarm → confirm the column on the image and add it to `checked_by_eye.csv` |
 | WRONG-DOC | value taken from a later report's comparison column | re-cite (and if restated, re-read) from the year's own report |
 | MISSING | wrong value, or OCR misread | read the image. Wrong → correct it. Right but unreadable → `checked_by_eye.csv` (also when OCR then finds the same number on another page, PAGE: keep the page you read, do not let `--fix` move it) |
 | TEXT? | name misspelt, wrong page, or handwriting | same as MISSING |
@@ -63,7 +63,7 @@ render it with `pdftoppm -f N -l N -r 90 -png FILE out` and read the image.
 | remainder in parent = Σ children | a note line left unmapped, or an aggregate line that cannot be split | map it, or explain it (e.g. "Fastighetsskötsel och förvaltning" stays in 2) |
 
 **checked_by_eye.csv** (per BRF, `table,year,category_id,note`): only for values that are right on the page image
-but that OCR cannot read (handwritten signatures, smudged scans). The note says what was seen where. Such rows
+but that OCR cannot read (handwritten signatures, smudged scans), or whose column the checker misjudges (COLUMN false alarm). The note says what was seen where. Such rows
 report as EYE. Never use it for a value that is not visible on the page.
 
 Each check also handles OCR quirks so you do not have to: a second OCR pass at 400 dpi for missed numbers,

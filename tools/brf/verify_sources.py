@@ -260,7 +260,7 @@ def main():
                 status, loc, page = check_amount(pdf, int(r["page"]), int(r["amount"]), box,
                                                  columns=fname != PROPERTY)
             # a value confirmed on the page image wins over OCR, also when OCR finds the number elsewhere (PAGE)
-            if status.split()[0] in ("MISSING", "TEXT?", "PAGE") and (fname[:-4], r["year"], r["category_id"]) in eye:
+            if status.split()[0] in ("MISSING", "TEXT?", "PAGE", "COLUMN") and (fname[:-4], r["year"], r["category_id"]) in eye:
                 status = "EYE"
             if fname in NUMERIC and report_year.get(r["file"], int(r["year"])) != int(r["year"]):
                 status = "WRONG-DOC"  # cites another fiscal year's report (its comparison column)

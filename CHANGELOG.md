@@ -111,6 +111,9 @@ not the API, and is listed under **Data**.
 
 ## Data
 
+- 2026-10-12: Passadvinden 2025 (from Booli's BRF page) and 2020 (svenskbrf.se, scanned) extracted and verified,
+  each unchained; its 2020 sewer renovation under the house recorded. Every tracked BRF now has verified data
+  (53 of 70 reports of the last five years held, all verified).
 - 2026-10-12: Silvertärnan 2025 (published on the BRF's site 2026-05-08) extracted and verified, chained from
   2024; every held report of the last five years remains verified (52 of 70).
 - 2026-10-12: Siken 2020–2023, Karlsön 2021–2023, Laxtrappan 2021–2022 and Silvertärnan 2021–2022

@@ -1,0 +1,65 @@
+# Profile of the BRF: stable facts (from the reports, with source), the derived stambyte assessment and data notes.
+# Not read by the verification scripts. Per-year counts and areas live in property_states.csv.
+name: Brf Passadvinden
+short_name: Passadvinden
+orgnr: 769612-0844
+municipality: Stockholm
+area: Hammarbyhöjden             # Booli; svenskbrf.se files it under Johanneshov/Björkhagen
+property: [Passadvinden 2]       # acquired 2007; land owned
+addresses: Båstadsvägen 19–21    # Booli
+built_from: 2006
+built_to: 2007
+built_basis: byggnadsår          # "Fastigheten bebyggdes 2006-2007 och består av 1 flerbostadshus"; värdeår 2007
+registered: 2005-02-04
+fiscal_year: 01-01 – 12-31
+management: SBC (ekonomisk förvaltning and fastighetsförvaltning); auditors Helin Karam (BoRevision) and Mats Jansson (elected)
+verified_through: 2025           # 2020 and 2025, each unchained (2019 and 2021–2024 not public)
+source: Arsredovisning-2025-BRF-Passadvinden.pdf p4–5
+links:
+  booli: https://www.booli.se/bostadsrattsforening/135648          # 2025 report under "Dokument"
+  svenskbrf: https://www.svenskbrf.se/forening/johanneshov/bjorkhagen/passadvinden/dokument/arsredovisning/   # 2020 report
+
+major_works:                     # "Utförda historiska underhåll" / "Planerade underhåll"
+  source: Arsredovisning-2025-BRF-Passadvinden.pdf p5; Arsredovisning-2020.pdf p2, p4
+  done:
+    - {years: 2018, what: OVK (godkänd efter åtgärd); målning träfasad förråd; energideklaration; mossa och klängväxter}
+    - {years: 2020, what: Avloppsrör under huset utbytta (sättningar i marken hade brutit rören; drygt 4 MSEK, nytt lån 3 MSEK); stamspolning; två laddplatser}
+    - {years: 2023, what: LED-armaturer inne och ute}
+    - {years: 2024, what: Bärremmar hissar; expansionskärl undercentral; stamspolning; OVK}
+    - {years: 2025, what: Nödtelefoner hissar 3G till 4G; ställdon undercentral}
+  planned:
+    - {years: 2026, what: Kodlås entrédörrar; målning trapphus (uppskjutet); termostatventiler (uppskjutet)}
+  underhallsplan: "2020: plan from 2017 to 2046; 2025: 'Föreningen har ingen aktuell underhållsplan.'"
+
+stambyte:                        # derived from pipe_works.csv; rubric in annual_reviews/brfs/README.md
+  as_of: 2026-10-12
+  last:
+    years: 2020
+    kind: ground_pipes
+    scope: [avlopp]
+    confidence: medium           # the year is given, but only the pipes under the house were replaced
+    basis: 2020 report p2 and p4 (works list, "Väsentliga händelser"); 2025 report p5 repeats it.
+  next:
+    from: 2047
+    to: 2057
+    status: estimated
+    scope: []
+    confidence: low
+    basis: The pipes inside the building are original (built 2006–2007); usually 40–50 years. No underhållsplan in 2025.
+  report: |
+    Built 2006–2007, 29 apartments (2 081 m²). In 2020 the whole sewer system under the house had to be
+    replaced after ground settlement broke the pipes: 4.8 MSEK of periodiskt underhåll and a 5.0 MSEK loss
+    that year, financed from cash and a new 3 MSEK loan. The pipes in the building are original; the stammar
+    were flushed in 2020 and 2024. Loans 22.1 MSEK (10 627 kr/m²) at SBAB, all four resetting in 2026
+    (2.56–3.66%). Fees +5% in 2025 and again in February 2026. No current underhållsplan (2025).
+
+data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
+  2020: scanned report (OCR); no kassaflödesanalys, only "Förändring likvida medel", so no cash-flow categories (3, 8–14); interest (7, 15) from the RR. Cash (2) is "Likvida medel vid årets slut" (SBC klientmedel, in Övriga fordringar).
+  2020: the 4 805 976 periodiskt underhåll (31) is 4 766 445 VVS (the sewer renovation) + 39 531 garage/parkering.
+  2020: "Styrelse och internrevisor" 20 000 stored as styrelsearvoden (44); it includes the elected auditor's fee.
+  2020: revisorsuppleant Jörgen Götehed (BoRevision) not stored under 5.
+  2025: cash (2) is the KF figure: transaktionskonto 167 295 + Borgo räntekonto 1 057 368 (in Övriga fordringar; no Kassa och bank line).
+  2025: "Byggnadernas totalyta är 2 080 kvm" next to 29 bostadsrätter of 2 081 kvm; only the 2 081 is stored (8). 2020 prints 2 080 for both (taxeringsbesked).
+  2025: all loans (22.1 MSEK) are short-term, as every rate resets within a year; long-term (1) is printed 0.
+  Fastighetsskötsel (2): brandskydd, gemensamma utrymmen, garage, serviceavtal, mattvätt and förbrukningsmaterial stay unassigned (2025: 34%).
+  Source: 2025 from Booli's BRF page (found by the user), 2020 from svenskbrf.se; 2021–2024 not found publicly.

@@ -1,0 +1,3 @@
+table,year,category_id,note
+financial_events,2025,19,"Page image p13, Not 2: Elintäkter laddstolpe 3 617 + Pantsättningsavgift 6 468 + Överlåtelseavgift 9 665 + Administrativ avgift 588 + Öres- och kronutjämning -1 = 20 337; the checker does not subtract the -1"
+financial_states,2020,0,"Page image p8: Kortfristig del av skulder till kreditinstitut 9 887 020 in the 2020-12-31 (highlighted) column; 6 616 934 is 2019"
