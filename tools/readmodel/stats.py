@@ -39,8 +39,8 @@ def regr(points):
             sxy += tx * ty * scale
     if n < 2 or sxx == 0:
         return None, None
-    slope = sxy / sxx
-    return slope, (sy - sx * slope) / n
+    # float8_regr_slope: Sxy / Sxx; float8_regr_intercept: (Sy - Sx * Sxy / Sxx) / N, in that order
+    return sxy / sxx, (sy - sx * sxy / sxx) / n
 
 
 def round_numeric(v, decimals=0):

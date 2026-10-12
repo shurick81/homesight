@@ -2,6 +2,9 @@
 """Build source_viewer.json for source_viewer.html: every extracted value with its PDF box, per BRF and document.
 
 Usage: build_viewer_data.py   (reads annual_reviews/brfs/**, writes source_viewer.json in the repo root)
+
+View: serve the repo root over http (fetch and the PDFs don't load from file://), e.g.
+  python3 -m http.server 8001 --bind 127.0.0.1   # from the repo root, then open http://127.0.0.1:8001/source_viewer.html
 """
 import csv, json
 from pathlib import Path

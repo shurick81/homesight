@@ -27,5 +27,5 @@ All endpoints are GET, public, and return JSON (this file is Markdown). Amounts 
 
 - Market data is a snapshot, not live: listings were captured August to October 2026 and sales run to July 2026. A listing may already be sold.
 - Booli's BRF figures (`brf_total_loan_kr`, `brf_loan_per_m2`, `brf_economy`, ...) are as Booli shows them, unverified; `brf_report_*`, `report` and /brfs/{orgnr}/financials are from the annual reports and verified. Prefer the verified figures where both exist.
-- School fields (`school_*`, `*_school_socio_index*`) are not available yet: NULL, and the school filters match nothing.
+- Schools: the five nearest school units (Skolverket's socio-economic index 2023–2026: higher = harder intake), their averages and a 2029 projection, on every listing and per område/kommun/city. Filter with `min_school_index*`, sort with `school_*`.
 - An empty result means nothing matched in the covered kommuns, not that nothing exists.

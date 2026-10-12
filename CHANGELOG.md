@@ -11,6 +11,19 @@ not the API, and is listed under **Data**.
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-10-13
+
+### Added
+- Schools, from Skolverket's *Index på skolenhetsnivå* 2023–2026 (`schools/`): on every listing the five
+  nearest school units (`school_1..5_*`: name, type, geodesic distance, index per edition, ineligible share)
+  and the averages over the nearest 1, 3 and 5 with a 2029 projection (`avg_school_socio_index*`); on every
+  område, kommun and city the mean, median, per-edition series, trends and projection, copied down to
+  listings and `/brfs` rows. The `min_school_index*` filters and `school_*` sorts now work.
+
+### Known differences from the data API
+- A projection or trend on an exact rounding tie can differ by 0.1 (about 2% of listing projections). Where
+  two school units share one address, the fifth-nearest can be the other one (12 listings).
+
 ## [0.8.0] - 2026-10-12
 
 ### Changed

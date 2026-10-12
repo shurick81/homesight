@@ -1,0 +1,4 @@
+# Tools (read model, scraping); the API itself needs only api/requirements.txt
+-r ../api/requirements.txt
+-r booli/requirements.txt
+geographiclib==2.0

@@ -9,14 +9,15 @@ avgift/m² and turnover of bostadsrätter, with 3y/5y trends and a forecast). Ea
 ancestors' summaries copied down (city_* on a kommun; kommun_* and city_* on an area and a listing), so one
 row answers "how does this compare with its kommun".
 
-Not migrated: the school block (avg/median_school_socio_index, school_socio_index_*) is present and NULL.
+The school block (avg/median_school_socio_index, school_socio_index_*) is built from the listings' nearest
+schools (tools/readmodel/schools.py): _geo_school_select and _fill_geo_school_history.
 """
 import functools
 import hashlib
 import unicodedata
 from fractions import Fraction
 
-from . import stats
+from . import schools, stats
 from .advertisements import BRF_FORECAST_TARGET, SALES_LATEST, SALES_WINDOWS, SALES_YEARS, market
 
 SFX = ("br", "villa", "radhus", "fritids")
@@ -95,8 +96,10 @@ def _snapshot(ads):
     for col, field in (("fee", "monthly_fee_per_m2"), ("loan", "brf_loan_per_m2")):
         out[f"avg_{col}_per_m2_br"] = stats.round_fraction(stats.exact_mean([a[field] for a in br]), 1)
         out[f"median_{col}_per_m2_br"] = stats.round_double_numeric(stats.percentile_cont([a[field] for a in br]), 1)
-    out["avg_school_socio_index"] = None
-    out["median_school_socio_index"] = None
+    out["avg_school_socio_index"] = stats.round_fraction(
+        stats.exact_mean([a["avg_school_socio_index"] for a in ads]), 1)
+    out["median_school_socio_index"] = stats.round_double_numeric(
+        stats.percentile_cont([a["avg_school_socio_index"] for a in ads]), 1)
     return out
 
 
@@ -164,6 +167,26 @@ def _sold_history(sales, units):
     return out
 
 
+def _school_history(ads):
+    """_fill_geo_school_history: per edition, the mean over the level's listings of each listing's 5-nearest
+    average for that edition; 3y/5y trends and a FORECAST_YEAR projection over that series."""
+    out = {}
+    series = []
+    for y in SCHOOL_YEARS:
+        v = stats.round_fraction(stats.exact_mean([schools.avg_index(a, year=y) for a in ads]), 1)
+        out[f"school_socio_index_{y}"] = v
+        if v is not None:
+            series.append((y, v))
+    latest = max(SCHOOL_YEARS)
+    for n in SALES_WINDOWS:
+        slope, _ = stats.regr([(y, v) for y, v in series if y > latest - n])
+        out[f"school_socio_index_trend_{n}y"] = stats.round_double_numeric(slope, 1)
+    slope, icpt = stats.regr([(y, v) for y, v in series if y > latest - 5])
+    out["school_socio_index_forecast"] = (None if slope is None
+                                          else stats.round_double_numeric(icpt + slope * schools.FORECAST_YEAR, 1))
+    return out
+
+
 def _level(name, ads, sales):
     keys = LEVELS[name]
     groups, sold = {}, {}
@@ -187,7 +210,7 @@ def _level(name, ads, sales):
         row["pct_for_sale_br"] = (stats.round_fraction(Fraction(row["listing_count_br"] * 100, units), 1)
                                   if units else None)
         row.update(_sold_history(sold.get(k, []), units))
-        row.update(dict.fromkeys(SCHOOL_SELF_COLUMNS))
+        row.update(_school_history(rs))
         rows[k] = row
     return rows
 
@@ -247,6 +270,7 @@ def build_all():
     """(advertisements with geo benchmarks, levels, kommuns, areas, cities): flatten_geo_benchmarks and the
     three populate_* steps."""
     ads, sales = market()
+    schools.flatten(ads)
     levels = {name: _level(name, ads, sales) for name in LEVELS}
     cities, kommuns, areas = levels["cities"], levels["kommuns"], levels["areas"]
 

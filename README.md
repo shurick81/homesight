@@ -17,12 +17,13 @@ raw/                         original documents, unchanged, one folder per BRF (
   maintenance_plans/brfs/<orgnr>/              underhållsplaner
 annual_reviews/brfs/         extracted, verified values (CSV); data model in annual_reviews/brfs/README.md
 market/                      Booli sales, current listings and apartment registers per BRF; see market/README.md
+schools/                     Skolverket's school index per school unit, 2023–2026; see schools/README.md
   index.csv                  one row per BRF: size, build year, coverage, stambyte summary (build_index.py)
   coverage.md                which annual reports are held / extracted / verified, BRF × last 5 years (generated)
   tracked.csv                the BRFs we want covered, kept by hand (also before any report is found)
   <orgnr>/profile.yaml       per-BRF facts, major works, derived stambyte assessment, data notes
 tools/brf/                   import, PDF reading/OCR, verification, comparison and index scripts
-tools/booli/                 import_from_data_repo.py: copies the Booli snapshot (market/booli/) and per-BRF files from the data repo
+tools/booli/                 scrape.py + refresh.py: refresh market/booli/ from booli.se; import_from_data_repo.py: the original copy
 tools/readmodel/             builds the API's read model (one finished document per response row) from the repo data
 tools/cloud/                 provision.py: blue/green deployment of the read model to the cloud DB
 api/                         read-only HTTP API (Azure Functions, Python), spec in api/openapi.json
@@ -99,15 +100,15 @@ combination precomputed, `tools/readmodel/sales_stats.py`). `tools/cloud/parity.
 and statistic, field by field,
 with the data repo's live API. Known differences: about 150 more listings linked to their BRF here (and through
 them the cooperative-stock fields of their område, kommun and city), `street_name` without a trailing space,
-±1 on a trend that falls on a rounding tie, and the school block, which is not migrated yet (NULL). With
-`--data-repo-linking` only the ties and the schools remain.
+±1 on a trend that falls on a rounding tie, a BRF row's område chosen by most listings, and two schools at one
+address tying for fifth-nearest. With `--data-repo-linking` only the ties and those choices remain.
 
 | | |
 |---|---|
 | base URL | https://homesight-api.azurewebsites.net |
 | changes | [CHANGELOG.md](CHANGELOG.md) |
 | resource group | `homesight` (Sweden Central), subscription "Azure subscription 1" |
-| endpoints (0.8.0) | `GET /llms.txt`, `GET /health`, `GET /openapi.json`, `GET /brfs`, `GET /brfs/{orgnr}`, `GET /brfs/{orgnr}/financials`, `GET /advertisements`, `GET /cities`, `GET /kommuns`, `GET /areas`, `GET /sales/stats/avg-price-per-sqm` |
+| endpoints (0.9.0) | `GET /llms.txt`, `GET /health`, `GET /openapi.json`, `GET /brfs`, `GET /brfs/{orgnr}`, `GET /brfs/{orgnr}/financials`, `GET /advertisements`, `GET /cities`, `GET /kommuns`, `GET /areas`, `GET /sales/stats/avg-price-per-sqm` |
 
 **Same principles as the data repo.**
 - *Read model:* one container per resource, each document a finished response row. Everything a request
@@ -134,7 +135,7 @@ is off); all endpoints are public, with no key.
 
 ```
 # one-off: tools
-python3.12 -m venv .venv && .venv/bin/pip install -r api/requirements.txt
+python3.12 -m venv .venv && .venv/bin/pip install -r tools/requirements.txt
 
 # parity: every listing against the data repo's live API (about 3 minutes)
 .venv/bin/python tools/cloud/parity.py
