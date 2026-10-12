@@ -1,0 +1,55 @@
+# Profile of the BRF: stable facts (from the reports, with source), the derived stambyte assessment and data notes.
+# Not read by the verification scripts. Per-year counts and areas live in property_states.csv.
+name: HSB Brf Sjötungan
+short_name: Sjötungan
+orgnr: 712400-1467
+municipality: Tyresö
+property: [Bollmora 1:388, Bollmora 2:399, Bollmora 2:400, Bollmora 2:401]   # plus 95% of Tyresö Bollmora S:9
+registered: 1965-01-30
+fiscal_year: 01-01 – 12-31
+maintenance_plan_until: 2074-12-31
+verified_through: 2025        # last fiscal year that passes verify-brf-data
+source: stamma2026.pdf p8–10
+
+major_works:                     # "Genomförda större underhålls- och investeringsåtgärder över åren"
+  source: stamma2026.pdf p9
+  done:
+    - {years: 1990, what: Delvis stambyte och nya ytskikt i badrum}
+    - {years: 2008, what: Nya fasader och utbyggda balkonger}
+    - {years: 2016–2019, what: Renovering av samtliga garage}
+    - {years: 2018, what: Stambyte M104; nytt elektroniskt låssystem; nya entrépartier}
+    - {years: 2018–2021, what: Byte av markliggande rör}
+    - {years: 2020–2021, what: Nytt styrsystem för ventilation}
+    - {years: 2021–2023, what: Nya innergårdar}
+    - {years: 2023, what: Hissrenoveringar; laddplatser för elbilar}
+    - {years: 2024, what: Referensstambyte i två stammar (M28, M64); omputsning av socklar och fasadkomponenter}
+    - {years: 2025, what: OVK; skyddsrum godkända av MSB; förarbeten inför det storskaliga stambytet}
+  planned:
+    - {years: 2026–2035, what: Byte av avloppsstammar inkl. nya våtrum och vattenledningar (storskaligt stambyte)}
+    - {years: 2027, what: Byte av entrépartier}
+
+stambyte:                        # derived from pipe_works.csv; rubric in annual_reviews/brfs/README.md
+  as_of: 2026-10-11
+  last:
+    years: 1990                    # last work on the stammar in all buildings, and only partial
+    kind: partial_stambyte
+    scope: [våtrum]                # "Delvis stambyte och nya ytskikt i badrum"; drains not stated
+    confidence: medium
+    basis: stamma2026.pdf p9 lists 1990 partial stambyte, 2018 stambyte in one building (M104), 2024 reference stambyte in two stammar (M28, M64).
+  next:
+    from: 2026
+    to: 2035
+    status: decided                # in_progress | decided | planned | estimated
+    scope: [avlopp, våtrum, tappvatten]
+    confidence: high
+    basis: stamma2026.pdf p9 (plan 2026–2035) and p10 (extra stämma voted for it, contractor procured, Handelsbanken loan commitment).
+  report: |
+    The original pipes from 1965 have never been replaced across the association: 1990 was a partial
+    stambyte with new bathroom surfaces, 2018 covered one building (M104) and 2024 two reference stammar.
+    A full stambyte (drains, water pipes, new wet rooms) runs 2026–2035 in stages. It is decided
+    and financed, so it is the dominant cost of the coming decade; total cost and fee path are not
+    yet in the imported documents.
+
+data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
+  Fully itemised operating-cost notes (skötsel, städ, trädgård, snö apart).
+  Verified 2016–2025; 2003–2014 imported but not usable (see annual_reviews/brfs/README.md).

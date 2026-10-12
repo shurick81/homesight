@@ -1,0 +1,50 @@
+# Profile of the BRF: stable facts (from the reports, with source), the derived stambyte assessment and data notes.
+# Not read by the verification scripts. Per-year counts and areas live in property_states.csv.
+name: Brf Björktrasten
+short_name: Björktrasten
+orgnr: 769610-4251
+municipality: Tyresö
+address: Axel Wennergrens väg 2–6, Tyresö
+property: [del av Järnet 7 (nu Järnet 9)]   # plus a gemensamhetsanläggning shared with Tornsvalan and Silvertärnan
+built_from: 2005
+built_to: 2005
+built_basis: värdeår
+registered: 2005 (ekonomisk plan 2005-03-24)
+fiscal_year: 01-01 – 12-31
+management: Fastum AB (ekonomisk); Ekströms Allservice / Ferla (teknisk)
+heating: bergvärme (ground-source heat pump); solar panels from 2025
+verified_through: 2025              # 2021–2025 chained, 2020 as opening balance
+source: Arsredovisning-2025.pdf p3–6
+links:
+  own: https://www.bjorktrasten.se/dokument/
+
+stambyte:                        # derived from pipe_works.csv; rubric in annual_reviews/brfs/README.md
+  as_of: 2026-10-11
+  last:
+    years: null                  # original pipes from 2005
+    kind: none
+    scope: []
+    confidence: medium           # the Fastum-template reports have no major-works list; silence is weaker evidence
+    basis: Built 2005; the reports mention only stamspolning (2023 in all apartments, 2025 of the drains).
+  next:
+    from: 2045
+    to: 2055
+    status: estimated
+    scope: []
+    confidence: low
+    basis: Original 2005 pipes; usually 40–50 years. The underhållsplan (updated yearly) has not been seen.
+  report: |
+    Original pipes from 2005, flushed in 2023 and 2025. No stambyte is mentioned. The reports have no
+    major-works list or 5-year plan, so the underhållsplan is needed to date the next one.
+
+data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
+  2025: the cash-flow statement treats the reclassification of a 15.85 MSEK loan to short-term as a
+  repayment (financing −15.85 MSEK) offset in short-term liabilities (+15.7 MSEK): the loans only
+  fell by 0.2 MSEK, so the DEBT check shows −15.65 MSEK "non-loan financing" that is not real.
+  Övriga externa kostnader is small (−21 770) because a 300 000 kr reserve for garage property tax
+  was reversed; the property tax lines there are left unassigned (+150 229).
+  2025 PDF has a broken font map (å/ä/ö); numbers read fine.
+  Every year the KF reports only the change in long-term loans as financing; loans moving to short-term
+  show up in 'Förändring av kortfristiga skulder'. So the DEBT check always shows a 'non-loan financing'
+  gap; the real amortisation is 200–250 kkr a year. Fastighetsavgift/-skatt under övriga externa
+  kostnader and förbrukningsinventarier/-material under driftkostnader are left unassigned.

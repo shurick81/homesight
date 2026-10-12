@@ -1,0 +1,59 @@
+id,name,parent
+0,Nettoomsättning,
+1,Driftkostnader,
+2,Fastighetsskötsel och lokalvård,1
+3,Kassaflöde från finansieringsverksamheten,
+4,Övriga intäkter,
+5,Övriga externa kostnader,
+6,Personalkostnader,
+7,Räntekostnader,
+8,Investeringar,
+9,Rörelsekapital - ej insamlade intäkter,
+10,Rörelsekapital - ej betalda kostnader,
+11,Leverantörsskulder,
+12,Övriga kortfristiga skulder,
+13,Kundfordringar,
+14,Övriga fordringar,
+15,Erhållen ränta,
+16,Planerat underhåll,
+17,Årsavgifter,0
+18,Hyror,0
+19,Övriga intäkter (nettoomsättning),0
+20,Avgifts- och hyresbortfall,0
+21,Reparationer,1
+22,El,1
+23,Uppvärmning,1
+24,Vatten,1
+25,Sophämtning,1
+26,Fastighetsförsäkring,1
+27,Kabel-TV och bredband,1
+28,Fastighetsskatt och fastighetsavgift,1
+29,Förvaltningsarvoden,1
+30,Övriga driftkostnader,1
+31,Underhåll,1
+32,Försäkringsskador,1
+33,Bevakningskostnader,5
+34,Hyror och arrenden,5
+35,Förbrukningsinventarier och varuinköp,5
+36,Administrationskostnader,5
+37,Extern revision,5
+38,Konsultkostnader,5
+39,Medlemsavgifter,5
+40,Juristarvode,5
+41,Föreningsverksamhet,5
+42,Övriga förvaltningskostnader,5
+43,Underhållsplan,5
+44,Styrelsearvoden,6
+45,Revisionsarvode,6
+46,Övriga arvoden,6
+47,Sociala avgifter,6
+48,Övriga personalkostnader,6
+49,Löner och övriga ersättningar,6
+50,Fastighetsskötsel,2
+51,Städning,2
+52,Hisstillsyn,2
+53,Tillsyn och besiktning,2
+54,Trädgårdsskötsel,2
+55,Snöröjning,2
+56,Skatt på årets resultat,
+57,Tomträttsavgäld,1

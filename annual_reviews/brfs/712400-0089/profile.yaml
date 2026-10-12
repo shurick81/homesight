@@ -1,0 +1,52 @@
+# Profile of the BRF: stable facts (from the reports, with source), the derived stambyte assessment and data notes.
+# Not read by the verification scripts. Per-year counts and areas live in property_states.csv.
+name: HSB Bostadsrättsförening Bergfoten i Tyresö
+short_name: Bergfoten
+orgnr: 712400-0089
+municipality: Tyresö
+property: [Näsby 4:1334, Näsby 4:1335]
+built_from: 1964
+built_to: 1966
+built_basis: byggnadsår
+registered: 1965
+fiscal_year: 01-01 – 12-31
+verified_through: 2025              # 2020–2025 chained, 2019 as opening balance
+source: bergfoten-arrsredovisning-2025.pdf p2–4
+
+major_works:                     # "Sedan föreningen startade har följande större åtgärder genomförts"
+  source: bergfoten-arrsredovisning-2025.pdf p4
+  done:
+    - {years: 2020–2022, what: Fönsterbyte}
+    - {years: 2022, what: Renoverad medlemslokal på gård 2}
+    - {years: 2023, what: Besiktning av skyddsrum; renoverad kompost}
+    - {years: 2024, what: Stambyte}
+    - {years: 2024, what: Rensning av ventilationskanaler; OVK; renoverad övernattningslägenhet}
+    - {years: 2025, what: Dagvattenledning besiktigad (byte inte nödvändigt)}
+  planned_5_years:
+    - {years: 2025–2026, what: Se över skyddsrummen (pågår)}
+    - {years: 2025–2026, what: Radonmätning}
+    - {years: 2026, what: Åtgärda ojämna gångvägar}
+    - {years: 2026, what: Nödstopp och fotoceller i garagen}
+
+stambyte:                        # derived from pipe_works.csv; rubric in annual_reviews/brfs/README.md
+  as_of: 2026-10-11
+  last:
+    years: 2023–2024
+    kind: stambyte
+    scope: []                      # not stated in the reports
+    confidence: high
+    basis: bergfoten-arrsredovisning-2025.pdf p4 "2024 Stambytet genomfört"; the 2023 report lists "2023-2024 Stambyte".
+  next:
+    from: 2064
+    to: 2074
+    status: estimated
+    scope: []
+    confidence: low
+    basis: Last stambyte completed 2024; pipes usually last 40–50 years.
+  report: |
+    Full stambyte 2023–2024, financed with loans (debt 7 086 kr/m² in 2025). Its scope (bathrooms,
+    water pipes) is not stated in the imported reports. No further pipe work for decades; the risk has
+    moved from the pipes to the loans and interest.
+
+data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
+  Property care and förvaltning are one merged line in the report.

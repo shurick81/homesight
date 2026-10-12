@@ -1,0 +1,61 @@
+# Profile of the BRF: stable facts (from the reports, with source), the derived stambyte assessment and data notes.
+# Not read by the verification scripts. Per-year counts and areas live in property_states.csv.
+name: Brf Laxtrappan
+short_name: Laxtrappan
+orgnr: 716421-3436
+municipality: Tyresö
+property: [Laxtrappan 1]
+built_from: 1993
+built_to: 1993
+built_basis: värdeår
+registered: 1990-07-09
+fiscal_year: 01-01 – 12-31
+management: Simpleko AB (ekonomisk förvaltning), HSB Stockholm (fastighetsskötsel och drift)
+heating: district heating (Vattenfall); hot water via district heating since 2024
+maintenance_plan_until: 2052     # drawn up and updated 2023
+verified_through: 2025              # 2021–2025 chained, 2020 as opening balance
+source: Brf-Laxtrappan-716421-3436-Arsredovisning-och-revisorberattelse-2024-1.pdf p4–7
+links:
+  website: https://laxtrappan.se
+
+major_works:                     # "Utförda historiska underhåll" (selection: larger items)
+  source: Brf-Laxtrappan-716421-3436-Arsredovisning-och-revisorberattelse-2024-1.pdf p5–6
+  done:
+    - {years: 2015, what: Hissöversyn; renovering tvättstuga}
+    - {years: 2017, what: Isolering av vindar; byte av alla stora lägenhetsfönster}
+    - {years: 2018, what: Stamspolning; OVK; LED-belysning; fönsterbyte färdigställt}
+    - {years: 2019, what: Ny fjärrvärmecentral; IMD el; byte av radiatorventiler}
+    - {years: 2022–2023, what: Garagebrand och återuppbyggnad}
+    - {years: 2023, what: Stamspolning; laddstolpar på alla p-platser}
+    - {years: 2024, what: OVK; varmvatten via fjärrvärme; nytt passersystem}
+  planned:
+    - {years: 2025, what: Målning trapphus, barnvagnsrum, cykelrum, soprum och hissar; rengöring och målning av tak}
+
+stambyte:                        # derived from pipe_works.csv; rubric in annual_reviews/brfs/README.md
+  as_of: 2026-10-11
+  last:
+    years: null                    # original pipes, building from 1993 (värdeår)
+    kind: none
+    scope: []
+    confidence: medium
+    basis: The major works list (2024 report p5–6) has no stambyte, only stamspolning 2018 and 2023.
+  next:
+    from: 2033
+    to: 2043
+    status: estimated
+    scope: []
+    confidence: low
+    basis: Original 1993 pipes; usually 40–50 years. The underhållsplan (to 2052) has not been seen.
+  report: |
+    Original pipes from 1993, flushed (stamspolning) in 2018 and 2023, which keeps them working but
+    replaces nothing. A stambyte or relining is likely within 10–20 years; the underhållsplan to 2052
+    is the document that would date it.
+
+data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
+  2021: the KF adds back "Bokslutsdispositioner 36 450" = note 11 "Korrigerat anskaffningsvärde −36 450" (equipment written down outside the RR); stored as 8 Investeringar (+36 450) so the cash identity holds.
+  2021–2022: Självrisker (30 000 / 70 000, note 6) left unassigned under Driftkostnader, as in 2025.
+  2021–2022: 97 bostadsrätter + 1 hyresrätt, area 8 806 m² as one Bostadsyta (12); 2023+ reports give 98 bostadsrätter / Bostadsrättsyta (8).
+  2025: Självrisker (40 000, note 8 p16) is left unassigned under Driftkostnader: 32 comes from note 5 on p15 and a sum cannot span pages.
+  Not an HSB-template report. Only 2024 extracted (sources verified, no opening balance yet).
+  2023: insurance damage 5.8 MSEK (32) against 4.9 MSEK insurance compensation (in 4). The RR line
+  Övriga rörelsekostnader −82 451 (realisationsförlust, non-cash) has no category and is left out.

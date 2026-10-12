@@ -1,0 +1,66 @@
+# Profile of the BRF: stable facts (from the reports, with source), the derived stambyte assessment and data notes.
+# Not read by the verification scripts. Per-year counts and areas live in property_states.csv.
+name: HSB Brf Pluto i Tyresö
+short_name: Pluto
+orgnr: 712400-2309
+municipality: Tyresö
+property: [Pluto 1, Pluto 2, Pluto 3, Pluto 4, Pluto 5, Pluto 6, Pluto 7]   # plus 8/51 of Tyresö Pluto S:1
+built_from: 1970
+built_to: 1971
+built_basis: byggnadsår
+registered: 1968
+fiscal_year: 07-01 – 06-30
+management: HSB Stockholm
+verified_through: 2024              # FY 2020/21–2024/25 chained, 2019/20 as opening balance
+source: arsredovisning-2024-2025-brf-pluto2.pdf p2–5
+links:
+  hsb: https://www.hsb.se/stockholm/brf/pluto/info/arsredovisning/
+
+major_works:                     # "Sedan föreningen startade har följande större åtgärder genomförts"
+  source: arsredovisning-2024-2025-brf-pluto2.pdf p5
+  done:
+    - {years: 2014, what: Byte garageportar på Bollmoravägen}
+    - {years: 2015, what: Byte av stolpbelysning i hela området}
+    - {years: 2016, what: Byte av entrédörrar; ny undercentral; ommålning av ekonomibyggnader}
+    - {years: 2019, what: Ytterligare en ny undercentral; målning av tak; garageportar på Herkulesvägen}
+    - {years: 2008–2021, what: Golvbrunnar och eventuellt stammar när boende renoverar sina badrum}
+    - {years: 2021, what: Fönsterbyte; 14 laddstolpar}
+    - {years: 2022, what: IMD el; målning av balkonger}
+    - {years: 2023, what: Översyn och upprustning av skyddsrummen}
+    - {years: 2023–2024, what: Stambyte och renovering av badrum}
+    - {years: 2025, what: Asfaltering av vissa parkeringsytor; OVK kontroll och injustering}
+  planned_5_years:
+    - {years: 2025–2026, what: Föryngra trädbeståndet}
+    - {years: 2025–2026, what: Översyn av krypgrunderna}
+    - {years: 2025–2026, what: IMD vatten}
+
+stambyte:                        # derived from pipe_works.csv; rubric in annual_reviews/brfs/README.md
+  as_of: 2026-10-11
+  last:
+    years: 2023–2024             # started August 2023; follow-up work finished during 2025
+    kind: stambyte
+    scope: [avlopp, våtrum]      # drains and all bathrooms (2023-2024 report p4); water pipes not stated
+    confidence: high
+    basis: >
+      arsredovisning-2024-2025-brf-pluto2.pdf p5 "2023-2024 Stambyte och renovering av badrum", p4 total
+      cost 86 082 895 kr; hsb-brf-pluto-arsredovisning-2023-2024.pdf p4 "renovera alla badrum och byta avloppsstammar".
+  next:
+    from: 2065
+    to: 2075
+    status: estimated
+    scope: []
+    confidence: low
+    basis: Stambyte completed 2024–2025; pipes usually last 40–50 years. Not in the 5-year plan.
+  report: |
+    Full stambyte with new bathrooms, August 2023 – 2024, finished in 2025. Cost 86.1 MSEK against
+    a quote of 79.8 MSEK (ÄTA 6.3 MSEK, 7.8%), plus 5.0 MSEK paid to 36 members who had renovated
+    their bathrooms earlier (sparade badrum). Financed with loans: 124.2 MSEK at 2025-06-30, 7 880 kr/m².
+    The pipe risk is gone for decades; the cost now sits in the loans and the fees (+2% 2024, +5% 2026).
+
+data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
+  The one-off 5.0 MSEK compensation to members with earlier renovated bathrooms (FY 2024/25) is
+  stored under 30 Övriga driftkostnader, see checked_by_eye.csv.
+  FY 2020/21 counts property differently (58 lokaler at 0 m², 266 parking and garage places combined);
+  later years list garage, p-platser and förråd separately. FY 2020/21: the BR line Kortfristiga placeringar
+  is OCR'd as 2 560 000; it is cited from note 12 (2 500 000), which the liquidity total confirms.
+  FY 2020/21 Nettoomsättning is cited from note 1 because OCR loses the RR line.

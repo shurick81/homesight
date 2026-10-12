@@ -1,0 +1,52 @@
+# Profile of the BRF: stable facts (from the reports, with source), the derived stambyte assessment and data notes.
+# Not read by the verification scripts. Per-year counts and areas live in property_states.csv.
+name: Brf Odlingslotten i Tyresö
+short_name: Odlingslotten
+orgnr: 769629-8590
+municipality: Tyresö
+property: [Odlingslotten 2, Odlingslotten 20]   # acquired 2015
+addresses: Peppargränd 1A–1D     # 4 bostadsrätter, about 129 m² each (Booli); see market/address_links.csv
+built_from: 2015
+built_to: 2015
+built_basis: byggnadsår          # "Fastigheten bebyggdes 2015. Värdeåret är 2015."
+registered: 2015-04-07
+fiscal_year: 01-01 – 12-31
+management: Sveriges BostadsrättsCentrum (ekonomisk förvaltning); external auditor Rävisor AB
+verified_through: 2025           # 2025 only (no other report held)
+source: Arsredovisning_2025.pdf p4–5
+links:
+  booli: https://www.booli.se/bostadsrattsforening/284155
+  report_2025: https://media.fastighetsbyran.se/Fil/16927561
+
+major_works:
+  source: Arsredovisning_2025.pdf p5
+  planned:
+    - {years: 2024–2054, what: Underhållsplan upprättad 2024, uppdaterad 2025}
+
+stambyte:                        # derived from pipe_works.csv; rubric in annual_reviews/brfs/README.md
+  as_of: 2026-10-12
+  last:
+    years: null                  # original pipes, built 2015
+    kind: none
+    scope: []
+    confidence: high
+    basis: Built 2015; the report mentions no work on the pipes.
+  next:
+    from: 2055
+    to: 2065
+    status: estimated
+    scope: []
+    confidence: low
+    basis: Original 2015 pipes; usually 40–50 years.
+  report: |
+    New houses (2015), no stambyte for decades; land owned. Low debt (1.78 MSEK, 3 453 kr/m²), but all of it
+    with Aros Kapital (a non-bank lender) at 6.67%, resetting 2026-02-28 after a 2025 refinancing; average
+    interest 5.92% in 2025 (6.57% in 2024). Small: 4 homes, cash 158 971 kr, maintenance fund 363 408 kr, losses
+    every year (−150 634 kr in 2025). Fees nearly doubled since 2016 (3 896 → 7 495 kr/month for a 129–130 m²
+    house, Booli). Board turnover: two members left and two joined during 2025; an extra stämma in May 2026.
+
+data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
+  Source: the Fastighetsbyrån listing of Peppargränd 1D (public link). Not held: earlier years (allabrf and Booli: login).
+  Cash (2) is the KF figure: bank 78 981 + transaktionskonto 32 179 + Borgo räntekonto 47 811 (in Övriga fordringar).
+  All loans are short-term in the BR (one loan, resetting within a year); long-term loans printed as 0.
+  Note 7 grouping: förvaltningsarvode, administration and tele/data to 36; överlåtelse- and pantsättningskostnad to 42; trivsel and föreningskostnader to 41.

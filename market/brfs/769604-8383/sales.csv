@@ -1,0 +1,311 @@
+sold_date,linked_by,address,apartment_number,rooms,living_area_m2,final_price_kr,asking_price_kr,kr_per_m2,monthly_fee_kr,price_change_pct,object_type,object_form,tenure,broker_agency,area_name,lat,lng,listing_id,booli_url
+2012-09-30,booli_brf_id,Sikvägen 61,,2.0,61.0,1350000,1280000,22100,3812,5.5,bostadsrätt,,,,Tyresö Centrum,59.245964,18.237968,1265394,https://www.booli.se/annons/1265394
+2012-10-27,booli_brf_id,Sikvägen 35,,3.0,81.0,1305000,1295000,16100,4751,0.8,bostadsrätt,,,,Bollmora,59.24766173,18.2363743,1280750,https://www.booli.se/annons/1280750
+2012-11-17,booli_brf_id,Sikvägen 42,,3.0,80.0,1700000,1495000,21300,5113,13.7,bostadsrätt,,,,Bollmora,59.24656034,18.2363964,1304164,https://www.booli.se/bostad/727450
+2013-02-06,booli_brf_id,Sikvägen 44,,2.0,59.0,1510000,1295000,25600,3727,16.6,bostadsrätt,,,,Bollmora,59.24625,18.23699,1342236,https://www.booli.se/annons/1342236
+2013-02-13,booli_brf_id,Sikvägen 38,,2.0,61.0,1470000,1295000,24100,3782,13.5,bostadsrätt,,,,Bollmora,59.24685,18.236383,1350895,https://www.booli.se/annons/1350895
+2013-02-18,booli_brf_id,Sikvägen 55,,4.0,80.0,1550000,1495000,19400,4802,3.7,bostadsrätt,,,,Bollmora,59.2465496,18.2382486,1350523,https://www.booli.se/annons/1350523
+2013-02-22,booli_brf_id,Sikvägen 33,,4.0,98.0,1490000,1495000,15200,5710,-6.6,bostadsrätt,,,,Bollmora,59.24776,18.23617,1328627,https://www.booli.se/annons/1328627
+2013-02-28,booli_brf_id,Sikvägen 35,,3.0,80.0,1760000,1695000,22000,4726,3.8,bostadsrätt,,,,Bollmora,59.24766173,18.2363743,1339096,https://www.booli.se/annons/1339096
+2013-04-08,booli_brf_id,Sikvägen 48,,3.0,80.0,1450000,1450000,18100,4634,0,bostadsrätt,,,,Bollmora,59.24595289,18.23698221,1375852,https://www.booli.se/annons/1375852
+2013-04-13,booli_brf_id,Sikvägen 36,,3.0,80.0,1470000,1295000,18400,4819,13.5,bostadsrätt,,,,Bollmora,59.24692627,18.23545252,1381758,https://www.booli.se/annons/1381758
+2013-04-14,booli_brf_id,Sikvägen 38,,2.0,59.0,1410000,1290000,23900,3858,9.3,bostadsrätt,,,,Bollmora,59.24685,18.236383,1384238,https://www.booli.se/bostad/727406
+2013-05-17,booli_brf_id,Sikvägen 61,,2.0,61.0,1270000,1095000,20800,3980,16,bostadsrätt,,,,Bollmora,59.245964,18.237968,1410410,https://www.booli.se/annons/1410410
+2013-05-23,booli_brf_id,Sikvägen 29,,3.0,80.0,1500000,1690000,18800,4982,-11.2,bostadsrätt,,,,Tyresö Centrum,59.24774,18.235256,1408618,https://www.booli.se/annons/1408618
+2013-07-01,booli_brf_id,Sikvägen 40,,3.0,80.0,1595000,1595000,19900,4759,0,bostadsrätt,,,,Tyresö Centrum,59.2467,18.23639,1444855,https://www.booli.se/annons/1444855
+2013-08-20,booli_brf_id,Sikvägen 31,,5.0,109.0,2250000,1895000,20600,6546,18.7,bostadsrätt,,,,Bollmora,59.2478581,18.2358949,1374327,https://www.booli.se/bostad/727285
+2013-10-06,booli_brf_id,Sikvägen 45,,3.0,80.0,1405000,1375000,17600,5163,2.2,bostadsrätt,,,,Bollmora,59.24723325,18.23773389,1504177,https://www.booli.se/annons/1504177
+2013-10-15,booli_brf_id,Sikvägen 34,,3.0,80.0,1375000,1375000,17200,4916,0,bostadsrätt,,,,Bollmora,59.2470509,18.2354508,1522740,https://www.booli.se/bostad/727339
+2013-10-30,booli_brf_id,Sikvägen 57,,3.0,80.0,1250000,1250000,15600,5018,-12.3,bostadsrätt,,,,Tyresö Centrum,59.24626,18.237974,1512443,https://www.booli.se/annons/1512443
+2013-11-08,booli_brf_id,Sikvägen 57,,3.0,80.0,1650000,1550000,20600,5017,6.5,bostadsrätt,,,,Bollmora,59.24626,18.237974,1525618,https://www.booli.se/annons/1525618
+2013-11-12,booli_brf_id,Sikvägen 38,,2.0,61.0,1515000,1275000,24800,3980,18.8,bostadsrätt,,,,Bollmora,59.24685,18.236383,1538424,https://www.booli.se/annons/1538424
+2014-02-10,booli_brf_id,Sikvägen 35,,3.0,81.0,1550000,1395000,19100,4971,11.1,bostadsrätt,,,,Bollmora,59.24766173,18.2363743,1580647,https://www.booli.se/annons/1580647
+2014-03-30,booli_brf_id,Sikvägen 38,,2.0,61.0,1290000,1290000,21100,3941,0,bostadsrätt,,,,Bollmora,59.24685,18.236383,1606625,https://www.booli.se/annons/1606625
+2014-04-11,booli_brf_id,Sikvägen 41,,4.0,98.0,1850000,1850000,18900,6075,0,bostadsrätt,,,,Bollmora,59.2473918,18.2370001,1613898,https://www.booli.se/bostad/727455
+2014-05-09,booli_brf_id,Sikvägen 44,,2.0,59.0,1450000,1250000,24600,3838,16,bostadsrätt,,,,Bollmora,59.24625,18.23699,1639659,https://www.booli.se/annons/1639659
+2014-05-28,booli_brf_id,Sikvägen 45,,3.0,80.0,1495000,1495000,18700,5163,0,bostadsrätt,,,,Bollmora,59.24723325,18.23773389,1653194,https://www.booli.se/annons/1653194
+2014-06-19,booli_brf_id,Sikvägen 32,,2.0,59.0,1500000,1395000,25400,3887,7.5,bostadsrätt,,,,Bollmora,59.247223,18.235441,1675334,https://www.booli.se/annons/1675334
+2014-08-15,booli_brf_id,Sikvägen 35,,3.0,80.0,1670000,1550000,20900,4866,7.7,bostadsrätt,,,,Centrum,59.24766173,18.2363743,1702128,https://www.booli.se/annons/1702128
+2014-08-22,booli_brf_id,Sikvägen 29,,3.0,80.0,1770000,1595000,22100,4982,11,bostadsrätt,,,,Bollmora,59.24774,18.235256,1691610,https://www.booli.se/annons/1691610
+2014-08-28,booli_brf_id,Sikvägen 44,,2.0,59.0,1650000,1595000,28000,3812,3.4,bostadsrätt,,,,Bollmora,59.24625,18.23699,1707000,https://www.booli.se/annons/1707000
+2014-09-09,booli_brf_id,Sikvägen 39,,3.0,81.0,1575000,1495000,19400,4961,5.4,bostadsrätt,,,,Centrum,59.24746825,18.23679424,1717741,https://www.booli.se/annons/1717741
+2014-10-03,booli_brf_id,Sikvägen 41,,3.0,80.0,2000000,1595000,25000,4949,25.4,bostadsrätt,,,,Bollmora,59.2473918,18.2370001,1738244,https://www.booli.se/annons/1738244
+2014-10-21,booli_brf_id,Sikvägen 48,,3.0,80.0,1850000,1695000,23100,4866,9.1,bostadsrätt,,,,Bollmora,59.24595289,18.23698221,1743284,https://www.booli.se/annons/1743284
+2014-11-14,booli_brf_id,Sikvägen 57,,3.0,80.0,1600000,1595000,20000,4809,0.3,bostadsrätt,,,,Bollmora,59.24626,18.237974,1765441,https://www.booli.se/annons/1765441
+2014-11-17,booli_brf_id,Sikvägen 29,,3.0,81.0,1695000,1695000,20900,4971,0,bostadsrätt,,,,Bollmora,59.24774,18.235256,1763537,https://www.booli.se/bostad/727273
+2014-11-18,booli_brf_id,Sikvägen 40,,3.0,80.0,1600000,1450000,20000,4866,10.3,bostadsrätt,,,,Bollmora,59.2467,18.23639,1766564,https://www.booli.se/annons/1766564
+2014-11-19,booli_brf_id,Sikvägen 39,,3.0,80.0,1525000,1495000,19100,4917,2,bostadsrätt,,,,Bollmora,59.24746825,18.23679424,1668367,https://www.booli.se/annons/1668367
+2014-11-19,booli_brf_id,Sikvägen 38,,2.0,61.0,1420000,1395000,23300,3988,1.8,bostadsrätt,,,,Bollmora,59.24685,18.236383,1767557,https://www.booli.se/annons/1767557
+2014-11-28,booli_brf_id,Sikvägen 38,,2.0,59.0,1484000,1350000,25200,3858,9.9,bostadsrätt,,,,Bollmora,59.24685,18.236383,1771481,https://www.booli.se/bostad/727406
+2014-12-17,booli_brf_id,Sikvägen 35,,3.0,81.0,1950000,1695000,24100,4941,15,bostadsrätt,,,,Bollmora,59.24766173,18.2363743,1776315,https://www.booli.se/annons/1776315
+2015-01-22,booli_brf_id,Sikvägen 43,,5.0,111.0,2360000,2350000,21300,6630,0.4,bostadsrätt,,,,Bollmora,59.2476092,18.23668596,1768561,https://www.booli.se/annons/1768561
+2015-04-01,booli_brf_id,Sikvägen 38,,2.0,61.0,1750000,1495000,28700,3965,17.1,bostadsrätt,,,,Bollmora,59.24685,18.236383,1835933,https://www.booli.se/annons/1835933
+2015-04-22,booli_brf_id,Sikvägen 41,,4.0,98.0,2130000,1995000,21700,6075,6.8,bostadsrätt,,,,Bollmora,59.2473918,18.2370001,1851878,https://www.booli.se/bostad/727455
+2015-04-23,booli_brf_id,Sikvägen 29,,3.0,81.0,2050000,1725000,25300,4971,18.8,bostadsrätt,,,,Bollmora,59.24774,18.235256,1844696,https://www.booli.se/bostad/727273
+2015-05-07,booli_brf_id,Sikvägen 33,,3.0,80.0,2140000,1875000,26800,4874,14.1,bostadsrätt,,,,Bollmora,59.24776,18.23617,1856345,https://www.booli.se/bostad/727295
+2015-05-29,booli_brf_id,Sikvägen 31,,5.0,109.0,2650000,2275000,24300,6546,16.5,bostadsrätt,,,,Bollmora,59.2478581,18.2358949,1880952,https://www.booli.se/bostad/727285
+2015-06-06,booli_brf_id,Sikvägen 38,,2.0,59.0,1820000,1495000,30800,3858,21.7,bostadsrätt,,,,Bollmora,59.24685,18.236383,1885718,https://www.booli.se/bostad/727406
+2015-06-13,booli_brf_id,Sikvägen 43,,5.0,111.0,2850000,2250000,25700,6741,26.7,bostadsrätt,,,,Bollmora,59.2476092,18.23668596,1898030,https://www.booli.se/bostad/727478
+2015-06-16,booli_brf_id,Sikvägen 38,,2.0,59.0,1810000,1495000,30700,3858,21.1,bostadsrätt,,,,Bollmora,59.24685,18.236383,1898209,https://www.booli.se/bostad/727406
+2015-06-30,booli_brf_id,Sikvägen 32,,2.0,61.0,1900000,1695000,31100,3965,12.1,bostadsrätt,,,,Bollmora,59.247223,18.235441,1884594,https://www.booli.se/annons/1884594
+2015-08-21,booli_brf_id,Sikvägen 48,,3.0,80.0,2150000,1875000,26900,4931,14.7,bostadsrätt,,,,Bollmora,59.24595289,18.23698221,1915689,https://www.booli.se/annons/1915689
+2015-09-25,booli_brf_id,Sikvägen 46,,3.0,80.0,2250000,1950000,28100,5007,15.4,bostadsrätt,,,,Bollmora,59.24609776,18.23698524,1947106,https://www.booli.se/annons/1947106
+2015-10-14,booli_brf_id,Sikvägen 44,,2.0,61.0,2175000,1695000,35700,4010,28.3,bostadsrätt,,,,Bollmora,59.24625,18.23699,1960813,https://www.booli.se/annons/1960813
+2015-10-30,booli_brf_id,Sikvägen 55,,3.0,80.0,2050000,1975000,25600,4958,3.8,bostadsrätt,,,,Bollmora,59.2465496,18.2382486,1976619,https://www.booli.se/bostad/727621
+2015-11-12,booli_brf_id,Sikvägen 46,,3.0,80.0,1860000,1795000,23300,4916,-6.8,bostadsrätt,,,,Bollmora,59.24609776,18.23698524,1974506,https://www.booli.se/annons/1974506
+2015-12-04,booli_brf_id,Sikvägen 45,,3.0,80.0,2030000,1795000,25400,4912,13.1,bostadsrätt,,,,Tyresö Centrum,59.24723325,18.23773389,2002074,https://www.booli.se/bostad/727489
+2015-12-09,booli_brf_id,Sikvägen 61,,2.0,59.0,1900000,1495000,32200,4245,27.1,bostadsrätt,,,,Bollmora,59.245964,18.237968,2004792,https://www.booli.se/bostad/727667
+2016-01-12,booli_brf_id,Sikvägen 40,,3.0,80.0,2000000,1995000,25000,4925,0.3,bostadsrätt,,,,Bollmora,59.2467,18.23639,2009404,https://www.booli.se/annons/2009404
+2016-02-10,booli_brf_id,Sikvägen 48,,3.0,80.0,2500000,1995000,31300,4819,25.3,bostadsrätt,,,,Bollmora,59.24595289,18.23698221,2021841,https://www.booli.se/annons/2021841
+2016-02-26,booli_brf_id,Sikvägen 53,,3.0,80.0,2550000,1995000,31900,5126,27.8,bostadsrätt,,,,Bollmora,59.2466885,18.2382479,2036578,https://www.booli.se/bostad/727606
+2016-03-12,booli_brf_id,Sikvägen 51,,3.0,80.0,2100000,1975000,26300,4916,6.3,bostadsrätt,,,,Tyresö Centrum,59.2468274,18.2382389,2044614,https://www.booli.se/annons/2044614
+2016-03-18,booli_brf_id,Sikvägen 45,,3.0,80.0,2700000,2100000,33800,5370,28.6,bostadsrätt,,,,Bollmora,59.24723325,18.23773389,2042497,https://www.booli.se/bostad/727495
+2016-04-12,booli_brf_id,Sikvägen 44,,2.0,61.0,2130000,1800000,34900,3980,18.3,bostadsrätt,,,,Bollmora,59.24625,18.23699,2057455,https://www.booli.se/annons/2057455
+2016-04-15,booli_brf_id,Sikvägen 46,,3.0,80.0,2300000,2100000,28800,5152,9.5,bostadsrätt,,,,Tyresö Centrum,59.24609776,18.23698524,2056015,https://www.booli.se/annons/2056015
+2016-04-22,booli_brf_id,Sikvägen 32,,2.0,59.0,2320000,1995000,39300,4024,16.3,bostadsrätt,,,,Bollmora,59.247223,18.235441,2030737,https://www.booli.se/bostad/727315
+2016-05-06,booli_brf_id,Sikvägen 53,,3.0,80.0,2225000,2125000,27800,4809,4.7,bostadsrätt,,,,Bollmora,59.2466885,18.2382479,2081522,https://www.booli.se/annons/2081522
+2016-05-12,booli_brf_id,Sikvägen 49,,3.0,80.0,2125000,1995000,26600,4912,6.5,bostadsrätt,,,,Bollmora,59.24695102,18.23828111,2087874,https://www.booli.se/bostad/727562
+2016-05-20,booli_brf_id,Sikvägen 33,,4.0,98.0,2750000,2750000,28100,6011,0,bostadsrätt,,,,Bollmora,59.24776,18.23617,2073980,https://www.booli.se/bostad/727296
+2016-05-27,booli_brf_id,Sikvägen 35,,3.0,81.0,2500000,2395000,30900,4941,4.4,bostadsrätt,,,,Bollmora,59.24766173,18.2363743,2103612,https://www.booli.se/bostad/727363
+2016-05-31,booli_brf_id,Sikvägen 51,,3.0,80.0,2550000,2495000,31900,4916,2.2,bostadsrätt,,,,Bollmora,59.2468274,18.2382389,2091885,https://www.booli.se/annons/2091885
+2016-06-23,booli_brf_id,Sikvägen 46,,3.0,80.0,1950000,1895000,24400,4923,2.9,bostadsrätt,,,,Bollmora,59.24609776,18.23698524,2124697,https://www.booli.se/annons/2124697
+2016-08-17,booli_brf_id,Sikvägen 55,,3.0,80.0,2250000,2250000,28100,4958,0,bostadsrätt,,,,Bollmora,59.2465496,18.2382486,2099251,https://www.booli.se/bostad/727621
+2016-08-31,booli_brf_id,Sikvägen 35,,3.0,80.0,2250000,1795000,28100,4826,25.3,bostadsrätt,,,,Bollmora,59.24766173,18.2363743,2155449,https://www.booli.se/annons/2155449
+2016-10-14,booli_brf_id,Sikvägen 31,,3.0,81.0,2300000,1995000,28400,5042,15.3,bostadsrätt,,,,Bollmora,59.2478581,18.2358949,2184278,https://www.booli.se/bostad/727286
+2016-10-14,booli_brf_id,Sikvägen 29,,4.0,81.0,2385000,2195000,29400,5428,8.7,bostadsrätt,,,,Bollmora,59.24774,18.235256,2186824,https://www.booli.se/bostad/727271
+2016-11-17,booli_brf_id,Sikvägen 42,,3.0,80.0,3105000,2195000,38800,4947,41.5,bostadsrätt,,,,Bollmora,59.24656034,18.2363964,2190574,https://www.booli.se/annons/2190574
+2016-11-29,booli_brf_id,Sikvägen 61,,2.0,61.0,1995000,1995000,32700,3965,0,bostadsrätt,,,,Bollmora,59.245964,18.237968,2165124,https://www.booli.se/bostad/727668
+2017-02-06,booli_brf_id,Sikvägen 33,,4.0,98.0,3250000,2600000,33200,5939,25,bostadsrätt,,,,Bollmora,59.24776,18.23617,2243160,https://www.booli.se/bostad/727302
+2017-03-08,booli_brf_id,Sikvägen 61,,2.0,61.0,2080000,1895000,34100,3965,9.8,bostadsrätt,,,,Tyresö Centrum,59.245964,18.237968,2175497,https://www.booli.se/bostad/727668
+2017-03-09,booli_brf_id,Sikvägen 37,,3.0,81.0,2550000,2195000,31500,4923,16.2,bostadsrätt,,,,Bollmora,59.24756548,18.2365834,2258698,https://www.booli.se/annons/2258698
+2017-03-17,booli_brf_id,Sikvägen 31,,3.0,81.0,3100000,2595000,38300,4971,19.5,bostadsrätt,,,,Tyresö Centrum,59.2478581,18.2358949,2254918,https://www.booli.se/bostad/727290
+2017-04-28,booli_brf_id,Sikvägen 41,,3.0,81.0,2655000,2395000,32800,5096,10.9,bostadsrätt,,,,Tyresö Centrum,59.2473918,18.2370001,2299670,https://www.booli.se/bostad/727468
+2017-05-12,booli_brf_id,Sikvägen 51,,3.0,80.0,2650000,2495000,33100,4866,6.2,bostadsrätt,,,,Bollmora,59.2468274,18.2382389,2305827,https://www.booli.se/annons/2305827
+2017-05-26,booli_brf_id,Sikvägen 46,,3.0,80.0,2400000,2350000,30000,5216,2.1,bostadsrätt,,,,Bollmora,59.24609776,18.23698524,2320065,https://www.booli.se/annons/2320065
+2017-06-01,booli_brf_id,Sikvägen 35,,3.0,81.0,2940000,2495000,36300,4971,17.8,bostadsrätt,,,,Tyresö Centrum,59.24766173,18.2363743,2322609,https://www.booli.se/annons/2322609
+2017-06-01,booli_brf_id,Sikvägen 53,,3.0,80.0,2500000,2195000,31300,5126,13.9,bostadsrätt,,,,Bollmora,59.2466885,18.2382479,2325049,https://www.booli.se/bostad/727606
+2017-06-02,booli_brf_id,Sikvägen 29,,3.0,81.0,2420000,2025000,29900,4961,19.5,bostadsrätt,,,,Bollmora,59.24774,18.235256,2328983,https://www.booli.se/annons/2328983
+2017-06-16,booli_brf_id,Sikvägen 61,,2.0,61.0,2100000,1995000,34400,3910,5.3,bostadsrätt,,,,Bollmora,59.245964,18.237968,2258540,https://www.booli.se/annons/2258540
+2017-06-19,booli_brf_id,Sikvägen 36,,4.0,80.0,2900000,2395000,36300,4939,21.1,bostadsrätt,,,,Tyresö Centrum,59.24692627,18.23545252,2341547,https://www.booli.se/annons/2341547
+2017-06-29,booli_brf_id,Sikvägen 53,,3.0,80.0,2760000,2450000,34500,5126,12.7,bostadsrätt,,,,Tyresö Centrum,59.2466885,18.2382479,2348604,https://www.booli.se/bostad/727606
+2017-08-24,booli_brf_id,Sikvägen 38,,2.0,59.0,2460000,2150000,41700,3858,14.4,bostadsrätt,,,,Bollmora,59.24685,18.236383,2365841,https://www.booli.se/bostad/727406
+2017-08-28,booli_brf_id,Sikvägen 42,,4.0,80.0,2815000,2425000,35200,4836,16.1,bostadsrätt,,,,Bollmora,59.24656034,18.2363964,2379071,https://www.booli.se/annons/2379071
+2017-09-27,booli_brf_id,Sikvägen 57,,3.0,80.0,2650000,2295000,33100,5017,10.6,bostadsrätt,,,,Bollmora,59.24626,18.237974,2400248,https://www.booli.se/annons/2400248
+2017-10-03,booli_brf_id,Sikvägen 59,,3.0,80.0,2700000,2350000,33800,4916,14.9,bostadsrätt,,,,Bollmora,59.24609762,18.23806641,2376938,https://www.booli.se/annons/2376938
+2017-10-06,booli_brf_id,Sikvägen 55,,4.0,80.0,2825000,2395000,35300,5024,18,bostadsrätt,,,,Bollmora,59.2465496,18.2382486,2382865,https://www.booli.se/annons/2382865
+2017-10-26,booli_brf_id,Sikvägen 32,,2.0,59.0,2360000,2195000,40000,3838,7.5,bostadsrätt,,,,Bollmora,59.247223,18.235441,2408680,https://www.booli.se/annons/2408680
+2017-10-29,booli_brf_id,Sikvägen 46,,3.0,80.0,2700000,2495000,33800,5007,8.2,bostadsrätt,,,,Bollmora,59.24609776,18.23698524,3016177,https://www.booli.se/annons/3016177
+2017-11-02,booli_brf_id,Sikvägen 35,,3.0,80.0,2220000,2195000,27800,4887,1.1,bostadsrätt,,,,Bollmora,59.24766173,18.2363743,3011471,https://www.booli.se/annons/3011471
+2017-11-15,booli_brf_id,Sikvägen 41,,3.0,81.0,2395000,2395000,29600,4949,0,bostadsrätt,,,,Tyresö Centrum,59.2473918,18.2370001,3019068,https://www.booli.se/bostad/727462
+2018-01-19,booli_brf_id,Sikvägen 32,,2.0,61.0,1850000,1895000,30300,3965,-2.4,bostadsrätt,,,,Tyresö Centrum,59.247223,18.235441,2386335,https://www.booli.se/bostad/727329
+2018-01-27,booli_brf_id,Sikvägen 44,,2.0,61.0,1900000,1875000,31100,4047,1.3,bostadsrätt,,,,Tyresö Centrum,59.24625,18.23699,3072735,https://www.booli.se/annons/3072735
+2018-04-23,booli_brf_id,Sikvägen 39,,3.0,80.0,1700000,1495000,21300,4925,13.7,bostadsrätt,,,,Bollmora,59.24746825,18.23679424,3129802,https://www.booli.se/annons/3129802
+2018-04-27,booli_brf_id,Sikvägen 59,,3.0,80.0,2195000,2195000,27400,4925,0,bostadsrätt,,,,Bollmora,59.24609762,18.23806641,3024639,https://www.booli.se/annons/3024639
+2018-06-03,booli_brf_id,Sikvägen 51,,3.0,80.0,2850000,2450000,35600,4866,16.3,bostadsrätt,,,,Bollmora,59.2468274,18.2382389,3168977,https://www.booli.se/annons/3168977
+2018-07-06,booli_brf_id,Sikvägen 45,,3.0,80.0,2550000,2550000,31900,5164,0,bostadsrätt,,,,Bollmora,59.24723325,18.23773389,3184236,https://www.booli.se/annons/3184236
+2018-07-13,booli_brf_id,Sikvägen 31,,3.0,81.0,2150000,1895000,26500,4941,13.5,bostadsrätt,,,,Bollmora,59.2478581,18.2358949,3193148,https://www.booli.se/annons/3193148
+2018-07-13,booli_brf_id,Sikvägen 43,,3.0,80.0,2300000,1995000,28800,4866,15.3,bostadsrätt,,,,Bollmora,59.2476092,18.23668596,3193155,https://www.booli.se/annons/3193155
+2018-08-17,booli_brf_id,Sikvägen 33,,3.0,80.0,2510000,2150000,31400,4887,16.7,bostadsrätt,,,,Bollmora,59.24776,18.23617,3204731,https://www.booli.se/annons/3204731
+2018-08-22,booli_brf_id,Sikvägen 57,,3.0,80.0,2425000,2150000,30300,4859,12.8,bostadsrätt,,,,Bollmora,59.24626,18.237974,3202601,https://www.booli.se/annons/3202601
+2018-09-07,booli_brf_id,Sikvägen 34,,3.0,80.0,2430000,2150000,30400,4905,-2.6,bostadsrätt,,,,Bollmora,59.2470509,18.2354508,3166811,https://www.booli.se/annons/3166811
+2018-09-25,booli_brf_id,Sikvägen 42,,3.0,80.0,2200000,1995000,27500,4887,10.3,bostadsrätt,,,,Bollmora,59.24656034,18.2363964,3234725,https://www.booli.se/annons/3234725
+2018-10-03,booli_brf_id,Sikvägen 55,,4.0,80.0,2250000,2095000,28100,4842,7.4,bostadsrätt,,,,Bollmora,59.2465496,18.2382486,3234817,https://www.booli.se/annons/3234817
+2018-10-12,booli_brf_id,Sikvägen 53,,4.0,80.0,2300000,2300000,28800,4809,0,bostadsrätt,,,,Bollmora,59.2466885,18.2382479,3258597,https://www.booli.se/annons/3258597
+2018-10-24,booli_brf_id,Sikvägen 32,,2.0,59.0,2350000,1995000,39800,3887,17.8,bostadsrätt,,,,Bollmora,59.247223,18.235441,3267098,https://www.booli.se/annons/3267098
+2018-12-12,booli_brf_id,Sikvägen 42,,3.0,80.0,2495000,2495000,31200,4905,0,bostadsrätt,,,,Bollmora,59.24656034,18.2363964,3291509,https://www.booli.se/annons/3291509
+2019-01-17,booli_brf_id,Sikvägen 45,,3.0,80.0,2550000,2245000,31900,4912,13.6,bostadsrätt,,,,Bollmora,59.24723325,18.23773389,3304246,https://www.booli.se/annons/3304246
+2019-01-22,booli_brf_id,Sikvägen 31,,3.0,81.0,2880000,2375000,35600,4912,21.3,bostadsrätt,,,,Bollmora,59.2478581,18.2358949,3304678,https://www.booli.se/annons/3304678
+2019-02-27,booli_brf_id,Sikvägen 32,,2.0,59.0,2300000,1895000,39000,3848,21.4,bostadsrätt,,,,Bollmora,59.247223,18.235441,3321977,https://www.booli.se/bostad/727309
+2019-03-12,booli_brf_id,Sikvägen 59,,3.0,80.0,2220000,2195000,27800,4925,1.1,bostadsrätt,,,,Bollmora,59.24609762,18.23806641,3344695,https://www.booli.se/annons/3344695
+2019-03-23,booli_brf_id,Sikvägen 38,,2.0,61.0,1950000,1995000,32000,3988,-2.3,bostadsrätt,,,,Bollmora,59.24685,18.236383,3044962,https://www.booli.se/annons/3044962
+2019-03-26,booli_brf_id,Sikvägen 32,,2.0,61.0,2150000,1975000,35200,3926,8.9,bostadsrätt,,,,Bollmora,59.247223,18.235441,3363294,https://www.booli.se/annons/3363294
+2019-04-17,booli_brf_id,Sikvägen 48,,3.0,80.0,1995000,1995000,24900,4887,0,bostadsrätt,,,,Tyresö Centrum,59.24595289,18.23698221,3383093,https://www.booli.se/annons/3383093
+2019-05-04,booli_brf_id,Sikvägen 31,,5.0,109.0,2720000,2395000,25000,6631,13.6,bostadsrätt,,,,Bollmora,59.2478581,18.2358949,3413337,https://www.booli.se/annons/3413337
+2019-05-07,booli_brf_id,Sikvägen 42,,3.0,80.0,2875000,,35900,4887,,bostadsrätt,,,,Bollmora,59.24656034,18.2363964,3433561,https://www.booli.se/annons/3433561
+2019-05-09,booli_brf_id,Sikvägen 49,,3.0,80.0,2150000,1995000,26900,4887,7.8,bostadsrätt,,,,Bollmora,59.24695102,18.23828111,3414662,https://www.booli.se/annons/3414662
+2019-05-10,booli_brf_id,Sikvägen 32,,2.0,59.0,2100000,1995000,35600,3876,5.3,bostadsrätt,,,,Tyresö Centrum,59.247223,18.235441,3342047,https://www.booli.se/annons/3342047
+2019-06-05,booli_brf_id,Sikvägen 59,,3.0,80.0,2500000,2195000,31300,4887,13.9,bostadsrätt,,,,Bollmora,59.24609762,18.23806641,3312105,https://www.booli.se/bostad/727643
+2019-06-05,booli_brf_id,Sikvägen 29,,3.0,81.0,2330000,2295000,28800,4923,1.5,bostadsrätt,,,,Bollmora,59.24774,18.235256,3434753,https://www.booli.se/bostad/727263
+2019-06-11,booli_brf_id,Sikvägen 49,,3.0,80.0,2400000,2245000,30000,4958,6.9,bostadsrätt,,,,Bollmora,59.24695102,18.23828111,3464447,https://www.booli.se/bostad/727570
+2019-06-12,booli_brf_id,Sikvägen 61,,2.0,61.0,2050000,1995000,33600,4010,2.8,bostadsrätt,,,,Bollmora,59.245964,18.237968,3296649,https://www.booli.se/annons/3296649
+2019-06-18,booli_brf_id,Sikvägen 57,,3.0,80.0,2250000,2290000,28100,4874,2.5,bostadsrätt,,,,Bollmora,59.24626,18.237974,3439299,https://www.booli.se/annons/3439299
+2019-06-20,booli_brf_id,Sikvägen 51,,3.0,81.0,1950000,2095000,24100,4923,-6.9,bostadsrätt,,,,Bollmora,59.2468274,18.2382389,3464382,https://www.booli.se/annons/3464382
+2019-06-28,booli_brf_id,Sikvägen 59,,3.0,80.0,2100000,2195000,26300,4874,-4.3,bostadsrätt,,,,Bollmora,59.24609762,18.23806641,3477861,https://www.booli.se/bostad/727642
+2019-07-03,booli_brf_id,Sikvägen 45,,3.0,81.0,2500000,2095000,30900,4826,19.3,bostadsrätt,,,,Bollmora,59.24723325,18.23773389,3494236,https://www.booli.se/bostad/727488
+2019-07-11,booli_brf_id,Sikvägen 61,,2.0,61.0,1895000,1895000,31100,4009,0,bostadsrätt,,,,Bollmora,59.245964,18.237968,3464379,https://www.booli.se/annons/3464379
+2019-09-05,booli_brf_id,Sikvägen 32,,2.0,61.0,1945000,1750000,31900,3933,11.1,bostadsrätt,,,,Bollmora,59.247223,18.235441,3555801,https://www.booli.se/bostad/727311
+2019-09-06,booli_brf_id,Sikvägen 44,,2.0,61.0,1850000,1795000,30300,4005,3.1,bostadsrätt,,,,Bollmora,59.24625,18.23699,3555807,https://www.booli.se/bostad/727514
+2019-09-12,booli_brf_id,Sikvägen 35,,3.0,81.0,2510000,2195000,31000,4923,14.4,bostadsrätt,,,,Bollmora,59.24766173,18.2363743,3559924,https://www.booli.se/annons/3559924
+2019-09-28,booli_brf_id,Sikvägen 53,,3.0,80.0,2675000,2395000,33400,4925,11.7,bostadsrätt,,,,Bollmora,59.2466885,18.2382479,3579981,https://www.booli.se/bostad/727601
+2019-10-03,booli_brf_id,Sikvägen 44,,2.0,59.0,2000000,1775000,33900,3887,1.3,bostadsrätt,,,,Bollmora,59.24625,18.23699,3560386,https://www.booli.se/bostad/727515
+2019-10-16,booli_brf_id,Sikvägen 57,,3.0,80.0,2230000,1995000,27900,4916,11.8,bostadsrätt,,,,Bollmora,59.24626,18.237974,3615187,https://www.booli.se/bostad/727632
+2019-10-17,booli_brf_id,Sikvägen 32,,2.0,61.0,2100000,1950000,34400,4010,7.7,bostadsrätt,,,,Bollmora,59.247223,18.235441,3576678,https://www.booli.se/annons/3576678
+2019-10-17,booli_brf_id,Sikvägen 33,,4.0,98.0,2800000,2395000,28600,5935,16.9,bostadsrätt,,,,Bollmora,59.24776,18.23617,3615160,https://www.booli.se/bostad/727300
+2019-11-14,booli_brf_id,Sikvägen 45,,3.0,80.0,2640000,2395000,33000,4936,10.2,bostadsrätt,,,,Bollmora,59.24723325,18.23773389,3645403,https://www.booli.se/bostad/727493
+2019-11-18,booli_brf_id,Sikvägen 57,,3.0,80.0,2165000,2165000,27100,5018,0,bostadsrätt,,,,Bollmora,59.24626,18.237974,3630450,https://www.booli.se/bostad/727629
+2019-11-19,booli_brf_id,Sikvägen 44,,2.0,61.0,1810000,1695000,29700,4327,6.8,bostadsrätt,,,,Bollmora,59.24625,18.23699,3648016,https://www.booli.se/bostad/727507
+2020-01-23,booli_brf_id,Sikvägen 51,,3.0,81.0,2650000,2245000,32700,4885,18,bostadsrätt,,,,Bollmora,59.2468274,18.2382389,3686673,https://www.booli.se/annons/3686673
+2020-01-31,booli_brf_id,Sikvägen 61,,2.0,61.0,1925000,1995000,31600,3900,-3.5,bostadsrätt,,,,Bollmora,59.245964,18.237968,3703477,https://www.booli.se/annons/3703477
+2020-03-11,booli_brf_id,Sikvägen 42,,4.0,80.0,2595000,2595000,32400,4905,0,bostadsrätt,,,,Tyresö Centrum,59.24656034,18.2363964,3726646,https://www.booli.se/annons/3726646
+2020-03-24,booli_brf_id,Sikvägen 31,,5.0,109.0,3365000,2995000,30900,6546,12.4,bostadsrätt,,,,Bollmora,59.2478581,18.2358949,3757059,https://www.booli.se/annons/3757059
+2020-03-25,booli_brf_id,Sikvägen 34,,3.0,80.0,2700000,2700000,33800,4916,0,bostadsrätt,,,,Bollmora,59.2470509,18.2354508,3762467,https://www.booli.se/annons/3762467
+2020-04-29,booli_brf_id,Sikvägen 48,,3.0,80.0,2390000,2285000,29900,4819,4.6,bostadsrätt,,,,Bollmora,59.24595289,18.23698221,3802328,https://www.booli.se/bostad/727544
+2020-04-30,booli_brf_id,Sikvägen 32,,2.0,61.0,2150000,1995000,35200,3965,7.8,bostadsrätt,,,,Bollmora,59.247223,18.235441,3784792,https://www.booli.se/bostad/727329
+2020-05-19,booli_brf_id,Sikvägen 36,,3.0,80.0,2290000,2095000,28600,4905,9.3,bostadsrätt,,,,Bollmora,59.24692627,18.23545252,3816403,https://www.booli.se/bostad/727356
+2020-05-29,booli_brf_id,Sikvägen 51,,3.0,80.0,2550000,2495000,31900,4887,2.2,bostadsrätt,,,,Bollmora,59.2468274,18.2382389,3803451,https://www.booli.se/annons/3803451
+2020-06-03,booli_brf_id,Sikvägen 59,,3.0,80.0,2500000,2195000,31300,4916,13.9,bostadsrätt,,,,Bollmora,59.24609762,18.23806641,3825610,https://www.booli.se/annons/3825610
+2020-07-09,booli_brf_id,Sikvägen 33,,4.0,98.0,3150000,3195000,32100,5773,10.5,bostadsrätt,,,,Tyresö Centrum,59.24776,18.23617,3870345,https://www.booli.se/annons/3870345
+2020-08-14,booli_brf_id,Sikvägen 39,,3.0,80.0,2750000,2395000,34400,4917,14.8,bostadsrätt,,,,Tyresö Centrum,59.24746825,18.23679424,3911262,https://www.booli.se/bostad/727398
+2020-09-17,booli_brf_id,Sikvägen 29,,3.0,81.0,2520000,2495000,31100,4923,14.8,bostadsrätt,,,,Bollmora,59.24774,18.235256,3907536,https://www.booli.se/bostad/727263
+2020-09-17,booli_brf_id,Sikvägen 41,,4.0,98.0,3250000,2495000,33200,5897,30.3,bostadsrätt,,,,Bollmora,59.2473918,18.2370001,3951081,https://www.booli.se/bostad/727457
+2020-09-18,booli_brf_id,Sikvägen 41,,3.0,81.0,2500000,2195000,30900,4949,13.9,bostadsrätt,,,,Bollmora,59.2473918,18.2370001,3434602,https://www.booli.se/annons/3434602
+2020-10-08,booli_brf_id,Sikvägen 32,,2.0,61.0,2200000,1995000,36100,4047,10.3,bostadsrätt,,,,Centrala,59.247223,18.235441,3977175,https://www.booli.se/annons/3977175
+2020-10-09,booli_brf_id,Sikvägen 55,,3.0,80.0,2850000,2340000,35600,5017,21.8,bostadsrätt,,,,Tyresö Centrum,59.2465496,18.2382486,3725799,https://www.booli.se/annons/3725799
+2020-10-11,booli_brf_id,Sikvägen 48,,3.0,80.0,2700000,2395000,33800,4916,12.7,bostadsrätt,,,,Tyresö Centrum,59.24595289,18.23698221,3131131,https://www.booli.se/bostad/727552
+2020-10-15,booli_brf_id,Sikvägen 45,,3.0,81.0,2425000,2095000,29900,5038,15.8,bostadsrätt,,,,Bollmora,59.24723325,18.23773389,3949700,https://www.booli.se/bostad/727490
+2021-01-18,booli_brf_id,Sikvägen 51,,3.0,80.0,2550000,2195000,31900,4809,16.2,bostadsrätt,,,,Bollmora,59.2468274,18.2382389,3983790,https://www.booli.se/bostad/727575
+2021-02-10,booli_brf_id,Sikvägen 51,,3.0,80.0,2850000,2495000,35600,4866,14.2,bostadsrätt,,,,Bollmora,59.2468274,18.2382389,3884054,https://www.booli.se/bostad/727590
+2021-02-10,booli_brf_id,Sikvägen 51,,3.0,80.0,2850000,,35600,4866,,bostadsrätt,,,,Bollmora,59.2468274,18.2382389,4098141,https://www.booli.se/annons/4098141
+2021-02-11,booli_brf_id,Sikvägen 59,,3.0,80.0,2510000,2295000,31400,4866,9.4,bostadsrätt,,,,Centrala,59.24609762,18.23806641,4100624,https://www.booli.se/annons/4100624
+2021-03-02,booli_brf_id,Sikvägen 53,,3.0,80.0,3125000,2495000,39100,4925,25.3,bostadsrätt,,,,Bollmora,59.2466885,18.2382479,4095457,https://www.booli.se/annons/4095457
+2021-03-22,booli_brf_id,Sikvägen 44,,2.0,61.0,2410000,1975000,39500,3910,22,bostadsrätt,,,,Bollmora,59.24625,18.23699,4135076,https://www.booli.se/annons/4135076
+2021-03-24,booli_brf_id,Sikvägen 45,,3.0,80.0,2900000,2495000,36300,5164,16.2,bostadsrätt,,,,Centrala,59.24723325,18.23773389,4154194,https://www.booli.se/annons/4154194
+2021-03-26,booli_brf_id,Sikvägen 29,,3.0,81.0,2625000,2395000,32400,4925,9.6,bostadsrätt,,,,Bollmora,59.24774,18.235256,4142286,https://www.booli.se/annons/4142286
+2021-04-01,booli_brf_id,Sikvägen 59,,3.0,80.0,2350000,2075000,29400,4916,13.3,bostadsrätt,,,,Bollmora,59.24609762,18.23806641,4158401,https://www.booli.se/annons/4158401
+2021-05-05,booli_brf_id,Sikvägen 29,,3.0,81.0,2900000,2595000,35800,4964,11.8,bostadsrätt,,,,Centrala,59.24774,18.235256,4179667,https://www.booli.se/annons/4179667
+2021-05-14,booli_brf_id,Sikvägen 32,,2.0,59.0,2300000,2095000,39000,4024,9.8,bostadsrätt,,,,Tyresö Centrum,59.247223,18.235441,4151404,https://www.booli.se/bostad/727315
+2021-05-22,booli_brf_id,Sikvägen 37,,3.0,81.0,3000000,2495000,37000,4826,20.2,bostadsrätt,,,,Bollmora,59.24756548,18.2365834,4211849,https://www.booli.se/bostad/727375
+2021-05-27,booli_brf_id,Sikvägen 45,,3.0,81.0,2600000,2095000,32100,4961,24.1,bostadsrätt,,,,Bollmora,59.24723325,18.23773389,4228623,https://www.booli.se/annons/4228623
+2021-05-28,booli_brf_id,Sikvägen 38,,2.0,61.0,2375000,2395000,38900,4329,-4.8,bostadsrätt,,,,Bollmora,59.24685,18.236383,4178845,https://www.booli.se/bostad/727426
+2021-06-06,booli_brf_id,Sikvägen 61,,2.0,59.0,2250000,2095000,38100,3888,7.4,bostadsrätt,,,,Bollmora,59.245964,18.237968,4238680,https://www.booli.se/annons/4238680
+2021-06-10,booli_brf_id,Sikvägen 42,,3.0,80.0,2680000,2295000,33500,4874,16.8,bostadsrätt,,,,Bollmora,59.24656034,18.2363964,4260040,https://www.booli.se/annons/4260040
+2021-06-15,booli_brf_id,Sikvägen 49,,3.0,80.0,2800000,2350000,35000,5168,19.1,bostadsrätt,,,,Bollmora,59.24695102,18.23828111,4143536,https://www.booli.se/annons/4143536
+2021-06-24,booli_brf_id,Sikvägen 61,,2.0,61.0,2250000,1995000,36900,3900,12.8,bostadsrätt,,,,Bollmora,59.245964,18.237968,4040930,https://www.booli.se/annons/4040930
+2021-08-02,booli_brf_id,Sikvägen 36,,3.0,80.0,3000000,,37500,4930,,bostadsrätt,,,,Bollmora,59.24692627,18.23545252,4309653,https://www.booli.se/annons/4309653
+2021-09-10,booli_brf_id,Sikvägen 41,,4.0,98.0,3170000,2695000,32300,5938,17.6,bostadsrätt,,,,Bollmora,59.2473918,18.2370001,4337547,https://www.booli.se/annons/4337547
+2021-09-16,booli_brf_id,Sikvägen 61,,2.0,61.0,2200000,2095000,36100,3964,5,bostadsrätt,,,,Bollmora,59.245964,18.237968,4356209,https://www.booli.se/annons/4356209
+2021-09-28,booli_brf_id,Sikvägen 31,,5.0,109.0,3810000,2775000,35000,6496,37.3,bostadsrätt,,,,Bollmora,59.2478581,18.2358949,4375622,https://www.booli.se/annons/4375622
+2021-10-07,booli_brf_id,Sikvägen 48,,3.0,80.0,3000000,2550000,37500,4866,11.3,bostadsrätt,,,,Tyresö Centrum,59.24595289,18.23698221,4382964,https://www.booli.se/bostad/727557
+2021-10-18,booli_brf_id,Sikvägen 61,,2.0,61.0,2200000,1995000,36100,3950,10.3,bostadsrätt,,,,Bollmora,59.245964,18.237968,4246984,https://www.booli.se/annons/4246984
+2021-11-02,booli_brf_id,Sikvägen 48,,3.0,80.0,2970000,2395000,37100,4850,24,bostadsrätt,,,,Bollmora,59.24595289,18.23698221,4379103,https://www.booli.se/annons/4379103
+2021-11-22,booli_brf_id,Sikvägen 61,,2.0,61.0,2300000,1995000,37700,3978,15.3,bostadsrätt,,,,Bollmora,59.245964,18.237968,4416453,https://www.booli.se/bostad/727660
+2021-12-14,booli_brf_id,Sikvägen 43,,3.0,80.0,3150000,2395000,39400,4796,31.5,bostadsrätt,,,,Bollmora,59.2476092,18.23668596,4143525,https://www.booli.se/annons/4143525
+2022-01-11,booli_brf_id,Sikvägen 49,,3.0,80.0,2500000,2150000,31300,4925,16.3,bostadsrätt,,,,Bollmora,59.24695102,18.23828111,4486859,https://www.booli.se/annons/4486859
+2022-01-14,booli_brf_id,Sikvägen 48,,3.0,80.0,3000000,2495000,37500,4923,20.2,bostadsrätt,,,,Bollmora,59.24595289,18.23698221,4494134,https://www.booli.se/annons/4494134
+2022-01-31,booli_brf_id,Sikvägen 35,,3.0,80.0,3000000,,37500,4866,,bostadsrätt,,,,,59.24766173,18.2363743,4523515,https://www.booli.se/bostad/727372
+2022-02-08,booli_brf_id,Sikvägen 45,,3.0,81.0,3500000,2695000,43200,4961,29.9,bostadsrätt,,,,Bollmora,59.24723325,18.23773389,4387747,https://www.booli.se/bostad/727496
+2022-02-09,booli_brf_id,Sikvägen 40,,3.0,80.0,3500000,2795000,43800,4916,25.2,bostadsrätt,,,,Bollmora,59.2467,18.23639,4482778,https://www.booli.se/annons/4482778
+2022-02-24,booli_brf_id,Sikvägen 36,,3.0,80.0,2800000,,35000,4905,,bostadsrätt,,,,Bollmora,59.24692627,18.23545252,4486857,https://www.booli.se/annons/4486857
+2022-03-03,booli_brf_id,Sikvägen 51,,3.0,80.0,3250000,2795000,40600,4866,16.3,bostadsrätt,,,,Centrala,59.2468274,18.2382389,4530816,https://www.booli.se/annons/4530816
+2022-03-03,booli_brf_id,Sikvägen 48,,3.0,80.0,3375000,,42200,4958,,bostadsrätt,,,,,59.24595289,18.23698221,4570136,https://www.booli.se/bostad/727555
+2022-03-09,booli_brf_id,Sikvägen 37,,3.0,81.0,3220000,2695000,39800,4826,19.5,bostadsrätt,,,,Bollmora,59.24756548,18.2365834,4543363,https://www.booli.se/annons/4543363
+2022-03-16,booli_brf_id,Sikvägen 41,,3.0,81.0,3320000,2695000,41000,4949,23.2,bostadsrätt,,,,Bollmora,59.2473918,18.2370001,4550386,https://www.booli.se/bostad/727462
+2022-03-17,booli_brf_id,Sikvägen 40,,3.0,80.0,3525000,2895000,44100,4925,21.8,bostadsrätt,,,,Bollmora,59.2467,18.23639,4551419,https://www.booli.se/bostad/727437
+2022-03-31,booli_brf_id,Sikvägen 53,,3.0,80.0,2920000,2795000,36500,4866,4.5,bostadsrätt,,,,Bollmora,59.2466885,18.2382479,4566294,https://www.booli.se/annons/4566294
+2022-03-31,booli_brf_id,Sikvägen 59,,4.0,80.0,2875000,2595000,35900,4874,10.8,bostadsrätt,,,,Bollmora,59.24609762,18.23806641,4568307,https://www.booli.se/annons/4568307
+2022-04-22,booli_brf_id,Sikvägen 46,,3.0,80.0,2930000,2395000,36600,4989,22.3,bostadsrätt,,,,Bollmora,59.24609776,18.23698524,4594853,https://www.booli.se/annons/4594853
+2022-05-04,booli_brf_id,Sikvägen 39,,3.0,81.0,3060000,2695000,37800,5082,13.5,bostadsrätt,,,,Bollmora,59.24746825,18.23679424,4571077,https://www.booli.se/annons/4571077
+2022-05-11,booli_brf_id,Sikvägen 61,,2.0,61.0,2500000,,41000,4056,,bostadsrätt,,,,,59.245964,18.237968,4641575,https://www.booli.se/bostad/727656
+2022-05-13,booli_brf_id,Sikvägen 37,,3.0,80.0,2900000,2495000,36300,4971,16.2,bostadsrätt,,,,Bollmora,59.24756548,18.2365834,4620083,https://www.booli.se/annons/4620083
+2022-07-12,booli_brf_id,Sikvägen 53,,3.0,80.0,2700000,2650000,33800,5005,1.9,bostadsrätt,,,,Bollmora,59.2466885,18.2382479,4683449,https://www.booli.se/annons/4683449
+2022-07-25,booli_brf_id,Sikvägen 40,,3.0,80.0,2500000,2495000,31300,4866,0.2,bostadsrätt,,,,Bollmora,59.2467,18.23639,4650441,https://www.booli.se/bostad/727439
+2022-08-04,booli_brf_id,Sikvägen 41,,3.0,81.0,2600000,2395000,32100,4971,8.6,bostadsrätt,,,,Bollmora,59.2473918,18.2370001,4718148,https://www.booli.se/bostad/727466
+2022-08-16,booli_brf_id,Sikvägen 46,,3.0,80.0,2750000,2495000,34400,4947,10.2,bostadsrätt,,,,Bollmora,59.24609776,18.23698524,4729397,https://www.booli.se/annons/4729397
+2022-08-25,booli_brf_id,Sikvägen 31,,3.0,81.0,2750000,2750000,34000,4941,0,bostadsrätt,,,,Bollmora,59.2478581,18.2358949,3867088,https://www.booli.se/annons/3867088
+2022-09-05,booli_brf_id,Sikvägen 34,,3.0,80.0,2100000,2295000,26300,5150,-8.5,bostadsrätt,,,,Bollmora,59.2470509,18.2354508,4669397,https://www.booli.se/annons/4669397
+2022-09-05,booli_brf_id,Sikvägen 61,,2.0,61.0,2100000,1995000,34400,3900,5.3,bostadsrätt,,,,Bollmora,59.245964,18.237968,4740460,https://www.booli.se/annons/4740460
+2022-09-06,booli_brf_id,Sikvägen 39,,3.0,81.0,3000000,2395000,37000,4961,25.3,bostadsrätt,,,,Bollmora,59.24746825,18.23679424,4482882,https://www.booli.se/annons/4482882
+2022-09-15,booli_brf_id,Sikvägen 41,,3.0,80.0,2800000,2595000,35000,4947,7.9,bostadsrätt,,,,Bollmora,59.2473918,18.2370001,4766076,https://www.booli.se/annons/4766076
+2022-09-22,booli_brf_id,Sikvägen 61,,2.0,61.0,1930000,1995000,31600,4010,-3.3,bostadsrätt,,,,Bollmora,59.245964,18.237968,4152701,https://www.booli.se/annons/4152701
+2022-09-23,booli_brf_id,Sikvägen 59,,3.0,80.0,2650000,2695000,33100,4887,-1.7,bostadsrätt,,,,Bollmora,59.24609762,18.23806641,4744607,https://www.booli.se/annons/4744607
+2022-09-28,booli_brf_id,Sikvägen 39,,3.0,81.0,2110000,2295000,26000,4826,-8.1,bostadsrätt,,,,Bollmora,59.24746825,18.23679424,4773639,https://www.booli.se/annons/4773639
+2022-09-30,booli_brf_id,Sikvägen 42,,3.0,80.0,2650000,2695000,33100,4947,-1.7,bostadsrätt,,,,Bollmora,59.24656034,18.2363964,4757285,https://www.booli.se/annons/4757285
+2022-10-10,booli_brf_id,Sikvägen 29,,3.0,80.0,2950000,3090000,36900,4905,-4.5,bostadsrätt,,,,Bollmora,59.24774,18.235256,4737276,https://www.booli.se/annons/4737276
+2022-10-17,booli_brf_id,Sikvägen 59,,3.0,80.0,2225000,2395000,27800,5004,-7.1,bostadsrätt,,,,Tyresö Centrum,59.24609762,18.23806641,4781709,https://www.booli.se/bostad/727644
+2022-10-21,booli_brf_id,Sikvägen 34,,3.0,80.0,2240000,2095000,28000,4916,6.9,bostadsrätt,,,,Bollmora,59.2470509,18.2354508,4797250,https://www.booli.se/annons/4797250
+2022-10-25,booli_brf_id,Sikvägen 40,,3.0,80.0,2850000,,35600,,-5,bostadsrätt,,,,Bollmora,59.2467,18.23639,4775579,https://www.booli.se/annons/4775579
+2023-01-13,booli_brf_id,Sikvägen 51,,3.0,80.0,2700000,2495000,33800,4887,8.2,bostadsrätt,,,,Bollmora,59.2468274,18.2382389,4864511,https://www.booli.se/annons/4864511
+2023-02-02,booli_brf_id,Sikvägen 48,,3.0,80.0,2150000,2095000,26900,5219,2.6,bostadsrätt,,,,Bollmora,59.24595289,18.23698221,4877868,https://www.booli.se/annons/4877868
+2023-02-05,booli_brf_id,Sikvägen 49,,3.0,80.0,2130000,2295000,26600,5061,-7.2,bostadsrätt,,,,Bollmora,59.24695102,18.23828111,4872631,https://www.booli.se/annons/4872631
+2023-02-16,booli_brf_id,Sikvägen 33,,3.0,80.0,2550000,2790000,31900,5006,-8.6,bostadsrätt,,,,Bollmora,59.24776,18.23617,4875398,https://www.booli.se/annons/4875398
+2023-02-20,booli_brf_id,Sikvägen 53,,3.0,80.0,2095000,2095000,26200,5083,0,bostadsrätt,,,,Bollmora,59.2466885,18.2382479,4889931,https://www.booli.se/annons/4889931
+2023-03-19,booli_brf_id,Sikvägen 38,,2.0,61.0,2400000,1995000,39300,4056,20.3,bostadsrätt,,,,Tyresö Centrum,59.24685,18.236383,4929341,https://www.booli.se/annons/4929341
+2023-03-24,booli_brf_id,Sikvägen 45,,4.0,80.0,2475000,2595000,30900,5370,-4.6,bostadsrätt,,,,Tyresö Centrum,59.24723325,18.23773389,4881596,https://www.booli.se/bostad/727495
+2023-03-29,booli_brf_id,Sikvägen 61,,2.0,61.0,2330000,1995000,38200,4123,16.8,bostadsrätt,,,,Bollmora,59.245964,18.237968,4921648,https://www.booli.se/annons/4921648
+2023-04-29,booli_brf_id,Sikvägen 55,,3.0,80.0,2410000,2395000,30100,5198,0.6,bostadsrätt,,,,Bollmora,59.2465496,18.2382486,4954214,https://www.booli.se/annons/4954214
+2023-05-17,booli_brf_id,Sikvägen 37,,3.0,80.0,3100000,2995000,38800,5170,3.5,bostadsrätt,,,,Bollmora,59.24756548,18.2365834,4957389,https://www.booli.se/annons/4957389
+2023-06-01,booli_brf_id,Sikvägen 48,,3.0,80.0,3075000,2895000,38400,5219,6.2,bostadsrätt,,,,Bollmora,59.24595289,18.23698221,4978186,https://www.booli.se/annons/4978186
+2023-06-05,booli_brf_id,Sikvägen 61,,2.0,59.0,2000000,2000000,33900,4113,0,bostadsrätt,,,,Bollmora,59.245964,18.237968,4988611,https://www.booli.se/annons/4988611
+2023-06-08,booli_brf_id,Sikvägen 35,,3.0,81.0,2625000,2495000,32400,5147,5.2,bostadsrätt,,,,Centrala Tyresö,59.24766173,18.2363743,5115207,https://www.booli.se/annons/5115207
+2023-06-09,booli_brf_id,Sikvägen 35,,3.0,81.0,2625000,2550000,32400,5147,2.9,bostadsrätt,,,,Bollmora,59.24766173,18.2363743,4985010,https://www.booli.se/annons/4985010
+2023-06-12,booli_brf_id,Sikvägen 41,,3.0,81.0,2150000,2150000,26500,5120,0,bostadsrätt,,,,Bollmora,59.2473918,18.2370001,4938930,https://www.booli.se/annons/4938930
+2023-08-24,booli_brf_id,Sikvägen 42,,3.0,80.0,3200000,,40000,5348,,bostadsrätt,,,,Centrala Tyresö,59.24656034,18.2363964,5037529,https://www.booli.se/annons/5037529
+2023-09-14,booli_brf_id,Sikvägen 37,,3.0,81.0,2700000,2545000,33300,5120,6.1,bostadsrätt,,,,Centrala Tyresö,59.24756548,18.2365834,5086666,https://www.booli.se/annons/5086666
+2023-10-01,booli_brf_id,Sikvägen 44,,2.0,59.0,2050000,1995000,34700,4043,2.8,bostadsrätt,,,,Centrala Tyresö,59.24625,18.23699,5102028,https://www.booli.se/annons/5102028
+2023-10-19,booli_brf_id,Sikvägen 49,,3.0,80.0,2300000,2195000,28800,5073,4.8,bostadsrätt,,,,Centrala Tyresö,59.24695102,18.23828111,5119540,https://www.booli.se/annons/5119540
+2023-10-29,booli_brf_id,Sikvägen 46,,3.0,80.0,2325000,2295000,29100,5358,1.3,bostadsrätt,,,,Centrala Tyresö,59.24609776,18.23698524,5136708,https://www.booli.se/annons/5136708
+2023-11-02,booli_brf_id,Sikvägen 51,,3.0,80.0,2495000,2495000,31200,5080,0,bostadsrätt,,,,Centrala Tyresö,59.2468274,18.2382389,5142748,https://www.booli.se/bostad/727578
+2023-11-16,booli_brf_id,Sikvägen 53,,3.0,80.0,2200000,,27500,5122,,bostadsrätt,,,,,59.2466885,18.2382479,5169726,https://www.booli.se/bostad/727603
+2023-12-18,booli_brf_id,Sikvägen 42,,3.0,80.0,2500000,2495000,31300,5113,0.2,bostadsrätt,,,,Centrala Tyresö,59.24656034,18.2363964,5169445,https://www.booli.se/annons/5169445
+2024-01-02,booli_brf_id,Sikvägen 49,,3.0,80.0,2500000,2495000,31300,5108,0.2,bostadsrätt,,,,Centrala Tyresö,59.24695102,18.23828111,5175729,https://www.booli.se/annons/5175729
+2024-01-13,booli_brf_id,Sikvägen 32,,2.0,59.0,2300000,,39000,4024,,bostadsrätt,,,,Tyresö Centrum,59.247223,18.235441,5193692,https://www.booli.se/bostad/727315
+2024-01-17,booli_brf_id,Sikvägen 39,,3.0,81.0,3100000,3150000,38300,4826,-1.6,bostadsrätt,,,,Centrala Tyresö,59.24746825,18.23679424,5136412,https://www.booli.se/annons/5136412
+2024-01-25,booli_brf_id,Sikvägen 39,,3.0,80.0,2550000,2295000,31900,5061,11.1,bostadsrätt,,,,Centrala Tyresö,59.24746825,18.23679424,5189460,https://www.booli.se/annons/5189460
+2024-02-08,booli_brf_id,Sikvägen 42,,3.0,80.0,2812500,2895000,35200,5144,-2.8,bostadsrätt,,,,Centrala Tyresö,59.24656034,18.2363964,5191785,https://www.booli.se/bostad/727454
+2024-02-13,booli_brf_id,Sikvägen 44,,2.0,61.0,1825000,1795000,29900,4139,1.7,bostadsrätt,,,,Centrala Tyresö,59.24625,18.23699,5216057,https://www.booli.se/annons/5216057
+2024-02-27,booli_brf_id,Sikvägen 43,,5.0,111.0,3450000,,31100,6936,,bostadsrätt,,,,Tyresö Centrum,59.2476092,18.23668596,5226694,https://www.booli.se/bostad/727480
+2024-03-08,booli_brf_id,Sikvägen 32,,2.0,61.0,1795000,1795000,29400,4209,0,bostadsrätt,,,,Centrala Tyresö,59.247223,18.235441,5242165,https://www.booli.se/annons/5242165
+2024-03-20,booli_brf_id,Sikvägen 35,,3.0,80.0,3000000,,37500,5083,,bostadsrätt,,,,Centrala Tyresö,59.24766173,18.2363743,5226456,https://www.booli.se/annons/5226456
+2024-03-30,booli_brf_id,Sikvägen 34,,3.0,80.0,2660000,2495000,33300,5101,6.6,bostadsrätt,,,,Centrala Tyresö,59.2470509,18.2354508,5259549,https://www.booli.se/bostad/727336
+2024-04-24,booli_brf_id,Sikvägen 48,,3.0,80.0,2600000,2295000,32500,5156,13.3,bostadsrätt,,,,Centrala Tyresö,59.24595289,18.23698221,5291048,https://www.booli.se/bostad/727556
+2024-05-12,booli_brf_id,Sikvägen 53,,3.0,80.0,3050000,,38100,5122,,bostadsrätt,,,,Centrala Tyresö,59.2466885,18.2382479,5317335,https://www.booli.se/annons/5317335
+2024-05-12,booli_brf_id,Sikvägen 53,,3.0,80.0,2900000,,36300,5126,,bostadsrätt,,,,,59.2466885,18.2382479,5323174,https://www.booli.se/bostad/727606
+2024-05-21,booli_brf_id,Sikvägen 32,,2.0,61.0,1970000,1895000,32300,4165,4,bostadsrätt,,,,Centrala Tyresö,59.247223,18.235441,5314408,https://www.booli.se/bostad/727317
+2024-06-07,booli_brf_id,Sikvägen 35,,3.0,80.0,2810000,2495000,35100,,12.6,bostadsrätt,,,,Centrala Tyresö,59.24766173,18.2363743,5348333,https://www.booli.se/bostad/727359
+2024-06-10,booli_brf_id,Sikvägen 61,,3.0,61.0,2295000,2295000,37600,4056,0,bostadsrätt,,,,Tyresö Centrum,59.245964,18.237968,5294161,https://www.booli.se/bostad/727656
+2024-08-20,booli_brf_id,Sikvägen 59,,3.0,80.0,2595000,2595000,32400,5113,0,bostadsrätt,,,,Centrala Tyresö,59.24609762,18.23806641,5387362,https://www.booli.se/annons/5387362
+2024-08-23,booli_brf_id,Sikvägen 35,,3.0,80.0,2460000,2195000,30800,5020,12.1,bostadsrätt,,,,Centrala Tyresö,59.24766173,18.2363743,5423541,https://www.booli.se/bostad/727358
+2024-09-02,booli_brf_id,Sikvägen 31,,5.0,109.0,3850000,,35300,6756,,bostadsrätt,,,,Centrala Tyresö,59.2478581,18.2358949,5420336,https://www.booli.se/annons/5420336
+2024-09-14,booli_brf_id,Sikvägen 37,,3.0,80.0,2400000,,30000,5101,,bostadsrätt,,,,Centrala Tyresö,59.24756548,18.2365834,5445488,https://www.booli.se/annons/5445488
+2024-09-20,booli_brf_id,Sikvägen 36,,3.0,80.0,3200000,,40000,5126,,bostadsrätt,,,,Centrala Tyresö,59.24692627,18.23545252,5467495,https://www.booli.se/annons/5467495
+2024-09-23,booli_brf_id,Sikvägen 42,,3.0,80.0,2675000,,33400,5113,,bostadsrätt,,,,,59.24656034,18.2363964,5479685,https://www.booli.se/bostad/727450
+2024-10-02,booli_brf_id,Sikvägen 39,,3.0,80.0,2950000,2995000,36900,5114,-1.5,bostadsrätt,,,,Centrala Tyresö,59.24746825,18.23679424,5380870,https://www.booli.se/annons/5380870
+2024-10-21,booli_brf_id,Sikvägen 53,,3.0,80.0,2195000,2195000,27400,5337,0,bostadsrätt,,,,Centrala Tyresö,59.2466885,18.2382479,5495664,https://www.booli.se/bostad/727593
+2024-10-25,booli_brf_id,Sikvägen 38,,2.0,61.0,2000000,1795000,32800,4170,11.4,bostadsrätt,,,,Centrala Tyresö,59.24685,18.236383,5518017,https://www.booli.se/annons/5518017
+2024-10-27,booli_brf_id,Sikvägen 40,,3.0,80.0,2375000,2295000,29700,5207,3.5,bostadsrätt,,,,Centrala Tyresö,59.2467,18.23639,5503053,https://www.booli.se/annons/5503053
+2024-11-15,booli_brf_id,Sikvägen 57,,3.0,80.0,2795000,2795000,34900,5218,0,bostadsrätt,,,,Tyresö Centrum,59.24626,18.237974,5495809,https://www.booli.se/bostad/727627
+2025-02-07,booli_brf_id,Sikvägen 46,,3.0,80.0,2635000,2695000,32900,5467,-2.2,bostadsrätt,,,,Centrala Tyresö,59.24609776,18.23698524,5560840,https://www.booli.se/bostad/727539
+2025-02-21,booli_brf_id,Sikvägen 38,,2.0,59.0,2200000,1995000,37300,4225,10.3,bostadsrätt,,,,Centrala Tyresö,59.24685,18.236383,4714717,https://www.booli.se/bostad/727412
+2025-02-26,booli_brf_id,Sikvägen 46,,3.0,80.0,2200000,2295000,27500,5251,-4.1,bostadsrätt,,,,Centrala Tyresö,59.24609776,18.23698524,5600606,https://www.booli.se/bostad/727528
+2025-02-26,booli_brf_id,Sikvägen 61,,2.0,61.0,2350000,,38500,4379,,bostadsrätt,,,,,59.245964,18.237968,5627815,https://www.booli.se/bostad/727675
+2025-02-27,booli_brf_id,Sikvägen 44,,2.0,59.0,2200000,,37300,4250,,bostadsrätt,,,,Centrala Tyresö,59.24625,18.23699,5614405,https://www.booli.se/bostad/727518
+2025-03-20,booli_brf_id,Sikvägen 31,,5.0,109.0,2795000,2795000,25600,7017,0,bostadsrätt,,,,Centrala Tyresö,59.2478581,18.2358949,5637150,https://www.booli.se/bostad/727279
+2025-03-20,booli_brf_id,Sikvägen 49,,3.0,80.0,2400000,2495000,30000,5643,-3.8,bostadsrätt,,,,Centrala Tyresö,59.24695102,18.23828111,5638177,https://www.booli.se/annons/5638177
+2025-03-28,booli_brf_id,Sikvägen 29A,,4.0,81.0,2950000,,36400,5417,,bostadsrätt,,,,Centrala Tyresö,59.24774368,18.23526171,5597745,https://www.booli.se/annons/5597745
+2025-04-11,booli_brf_id,Sikvägen 44,,2.0,61.0,2100000,1850000,34400,4327,13.5,bostadsrätt,,,,Centrala Tyresö,59.24625,18.23699,5643095,https://www.booli.se/bostad/727507
+2025-04-24,booli_brf_id,Sikvägen 48,,3.0,80.0,2900000,2995000,36300,5480,-3.2,bostadsrätt,,,,Tyresö Centrum,59.24595289,18.23698221,5601095,https://www.booli.se/bostad/727549
+2025-04-25,booli_brf_id,Sikvägen 61,,2.0,59.0,2275000,2095000,38600,4245,8.6,bostadsrätt,,,,Centrala Tyresö,59.245964,18.237968,5681090,https://www.booli.se/bostad/727667
+2025-04-30,booli_brf_id,Sikvägen 55,,4.0,80.0,2795000,2795000,34900,5486,0,bostadsrätt,,,,Centrala Tyresö,59.2465496,18.2382486,5585290,https://www.booli.se/annons/5585290
+2025-05-04,booli_brf_id,Sikvägen 38,,2.0,61.0,2330000,,38200,4329,,bostadsrätt,,,,,59.24685,18.236383,5707726,https://www.booli.se/bostad/727426
+2025-05-28,booli_brf_id,Sikvägen 57,,3.0,80.0,2095000,2095000,26200,5414,0,bostadsrätt,,,,Centrala Tyresö,59.24626,18.237974,5687597,https://www.booli.se/bostad/727634
+2025-06-12,booli_brf_id,Sikvägen 57,,3.0,80.0,2600000,,32500,5480,0.2,bostadsrätt,,,,Centrala Tyresö,59.24626,18.237974,5488300,https://www.booli.se/annons/5488300
+2025-06-12,booli_brf_id,Sikvägen 49,,,,2750000,,,,,bostadsrätt,,,,Centrala Tyresö,59.24695102,18.23828111,5661652,https://www.booli.se/annons/5661652
+2025-06-12,booli_brf_id,Sikvägen 39,,3.0,80.0,2000000,,25000,5270,,bostadsrätt,,,,,59.24746825,18.23679424,5761983,https://www.booli.se/bostad/727390
+2025-07-01,booli_brf_id,Sikvägen 61,,2.0,59.0,2050000,2150000,34700,4225,-6.6,bostadsrätt,,,,Tyresö Centrum,59.245964,18.237968,5682891,https://www.booli.se/bostad/727661
+2025-09-16,booli_brf_id,Sikvägen 46,,3.0,80.0,2615000,2495000,32700,5369,4.8,bostadsrätt,,,,Centrala Tyresö,59.24609776,18.23698524,5837984,https://www.booli.se/annons/5837984
+2025-09-22,booli_brf_id,Sikvägen 38,,2.0,61.0,1900000,1995000,31100,4438,-4.8,bostadsrätt,,,,Tyresö Centrum,59.24685,18.236383,5835575,https://www.booli.se/bostad/727411
+2025-10-16,booli_brf_id,Sikvägen 29,,3.0,80.0,2095000,2095000,26200,5421,0,bostadsrätt,,,,Centrala Tyresö,59.24774,18.235256,5872891,https://www.booli.se/bostad/727267
+2025-10-23,booli_brf_id,Sikvägen 43,,3.0,80.0,2575000,2495000,32200,5426,3.2,bostadsrätt,,,,Tyresö Centrum,59.2476092,18.23668596,5881172,https://www.booli.se/bostad/727477
+2025-11-01,booli_brf_id,Sikvägen 55,,3.0,80.0,2600000,2695000,32500,5391,-3.5,bostadsrätt,,,,Tyresö Centrum,59.2465496,18.2382486,5868301,https://www.booli.se/bostad/727613
+2025-12-04,booli_brf_id,Sikvägen 49,,3.0,80.0,2450000,2195000,30600,5314,11.6,bostadsrätt,,,,Centrala Tyresö,59.24695102,18.23828111,5930065,https://www.booli.se/annons/5930065
+2025-12-09,booli_brf_id,Sikvägen 53,,3.0,80.0,2550000,2595000,31900,5337,-5.4,bostadsrätt,,,,Tyresö Centrum,59.2466885,18.2382479,5865176,https://www.booli.se/bostad/727593
+2026-01-21,booli_brf_id,Sikvägen 46,,4.0,80.0,2600000,2595000,32500,5448,-3.5,bostadsrätt,,,,Centrala Tyresö,59.24609776,18.23698524,5953256,https://www.booli.se/annons/5953256
+2026-01-28,booli_brf_id,Sikvägen 29,,4.0,81.0,2800000,2795000,34600,5428,0.2,bostadsrätt,,,,Centrala Tyresö,59.24774,18.235256,5581671,https://www.booli.se/bostad/727271
+2026-02-10,booli_brf_id,Sikvägen 48,,4.0,80.0,2375000,,29700,5337,,bostadsrätt,,,,Centrala Tyresö,59.24595289,18.23698221,5989121,https://www.booli.se/annons/5989121
+2026-03-17,booli_brf_id,Sikvägen 34,,3.0,80.0,2700000,2695000,33800,5624,-3.4,bostadsrätt,,,,Centrala Tyresö,59.2470509,18.2354508,5919946,https://www.booli.se/annons/5919946
+2026-04-01,booli_brf_id,Sikvägen 46,,4.0,80.0,2400000,2495000,30000,5448,-7.5,bostadsrätt,,,,Centrum,59.24609776,18.23698524,5995632,https://www.booli.se/bostad/727530
+2026-04-10,booli_brf_id,Sikvägen 41,,4.0,98.0,3115000,3095000,31800,6634,-2.5,bostadsrätt,,,,Centrum,59.2473918,18.2370001,5445258,https://www.booli.se/annons/5445258
+2026-04-16,booli_brf_id,Sikvägen 42,,3.0,80.0,2225000,2195000,27800,5384,1.4,bostadsrätt,,,,Centrala Tyresö,59.24656034,18.2363964,6067203,https://www.booli.se/bostad/727445
+2026-05-20,booli_brf_id,Sikvägen 49,,3.0,80.0,2710000,2595000,33900,5378,4.4,bostadsrätt,,,,Centrala Tyresö,59.24695102,18.23828111,6112368,https://www.booli.se/bostad/727571
+2026-05-22,booli_brf_id,Sikvägen 38,,2.0,61.0,1995000,1995000,32700,4346,0,bostadsrätt,,,,Centrala Tyresö,59.24685,18.236383,6124115,https://www.booli.se/bostad/727414
+2026-06-03,booli_brf_id,Sikvägen 49,,3.0,80.0,2400000,2295000,30000,5378,4.6,bostadsrätt,,,,Centrala Tyresö,59.24695102,18.23828111,6027203,https://www.booli.se/bostad/727569

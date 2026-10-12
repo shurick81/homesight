@@ -1,0 +1,14 @@
+id,name,parent
+0,Lägenheter bostadsrätt (antal),
+1,Lägenheter hyresrätt (antal),
+2,Lokaler (antal),
+3,Garageplatser (antal),
+4,Parkeringsplatser (antal),
+5,Förråd (antal),
+6,Garage- och parkeringsplatser (antal),
+7,Total yta (m²),
+8,Bostadsrättsyta (m²),7
+9,Hyresrättsyta (m²),7
+10,Lokalyta (m²),7
+11,Förrådsyta (m²),7
+12,Bostadsyta totalt (m²),

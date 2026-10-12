@@ -1,0 +1,6 @@
+sold_date,linked_by,address,apartment_number,rooms,living_area_m2,final_price_kr,asking_price_kr,kr_per_m2,monthly_fee_kr,price_change_pct,object_type,object_form,tenure,broker_agency,area_name,lat,lng,listing_id,booli_url
+2016-02-05,booli_brf_id,Peppargränd 1D,,5.0,129.0,4795000,4795000,37200,3896,0,bostadsrätt,,,,Farmarstigen,59.228973,18.23298,2021696,https://www.booli.se/annons/2021696
+2022-02-22,address_link,Peppargränd 1D,,5.0,129.0,5750000,5495000,44600,,4.6,radhus,,,,Trollbäcken,59.228973,18.23298,4434969,https://www.booli.se/annons/4434969
+2024-05-29,address_link,Peppargränd 1A,,5.0,129.0,5600000,5495000,43400,,1.9,radhus,,,,Centrala Tyresö,59.2287941,18.2326246,5128648,https://www.booli.se/annons/5128648
+2025-06-17,address_link,Peppargränd 1A,,6.0,129.0,5500000,5295000,42600,,0.1,radhus,,,,Centrala Tyresö,59.2287941,18.2326246,5636852,https://www.booli.se/annons/5636852
+2026-02-25,address_link,Peppargränd 1C,,6.0,129.0,5300000,,41100,,,radhus,,,,Centrala Tyresö,59.22899054,18.23280769,5974995,https://www.booli.se/annons/5974995

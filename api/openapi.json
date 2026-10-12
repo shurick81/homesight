@@ -1,0 +1,2254 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "homesight BRF API",
+    "version": "0.7.0",
+    "description": "Read-only data about Swedish bostadsrättsföreningar (BRFs, housing cooperatives) and the apartments for sale in them, for deciding which apartment to buy. GET /advertisements follows the contract of the Real Estate Data API (llm-brf.github.io). Every figure is extracted from the BRF's own annual reports (årsredovisningar) and verified; the per-BRF figures summarised here link back to the page of the report they came from in the full dataset. Coverage is small and listed by GET /brfs: only BRFs returned there exist in this dataset. A BRF is identified by its organisationsnummer (orgnr, format NNNNNN-NNNN). Amounts are SEK, areas m², years are calendar years; a fiscal year that does not follow the calendar year is labelled by the year it starts."
+  },
+  "paths": {
+    "/llms.txt": {
+      "get": {
+        "summary": "A short Markdown guide for LLM agents (llmstxt.org format): what the data is, coverage, how to query it, caveats.",
+        "operationId": "llmsTxt",
+        "responses": {
+          "200": {
+            "description": "Markdown text.",
+            "content": {
+              "text/markdown": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "operationId": "health",
+        "summary": "Service status and version.",
+        "responses": {
+          "200": {
+            "description": "Service is up.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/brfs": {
+      "get": {
+        "operationId": "listBrfs",
+        "summary": "All BRFs in the dataset, one summary each, sorted by name. Start here to see coverage and to find an orgnr.",
+        "responses": {
+          "200": {
+            "description": "The BRFs covered.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    },
+                    "brfs": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/BrfSummary"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/brfs/{orgnr}": {
+      "get": {
+        "operationId": "getBrf",
+        "summary": "Summary of one BRF: size, build years, data coverage and pipe-replacement (stambyte) assessment.",
+        "parameters": [
+          {
+            "name": "orgnr",
+            "in": "path",
+            "required": true,
+            "description": "Organisationsnummer of the BRF, e.g. 712400-1467.",
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{6}-\\d{4}$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The BRF.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BrfSummary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "orgnr is not in the NNNNNN-NNNN format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "This BRF is not in the dataset.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/brfs/{orgnr}/financials": {
+      "get": {
+        "operationId": "getBrfFinancials",
+        "summary": "The BRF's own annual-report figures, one entry per fiscal year (newest first): income, costs, interest, loans, cash, per-m² figures and ratios. Extracted from the årsredovisning and verified against it.",
+        "description": "Use this to judge a BRF's finances: loans_kr and per_m2.loans_kr (debt), per_m2.annual_fees_kr (what members pay), ratios.interest_share_of_annual_fees_pct (how exposed fees are to interest rates), balance_sheet.cash_kr (buffer), costs.ground_rent_kr (tomträttsavgäld, only for BRFs on leased land). Years not listed are not held (often not public); `verified` false means extracted but not yet checked. Compare BRFs on the per_m2 figures. Every entry links its source report (report.url); with include=values each number also comes with its page and position in that report.",
+        "parameters": [
+          {
+            "name": "orgnr",
+            "in": "path",
+            "required": true,
+            "description": "Organisationsnummer, e.g. 769616-7928.",
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{6}-\\d{4}$"
+            }
+          },
+          {
+            "name": "include",
+            "in": "query",
+            "required": false,
+            "description": "`values`: add every stored number with its page and box in the report (provenance). Omit for a compact answer.",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "values"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The fiscal years held for this BRF.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BrfFinancials"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Malformed orgnr or include.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "BRF not in the dataset.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/advertisements": {
+      "get": {
+        "summary": "List property advertisements",
+        "operationId": "listAdvertisements",
+        "description": "Returns property listings to support a purchase decision. Like sales, each row is fully self-contained (denormalized \"One Big Table\" model): besides the listing's own fields it embeds the housing cooperative (brf_*) and the five geographically nearest schools (school_1..5_*), plus a derived `avg_school_socio_index` averaging the socio-economic index of nearby schools. This is Skolverket's *Index på skolenhetsnivå* (socioekonomiskt index); a higher value corresponds to a higher modelled share of students not expected to become eligible for a national programme in upper-secondary school. See the `avg_school_socio_index` field for the full definition and the source link.\n\nThe result set is **capped at 10 rows**. Rather than paging the whole market, choose a `sort` that matches what you're optimising for (lowest price per m², largest BRF, nearby-school socio-economic index, …) and narrow with the filters below; you then get the 10 best matches in one cheap request. Default order is most recently listed first.\n\n**Coverage in this API:** every listing of the Real Estate Data API, in the kommuns Stockholm, Nacka, Solna and Tyresö (Booli snapshot). Differences from it: a listing is also linked to its BRF by the Booli apartment id in its URL and by its address with the entrance letter, so about 150 more listings carry brf_* fields (and the brf_pct_for_sale of their BRF counts them); street_name has no trailing space or stray digit; a regression-derived trend or forecast that falls exactly on .5 can round the other way. Not yet migrated: the nearest-school block (school_*, avg_school_socio_index*, and the *_school_socio_index_* benchmarks, which are NULL). Until then the min_school_index* filters match nothing and the school_* sorts return listings in tiebreak order. Rows with an equal sort value, and rows without it (always last), are ordered by listing_id, newest first.\n\n\n**Verified BRF layer (homesight):** for BRFs whose annual reports are extracted, every listing also carries brf_report_* (debt, fees, costs and interest per m², cash, ground rent, from the BRF's own årsredovisning), brf_land_tenure and the stambyte assessment. GET /brfs/{orgnr}/financials has all years and the full breakdown.\n",
+        "parameters": [
+          {
+            "name": "property_type",
+            "in": "query",
+            "required": false,
+            "description": "LEGACY conflated dwelling-type filter, kept for back-compat. It mixes two independent ideas (tenure for apartments, physical form for houses). Prefer the two orthogonal filters below — `object_form` (physical form) and `tenure` (property-right) — which can be combined.\n",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "bostadsrätt",
+                "villa",
+                "radhus",
+                "fritidshus"
+              ]
+            },
+            "example": "bostadsrätt"
+          },
+          {
+            "name": "object_form",
+            "in": "query",
+            "required": false,
+            "description": "Restrict to one physical dwelling form. This is the \"what is it\" axis, independent of tenure. The row-house family is kept distinct here (`radhus`/`parhus`/`kedjehus`). Combine with `tenure` to target e.g. a radhus sold via a BRF: `object_form=radhus&tenure=bostadsrätt`.\n",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "lägenhet",
+                "villa",
+                "radhus",
+                "parhus",
+                "kedjehus",
+                "fritidshus"
+              ]
+            },
+            "example": "radhus"
+          },
+          {
+            "name": "tenure",
+            "in": "query",
+            "required": false,
+            "description": "Restrict to one property-right (tenure) — the \"how is it owned\" axis, independent of physical form. `bostadsrätt` = a BRF (cooperative) unit; `äganderätt` = freehold. Combine with `object_form` as needed.\n",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "bostadsrätt",
+                "äganderätt"
+              ]
+            },
+            "example": "bostadsrätt"
+          },
+          {
+            "name": "kommun",
+            "in": "query",
+            "required": false,
+            "description": "Restrict to listings in a single kommun. Exact match on the stored kommun name (case and spelling must match, e.g. `Tyresö`). Call `GET /kommuns` to enumerate the values this filter accepts.\n",
+            "schema": {
+              "type": "string",
+              "maxLength": 100
+            },
+            "example": "Tyresö"
+          },
+          {
+            "name": "omrade",
+            "in": "query",
+            "required": false,
+            "description": "Restrict to listings in a single område (sub-kommun neighborhood / stadsdel, e.g. `Trollbäcken`). Exact match on the stored area name. Usually combined with `kommun`, since område names recur across kommuns. Call `GET /areas` to enumerate the values this filter accepts.\n",
+            "schema": {
+              "type": "string",
+              "maxLength": 100
+            },
+            "example": "Trollbäcken"
+          },
+          {
+            "name": "min_rooms",
+            "in": "query",
+            "required": false,
+            "description": "Only listings with at least this many rooms (e.g. 3 or 3.5).",
+            "schema": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "example": 3
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "description": "Ordering of the (capped) result set. `price_*` sorts on asking price, `price_per_sqm_*` on kr/m² (best value first with `_asc`), `rooms_*` on room count, `area_*` on living area, `fee_per_sqm_*` on the monthly avgift per m² (`_asc` = cheapest to own first), `fee_*` on the total monthly avgift in kr (`_asc` = lowest fee first), `brf_price_*` on the BRF's current-year (latest) average kr/m², `construction_year_*` on the building's construction year (`_desc` = newest first), `brf_units_*` on the number of apartments in the cooperative, `brf_loan_*` on `brf_loan_per_m2` (the BRF's loan per m²; `_asc` = least-indebted first), `brf_trend_*` on `brf_kr_per_m2_trend` (the BRF's price/m² trend in kr per year; `_desc` = fastest appreciating first), `brf_fee_*` on the BRF's current-year (latest) average avgift per m² (`_asc` = cheapest to own first) and `brf_fee_trend_*` on `brf_fee_per_m2_trend` (the BRF's avgift/m² trend in kr per year; `_asc` = slowest fee growth first). `brf_pct_for_sale_*` sorts on `brf_pct_for_sale` (the share of the BRF's apartments currently listed; `_asc` = most stable / fewest on the market first). The all-history `brf_trend_*`/`brf_fee_trend_*` slopes have **windowed** counterparts fit over only the last 5 years — `brf_price_trend_5y_*` and `brf_fee_trend_5y_*` — plus forward projections of each metric three years past the latest year: `brf_price_forecast_*` (projected kr/m²; `_desc` = highest projected price first) and `brf_fee_forecast_*` (projected avgift/m²; `_asc` = lowest projected fee first). The school sorts come in three radii — `school_index_1_*` (closest school), `school_index_3_*` (3 nearest) and `school_index_*` (5 nearest) — on the current latest-year socio-economic index (Skolverket's *Index på skolenhetsnivå*; a higher value = a higher modelled share of students not expected to become eligible for upper-secondary school — see `avg_school_socio_index`). `_desc` sorts highest index first, `_asc` lowest. With matching `school_forecast_1_*` / `school_forecast_3_*` / `school_forecast_*` on the same averages projected three years ahead from the recent-years trend. Listings missing the sorted value sort last.\n",
+            "schema": {
+              "type": "string",
+              "default": "listed_date",
+              "enum": [
+                "listed_date",
+                "price_asc",
+                "price_desc",
+                "price_per_sqm_asc",
+                "price_per_sqm_desc",
+                "rooms_asc",
+                "rooms_desc",
+                "area_asc",
+                "area_desc",
+                "fee_per_sqm_asc",
+                "fee_per_sqm_desc",
+                "fee_asc",
+                "fee_desc",
+                "construction_year_asc",
+                "construction_year_desc",
+                "brf_units_asc",
+                "brf_units_desc",
+                "brf_loan_asc",
+                "brf_loan_desc",
+                "brf_price_asc",
+                "brf_price_desc",
+                "brf_trend_asc",
+                "brf_trend_desc",
+                "brf_fee_asc",
+                "brf_fee_desc",
+                "brf_pct_for_sale_asc",
+                "brf_pct_for_sale_desc",
+                "brf_fee_trend_asc",
+                "brf_fee_trend_desc",
+                "brf_price_trend_5y_asc",
+                "brf_price_trend_5y_desc",
+                "brf_price_forecast_asc",
+                "brf_price_forecast_desc",
+                "brf_fee_trend_5y_asc",
+                "brf_fee_trend_5y_desc",
+                "brf_fee_forecast_asc",
+                "brf_fee_forecast_desc",
+                "school_index_1_asc",
+                "school_index_1_desc",
+                "school_index_3_asc",
+                "school_index_3_desc",
+                "school_index_asc",
+                "school_index_desc",
+                "school_forecast_1_asc",
+                "school_forecast_1_desc",
+                "school_forecast_3_asc",
+                "school_forecast_3_desc",
+                "school_forecast_asc",
+                "school_forecast_desc"
+              ]
+            },
+            "example": "price_per_sqm_asc"
+          },
+          {
+            "name": "min_price",
+            "in": "query",
+            "required": false,
+            "description": "Only listings with an asking price of at least this many kronor.",
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "example": 2000000
+          },
+          {
+            "name": "max_price",
+            "in": "query",
+            "required": false,
+            "description": "Only listings with an asking price of at most this many kronor.",
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "example": 5000000
+          },
+          {
+            "name": "max_kr_per_m2",
+            "in": "query",
+            "required": false,
+            "description": "Only listings with a price per m² of at most this many kronor.",
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "example": 60000
+          },
+          {
+            "name": "min_area_m2",
+            "in": "query",
+            "required": false,
+            "description": "Only listings with at least this living area (m²).",
+            "schema": {
+              "type": "number",
+              "minimum": 0
+            },
+            "example": 60
+          },
+          {
+            "name": "max_area_m2",
+            "in": "query",
+            "required": false,
+            "description": "Only listings with at most this living area (m²).",
+            "schema": {
+              "type": "number",
+              "minimum": 0
+            },
+            "example": 120
+          },
+          {
+            "name": "min_construction_year",
+            "in": "query",
+            "required": false,
+            "description": "Only listings whose building was constructed in or after this year.",
+            "schema": {
+              "type": "integer",
+              "minimum": 1500,
+              "maximum": 2100
+            },
+            "example": 1970
+          },
+          {
+            "name": "max_construction_year",
+            "in": "query",
+            "required": false,
+            "description": "Only listings whose building was constructed in or before this year (building age = current year − construction_year).\n",
+            "schema": {
+              "type": "integer",
+              "minimum": 1500,
+              "maximum": 2100
+            },
+            "example": 2020
+          },
+          {
+            "name": "max_fee_per_sqm",
+            "in": "query",
+            "required": false,
+            "description": "Only listings whose monthly avgift per m² (`monthly_fee_per_m2`, kr/m²/month) is at most this value — caps ongoing carrying cost.\n",
+            "schema": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            "example": 80
+          },
+          {
+            "name": "max_monthly_fee",
+            "in": "query",
+            "required": false,
+            "description": "Only listings whose total monthly avgift (`monthly_fee_kr`, kr/month) is at most this value — caps the absolute fee regardless of size.\n",
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "example": 5000
+          },
+          {
+            "name": "brf_org_number",
+            "in": "query",
+            "required": false,
+            "description": "Only listings belonging to the cooperative with this exact Swedish org.nr (`brf_org_number`) — the identity filter for \"all listings of one BRF\". Accepted with or without the hyphen (`769625-3744` or `7696253744`); both normalise to the stored `NNNNNN-NNNN` form. A value that is not 10 digits returns HTTP 400.\n",
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{6}-?\\d{4}$"
+            },
+            "example": "769625-3744"
+          },
+          {
+            "name": "min_brf_units",
+            "in": "query",
+            "required": false,
+            "description": "Only listings whose cooperative has at least this many apartments (brf_num_units). Larger föreningar tend to spread shared costs wider.\n",
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "example": 50
+          },
+          {
+            "name": "max_brf_loan_per_m2",
+            "in": "query",
+            "required": false,
+            "description": "Only listings whose BRF loan per m² (`brf_loan_per_m2`, kr/m²) is at most this value — a lower cap targets less-indebted föreningar.\n",
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "example": 6000
+          },
+          {
+            "name": "min_brf_trend",
+            "in": "query",
+            "required": false,
+            "description": "Only listings whose `brf_kr_per_m2_trend` (the BRF's price/m² trend in kr per year, from its own sold listings) is at least this value. May be negative; use 0 to surface only föreningar with non-declining prices.\n",
+            "schema": {
+              "type": "integer"
+            },
+            "example": 0
+          },
+          {
+            "name": "max_brf_fee_trend",
+            "in": "query",
+            "required": false,
+            "description": "Only listings whose `brf_fee_per_m2_trend` (the BRF's avgift/m² trend in kr per year, from its own sold listings) is at most this value — a lower cap targets föreningar with the most controlled fee growth. May be negative; use 0 to surface only föreningar with non-rising fees.\n",
+            "schema": {
+              "type": "number"
+            },
+            "example": 5
+          },
+          {
+            "name": "min_brf_price_trend_5y",
+            "in": "query",
+            "required": false,
+            "description": "Only listings whose `brf_kr_per_m2_trend_5y` (the BRF's price/m² trend in kr per year, fit over only the **last 5 years** of its sold listings) is at least this value. The recent-momentum counterpart of `min_brf_trend`, which spans the BRF's entire history. May be negative.\n",
+            "schema": {
+              "type": "integer"
+            },
+            "example": 0
+          },
+          {
+            "name": "min_brf_price_forecast",
+            "in": "query",
+            "required": false,
+            "description": "Only listings whose `brf_kr_per_m2_forecast` (the BRF's price/m² projected 3 years past the latest year from its 5-year trend) is at least this value — a floor on the projected future price level.\n",
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "example": 50000
+          },
+          {
+            "name": "max_brf_fee_trend_5y",
+            "in": "query",
+            "required": false,
+            "description": "Only listings whose `brf_fee_per_m2_trend_5y` (the BRF's avgift/m² trend in kr per year, fit over only the **last 5 years**) is at most this value — the recent-momentum counterpart of `max_brf_fee_trend`. May be negative.\n",
+            "schema": {
+              "type": "number"
+            },
+            "example": 5
+          },
+          {
+            "name": "max_brf_fee_forecast",
+            "in": "query",
+            "required": false,
+            "description": "Only listings whose `brf_fee_per_m2_forecast` (the BRF's avgift/m² projected 3 years past the latest year from its 5-year trend) is at most this value — a cap on the projected future monthly fee per m².\n",
+            "schema": {
+              "type": "number",
+              "minimum": 0
+            },
+            "example": 80
+          },
+          {
+            "name": "min_brf_pct_for_sale",
+            "in": "query",
+            "required": false,
+            "description": "Only listings whose `brf_pct_for_sale` (the share of the BRF's apartments currently on the market, in percent) is at least this value — surfaces föreningar with unusually high turnover.\n",
+            "schema": {
+              "type": "number",
+              "minimum": 0
+            },
+            "example": 5
+          },
+          {
+            "name": "max_brf_pct_for_sale",
+            "in": "query",
+            "required": false,
+            "description": "Only listings whose `brf_pct_for_sale` (the share of the BRF's apartments currently on the market, in percent) is at most this value — targets stable föreningar with few apartments listed.\n",
+            "schema": {
+              "type": "number",
+              "minimum": 0
+            },
+            "example": 10
+          },
+          {
+            "name": "min_school_index",
+            "in": "query",
+            "required": false,
+            "description": "Only listings whose `avg_school_socio_index` (average latest-year socio-economic index across the 5 nearest schools) is at least this value. A higher index = a higher modelled share of students not expected to become eligible for upper-secondary school (see `avg_school_socio_index`), so this filter keeps areas at or above that index level.\n",
+            "schema": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            "example": 90
+          },
+          {
+            "name": "min_school_index_3",
+            "in": "query",
+            "required": false,
+            "description": "Only listings whose `avg_school_socio_index_3` (average latest-year socio-economic index across the 3 nearest schools — a tighter radius) is at least this value.\n",
+            "schema": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            "example": 90
+          },
+          {
+            "name": "min_school_index_1",
+            "in": "query",
+            "required": false,
+            "description": "Only listings whose `avg_school_socio_index_1` (the closest school's latest-year socio-economic index) is at least this value.\n",
+            "schema": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            "example": 90
+          },
+          {
+            "name": "near_lat",
+            "in": "query",
+            "required": false,
+            "description": "Radius search — centre latitude (WGS84). Must be given together with `near_lng` and `radius_m`; returns only listings within that radius.\n",
+            "schema": {
+              "type": "number",
+              "minimum": -90,
+              "maximum": 90
+            },
+            "example": 59.2435
+          },
+          {
+            "name": "near_lng",
+            "in": "query",
+            "required": false,
+            "description": "Radius search — centre longitude (WGS84). See `near_lat`.",
+            "schema": {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            },
+            "example": 18.3012
+          },
+          {
+            "name": "radius_m",
+            "in": "query",
+            "required": false,
+            "description": "Radius search — radius in metres around (`near_lat`, `near_lng`). All three radius parameters must be supplied together (else HTTP 400).\n",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100000
+            },
+            "example": 1500
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of rows to return (1–10). Capped at 10 by design — see the endpoint description; pick a `sort` and filters instead of paging.\n",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10,
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Advertisements returned (possibly empty)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdvertisementsList"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid query parameter",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "examples": {
+                  "bad_sort": {
+                    "value": {
+                      "error": "sort must be one of: area_asc, area_desc, brf_fee_asc, brf_fee_desc, brf_fee_forecast_asc, brf_fee_forecast_desc, brf_fee_trend_5y_asc, brf_fee_trend_5y_desc, brf_fee_trend_asc, brf_fee_trend_desc, brf_loan_asc, brf_loan_desc, brf_pct_for_sale_asc, brf_pct_for_sale_desc, brf_price_asc, brf_price_desc, brf_price_forecast_asc, brf_price_forecast_desc, brf_price_trend_5y_asc, brf_price_trend_5y_desc, brf_trend_asc, brf_trend_desc, brf_units_asc, brf_units_desc, construction_year_asc, construction_year_desc, fee_asc, fee_desc, fee_per_sqm_asc, fee_per_sqm_desc, listed_date, price_asc, price_desc, price_per_sqm_asc, price_per_sqm_desc, rooms_asc, rooms_desc, school_forecast_1_asc, school_forecast_1_desc, school_forecast_3_asc, school_forecast_3_desc, school_forecast_asc, school_forecast_desc, school_index_1_asc, school_index_1_desc, school_index_3_asc, school_index_3_desc, school_index_asc, school_index_desc"
+                    }
+                  },
+                  "bad_limit": {
+                    "value": {
+                      "error": "limit out of range (1-10)"
+                    }
+                  },
+                  "bad_brf_org_number": {
+                    "value": {
+                      "error": "brf_org_number must be 10 digits (NNNNNN-NNNN)"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cities": {
+      "get": {
+        "summary": "List cities (top of the geo hierarchy)",
+        "operationId": "listCities",
+        "description": "Returns one row per city — the level above kommun, an explicit grouping of kommuns (e.g. \"Stockholm\" spans every Stockholms-län kommun), ordered by name. Each row carries its current listing_count and the aggregated-up avg/median asking price per m² (kr/m²) and avgift per m² over the city's current advertisements. The root of the hierarchical-stats model, so it has no copied-down parent columns. Backed by a small reference table refreshed on each data import — not a live scan of the listings.\n\n**In this API:** the rows are built from the same Booli snapshot as the Real Estate Data API and match it, except: the school block (avg/median_school_socio_index, school_socio_index_*) is not migrated yet and is NULL; about 150 more listings are linked to their BRF here, so the cooperative-stock fields (units_in_scope_br, pct_for_sale_br, turnover_br_*, *_loan_per_m2_br) of their område, kommun and city count those BRFs too; a sold trend or forecast that falls exactly on a rounding tie can differ by 1 in its last digit.\n",
+        "responses": {
+          "200": {
+            "description": "Cities returned (possibly empty)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CitiesList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/kommuns": {
+      "get": {
+        "summary": "List available kommuns",
+        "operationId": "listKommuns",
+        "description": "Returns every kommun present in the dataset, each with its current number of listings, ordered by name. Use this to populate a kommun picker and to discover the exact values the `kommun` filter on `GET /advertisements` accepts. Each kommun also carries `price_stats`: the average and median sale price per m² (kr/m²) per year and object type (bostadsrätt, villa, radhus, …), newest year first. Backed by a small reference table refreshed on each data import — not a live scan of the listings.\n\n**In this API:** the rows are built from the same Booli snapshot as the Real Estate Data API and match it, except: the school block (avg/median_school_socio_index, school_socio_index_*) is not migrated yet and is NULL; about 150 more listings are linked to their BRF here, so the cooperative-stock fields (units_in_scope_br, pct_for_sale_br, turnover_br_*, *_loan_per_m2_br) of their område, kommun and city count those BRFs too; a sold trend or forecast that falls exactly on a rounding tie can differ by 1 in its last digit.\n",
+        "responses": {
+          "200": {
+            "description": "Kommuns returned (possibly empty)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KommunsList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/areas": {
+      "get": {
+        "summary": "List sub-kommun områden (neighborhoods / stadsdelar)",
+        "operationId": "listAreas",
+        "description": "Returns the områden (sub-kommun neighborhoods / stadsdelar) present in the dataset, one row per `(kommun, område)` with its current number of listings, ordered by kommun then område. The område is the geographic tier between a whole kommun and a single BRF. Use this to populate an område picker, to discover the exact values the `omrade` filter on `GET /advertisements` and `GET /brfs` accepts, and to answer \"how many områden are in kommun X\" (call with `?kommun=X`). Backed by a small reference table refreshed on each data import — not a live scan of the listings.\n\n**In this API:** the rows are built from the same Booli snapshot as the Real Estate Data API and match it, except: the school block (avg/median_school_socio_index, school_socio_index_*) is not migrated yet and is NULL; about 150 more listings are linked to their BRF here, so the cooperative-stock fields (units_in_scope_br, pct_for_sale_br, turnover_br_*, *_loan_per_m2_br) of their område, kommun and city count those BRFs too; a sold trend or forecast that falls exactly on a rounding tie can differ by 1 in its last digit.\n",
+        "parameters": [
+          {
+            "name": "kommun",
+            "in": "query",
+            "required": false,
+            "description": "Restrict the catalogue to a single kommun (exact match). Discover valid values via `GET /kommuns`.\n",
+            "schema": {
+              "type": "string",
+              "maxLength": 100
+            },
+            "example": "Tyresö"
+          },
+          {
+            "name": "name_search",
+            "in": "query",
+            "required": false,
+            "description": "Case-insensitive substring match against the område name — use when the exact name is unknown (e.g. `troll` matches \"Trollbäcken\"). LIKE metacharacters are matched literally.\n",
+            "schema": {
+              "type": "string",
+              "maxLength": 100
+            },
+            "example": "troll"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Områden returned (possibly empty)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AreasList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sales/stats/avg-price-per-sqm": {
+      "get": {
+        "summary": "Average sale price per square metre",
+        "operationId": "getSalesStatsAvgPricePerSqm",
+        "description": "Returns the average final sale price per square metre (kr/m²) across completed sales in the database. Both query parameters are optional and can be combined. The response always includes the date range and number of sales that contributed to the average so the caller can judge statistical significance.\n\n**In this API:** the same completed sales as the Real Estate Data API (Booli snapshot, Stockholm, Nacka, Solna and Tyresö); every year/rooms combination is precomputed, so the values are identical.\n",
+        "parameters": [
+          {
+            "name": "year",
+            "in": "query",
+            "required": false,
+            "description": "Restrict to sales in this calendar year.",
+            "schema": {
+              "type": "integer",
+              "minimum": 1900,
+              "maximum": 2100
+            },
+            "example": 2025
+          },
+          {
+            "name": "rooms",
+            "in": "query",
+            "required": false,
+            "description": "Restrict to sales where the number of rooms matches exactly. Accepts integers and half-values (e.g. 3 or 3.5).\n",
+            "schema": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 20
+            },
+            "example": 3
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Average successfully computed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AvgPricePerSqm"
+                },
+                "examples": {
+                  "all_data": {
+                    "summary": "No filters — all 375 sales",
+                    "value": {
+                      "avg_kr_per_m2": 29112,
+                      "sample_count": 375,
+                      "from_date": "2012-11-02",
+                      "to_date": "2026-06-03",
+                      "filters": {
+                        "year": null,
+                        "rooms": null
+                      }
+                    }
+                  },
+                  "by_year": {
+                    "summary": "Filter by year",
+                    "value": {
+                      "avg_kr_per_m2": 25558,
+                      "sample_count": 25,
+                      "from_date": "2025-01-07",
+                      "to_date": "2025-12-22",
+                      "filters": {
+                        "year": 2025,
+                        "rooms": null
+                      }
+                    }
+                  },
+                  "by_rooms": {
+                    "summary": "Filter by number of rooms",
+                    "value": {
+                      "avg_kr_per_m2": 27095,
+                      "sample_count": 90,
+                      "from_date": "2012-11-02",
+                      "to_date": "2026-06-03",
+                      "filters": {
+                        "year": null,
+                        "rooms": 3.0
+                      }
+                    }
+                  },
+                  "by_year_and_rooms": {
+                    "summary": "Filter by year and rooms combined",
+                    "value": {
+                      "avg_kr_per_m2": 22639,
+                      "sample_count": 7,
+                      "from_date": "2025-01-07",
+                      "to_date": "2025-12-10",
+                      "filters": {
+                        "year": 2025,
+                        "rooms": 3.0
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid query parameter",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "examples": {
+                  "bad_year": {
+                    "value": {
+                      "error": "year must be an integer"
+                    }
+                  },
+                  "bad_rooms": {
+                    "value": {
+                      "error": "rooms must be a number"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No sales match the given filters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "error": "no data found for the given filters"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "required": [
+          "error"
+        ],
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "year must be an integer"
+          }
+        }
+      },
+      "BrfSummary": {
+        "type": "object",
+        "description": "One BRF. Null means not known or not recorded.",
+        "properties": {
+          "orgnr": {
+            "type": "string",
+            "description": "Organisationsnummer, NNNNNN-NNNN."
+          },
+          "name": {
+            "type": "string",
+            "description": "Registered name of the association."
+          },
+          "municipality": {
+            "type": "string",
+            "description": "Kommun where the property is."
+          },
+          "built_from": {
+            "type": "integer",
+            "description": "First year of construction (byggnadsår, or värdeår when that is all the report gives).",
+            "nullable": true
+          },
+          "built_to": {
+            "type": "integer",
+            "description": "Last year of construction; equals built_from for a single build year.",
+            "nullable": true
+          },
+          "built_source": {
+            "type": "string",
+            "description": "Where the build years come from in the reports.",
+            "nullable": true
+          },
+          "land_tenure": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "äganderätt",
+              "tomträtt",
+              "arrende"
+            ],
+            "description": "Whether the association owns the land under its buildings, from its annual report. äganderätt: owns the land (no ground rent). tomträtt: site leasehold from the kommun; the association pays a yearly tomträttsavgäld that the kommun renegotiates every 10–20 years, often with a large increase, a risk for future fees. arrende: private land lease. Null when not yet extracted."
+          },
+          "apartments": {
+            "type": "integer",
+            "description": "Number of bostadsrätt apartments (owner-occupied; rental apartments not included) in the latest extracted report.",
+            "nullable": true
+          },
+          "living_area_m2": {
+            "type": "integer",
+            "description": "Bostadsrätt living area in m² (total residential area where the report does not split it), latest extracted report. Divide SEK amounts by this for per-m² comparisons.",
+            "nullable": true
+          },
+          "fiscal_year": {
+            "type": "string",
+            "description": "Fiscal year as 'MM-DD – MM-DD'; '01-01 – 12-31' is the calendar year."
+          },
+          "reports_held": {
+            "type": "string",
+            "description": "Range of fiscal years whose annual reports are held.",
+            "nullable": true
+          },
+          "extracted_fy": {
+            "type": "integer",
+            "description": "Latest fiscal year with extracted figures.",
+            "nullable": true
+          },
+          "verified_through": {
+            "type": "integer",
+            "description": "Latest fiscal year whose figures pass all consistency checks against the source reports.",
+            "nullable": true
+          },
+          "stambyte_last": {
+            "type": "string",
+            "description": "When the pipes (stammar: drains, water) were last replaced, e.g. '2011–2013'; 'none' if never since construction; may carry a qualifier such as '(partial_stambyte)'.",
+            "nullable": true
+          },
+          "stambyte_next": {
+            "type": "string",
+            "description": "Year range in which the next stambyte is expected. A stambyte is a major, costly project (typically raises fees or debt); see stambyte_next_status for how firm this is.",
+            "nullable": true
+          },
+          "stambyte_next_status": {
+            "type": "string",
+            "enum": [
+              "in_progress",
+              "decided",
+              "planned",
+              "estimated"
+            ],
+            "description": "in_progress: under way; decided: voted and financed; planned: in the maintenance plan; estimated: derived from pipe age (typically ~50 years), not from any plan.",
+            "nullable": true
+          },
+          "stambyte_next_confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ],
+            "nullable": true
+          },
+          "stamspolning_done": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "Years the drains were flushed (stamspolning), a routine maintenance step.",
+            "nullable": true
+          },
+          "stamspolning_next": {
+            "type": "string",
+            "description": "Next planned stamspolning, if any.",
+            "nullable": true
+          },
+          "stamspolning_regular": {
+            "type": "string",
+            "description": "'regular', 'once' or 'none recorded'.",
+            "nullable": true
+          },
+          "source": {
+            "type": "string",
+            "description": "File in the homesight repository this summary was built from."
+          }
+        }
+      },
+      "AdvertisementsList": {
+        "type": "object",
+        "required": [
+          "advertisements",
+          "count",
+          "filters"
+        ],
+        "properties": {
+          "advertisements": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Advertisement"
+            }
+          },
+          "count": {
+            "type": "integer",
+            "description": "Number of rows returned (at most 10).",
+            "example": 10
+          },
+          "filters": {
+            "type": "object",
+            "description": "Echo of the filters and sort that were applied.",
+            "properties": {
+              "property_type": {
+                "type": "string",
+                "nullable": true
+              },
+              "object_form": {
+                "type": "string",
+                "nullable": true
+              },
+              "tenure": {
+                "type": "string",
+                "nullable": true
+              },
+              "kommun": {
+                "type": "string",
+                "nullable": true
+              },
+              "omrade": {
+                "type": "string",
+                "nullable": true
+              },
+              "min_rooms": {
+                "type": "number",
+                "nullable": true
+              },
+              "sort": {
+                "type": "string",
+                "example": "price_per_sqm_asc"
+              },
+              "min_price": {
+                "type": "integer",
+                "nullable": true
+              },
+              "max_price": {
+                "type": "integer",
+                "nullable": true
+              },
+              "max_kr_per_m2": {
+                "type": "integer",
+                "nullable": true
+              },
+              "min_area_m2": {
+                "type": "number",
+                "nullable": true
+              },
+              "max_area_m2": {
+                "type": "number",
+                "nullable": true
+              },
+              "min_construction_year": {
+                "type": "integer",
+                "nullable": true
+              },
+              "max_construction_year": {
+                "type": "integer",
+                "nullable": true
+              },
+              "max_fee_per_sqm": {
+                "type": "number",
+                "nullable": true
+              },
+              "max_monthly_fee": {
+                "type": "integer",
+                "nullable": true
+              },
+              "brf_org_number": {
+                "type": "string",
+                "nullable": true,
+                "description": "Normalised to the stored `NNNNNN-NNNN` form.",
+                "example": "769625-3744"
+              },
+              "min_brf_units": {
+                "type": "integer",
+                "nullable": true
+              },
+              "max_brf_loan_per_m2": {
+                "type": "integer",
+                "nullable": true
+              },
+              "min_brf_trend": {
+                "type": "integer",
+                "nullable": true
+              },
+              "max_brf_fee_trend": {
+                "type": "number",
+                "nullable": true
+              },
+              "min_brf_price_trend_5y": {
+                "type": "integer",
+                "nullable": true
+              },
+              "min_brf_price_forecast": {
+                "type": "integer",
+                "nullable": true
+              },
+              "max_brf_fee_trend_5y": {
+                "type": "number",
+                "nullable": true
+              },
+              "max_brf_fee_forecast": {
+                "type": "number",
+                "nullable": true
+              },
+              "min_brf_pct_for_sale": {
+                "type": "number",
+                "nullable": true
+              },
+              "max_brf_pct_for_sale": {
+                "type": "number",
+                "nullable": true
+              },
+              "min_school_index": {
+                "type": "number",
+                "nullable": true
+              },
+              "min_school_index_1": {
+                "type": "number",
+                "nullable": true
+              },
+              "min_school_index_3": {
+                "type": "number",
+                "nullable": true
+              },
+              "near_lat": {
+                "type": "number",
+                "nullable": true
+              },
+              "near_lng": {
+                "type": "number",
+                "nullable": true
+              },
+              "radius_m": {
+                "type": "integer",
+                "nullable": true
+              },
+              "limit": {
+                "type": "integer",
+                "example": 10
+              }
+            }
+          }
+        }
+      },
+      "Advertisement": {
+        "type": "object",
+        "description": "A property listing, fully denormalized — one flat row, no nested objects except `location`. Fields fall into three groups:\n• Listing core — listing_id, listed_date, asking_price_kr, property_type, street_name, street_number, apartment_number, rooms, living_area_m2, kr_per_m2, monthly_fee_kr (the BRF avgift in kr/month; NULL for listings with no fee), construction_year (the building's construction year), broker_agency, description, attributes (JSONB), photo_urls (ordered array of listing photos, primary first; each {url, primaryLabel, alt} so floor plans and maps are distinguishable from photos), source_url, kommun, location {lat, lng}.\n• BRF block (recovered by matching the listing address to the BRF residences export; NULL for non-coop listings or unmatched addresses) — brf_booli_id, brf_name, brf_org_number, brf_construction_year, brf_num_units, brf_num_rental_units, brf_total_living_area_m2, brf_plot_ownership, brf_is_genuine, brf_total_loan_kr, brf_annual_report_year, brf_has_valid_annual_report, brf_economy (JSONB).\n• Nearest-5 schools — school_1_* (closest) … school_5_*, each with: _skolenhetskod, _name, _type, _distance_m, _socio_index_2023 / _2024 / _2025 / _2026, _ineligible_pct_latest, _ineligible_pct_prev. Cross-school rollups are precomputed as flat columns at import time and ride along on every row, for three nearest-school radii (1 = closest, 3, 5): a current latest-year average (`avg_school_socio_index_1` / `_3` / `avg_school_socio_index`) and a three-year-ahead projection of each (`avg_school_socio_index_1_forecast` / `_3_forecast` / `avg_school_socio_index_forecast`), fitted by least squares to each school's per-year history.\n• Geo hierarchy block (benchmarks copied down from the geo hierarchy) — `city` (the level above kommun) plus this listing's ancestor aggregates carried onto the row so it is self-contained: `area_avg_kr_per_m2` / `area_median_kr_per_m2`, `kommun_avg_kr_per_m2` / `kommun_median_kr_per_m2`, `city_avg_kr_per_m2` / `city_median_kr_per_m2` — each the avg/median asking price per m² over listings of the SAME boende type (this listing's object_type) at that ancestor level. Compare a listing's own `kr_per_m2` against these to position it within its område, kommun, and city — like for like — without a second query.\nThe properties below are a representative sample; additionalProperties is true so new flat columns appear without a spec change — the live response is authoritative for the full column list.\n",
+        "additionalProperties": true,
+        "properties": {
+          "listing_id": {
+            "type": "string",
+            "example": "4123456"
+          },
+          "listed_date": {
+            "type": "string",
+            "format": "date",
+            "nullable": true,
+            "example": "2026-05-30"
+          },
+          "asking_price_kr": {
+            "type": "integer",
+            "nullable": true,
+            "example": 3895000
+          },
+          "property_type": {
+            "type": "string",
+            "description": "LEGACY conflated dwelling type (physical form for houses, tenure for apartments), kept for back-compat. Prefer object_form + tenure below.\n",
+            "example": "bostadsrätt"
+          },
+          "object_form": {
+            "type": "string",
+            "nullable": true,
+            "description": "Physical dwelling form (the \"what is it\" axis), independent of tenure: lägenhet / villa / radhus / parhus / kedjehus / fritidshus. NULL when Booli supplied no form. Per-type PRICE and SIZE stats segment by this.\n",
+            "example": "lägenhet"
+          },
+          "tenure": {
+            "type": "string",
+            "nullable": true,
+            "description": "Property-right (the \"how is it owned\" axis): bostadsrätt (a BRF unit) or äganderätt (freehold). NULL when unknown. Fee/loan/turnover stats are scoped by this (bostadsrätt-only).\n",
+            "example": "bostadsrätt"
+          },
+          "street_name": {
+            "type": "string",
+            "example": "Gusthemsvägen"
+          },
+          "rooms": {
+            "type": "number",
+            "example": 3.0
+          },
+          "living_area_m2": {
+            "type": "number",
+            "example": 72.0
+          },
+          "kr_per_m2": {
+            "type": "integer",
+            "nullable": true,
+            "example": 54097
+          },
+          "monthly_fee_kr": {
+            "type": "integer",
+            "nullable": true,
+            "description": "BRF monthly fee (avgift) in kr; NULL when the listing has no fee. The value the `fee_*` sort and `max_monthly_fee` filter operate on.\n",
+            "example": 4687
+          },
+          "monthly_fee_per_m2": {
+            "type": "number",
+            "nullable": true,
+            "description": "Avgift per m² (kr/m²/month), derived at import from monthly_fee_kr / living_area_m2. The value the `fee_per_sqm_*` sort and `max_fee_per_sqm` filter operate on. NULL when the fee or area is missing.\n",
+            "example": 66.7
+          },
+          "construction_year": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Year the building was constructed (from the listing detail page). Building age = current year − this. The value the `construction_year_*` sort and min/max_construction_year filters use.\n",
+            "example": 1992
+          },
+          "photo_urls": {
+            "type": "array",
+            "nullable": true,
+            "description": "Ordered listing photos (Booli CDN, webp), primary image first. The full gallery from the listing's detail page — not capped. Each item is an object carrying the photo's URL plus its category. NULL when the listing has no photos.\n",
+            "items": {
+              "type": "object",
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "Booli CDN URL (1440px wide, webp)."
+                },
+                "primaryLabel": {
+                  "type": "string",
+                  "nullable": true,
+                  "description": "Booli's category for the image — e.g. \"floorplan\" (planritning), \"property_map\", \"exterior\", \"interior\", \"kitchen/dining_room\", \"bathroom/laundry\", \"balcony/view\". NULL when Booli left the image uncategorized.\n",
+                  "example": "floorplan"
+                },
+                "alt": {
+                  "type": "string",
+                  "nullable": true,
+                  "description": "Swedish alt text Booli provides for the image.",
+                  "example": "Planlösning"
+                }
+              }
+            },
+            "example": [
+              {
+                "url": "https://bcdn.se/images/cache/54230613_1440x0.webp",
+                "primaryLabel": "exterior",
+                "alt": "Exteriörbild"
+              },
+              {
+                "url": "https://bcdn.se/images/cache/54244810_1440x0.webp",
+                "primaryLabel": "floorplan",
+                "alt": "Planlösning"
+              }
+            ]
+          },
+          "kommun": {
+            "type": "string",
+            "example": "Tyresö"
+          },
+          "location": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "lat": {
+                "type": "number",
+                "example": 59.237
+              },
+              "lng": {
+                "type": "number",
+                "example": 18.301
+              }
+            }
+          },
+          "brf_name": {
+            "type": "string",
+            "nullable": true,
+            "example": "Brf Sjötungan"
+          },
+          "brf_num_units": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Total number of apartments in the cooperative.",
+            "example": 120
+          },
+          "brf_kr_per_m2_trend": {
+            "type": "integer",
+            "nullable": true,
+            "description": "The BRF's price/m² trend in kr per year, derived at import from the förening's own completed sales (least-squares slope over sold date). Negative when prices are declining. NULL with fewer than two priced sales. The value the `brf_trend_*` sort and `min_brf_trend` filter operate on.\n",
+            "example": 1850
+          },
+          "brf_kr_per_m2_2026": {
+            "type": "integer",
+            "nullable": true,
+            "description": "The BRF's average kr/m² for 2026 (the current year) from its own completed sales — the latest point of the per-year history `brf_kr_per_m2_2021 … brf_kr_per_m2_2026` (each derived at import; NULL for a year with no priced sale). The value the `brf_price_*` sort operates on.\n",
+            "example": 58200
+          },
+          "brf_kr_per_m2_trend_3y": {
+            "type": "integer",
+            "nullable": true,
+            "description": "The BRF's price/m² trend in kr per year, fit by least-squares over only the **last 3 years** of the per-year average series (vs the all-history `brf_kr_per_m2_trend`). NULL with <2 priced years in the window.\n",
+            "example": 2100
+          },
+          "brf_kr_per_m2_trend_5y": {
+            "type": "integer",
+            "nullable": true,
+            "description": "As `brf_kr_per_m2_trend_3y` but fit over the **last 5 years**. The value the `brf_price_trend_5y_*` sort and `min_brf_price_trend_5y` filter operate on.\n",
+            "example": 1950
+          },
+          "brf_kr_per_m2_forecast": {
+            "type": "integer",
+            "nullable": true,
+            "description": "The BRF's price/m² projected **3 years past the latest year** (i.e. 2029), extrapolating the 5-year least-squares fit (intercept + slope × target). NULL with <2 priced years in the 5-year window. The value the `brf_price_forecast_*` sort and `min_brf_price_forecast` filter operate on.\n",
+            "example": 64000
+          },
+          "brf_loan_per_m2": {
+            "type": "number",
+            "nullable": true,
+            "description": "The BRF's loan per m² (kr/m²), derived at import from brf_total_loan_kr / brf_total_living_area_m2 (latest annual report). Only the current figure is available — Booli exposes no loan history, so there is no per-year series or trend. Lower means a less-indebted förening. The value the `brf_loan_*` sort and `max_brf_loan_per_m2` filter operate on.\n",
+            "example": 4582.2
+          },
+          "brf_fee_per_m2_trend": {
+            "type": "number",
+            "nullable": true,
+            "description": "The BRF's avgift (monthly fee) per m² trend in kr per year, derived at import from the förening's own completed bostadsrätt sales (least-squares slope of monthly_fee_kr / living_area_m2 over sold date). Negative when fees are declining. NULL with fewer than two fee-bearing sales. The value the `brf_fee_trend_*` sort and `max_brf_fee_trend` filter operate on.\n",
+            "example": 4.5
+          },
+          "brf_fee_per_m2_2026": {
+            "type": "number",
+            "nullable": true,
+            "description": "The BRF's average avgift per m² (kr/m²/month) for 2026 (the current year) from its own completed sales — the latest point of the 15-year per-year history `brf_fee_per_m2_2012 … brf_fee_per_m2_2026` (each derived at import; NULL for a year with no fee-bearing sale). The value the `brf_fee_*` sort operates on.\n",
+            "example": 62.5
+          },
+          "brf_fee_per_m2_trend_5y": {
+            "type": "number",
+            "nullable": true,
+            "description": "The BRF's avgift/m² trend in kr per year, fit by least-squares over only the **last 5 years** of the per-year average series (vs the all-history `brf_fee_per_m2_trend`). Negative when fees are declining. NULL with <2 fee-bearing years in the window. The value the `brf_fee_trend_5y_*` sort and `max_brf_fee_trend_5y` filter operate on.\n",
+            "example": 3.2
+          },
+          "brf_fee_per_m2_trend_15y": {
+            "type": "number",
+            "nullable": true,
+            "description": "As `brf_fee_per_m2_trend_5y` but fit over the **last 15 years** — the long-run avgift trajectory. NULL with <2 fee-bearing years.\n",
+            "example": 2.6
+          },
+          "brf_fee_per_m2_forecast": {
+            "type": "number",
+            "nullable": true,
+            "description": "The BRF's avgift/m² (kr/m²/month) projected **3 years past the latest year** (i.e. 2029), extrapolating the 5-year least-squares fit. NULL with <2 fee-bearing years in the 5-year window. The value the `brf_fee_forecast_*` sort and `max_brf_fee_forecast` filter operate on.\n",
+            "example": 71.5
+          },
+          "brf_pct_for_sale": {
+            "type": "number",
+            "nullable": true,
+            "description": "Share of the BRF currently on the market, in percent: the count of this förening's advertisements divided by `brf_num_units` (the total number of apartments), derived at import and identical for every listing of the same BRF. A high value flags unusually heavy turnover; a low value a stable cooperative. NULL when `brf_num_units` is missing or zero. The value the `brf_pct_for_sale_*` sort and the `min_brf_pct_for_sale` / `max_brf_pct_for_sale` filters operate on.\n",
+            "example": 2.6
+          },
+          "brf_num_sales_2026": {
+            "type": "integer",
+            "nullable": true,
+            "description": "BRF sold-history (self): number of the förening's completed sales in 2026, from its own sales. One per year `brf_num_sales_2021…2026`; NULL for a BRF never seen in the staged sales, 0 for an in-scope year with no sale.\n",
+            "example": 3
+          },
+          "brf_turnover_2026": {
+            "type": "number",
+            "nullable": true,
+            "description": "Share of the BRF's apartments sold in 2026 (`brf_num_sales_2026 / brf_num_units × 100`). One per year `brf_turnover_2021…2026`, plus the cumulative `brf_turnover_agg_3y` / `brf_turnover_agg_5y` (sales summed over the window ÷ units × 100) as the robust comparison level.\n",
+            "example": 3.0
+          },
+          "brf_report_fiscal_year": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Fiscal year of the BRF's annual report the brf_report_* figures come from (latest verified, else latest extracted). Null when no report of this BRF is extracted."
+          },
+          "brf_report_verified": {
+            "type": "boolean",
+            "nullable": true,
+            "description": "The brf_report_* figures passed all checks against the report."
+          },
+          "brf_report_url": {
+            "type": "string",
+            "nullable": true,
+            "description": "The source report."
+          },
+          "brf_report_loans_kr": {
+            "type": "integer",
+            "nullable": true,
+            "description": "BRF loans at year end, SEK, from its annual report."
+          },
+          "brf_report_loans_per_m2": {
+            "type": "number",
+            "nullable": true,
+            "description": "BRF debt per m² bostadsrätt area, from its annual report (skuldsättning); above ~10 000 is high."
+          },
+          "brf_report_cash_kr": {
+            "type": "integer",
+            "nullable": true,
+            "description": "BRF liquid funds at year end, SEK."
+          },
+          "brf_report_annual_fees_per_m2": {
+            "type": "number",
+            "nullable": true,
+            "description": "Member fees per m² per year, from the report."
+          },
+          "brf_report_operating_costs_per_m2": {
+            "type": "number",
+            "nullable": true,
+            "description": "Driftkostnader per m² per year."
+          },
+          "brf_report_interest_paid_per_m2": {
+            "type": "number",
+            "nullable": true,
+            "description": "Interest paid per m² per year."
+          },
+          "brf_report_interest_share_of_fees_pct": {
+            "type": "number",
+            "nullable": true,
+            "description": "Interest paid as % of member fees."
+          },
+          "brf_report_ground_rent_kr": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Yearly tomträttsavgäld (ground rent), SEK; null when the BRF owns its land or the report does not show it."
+          },
+          "brf_land_tenure": {
+            "type": "string",
+            "nullable": true,
+            "description": "äganderätt (owns the land), tomträtt (leased from the kommun, pays ground rent) or arrende, from the annual report."
+          },
+          "brf_stambyte_last": {
+            "type": "string",
+            "nullable": true,
+            "description": "When the pipes were last replaced; 'none' if never since construction."
+          },
+          "brf_stambyte_next": {
+            "type": "string",
+            "nullable": true,
+            "description": "Year range of the next expected stambyte (a large, costly pipe replacement)."
+          },
+          "brf_stambyte_next_status": {
+            "type": "string",
+            "nullable": true,
+            "description": "in_progress, decided, planned or estimated (from pipe age only)."
+          },
+          "area_name": {
+            "type": "string",
+            "nullable": true,
+            "description": "Sub-kommun område (neighborhood / stadsdel, Booli descriptiveAreaName). The value the `omrade` filter operates on. NULL when Booli supplies no område for the listing.\n",
+            "example": "Trollbäcken"
+          },
+          "kommun_turnover_br_agg_5y": {
+            "type": "number",
+            "nullable": true,
+            "description": "COPIED DOWN from the kommun — the kommun's 5-year cumulative BR turnover, so a listing can be compared to its kommun's liquidity in one row. Every ancestor's sold-history SUMMARY rides along this way: `{area,kommun,city}_{sold_kr_per_m2,sold_fee_per_m2,turnover_br}_*` (last-year + 3y/5y trend/agg + forecast). The per-year history is NOT copied down — it lives on the område/kommun/city rows (GET /areas etc.).\n",
+            "example": 6.0
+          }
+        }
+      },
+      "BrfFinancials": {
+        "type": "object",
+        "properties": {
+          "orgnr": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "verified_through": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Latest fiscal year that passes all checks against the reports."
+          },
+          "count": {
+            "type": "integer"
+          },
+          "years": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FinancialYear"
+            }
+          }
+        }
+      },
+      "FinancialYear": {
+        "type": "object",
+        "description": "One fiscal year from the BRF's årsredovisning. Amounts in SEK. Costs are positive amounts; cash-flow items keep their sign (+ in, − out). A field is absent or null when the report does not give it.",
+        "properties": {
+          "fiscal_year": {
+            "type": "integer",
+            "description": "Year the fiscal year starts (a July–June year 2024 is 2024-07-01 – 2025-06-30)."
+          },
+          "period": {
+            "type": "string",
+            "nullable": true,
+            "description": "Fiscal year as printed, 'YYYY-MM-DD – YYYY-MM-DD'."
+          },
+          "verified": {
+            "type": "boolean",
+            "description": "Every value found at its place in the report and the totals and year-to-year identities hold."
+          },
+          "opening_balance_held": {
+            "type": "boolean",
+            "description": "The previous year's balances are held, so this year's cash and debt movements were checked against them."
+          },
+          "report": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "file": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string",
+                "nullable": true,
+                "description": "Where the report was published."
+              }
+            }
+          },
+          "income": {
+            "type": "object",
+            "properties": {
+              "net_revenue_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Nettoomsättning SEK."
+              },
+              "annual_fees_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Årsavgifter (member fees) SEK."
+              },
+              "rents_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Rents (garage, parking, premises, rental flats) SEK."
+              },
+              "other_net_revenue_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Other revenue in nettoomsättning (transfer fees, debited electricity, broadband…) SEK."
+              },
+              "vacancy_losses_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Avgifts- och hyresbortfall (negative) SEK."
+              },
+              "other_operating_income_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Övriga rörelseintäkter SEK."
+              }
+            }
+          },
+          "costs": {
+            "type": "object",
+            "properties": {
+              "operating_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Driftkostnader: running the property (includes maintenance shown inside it and ground_rent_kr) SEK."
+              },
+              "planned_maintenance_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Planerat underhåll when the report shows it outside driftkostnader SEK."
+              },
+              "other_external_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Övriga externa kostnader (administration, audit, management fees…) SEK."
+              },
+              "personnel_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Personal and board fees SEK."
+              },
+              "interest_paid_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Interest paid on loans SEK."
+              },
+              "income_tax_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Tax on the year's result SEK."
+              },
+              "ground_rent_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Tomträttsavgäld: yearly ground rent to the kommun for leased land (tomträtt); part of operating_kr. The kommun renegotiates it every 10–20 years, often with a large increase SEK."
+              }
+            }
+          },
+          "cash_flow": {
+            "type": "object",
+            "properties": {
+              "interest_received_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Interest received SEK."
+              },
+              "investments_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Cash flow from investments (negative = spent) SEK."
+              },
+              "financing_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Cash flow from financing: new loans minus amortisation (negative = loans paid down) SEK."
+              }
+            }
+          },
+          "balance_sheet": {
+            "type": "object",
+            "properties": {
+              "loans_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "All loans from credit institutions at year end SEK."
+              },
+              "loans_short_term_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Loans due or resetting within a year SEK."
+              },
+              "loans_long_term_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Other loans SEK."
+              },
+              "cash_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Liquid funds at year end, including the manager's client accounts SEK."
+              },
+              "equity_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Eget kapital SEK."
+              },
+              "total_assets_kr": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Summa tillgångar SEK."
+              }
+            }
+          },
+          "cost_breakdown": {
+            "type": "array",
+            "description": "Every cost line the notes give, as {category_id, category (Swedish name), parent, amount_kr}. A line whose parent is 'Fastighetsskötsel och lokalvård' is also inside that line's own amount; do not add both.",
+            "items": {
+              "type": "object"
+            }
+          },
+          "property": {
+            "type": "object",
+            "properties": {
+              "apartments": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Bostadsrätt apartments"
+              },
+              "rental_apartments": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Rental apartments"
+              },
+              "premises": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Commercial premises"
+              },
+              "living_area_m2": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Bostadsrätt living area (the per-m² basis)"
+              },
+              "living_area_year": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Report year the area comes from"
+              },
+              "total_area_m2": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Total area when printed"
+              }
+            }
+          },
+          "per_m2": {
+            "type": "object",
+            "description": "kr per m² of bostadsrätt living area per year (loans_kr and cash_kr: per m² at year end). The figures to compare BRFs on.",
+            "properties": {
+              "annual_fees_kr": {
+                "type": "number",
+                "nullable": true,
+                "description": "Member fees per m²"
+              },
+              "operating_costs_kr": {
+                "type": "number",
+                "nullable": true,
+                "description": "Driftkostnader per m²"
+              },
+              "interest_paid_kr": {
+                "type": "number",
+                "nullable": true,
+                "description": "Interest paid per m²"
+              },
+              "loans_kr": {
+                "type": "number",
+                "nullable": true,
+                "description": "Debt per m² (skuldsättning); above ~10 000 is high"
+              },
+              "cash_kr": {
+                "type": "number",
+                "nullable": true,
+                "description": "Cash per m²"
+              },
+              "ground_rent_kr": {
+                "type": "number",
+                "nullable": true,
+                "description": "Ground rent per m²"
+              }
+            }
+          },
+          "ratios": {
+            "type": "object",
+            "properties": {
+              "interest_share_of_annual_fees_pct": {
+                "type": "number",
+                "nullable": true,
+                "description": "Interest paid as % of member fees: how much of the fees goes to the bank. High values mean fees react strongly to interest rates"
+              },
+              "annual_fees_share_of_net_revenue_pct": {
+                "type": "number",
+                "nullable": true,
+                "description": "Member fees as % of nettoomsättning; the rest is rents and other revenue"
+              }
+            }
+          },
+          "board": {
+            "type": "object",
+            "properties": {
+              "chair": {
+                "type": "string",
+                "nullable": true,
+                "description": ""
+              },
+              "members": {
+                "type": "string",
+                "nullable": true,
+                "description": "';'-separated"
+              },
+              "auditors": {
+                "type": "string",
+                "nullable": true,
+                "description": "';'-separated"
+              }
+            }
+          },
+          "land": {
+            "type": "string",
+            "nullable": true,
+            "description": "The report's own statement on land ownership"
+          },
+          "values": {
+            "type": "array",
+            "description": "Only with include=values: every stored number with table, category_id, category, value, page (1-based PDF page) and box [x, y, width, height] in PDF points from the top-left.",
+            "items": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "CitiesList": {
+        "type": "object",
+        "required": [
+          "cities",
+          "count"
+        ],
+        "properties": {
+          "cities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": [
+                "city",
+                "listing_count"
+              ],
+              "properties": {
+                "city": {
+                  "type": "string",
+                  "description": "City name; the top of the geo hierarchy.",
+                  "example": "Stockholm"
+                },
+                "listing_count": {
+                  "type": "integer",
+                  "description": "Total advertisements currently in this city (all boende types).",
+                  "example": 4300
+                },
+                "listing_count_br": {
+                  "type": "integer",
+                  "description": "Sample size for the bostadsrätt stats — carried beside every stat so low-sample (noisy) cells can be filtered. One per type (listing_count_villa / _radhus / _fritids).\n",
+                  "example": 3600
+                },
+                "avg_kr_per_m2_br": {
+                  "type": "integer",
+                  "nullable": true,
+                  "description": "Aggregated-up mean asking price per m² for bostadsrätter, over the city's current advertisements. Per type: _br / _villa / _radhus / _fritids.\n",
+                  "example": 79000
+                },
+                "median_kr_per_m2_br": {
+                  "type": "integer",
+                  "nullable": true,
+                  "description": "Aggregated-up median asking price per m² for bostadsrätter (per type).",
+                  "example": 78000
+                },
+                "avg_fee_per_m2_br": {
+                  "type": "number",
+                  "nullable": true,
+                  "description": "Mean avgift per m²/month (bostadsrätt only — fee is a BRF concept).",
+                  "example": 54.0
+                },
+                "median_fee_per_m2_br": {
+                  "type": "number",
+                  "nullable": true,
+                  "description": "Median avgift per m²/month (bostadsrätt only).",
+                  "example": 53.0
+                },
+                "units_in_scope_br": {
+                  "type": "integer",
+                  "nullable": true,
+                  "description": "Σ brf_num_units over the city's distinct BRFs — the cooperative housing stock in import scope.\n",
+                  "example": 52000
+                },
+                "pct_for_sale_br": {
+                  "type": "number",
+                  "nullable": true,
+                  "description": "Share of that stock currently listed (listing_count_br / units_in_scope_br × 100).",
+                  "example": 6.9
+                },
+                "num_sales_br_2026": {
+                  "type": "integer",
+                  "nullable": true,
+                  "description": "SOLD-HISTORY (self, BR completed sales): number of bostadsrätt sales in 2026. One per year `num_sales_br_2021…2026`. This block is on every geo level (cities/kommuns/areas) and on the BRF (as `brf_num_sales_*`).\n",
+                  "example": 1800
+                },
+                "turnover_br_2026": {
+                  "type": "number",
+                  "nullable": true,
+                  "description": "Share of the BR unit stock sold in 2026 (`num_sales_br_2026 / units_in_scope_br × 100`); per year `turnover_br_2021…2026`, plus the cumulative `turnover_br_agg_3y` / `turnover_br_agg_5y`.\n",
+                  "example": 3.5
+                },
+                "sold_kr_per_m2_br_2026": {
+                  "type": "integer",
+                  "nullable": true,
+                  "description": "Average SOLD price/m² in 2026, segmented PER boende type like the snapshot — `sold_kr_per_m2_{br,villa,radhus,fritids}_<year>` (per year `…_2021…2026`) with `…_trend_3y` / `_trend_5y` / `_forecast` each. The avgift/m² counterpart `sold_fee_per_m2_br_*` is bostadsrätt-only. Distinct from the current-listing `avg_kr_per_m2_br` snapshot (asking, not sold).\n",
+                  "example": 79000
+                },
+                "sold_obs_br_2026": {
+                  "type": "integer",
+                  "nullable": true,
+                  "description": "Number of completed sales behind `sold_kr_per_m2_br_2026` — the sample size for that average, so a thin cell is recognisable as one. `sold_obs_{br,villa,radhus,fritids}_<year>` (per year `…_2021…2026`), NULL exactly where the paired price is NULL. Counted on the same object_form axis as the price, so it is NOT interchangeable with `num_sales_br_*`, which counts tenure = bostadsrätt for turnover: a BRF radhus counts in `sold_obs_radhus_*` here but in `num_sales_br_*` there. Especially worth checking on areas, where a type-year can rest on a handful of sales.\n",
+                  "example": 1650
+                },
+                "school_socio_index_2026": {
+                  "type": "number",
+                  "nullable": true,
+                  "description": "Pooled SOLD-era school history (self): mean over the level's listings of each listing's nearest-5-school socio index for 2026 (per year `school_socio_index_2023…2026`), with `school_socio_index_trend_3y` / `_trend_5y` / `_forecast`. Not per-type (school is a place attribute); the latest-year value equals the snapshot `avg_school_socio_index`.\n",
+                  "example": 102.5
+                },
+                "avg_loan_per_m2_br": {
+                  "type": "number",
+                  "nullable": true,
+                  "description": "Mean BRF loan per m² over the city's bostadsrätt listings (BRF balance-sheet health; median_loan_per_m2_br alongside). Bostadsrätt only.\n",
+                  "example": 5200.0
+                },
+                "median_living_area_m2_br": {
+                  "type": "number",
+                  "nullable": true,
+                  "description": "Median dwelling size (m²) for bostadsrätter — context for kr/m² (per type: _br / _villa / _radhus / _fritids).\n",
+                  "example": 62.0
+                },
+                "avg_school_socio_index": {
+                  "type": "number",
+                  "nullable": true,
+                  "description": "Pooled (not per-type) mean of each listing's avg_school_socio_index (its 5-nearest-school socio-economic average) over the city's advertisements — the school environment. median_school_socio_index is alongside. School quality is a place attribute, so it is not segmented by boende type.\n",
+                  "example": 102.3
+                }
+              }
+            }
+          },
+          "count": {
+            "type": "integer",
+            "description": "Number of distinct cities returned.",
+            "example": 1
+          }
+        }
+      },
+      "KommunsList": {
+        "type": "object",
+        "required": [
+          "kommuns",
+          "count"
+        ],
+        "properties": {
+          "kommuns": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": [
+                "kommun",
+                "listing_count",
+                "price_stats"
+              ],
+              "properties": {
+                "kommun": {
+                  "type": "string",
+                  "description": "Kommun name; the exact value the `kommun` filter accepts.",
+                  "example": "Tyresö"
+                },
+                "listing_count": {
+                  "type": "integer",
+                  "description": "Number of advertisements currently in this kommun.",
+                  "example": 433
+                },
+                "city": {
+                  "type": "string",
+                  "nullable": true,
+                  "description": "The city this kommun belongs to (the level above kommun, an explicit grouping — see the hierarchical-stats model). NULL when the kommun is not mapped to a city.\n",
+                  "example": "Stockholm"
+                },
+                "listing_count_br": {
+                  "type": "integer",
+                  "description": "Sample size for the bostadsrätt stats (one per type; see /cities).",
+                  "example": 380
+                },
+                "median_kr_per_m2_br": {
+                  "type": "integer",
+                  "nullable": true,
+                  "description": "Aggregated-up median asking price per m² for bostadsrätter over this kommun's CURRENT advertisements (per type: _br / _villa / _radhus / _fritids). Distinct from price_stats, which is over completed sales, per year. Divide a BRF's median by this for a like-for-like ratio.\n",
+                  "example": 79500
+                },
+                "city_median_kr_per_m2_br": {
+                  "type": "integer",
+                  "nullable": true,
+                  "description": "COPIED DOWN from the parent city — the city's median_kr_per_m2_br, so a single GET /kommuns row carries both the kommun's stat and its city's. Divide median_kr_per_m2_br by this for the kommun-vs-city ratio. The full parent set is city_<agg>_<metric>_<type> (+ city fee).\n",
+                  "example": 78000
+                },
+                "median_fee_per_m2_br": {
+                  "type": "number",
+                  "nullable": true,
+                  "description": "Median avgift per m²/month (bostadsrätt only).",
+                  "example": 51.0
+                },
+                "units_in_scope_br": {
+                  "type": "integer",
+                  "nullable": true,
+                  "description": "Σ brf_num_units over the kommun's distinct BRFs (cooperative stock in scope).",
+                  "example": 4800
+                },
+                "pct_for_sale_br": {
+                  "type": "number",
+                  "nullable": true,
+                  "description": "Share of that stock currently listed (listing_count_br / units_in_scope_br × 100).",
+                  "example": 7.9
+                },
+                "city_pct_for_sale_br": {
+                  "type": "number",
+                  "nullable": true,
+                  "description": "COPIED DOWN from the parent city — the city's pct_for_sale_br, so a kommun row shows whether it is more/less on-market than its city (compare pct_for_sale_br vs this). city_units_in_scope_br is alongside.\n",
+                  "example": 6.9
+                },
+                "city_turnover_br_agg_5y": {
+                  "type": "number",
+                  "nullable": true,
+                  "description": "COPIED DOWN from the parent city — the city's 5-year cumulative BR turnover, so a kommun compares its own `turnover_br_agg_5y` to its city's. The full city sold-history SUMMARY rides along as `city_{sold_kr_per_m2,sold_fee_per_m2,turnover_br}_*` (the per-year history stays on GET /cities, not copied down).\n",
+                  "example": 6.9
+                },
+                "avg_school_socio_index": {
+                  "type": "number",
+                  "nullable": true,
+                  "description": "Pooled mean school socio-economic index over the kommun's listings (median_school_socio_index alongside). city_avg_school_socio_index is the copied-down city value for a kommun-vs-city school comparison.\n",
+                  "example": 101.0
+                },
+                "price_stats": {
+                  "type": "array",
+                  "description": "Average and median sale price per m² (kr/m²) over completed sales, one entry per (year, object_type) cell, ordered newest year first then by object type. Precomputed at import. May be empty if the kommun has no recorded sales.\n",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "year",
+                      "object_type",
+                      "avg_kr_per_m2",
+                      "median_kr_per_m2",
+                      "sample_count"
+                    ],
+                    "properties": {
+                      "year": {
+                        "type": "integer",
+                        "description": "Calendar year of the sales in this cell.",
+                        "example": 2026
+                      },
+                      "object_type": {
+                        "type": "string",
+                        "description": "Property type the stats are computed over.",
+                        "example": "bostadsrätt"
+                      },
+                      "avg_kr_per_m2": {
+                        "type": "integer",
+                        "description": "Mean sale price per m² (kr/m²) for this year and object type.",
+                        "example": 41000
+                      },
+                      "median_kr_per_m2": {
+                        "type": "integer",
+                        "description": "Median sale price per m² (kr/m²) for this year and object type.",
+                        "example": 40600
+                      },
+                      "sample_count": {
+                        "type": "integer",
+                        "description": "Number of completed sales behind this cell.",
+                        "example": 120
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "count": {
+            "type": "integer",
+            "description": "Number of distinct kommuns returned.",
+            "example": 1
+          }
+        }
+      },
+      "AreasList": {
+        "type": "object",
+        "required": [
+          "areas",
+          "count",
+          "filters"
+        ],
+        "properties": {
+          "areas": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": [
+                "kommun",
+                "area_name",
+                "listing_count"
+              ],
+              "properties": {
+                "kommun": {
+                  "type": "string",
+                  "description": "The kommun the område belongs to.",
+                  "example": "Tyresö"
+                },
+                "area_name": {
+                  "type": "string",
+                  "description": "Område name; the exact value the `omrade` filter accepts.\n",
+                  "example": "Trollbäcken"
+                },
+                "listing_count": {
+                  "type": "integer",
+                  "description": "Total advertisements currently in this område (all boende types).",
+                  "example": 12
+                },
+                "city": {
+                  "type": "string",
+                  "nullable": true,
+                  "description": "The city this område's kommun belongs to (copied down).",
+                  "example": "Stockholm"
+                },
+                "listing_count_br": {
+                  "type": "integer",
+                  "description": "Sample size for the bostadsrätt stats (one per type).",
+                  "example": 9
+                },
+                "median_kr_per_m2_br": {
+                  "type": "integer",
+                  "nullable": true,
+                  "description": "Aggregated-up median asking price per m² for bostadsrätter over this område's current advertisements — the neighbourhood benchmark (per type: _br / _villa / _radhus / _fritids).\n",
+                  "example": 40500
+                },
+                "median_fee_per_m2_br": {
+                  "type": "number",
+                  "nullable": true,
+                  "description": "Median avgift per m²/month (bostadsrätt only).",
+                  "example": 47.0
+                },
+                "units_in_scope_br": {
+                  "type": "integer",
+                  "nullable": true,
+                  "description": "Σ brf_num_units over the område's distinct BRFs (cooperative stock in scope).",
+                  "example": 140
+                },
+                "pct_for_sale_br": {
+                  "type": "number",
+                  "nullable": true,
+                  "description": "Share of that stock currently listed (listing_count_br / units_in_scope_br × 100).",
+                  "example": 6.4
+                },
+                "turnover_br_2026": {
+                  "type": "number",
+                  "nullable": true,
+                  "description": "Sold-history (self): share of the område's BR stock sold in 2026 (per year `turnover_br_2021…2026`, + `turnover_br_agg_3y/5y`), plus the `num_sales_br_*` / `sold_kr_per_m2_*` / `sold_obs_*` / `sold_fee_per_m2_*` block (same shape as GET /cities). An område additionally carries its ancestors' summaries copied down: `kommun_*` and `city_*` (`kommun_turnover_br_agg_5y`, `city_sold_kr_per_m2_trend_5y`, …).\n",
+                  "example": 3.0
+                }
+              }
+            }
+          },
+          "count": {
+            "type": "integer",
+            "description": "Number of (kommun, område) rows returned.",
+            "example": 10
+          },
+          "filters": {
+            "type": "object",
+            "description": "Echo of the filters that were applied.",
+            "properties": {
+              "kommun": {
+                "type": "string",
+                "nullable": true
+              },
+              "name_search": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        }
+      },
+      "AvgPricePerSqm": {
+        "type": "object",
+        "required": [
+          "avg_kr_per_m2",
+          "sample_count",
+          "from_date",
+          "to_date",
+          "filters"
+        ],
+        "properties": {
+          "avg_kr_per_m2": {
+            "type": "integer",
+            "description": "Average final sale price per square metre in Swedish kronor.",
+            "example": 25558
+          },
+          "sample_count": {
+            "type": "integer",
+            "description": "Number of sales that contributed to the average.",
+            "example": 25
+          },
+          "from_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Earliest sale date among the matched sales.",
+            "example": "2025-01-07"
+          },
+          "to_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Latest sale date among the matched sales.",
+            "example": "2025-12-22"
+          },
+          "filters": {
+            "type": "object",
+            "description": "Echo of the filters that were applied.",
+            "properties": {
+              "year": {
+                "type": "integer",
+                "nullable": true,
+                "example": 2025
+              },
+              "rooms": {
+                "type": "number",
+                "nullable": true,
+                "example": 3.0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

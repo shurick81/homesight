@@ -1,0 +1,31 @@
+# homesight API
+
+> Read-only data for deciding which Swedish apartment to buy, built for LLM agents. Two layers: the market as Booli publishes it (apartments and houses for sale, completed sales, and område/kommun/city statistics) for Stockholm, Nacka, Solna and Tyresö; and, for a small set of bostadsrättsföreningar (BRFs, housing cooperatives), figures extracted from their own annual reports (årsredovisningar) and verified, each linked to the page it came from.
+
+All endpoints are GET, public, and return JSON (this file is Markdown). Amounts are SEK, areas m², fees per month. The full contract, with every field's unit and meaning, is the OpenAPI spec.
+
+## Docs
+
+- [OpenAPI spec]({BASE}/openapi.json): every endpoint, parameter, sort and field
+
+## Market (Booli snapshot)
+
+- [GET /advertisements]({BASE}/advertisements): listings for sale, at most 10 per request. Pick a `sort` that matches the goal (e.g. `price_asc`, `brf_loan_asc`) and narrow with filters (`kommun`, `omrade`, `min_rooms`, `max_price`, `brf_org_number`, `near_lat`/`near_lng`/`radius_m`, ...) instead of paging. Each row is self-contained: the listing, its BRF (debt, fees, price and fee trends, turnover), and the averages of its område, kommun and city for the same type of home.
+- [GET /kommuns]({BASE}/kommuns): the kommuns covered, with listing counts, asking and sold kr/m² per type of home, avgift and loan per m², turnover, trends and forecasts, and sold kr/m² per year and type (`price_stats`). Use it to learn the exact `kommun` values.
+- [GET /areas]({BASE}/areas): the same per område (`?kommun=`, `?name_search=`); the values of the `omrade` filter.
+- [GET /cities]({BASE}/cities): the same for the city (Stockholm: every kommun in Stockholms län that is covered).
+- [GET /sales/stats/avg-price-per-sqm]({BASE}/sales/stats/avg-price-per-sqm): average sold kr/m² over completed sales, optionally `?year=` and `?rooms=`.
+
+## Verified BRF layer (annual reports)
+
+- [GET /brfs]({BASE}/brfs): the BRFs whose annual reports are extracted, one summary each (orgnr, size, build year, land tenure, pipe replacement (stambyte), report coverage). Only these BRFs have this layer.
+- [GET /brfs/{orgnr}]({BASE}/brfs/712400-1467): one BRF's summary.
+- [GET /brfs/{orgnr}/financials]({BASE}/brfs/712400-1467/financials): every extracted fiscal year: income, costs, interest, loans, cash, per-m² figures and ratios (e.g. interest as a share of fees). `?include=values` adds where each number is printed in the report (file, page).
+- Listings of these BRFs also carry `brf_report_*` fields (latest verified year) in /advertisements.
+
+## Caveats
+
+- Market data is a snapshot, not live: listings were captured August to October 2026 and sales run to July 2026. A listing may already be sold.
+- Booli's BRF figures (`brf_total_loan_kr`, `brf_economy`, ...) are as Booli shows them, unverified; `brf_report_*` and /brfs/{orgnr}/financials are from the annual reports and verified.
+- School fields (`school_*`, `*_school_socio_index*`) are not available yet: NULL, and the school filters match nothing.
+- An empty result means nothing matched in the covered kommuns, not that nothing exists.

@@ -1,0 +1,58 @@
+# Profile of the BRF: stable facts (from the reports, with source), the derived stambyte assessment and data notes.
+# Not read by the verification scripts. Per-year counts and areas live in property_states.csv.
+name: Bostadsrättsföreningen Stortorpet 1
+short_name: Stortorpet 1
+orgnr: 769626-9864
+municipality: Tyresö
+property: [Agaten 32]            # 3 parhus with 6 bostadsrätter (4 × 119 m², 2 × 174 m²), a garage place each, 2 guest places
+addresses: Åvägen 11A–11F        # Booli lists 11B–11D; see market/address_links.csv
+built_from: 2017
+built_to: 2017
+built_basis: byggnadsår          # "uppfördes av Trivselhus på uppdrag av UTC Bygg under året 2017"
+registered: 2013
+fiscal_year: 01-01 – 12-31
+management: own (no förvaltare named); audited by a lay internal auditor only (Per Norén, "intern revisor")
+verified_through: 2025           # 2021 and 2025, both unchained (2020 and 2024 reports not held)
+source: Arsredovisning_2025.pdf p3–4
+links:
+  booli: https://www.booli.se/bostadsrattsforening/277087
+  report_2025: https://www.svenskfast.se/resurs/dokument/464606/mdiynnwwmdaymzu1ntq0n3w5ng../%c3%85rsredovisning_2025.pdf
+
+major_works:
+  source: Arsredovisning_2025.pdf p4
+  done:
+    - {years: 2019, what: Radonmätning (u.a.)}
+    - {years: 2025, what: Genomgång av värmepumpar; energiklassning av husen}
+  planned:
+    - {years: 2029, what: Radonmätning}
+    - {years: 2030, what: Genomgång av värmepumpar}
+
+stambyte:                        # derived from pipe_works.csv; rubric in annual_reviews/brfs/README.md
+  as_of: 2026-10-12
+  last:
+    years: null                  # original pipes, built 2017
+    kind: none
+    scope: []
+    confidence: high
+    basis: Built 2017; neither report mentions work on the pipes.
+  next:
+    from: 2057
+    to: 2067
+    status: estimated
+    scope: []
+    confidence: low
+    basis: Original 2017 pipes; usually 40–50 years. Nothing planned.
+  report: |
+    New houses (2017), no stambyte for decades. The risks are financial and organisational: a tiny
+    self-run association (6 homes, lay internal auditor, no maintenance fund), 9.16 MSEK of loans
+    (11 088 kr/m²) all resetting in March–April 2026 from 3.04–3.14% (1.39% in 2021), cash of 57 947 kr at
+    the end of 2025, losses every year (−406 261 kr in 2025), and fee income cut 31% in 2025 with an
+    increase announced for 2026. Three of the six homes were for sale in October 2026.
+
+data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
+  Sources: 2025 from the Svensk Fastighetsförmedling listing of Åvägen 11E (public link); 2021 from Booli (document behind Booli login, link given by the user). Not held: 2018 (allabrf, login), 2022–2024.
+  2021 has no kassaflödesanalys and no notes on revenue or costs: only RR and BR lines are extracted; cash (2) is BR Kassa och bank.
+  RR "Övriga rörelsekostnader" holds the operating costs (note 3: el, sophämtning, försäkring, förvaltning, underhåll) and is mapped to Driftkostnader (1).
+  2025 BR shows long-term loans as −47 000 and short-term as 9 206 000 (stored as printed); together 9 159 000 = the loan note.
+  2021 equity: BR 29 670 141 vs 29 670 201 in the equity table (p5); the BR is used.
+  2025: the text layer drops å/ä/ö on some pages; names and the land sentence were confirmed on the page image where needed.

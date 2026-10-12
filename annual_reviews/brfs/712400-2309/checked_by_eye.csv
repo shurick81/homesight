@@ -1,0 +1,3 @@
+table,year,category_id,note
+financial_events,2024,1,"Derived sum of two printed figures on different pages: Driftskostnader -11 103 176 (RR p8) + cash part of Övriga rörelsekostnader 'Ersättning till medlemmar för genomförd badrums renovering' -4 999 400 (Not 7, p15; also child 30). Not a single value on one page."
+general_states,2020,9,"Signature page p22 prints ""Jan Andersson"" under the elected auditor signature; OCR reads it as one token ""Jan\Andersson"""

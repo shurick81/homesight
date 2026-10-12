@@ -1,0 +1,55 @@
+# Profile of the BRF: stable facts (from the reports, with source), the derived stambyte assessment and data notes.
+# Not read by the verification scripts. Per-year counts and areas live in property_states.csv.
+name: HSB Brf Skogsgläntan i Tyresö
+short_name: Skogsgläntan
+orgnr: 769628-4574
+municipality: Tyresö
+property: [del av Näsby 4:1472]
+built_from: 2015
+built_to: 2015
+built_basis: byggnadsår
+registered: 2014
+fiscal_year: 01-01 – 12-31
+management: HSB Stockholm
+verified_through: 2025              # 2021–2025 chained, 2020 as opening balance
+source: arsredovisning-2025-brf-skogslantan-signerad.pdf p2–4
+links:
+  hsb: https://www.hsb.se/stockholm/brf/skogsglantan/foreningen/foreningsdokument/arsstamma-arsredovisning-protokoll-m.m/
+
+major_works:                     # "Sedan föreningen startade har följande större åtgärder genomförts"
+  source: arsredovisning-2025-brf-skogslantan-signerad.pdf p4
+  done:
+    - {years: 2021, what: Spolning av stammar; OVK}
+    - {years: 2022, what: Laddplatser för elbilar}
+    - {years: 2023, what: Omläggning av stenmjölsytor; byte av formbar leksand; härdning av betong}
+  planned_5_years:
+    - {years: 2025, what: Linjemarkering av parkeringsplatser; energideklaration; härdning av betong}
+    - {years: 2026, what: Stenmjölsytor; leksand; målning av smidesräcke; stamspolning}
+    - {years: 2027, what: OVK; sandlådor; träpaneler; dörrautomatik; solceller; gemensam el}
+    - {years: 2030, what: Byte av hisslinor}
+
+stambyte:                        # derived from pipe_works.csv; rubric in annual_reviews/brfs/README.md
+  as_of: 2026-10-11
+  last:
+    years: null                  # original pipes, built 2015
+    kind: none
+    scope: []
+    confidence: high             # a 2015 building cannot have had one
+    basis: Built 2015; the major works list (p4) has only stamspolning 2021.
+  next:
+    from: 2055
+    to: 2065
+    status: estimated
+    scope: []
+    confidence: low
+    basis: Original 2015 pipes; usually 40–50 years. Only a stamspolning (2026) is planned.
+  report: |
+    New building (2015) with original pipes; stamspolning in 2021 and planned for 2026. No stambyte
+    for decades. The near-term pressures are elsewhere: 67.8 MSEK of loans, 54.6 MSEK of it
+    resetting within a year (2026), and fees raised 3% + 15% in 2025 and 3% in 2026.
+
+data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
+  2025: garage area (1 005 m²) counted in total yta from 2025; stored as Lokalyta (cat 10).
+  2025: note 2 total (7 041 384) differs from the RR Nettoomsättning (7 040 385) by 999 kr.
+  2021–2022 are pre-HSB reports (Öhrlings PwC audit; one combined count of 82 parking and garage places).
+  2024: förvaltningsavtal is its own line (29); the 2025 report merges it into fastighetsskötsel.

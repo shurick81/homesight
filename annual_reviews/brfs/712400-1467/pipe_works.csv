@@ -1,0 +1,9 @@
+year_from,year_to,status,kind,scope,cost_kr,text,file,page,x,y,width,height
+1990,1990,done,partial_stambyte,våtrum,,1990 Delvis stambyte och nya ytskikt i badrum.,stamma2026.pdf,9,72,559,258,10
+2018,2018,done,partial_stambyte,,,2018 Stambyte M104.,stamma2026.pdf,9,72,492,142,10
+2018,2021,done,ground_pipes,,,2018–2021 Byte av markliggande rör.,stamma2026.pdf,9,72,479,185,10
+2024,2024,done,reference_stambyte,,,"2024 Referensstambyte i två stammar, M28 och M64.",stamma2026.pdf,9,72,344,281,10
+2026,2035,planned,stambyte,avlopp;våtrum;tappvatten,,2026-2035 Byte avloppstammar inkl. nya våtrum och vattenledningar.,stamma2026.pdf,9,72,668,333,10
+2025,2025,decided,stambyte,,,"informationsmöten, extrastämma (där medlemmarna röstade för ett stambyte) och samtyckesprocess,",stamma2026.pdf,10,71,220,461,10
+2008,2008,done,stamspolning,avlopp,,Stamspolning vertikala och horisontella avloppsstammar.,Arsredovisning_2008.pdf,4,66,321,101,11
+2011,2011,planned,stamspolning,avlopp,,Stamspolning av avlopp. (plan 2011),arsredovisning2010.pdf,5,96,601,66,10

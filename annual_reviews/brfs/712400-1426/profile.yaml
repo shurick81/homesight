@@ -1,0 +1,69 @@
+# Profile of the BRF: stable facts (from the reports, with source), the derived stambyte assessment and data notes.
+# Not read by the verification scripts. Per-year counts and areas live in property_states.csv.
+name: HSB Bostadsrättsförening Siken i Tyresö
+short_name: Siken
+orgnr: 712400-1426
+municipality: Tyresö
+address: Sikvägen 1–23 (odd numbers), 135 41 Tyresö
+property: [Siken 1]              # plus 5/10 of Tyresö Siken S:1 (samfällighet, samlingslokaler)
+built_from: 1961
+built_to: 1963
+built_basis: byggnadsår
+registered: 1961
+fiscal_year: 05-01 – 04-30
+management: HSB Stockholm (förvaltningsavtal)
+heating: district heating with heat recovery (återvinningsvärme) since 2018–2019
+verified_through: 2024        # 2020–2024 chained (fiscal years May–April), 2019 as opening balance
+source: Arsredovisning-BRF-Siken-i-Tyreso-2024.pdf p2–4
+links:
+  allabrf: https://www.allabrf.se/hsb-brf-siken-i-tyreso
+  svenskbrf: https://www.svenskbrf.se/forening/tyreso/siken-i-tyreso/
+
+major_works:                     # "Sedan föreningen startade har följande större åtgärder genomförts"
+  source: Arsredovisning-BRF-Siken-i-Tyreso-2024.pdf p4
+  done:
+    - {years: 1983 and 1993, what: Fönsterbyten}
+    - {years: 1992, what: Fasad och balkonginglasning}
+    - {years: 1998, what: Nya miljöhus}
+    - {years: 1999–2000, what: Stambyte}
+    - {years: 2001, what: Hissrenovering och ny takbeläggning}
+    - {years: 2007, what: Renovering av tvättstuga och trapphus}
+    - {years: 2014–2015, what: 97 nya garage}
+    - {years: 2018–2019, what: Återvinningsvärme; laddstolpar i 5 garage}
+    - {years: 2019–2020, what: Asbestsanering i källargångar}
+    - {years: 2021–2022, what: Rökdetektorer, fukt- och temperaturgivare}
+    - {years: 2022–2023, what: 5 garageladdare och 8 utomhusladdare; ny elcentral}
+  planned_5_years:               # no years given in the report
+    - OVK-besiktning
+    - Målning av takluckor och stosar
+    - Byte av 2 värmeväxlare
+    - Ev. uppdatering av porttelefoner
+    - Byte av hisslinor
+    - Parkeringsrutor vid HCP och storbilsparkering
+    - Byte av staket runt lekplats S9
+
+stambyte:                        # derived from pipe_works.csv; rubric in annual_reviews/brfs/README.md
+  as_of: 2026-10-11
+  last:
+    years: 1999–2000
+    kind: stambyte
+    scope: []                      # not stated
+    confidence: high
+    basis: Arsredovisning-BRF-Siken-i-Tyreso-2024.pdf p4 "1999 - 2000 Stambyte har genomförts".
+  next:
+    from: 2040
+    to: 2050
+    status: estimated
+    scope: []
+    confidence: low
+    basis: Last stambyte 1999–2000; pipes usually last 40–50 years. Not in the 5-year plan; the underhållsplan (updated 2025-06-09) has not been seen.
+  report: |
+    Stambyte done 1999–2000, so the pipes are 25 years old. Nothing in the 5-year plan. If the
+    1999–2000 work was drains only (common then), the next stambyte could come at the early end of
+    the range; the underhållsplan would settle it.
+
+data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
+  2023: the 2023/24 report restates the opening cash (12 256 kr moved from Kassa och bank to Övriga fordringar); recorded in restatements.csv.
+  2022 and earlier: the BR lists the HSB avräknings- and placeringskonto separately (states 3, 4), so 2 is Kassa och bank only; from 2023 2 is the KF total.
+  2020: the report counts 14 lokaler (298 m²), later reports 2–3 (212–243 m²): a changed basis, stored as printed.
+  Property care is one merged line in the report (skötsel, lokalvård och samfälligheter).

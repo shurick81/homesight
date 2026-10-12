@@ -1,0 +1,21 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# OCR and text-extraction cache (tools/brf/pdfwords.py), rebuilt on demand
+.cache/
+
+# Azure Functions local settings
+api/local.settings.json
+
+# stray downloads at the top level; reports live under raw/
+/*.pdf
+
+.DS_Store
+
+# original documents (annual reports, protocols, plans) stay local for now, not in git; their metadata.yaml
+# (source URL, sha256, how obtained) is tracked. Permanent storage still to be decided.
+raw/**
+!raw/**/
+!raw/**/metadata.yaml

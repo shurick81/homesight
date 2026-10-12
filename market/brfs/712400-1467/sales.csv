@@ -1,0 +1,376 @@
+sold_date,linked_by,address,apartment_number,rooms,living_area_m2,final_price_kr,asking_price_kr,kr_per_m2,monthly_fee_kr,price_change_pct,object_type,object_form,tenure,broker_agency,area_name,lat,lng,listing_id,booli_url
+2012-11-02,booli_brf_id,Myggdalsvägen 98,,3.0,90.0,1310000,1175000,14600,5160,1.2,bostadsrätt,,,,Bollmora,59.241512,18.237442,1282324,https://www.booli.se/annons/1282324
+2012-12-10,booli_brf_id,Myggdalsvägen 98,,2.0,45.0,1150000,1150000,25600,2439,15.6,bostadsrätt,,,,Tyresö Centrum,59.241512,18.237442,1320484,https://www.booli.se/annons/1320484
+2012-12-14,booli_brf_id,Myggdalsvägen 104,,2.0,49.5,1100000,1100000,22200,2540,0,bostadsrätt,,,,Bollmora,59.2411091,18.23684959,1323386,https://www.booli.se/annons/1323386
+2013-01-25,booli_brf_id,Myggdalsvägen 116,,4.0,88.5,1420000,1100000,16000,4878,29.1,bostadsrätt,,,,Bollmora,59.24093381,18.23519306,1334289,https://www.booli.se/annons/1334289
+2013-01-27,booli_brf_id,Myggdalsvägen 108,,2.0,74.0,1575000,1325000,21300,3816,18.9,bostadsrätt,,,,Tyresö Centrum,59.24081309,18.23616312,1336621,https://www.booli.se/annons/1336621
+2013-02-15,booli_brf_id,Myggdalsvägen 20,,4.0,92.0,1950000,1595000,21200,5105,22.3,bostadsrätt,,,,Centrum,59.24308322,18.23360633,1350868,https://www.booli.se/annons/1350868
+2013-02-16,booli_brf_id,Myggdalsvägen 12,,4.0,90.0,1700000,1575000,18900,5160,7.9,bostadsrätt,,,,Tyresö Centrum,59.24347598,18.23264145,1355000,https://www.booli.se/annons/1355000
+2013-03-20,booli_brf_id,Myggdalsvägen 64,,4.0,92.0,1320000,1195000,14300,5369,10.5,bostadsrätt,,,,Bollmora,59.24216767,18.2357153,1368969,https://www.booli.se/bostad/678145
+2013-03-25,booli_brf_id,Myggdalsvägen 10,,2.0,74.0,1325000,1295000,17900,3895,2.3,bostadsrätt,,,,Tyresö Centrum,59.24342071,18.23215771,1373709,https://www.booli.se/bostad/677743
+2013-03-29,booli_brf_id,Myggdalsvägen 46,,3.0,90.0,1320000,1195000,14700,4885,10.5,bostadsrätt,,,,Bollmora,59.24275,18.23429,1375851,https://www.booli.se/annons/1375851
+2013-05-02,booli_brf_id,Myggdalsvägen 86,,4.0,88.5,1295000,1295000,14600,4878,0,bostadsrätt,,,,Bollmora,59.2416595,18.2363827,1391208,https://www.booli.se/annons/1391208
+2013-05-07,booli_brf_id,Myggdalsvägen 94,,4.0,90.0,1200000,1200000,13300,4768,0,bostadsrätt,,,,Bollmora,59.24170851,18.23696084,1388619,https://www.booli.se/annons/1388619
+2013-05-10,booli_brf_id,Myggdalsvägen 68,,2.0,56.0,1230000,1050000,22000,2940,17.1,bostadsrätt,,,,Tyresö Centrum,59.24185323,18.23521606,1410877,https://www.booli.se/annons/1410877
+2013-05-28,booli_brf_id,Myggdalsvägen 50,,2.0,45.0,1160000,1095000,25800,2497,5.9,bostadsrätt,,,,Bv,59.24255181,18.23477789,1417179,https://www.booli.se/annons/1417179
+2013-06-13,booli_brf_id,Myggdalsvägen 74,,3.0,85.5,1300000,1275000,15200,4432,2,bostadsrätt,,,,Bollmora,59.24162058,18.23608157,1439537,https://www.booli.se/bostad/677682
+2013-08-15,booli_brf_id,Myggdalsvägen 76,,3.0,85.5,1780000,1495000,20800,4432,19.1,bostadsrätt,,,,Bollmora,59.2414757,18.2357506,1472376,https://www.booli.se/annons/1472376
+2013-09-10,booli_brf_id,Myggdalsvägen 62,,4.0,90.0,1675000,1475000,18600,4866,13.6,bostadsrätt,,,,Bollmora,59.24226748,18.23546632,1493938,https://www.booli.se/annons/1493938
+2013-09-11,booli_brf_id,Myggdalsvägen 82,,4.0,95.0,1610000,1400000,16900,5183,15,bostadsrätt,,,,Tyresö Centrum,59.2412,18.236183,1488541,https://www.booli.se/annons/1488541
+2013-10-02,booli_brf_id,Myggdalsvägen 10,,2.0,49.5,1200000,895000,24200,2519,34.1,bostadsrätt,,,,Bollmora,59.24342071,18.23215771,1516876,https://www.booli.se/annons/1516876
+2013-10-10,booli_brf_id,Myggdalsvägen 98,,4.0,92.0,1290000,1095000,14000,5105,17.8,bostadsrätt,,,,Bollmora,59.241512,18.237442,1516273,https://www.booli.se/annons/1516273
+2013-10-10,booli_brf_id,Myggdalsvägen 18,,2.0,45.0,1275000,995000,28300,2439,28.1,bostadsrätt,,,,Bollmora,59.2431794,18.2333729,1516853,https://www.booli.se/annons/1516853
+2013-10-24,booli_brf_id,Myggdalsvägen 26,,4.0,88.5,1770000,1500000,20000,4878,18,bostadsrätt,,,,Bollmora,59.24291502,18.2324397,1525281,https://www.booli.se/annons/1525281
+2013-11-11,booli_brf_id,Myggdalsvägen 94,,4.0,92.0,1620000,1290000,17600,5105,25.6,bostadsrätt,,,,Bollmora,59.24170851,18.23696084,1535850,https://www.booli.se/bostad/677995
+2013-11-13,booli_brf_id,Myggdalsvägen 28,,4.0,88.5,1800000,1575000,20300,4722,14.3,bostadsrätt,,,,Bollmora,59.24279347,18.23225195,1543794,https://www.booli.se/annons/1543794
+2013-11-21,booli_brf_id,Myggdalsvägen 108,,2.0,67.0,1680000,1595000,25100,3815,5.3,bostadsrätt,,,,Bollmora,59.24081309,18.23616312,1544388,https://www.booli.se/annons/1544388
+2013-11-23,booli_brf_id,Myggdalsvägen 14,,4.0,92.0,2000000,1795000,21700,5072,11.4,bostadsrätt,,,,Bollmora,59.24337575,18.23287873,1544770,https://www.booli.se/bostad/677778
+2013-12-04,booli_brf_id,Myggdalsvägen 108,,2.0,49.5,1400000,1195000,28300,2770,17.2,bostadsrätt,,,,Bollmora,59.24081309,18.23616312,1552880,https://www.booli.se/bostad/677942
+2013-12-04,booli_brf_id,Myggdalsvägen 66,,4.0,88.5,1450000,1350000,16400,5699,7.4,bostadsrätt,,,,Bollmora,59.24197174,18.23554512,1553503,https://www.booli.se/bostad/677656
+2013-12-11,booli_brf_id,Myggdalsvägen 20,,1.5,45.0,1410000,1195000,31300,2439,18,bostadsrätt,,,,Bollmora,59.24308322,18.23360633,1557444,https://www.booli.se/annons/1557444
+2014-02-19,booli_brf_id,Myggdalsvägen 74,,4.0,94.5,1830000,1650000,19400,5051,10.9,bostadsrätt,,,,Bollmora,59.24162058,18.23608157,1589077,https://www.booli.se/annons/1589077
+2014-03-27,booli_brf_id,Myggdalsvägen 110,,2.0,74.0,1600000,1495000,21600,3816,7,bostadsrätt,,,,Bollmora,59.24068974,18.23597097,1612364,https://www.booli.se/annons/1612364
+2014-04-06,booli_brf_id,Myggdalsvägen 96,,3.0,92.0,1935000,1795000,21000,217,7.8,bostadsrätt,,,,Bollmora,59.24161159,18.23720161,1618021,https://www.booli.se/annons/1618021
+2014-04-29,booli_brf_id,Myggdalsvägen 68,,4.0,88.5,1610000,1395000,18200,4995,15.4,bostadsrätt,,,,Bollmora,59.24185323,18.23521606,1628935,https://www.booli.se/annons/1628935
+2014-05-04,booli_brf_id,Myggdalsvägen 100,,2.0,74.0,1705000,1575000,23000,3992,8.3,bostadsrätt,,,,Bollmora,59.24132428,18.2374441,1618852,https://www.booli.se/bostad/677875
+2014-05-09,booli_brf_id,Myggdalsvägen 94,,4.0,90.0,1950000,1595000,21700,4768,22.3,bostadsrätt,,,,Bollmora,59.24170851,18.23696084,1639947,https://www.booli.se/annons/1639947
+2014-05-10,booli_brf_id,Myggdalsvägen 98,,3.0,92.0,2025000,1825000,22000,5105,11,bostadsrätt,,,,Bollmora,59.241512,18.237442,1637794,https://www.booli.se/annons/1637794
+2014-05-15,booli_brf_id,Myggdalsvägen 64,,3.0,90.0,1910000,1695000,21200,4983,12.7,bostadsrätt,,,,Bollmora,59.24216767,18.2357153,1637824,https://www.booli.se/annons/1637824
+2014-05-17,booli_brf_id,Myggdalsvägen 48,,4.0,92.0,2465000,1725000,26800,4928,42.9,bostadsrätt,,,,Bollmora,59.24264945,18.23453368,1644876,https://www.booli.se/annons/1644876
+2014-06-19,booli_brf_id,Myggdalsvägen 106,,2.0,49.5,1450000,1450000,29300,2519,21.3,bostadsrätt,,,,Bollmora,59.2409407,18.2363661,1674607,https://www.booli.se/annons/1674607
+2014-07-01,booli_brf_id,Myggdalsvägen 32,,4.0,88.5,1770000,1595000,20000,4878,11,bostadsrätt,,,,Bollmora,59.24256321,18.23264852,1686016,https://www.booli.se/annons/1686016
+2014-08-25,booli_brf_id,Myggdalsvägen 102,,2.0,74.0,1440000,1095000,19500,3680,31.5,bostadsrätt,,,,Bollmora,59.24123667,18.23704158,1707996,https://www.booli.se/annons/1707996
+2014-09-03,booli_brf_id,Myggdalsvägen,,2.0,74.0,1670000,1395000,22600,3816,19.7,bostadsrätt,,,,Bollmora,59.24295388,18.23315263,1716988,https://www.booli.se/annons/1716988
+2014-09-04,booli_brf_id,Myggdalsvägen 110,,2.0,49.5,1450000,1190000,29300,2867,21.8,bostadsrätt,,,,Bollmora,59.24068974,18.23597097,1720622,https://www.booli.se/bostad/677954
+2014-09-04,booli_brf_id,Myggdalsvägen 10,,3.0,87.0,1900000,1295000,21800,4479,46.7,bostadsrätt,,,,Bollmora,59.24342071,18.23215771,1721451,https://www.booli.se/annons/1721451
+2014-09-12,booli_brf_id,Myggdalsvägen 20,,4.0,92.0,2050000,2050000,22300,5150,0,bostadsrätt,,,,Bollmora,59.24308322,18.23360633,1716840,https://www.booli.se/annons/1716840
+2014-09-18,booli_brf_id,Myggdalsvägen 58,,3.0,85.5,1800000,1595000,21100,4432,12.9,bostadsrätt,,,,Bollmora,59.24223424,18.23482553,1726893,https://www.booli.se/annons/1726893
+2014-10-16,booli_brf_id,Myggdalsvägen 80,,3.0,88.5,1675000,1595000,18900,4840,5,bostadsrätt,,,,Bollmora,59.241245,18.235899,1740201,https://www.booli.se/annons/1740201
+2014-10-23,booli_brf_id,Myggdalsvägen 82,,4.0,94.0,1715000,1695000,18200,5051,1.2,bostadsrätt,,,,Centrum,59.2412,18.236183,1752584,https://www.booli.se/annons/1752584
+2014-10-31,booli_brf_id,Myggdalsvägen 110,,2.0,74.0,1705000,1595000,23000,3974,6.9,bostadsrätt,,,,Bollmora,59.24068974,18.23597097,1755195,https://www.booli.se/annons/1755195
+2014-11-11,booli_brf_id,Myggdalsvägen 100,,2.0,74.0,1650000,1495000,22300,3992,10.4,bostadsrätt,,,,Bollmora,59.24132428,18.2374441,1759451,https://www.booli.se/bostad/677875
+2014-11-12,booli_brf_id,Myggdalsvägen 120,,3.0,88.5,1705000,1395000,19300,4878,22.2,bostadsrätt,,,,Bollmora,59.2411939,18.2350863,1764256,https://www.booli.se/annons/1764256
+2014-11-21,booli_brf_id,Myggdalsvägen 96,,3.0,90.0,1950000,1695000,21700,5043,15,bostadsrätt,,,,Bollmora,59.24161159,18.23720161,1769265,https://www.booli.se/annons/1769265
+2014-12-09,booli_brf_id,Myggdalsvägen 52,,3.0,85.5,1820000,1495000,21300,4490,21.7,bostadsrätt,,,,Tyresö Centrum,59.242538,18.234825,1779470,https://www.booli.se/annons/1779470
+2014-12-10,booli_brf_id,Myggdalsvägen 20,,1.5,45.0,1600000,1475000,35600,7095,8.5,bostadsrätt,,,,Bollmora,59.24308322,18.23360633,1780134,https://www.booli.se/bostad/677811
+2014-12-17,booli_brf_id,Myggdalsvägen 16,,4.0,90.0,2040000,1700000,22700,5150,-2.9,bostadsrätt,,,,Bollmora,59.2432776,18.2331198,1779045,https://www.booli.se/annons/1779045
+2015-01-15,booli_brf_id,Myggdalsvägen,,2.0,74.0,1640000,1595000,22200,3992,2.8,bostadsrätt,,,,Bollmora,59.24295388,18.23315263,1790722,https://www.booli.se/annons/1790722
+2015-01-16,booli_brf_id,Myggdalsvägen 116,,4.0,88.5,1905000,1750000,21500,4995,8.9,bostadsrätt,,,,Bollmora,59.24093381,18.23519306,1791195,https://www.booli.se/annons/1791195
+2015-01-21,booli_brf_id,Myggdalsvägen 8,,2.0,49.5,1700000,1395000,34300,2559,21.9,bostadsrätt,,,,,59.243294,18.23196,1798444,https://www.booli.se/bostad/677844
+2015-02-14,booli_brf_id,Myggdalsvägen 14,,4.0,90.0,2200000,1990000,24400,5160,10.6,bostadsrätt,,,,Bollmora,59.24337575,18.23287873,1803109,https://www.booli.se/bostad/677777
+2015-03-23,booli_brf_id,Myggdalsvägen 100,,2.0,58.0,2000000,1495000,34500,2963,33.8,bostadsrätt,,,,Bollmora,59.24132428,18.2374441,1832134,https://www.booli.se/bostad/677859
+2015-04-15,booli_brf_id,Myggdalsvägen 34,,3.0,88.5,2250000,1795000,25400,4840,25.3,bostadsrätt,,,,Bollmora,59.24289501,18.23363639,1841825,https://www.booli.se/annons/1841825
+2015-04-17,booli_brf_id,Myggdalsvägen 52,,4.0,95.0,2320000,1995000,24400,5183,22.4,bostadsrätt,,,,Tyresö Centrum,59.242538,18.234825,1843599,https://www.booli.se/annons/1843599
+2015-04-23,booli_brf_id,Myggdalsvägen 8,,2.0,49.5,1805000,1495000,36500,2559,20.7,bostadsrätt,,,,Bollmora,59.243294,18.23196,1850389,https://www.booli.se/bostad/677844
+2015-05-13,booli_brf_id,Myggdalsvägen 64,,4.0,92.0,2710000,2710000,29500,5369,40.8,bostadsrätt,,,,Bollmora,59.24216767,18.2357153,1857255,https://www.booli.se/bostad/678145
+2015-05-13,booli_brf_id,Myggdalsvägen 106,,2.0,49.5,1850000,1595000,37400,2600,16,bostadsrätt,,,,Bollmora,59.2409407,18.2363661,1868034,https://www.booli.se/bostad/677921
+2015-05-24,booli_brf_id,Myggdalsvägen 14,,3.0,90.0,2600000,1995000,28900,7781,30.3,bostadsrätt,,,,Bollmora,59.24337575,18.23287873,1869902,https://www.booli.se/bostad/677775
+2015-06-03,booli_brf_id,Myggdalsvägen 102,,2.0,74.0,1710000,1495000,23100,3856,14.4,bostadsrätt,,,,Bollmora,59.24123667,18.23704158,1886607,https://www.booli.se/annons/1886607
+2015-06-11,booli_brf_id,Myggdalsvägen 100,,2.0,49.5,1935000,1695000,39100,2677,14.2,bostadsrätt,,,,Bollmora,59.24132428,18.2374441,1892249,https://www.booli.se/bostad/677870
+2015-07-03,booli_brf_id,Myggdalsvägen 110,,2.0,74.0,1920000,1595000,25900,3738,20.4,bostadsrätt,,,,Bollmora,59.24068974,18.23597097,1912290,https://www.booli.se/bostad/677947
+2015-08-19,booli_brf_id,Myggdalsvägen 14,,4.0,92.0,2800000,2475000,30400,5072,13.1,bostadsrätt,,,,Bollmora,59.24337575,18.23287873,1928172,https://www.booli.se/bostad/677778
+2015-08-20,booli_brf_id,Myggdalsvägen 28,,4.0,88.5,1980000,1675000,22400,4995,18.2,bostadsrätt,,,,Bollmora,59.24279347,18.23225195,1928070,https://www.booli.se/annons/1928070
+2015-08-21,booli_brf_id,Myggdalsvägen 12,,4.0,90.0,1920000,1795000,21300,5100,7,bostadsrätt,,,,Bollmora,59.24347598,18.23264145,1921650,https://www.booli.se/annons/1921650
+2015-08-28,booli_brf_id,Myggdalsvägen 46,,2.0,46.0,1850000,1495000,40200,2556,23.7,bostadsrätt,,,,Bollmora,59.24275,18.23429,1931229,https://www.booli.se/bostad/678065
+2015-09-02,booli_brf_id,Myggdalsvägen 94,,4.0,92.0,2330000,2200000,25300,5105,5.9,bostadsrätt,,,,Bollmora,59.24170851,18.23696084,1897097,https://www.booli.se/bostad/677995
+2015-09-23,booli_brf_id,Myggdalsvägen 98,,4.0,90.0,2125000,1595000,23600,6994,33.2,bostadsrätt,,,,Bollmora,59.241512,18.237442,1951318,https://www.booli.se/bostad/678022
+2015-09-24,booli_brf_id,Myggdalsvägen 74,,3.0,86.0,2520000,2395000,29300,4432,5.2,bostadsrätt,,,,Bollmora,59.24162058,18.23608157,1950052,https://www.booli.se/bostad/677682
+2015-10-23,booli_brf_id,Myggdalsvägen 104,,5.0,114.5,2495000,2495000,21800,6299,0,bostadsrätt,,,,Tyresö Centrum,59.2411091,18.23684959,1979067,https://www.booli.se/bostad/677909
+2015-10-30,booli_brf_id,Myggdalsvägen 114,,4.0,94.0,2210000,1790000,23500,5051,23.5,bostadsrätt,,,,Bollmora,59.240993,18.235645,1976641,https://www.booli.se/annons/1976641
+2015-11-02,booli_brf_id,Myggdalsvägen 92,,4.0,92.0,2100000,1795000,22800,5163,17,bostadsrätt,,,,Bollmora,59.24180966,18.23671729,1975225,https://www.booli.se/bostad/677983
+2015-11-07,booli_brf_id,Myggdalsvägen 78,,3.0,88.5,2600000,1985000,29400,4878,16.9,bostadsrätt,,,,Tyresö Centrum,59.2413409,18.2356555,1977859,https://www.booli.se/annons/1977859
+2015-11-17,booli_brf_id,Myggdalsvägen 74,,4.0,94.0,2760000,2500000,29400,5051,28.4,bostadsrätt,,,,Bollmora,59.24162058,18.23608157,1973332,https://www.booli.se/annons/1973332
+2015-11-28,booli_brf_id,Myggdalsvägen 86,,4.0,88.5,3340000,2195000,37700,4995,52.2,bostadsrätt,,,,Bollmora,59.2416595,18.2363827,1960441,https://www.booli.se/annons/1960441
+2015-12-06,booli_brf_id,Myggdalsvägen 18,,3.0,90.0,2625000,2200000,29200,4866,19.3,bostadsrätt,,,,Bollmora,59.2431794,18.2333729,1983415,https://www.booli.se/bostad/677809
+2015-12-07,booli_brf_id,Myggdalsvägen 14,,3.0,90.0,2540000,2295000,28200,7424,10.7,bostadsrätt,,,,Bollmora,59.24337575,18.23287873,2000492,https://www.booli.se/bostad/677781
+2016-01-27,booli_brf_id,Myggdalsvägen 26,,3.0,88.5,2650000,2225000,29900,4722,19.1,bostadsrätt,,,,Bollmora,59.24291502,18.2324397,2013142,https://www.booli.se/annons/2013142
+2016-01-28,booli_brf_id,Myggdalsvägen 12,,3.0,92.0,2750000,2250000,29900,5105,22.2,bostadsrätt,,,,Bollmora,59.24347598,18.23264145,2019481,https://www.booli.se/bostad/677760
+2016-02-10,booli_brf_id,Myggdalsvägen 12,,4.0,90.0,3060000,2495000,34000,5100,22.6,bostadsrätt,,,,Bollmora,59.24347598,18.23264145,2026925,https://www.booli.se/annons/2026925
+2016-03-10,booli_brf_id,Myggdalsvägen 42,,4.0,88.5,2700000,2645000,30500,4995,2.1,bostadsrätt,,,,Bollmora,59.24247,18.23374,2042251,https://www.booli.se/annons/2042251
+2016-03-23,booli_brf_id,Myggdalsvägen 26,,3.0,88.5,2285000,1825000,25800,4878,25.2,bostadsrätt,,,,Bollmora,59.24291502,18.2324397,2052082,https://www.booli.se/annons/2052082
+2016-03-24,booli_brf_id,Myggdalsvägen 86,,4.0,88.5,2225000,1995000,25100,4995,11.5,bostadsrätt,,,,Bollmora,59.2416595,18.2363827,2034681,https://www.booli.se/annons/2034681
+2016-04-07,booli_brf_id,Myggdalsvägen 112,,3.0,85.5,2810000,2495000,32900,4314,12.6,bostadsrätt,,,,Bollmora,59.24088,18.23545,2056850,https://www.booli.se/bostad/677516
+2016-04-29,booli_brf_id,Myggdalsvägen 16,,4.0,92.0,2575000,2495000,28000,4987,3.2,bostadsrätt,,,,Bollmora,59.2432776,18.2331198,2077024,https://www.booli.se/bostad/677788
+2016-05-12,booli_brf_id,Myggdalsvägen 104,,2.0,49.5,1770000,1595000,35800,2697,11,bostadsrätt,,,,Bollmora,59.2411091,18.23684959,2087020,https://www.booli.se/bostad/677911
+2016-05-13,booli_brf_id,Myggdalsvägen 74,,4.0,94.0,2675000,2675000,28500,5051,0,bostadsrätt,,,,Bollmora,59.24162058,18.23608157,2074298,https://www.booli.se/annons/2074298
+2016-06-10,booli_brf_id,Myggdalsvägen 106,,2.0,49.5,1860000,1495000,37600,3844,24.4,bostadsrätt,,,,Bollmora,59.2409407,18.2363661,2113716,https://www.booli.se/bostad/677930
+2016-06-20,booli_brf_id,Myggdalsvägen 104,,2.0,49.5,1860000,,37600,2638,,bostadsrätt,,,,Bollmora,59.2411091,18.23684959,2126838,https://www.booli.se/bostad/677905
+2016-06-23,booli_brf_id,Myggdalsvägen 68,,4.0,88.5,2325000,2395000,26300,4722,-2.9,bostadsrätt,,,,Bollmora,59.24185323,18.23521606,2117658,https://www.booli.se/annons/2117658
+2016-07-07,booli_brf_id,Myggdalsvägen 92,,4.0,90.0,2300000,2195000,25600,4768,4.8,bostadsrätt,,,,Centrum,59.24180966,18.23671729,2115287,https://www.booli.se/annons/2115287
+2016-08-12,booli_brf_id,Myggdalsvägen 100,,2.0,74.0,2075000,1995000,28000,3992,4,bostadsrätt,,,,Bollmora,59.24132428,18.2374441,2139158,https://www.booli.se/bostad/677875
+2016-09-19,booli_brf_id,Myggdalsvägen 34,,3.0,88.5,2245000,1995000,25400,4878,12.5,bostadsrätt,,,,Bollmora,59.24289501,18.23363639,2137391,https://www.booli.se/annons/2137391
+2016-11-03,booli_brf_id,Myggdalsvägen 60,,4.0,92.0,2600000,2495000,28300,5252,4.2,bostadsrätt,,,,Centrum,59.24237,18.235218,2201415,https://www.booli.se/bostad/678117
+2016-11-23,booli_brf_id,Myggdalsvägen 14,,3.0,92.0,2480000,2250000,27000,5825,10.2,bostadsrätt,,,,Centrum,59.24337575,18.23287873,2215410,https://www.booli.se/bostad/677774
+2016-11-30,booli_brf_id,Myggdalsvägen 120,,2.0,77.5,2060000,1850000,26600,3926,11.4,bostadsrätt,,,,Centrum,59.2411939,18.2350863,2220392,https://www.booli.se/bostad/677539
+2016-12-02,booli_brf_id,Myggdalsvägen 14,,3.0,89.0,2640000,2375000,29700,5043,11.2,bostadsrätt,,,,Bollmora,59.24337575,18.23287873,2209430,https://www.booli.se/bostad/677773
+2016-12-08,booli_brf_id,Myggdalsvägen 90,,3.0,90.0,2450000,2050000,27200,5160,19.5,bostadsrätt,,,,Bollmora,59.24190947,18.23646829,2223914,https://www.booli.se/bostad/677966
+2017-02-27,booli_brf_id,Myggdalsvägen 104,,2.0,74.0,2100000,1995000,28400,4490,5.3,bostadsrätt,,,,Bollmora,59.2411091,18.23684959,2256915,https://www.booli.se/bostad/677904
+2017-03-05,booli_brf_id,Myggdalsvägen 122,,4.0,88.0,2405000,2295000,27300,4994,4.8,bostadsrätt,,,,Bollmora,59.24132428,18.23537469,2257131,https://www.booli.se/annons/2257131
+2017-03-30,booli_brf_id,Myggdalsvägen 18,,4.0,92.0,2760000,2195000,30000,5222,25.7,bostadsrätt,,,,Bollmora,59.2431794,18.2333729,2274801,https://www.booli.se/bostad/677806
+2017-03-30,booli_brf_id,Myggdalsvägen 116,,2.0,77.5,2450000,1795000,31600,3926,36.5,bostadsrätt,,,,Tyresö Centrum,59.24093381,18.23519306,2282008,https://www.booli.se/annons/2282008
+2017-04-07,booli_brf_id,Myggdalsvägen 8,,2.0,74.0,2525000,2075000,34100,3935,-53.9,bostadsrätt,,,,Tyresö Centrum,59.243294,18.23196,2264016,https://www.booli.se/annons/2264016
+2017-04-28,booli_brf_id,Myggdalsvägen 36,,4.0,88.5,2625000,2195000,29700,4878,19.6,bostadsrätt,,,,Bollmora,59.24279531,18.23388276,2303226,https://www.booli.se/annons/2303226
+2017-05-04,booli_brf_id,Myggdalsvägen 84,,4.0,94.5,2525000,2195000,26700,5065,15,bostadsrätt,,,,Tyresö Centrum,59.24131578,18.23636811,2292138,https://www.booli.se/bostad/677721
+2017-05-11,booli_brf_id,Myggdalsvägen 60,,4.0,90.0,2900000,2300000,32200,4983,-59.4,bostadsrätt,,,,Bollmora,59.24237,18.235218,2291006,https://www.booli.se/annons/2291006
+2017-05-31,booli_brf_id,Myggdalsvägen 64,,4.0,90.0,2800000,2295000,31100,5100,22,bostadsrätt,,,,Bollmora,59.24216767,18.2357153,2329471,https://www.booli.se/annons/2329471
+2017-06-14,booli_brf_id,Myggdalsvägen 86,,4.0,88.5,2700000,2295000,30500,4878,17.6,bostadsrätt,,,,Bollmora,59.2416595,18.2363827,2341385,https://www.booli.se/annons/2341385
+2017-06-24,booli_brf_id,Myggdalsvägen,,4.0,94.5,2700000,2350000,28600,5183,14.9,bostadsrätt,,,,Bollmora,59.24295388,18.23315263,2347672,https://www.booli.se/annons/2347672
+2017-07-06,booli_brf_id,Myggdalsvägen 94,,4.0,92.0,2850000,2495000,31000,5105,14.2,bostadsrätt,,,,Centrum,59.24170851,18.23696084,2216274,https://www.booli.se/bostad/677995
+2017-08-02,booli_brf_id,Myggdalsvägen 50,,3.0,90.0,3000000,2495000,33300,4983,20.2,bostadsrätt,,,,Bollmora,59.24255181,18.23477789,2370792,https://www.booli.se/annons/2370792
+2017-08-24,booli_brf_id,Myggdalsvägen 16,,3.0,92.0,2860000,2495000,31100,5222,14.6,bostadsrätt,,,,Centrum,59.2432776,18.2331198,2379449,https://www.booli.se/annons/2379449
+2017-08-24,booli_brf_id,Myggdalsvägen 26,,3.0,88.5,2500000,2295000,28200,4878,8.9,bostadsrätt,,,,Tyresö Centrum,59.24291502,18.2324397,2380422,https://www.booli.se/bostad/677573
+2017-09-19,booli_brf_id,Myggdalsvägen 36,,4.0,88.5,2395000,2395000,27100,4995,0,bostadsrätt,,,,Tyresö Centrum,59.24279531,18.23388276,2285787,https://www.booli.se/annons/2285787
+2017-09-20,booli_brf_id,Myggdalsvägen 82,,4.0,94.5,2850000,1995000,30200,5183,42.9,bostadsrätt,,,,Bollmora,59.2412,18.236183,2406496,https://www.booli.se/annons/2406496
+2017-09-27,booli_brf_id,Myggdalsvägen 44,,3.0,77.5,2700000,2295000,34800,3926,12.7,bostadsrätt,,,,Bollmora,59.24260237,18.23394441,2400257,https://www.booli.se/annons/2400257
+2017-09-29,booli_brf_id,Myggdalsvägen 90,,4.0,90.0,2900000,2495000,32200,4983,16.2,bostadsrätt,,,,Centrum,59.24190947,18.23646829,2403770,https://www.booli.se/annons/2403770
+2017-10-17,booli_brf_id,Myggdalsvägen 100,,2.0,74.0,2395000,2395000,32400,3895,9.1,bostadsrätt,,,,Bollmora,59.24132428,18.2374441,2392789,https://www.booli.se/annons/2392789
+2017-10-24,booli_brf_id,Myggdalsvägen 68,,4.0,88.5,2550000,2250000,28800,4878,13.3,bostadsrätt,,,,Centrum,59.24185323,18.23521606,3018829,https://www.booli.se/annons/3018829
+2018-01-16,booli_brf_id,Myggdalsvägen 36,,2.0,79.5,2295000,2295000,28900,3872,0,bostadsrätt,,,,Tyresö Centrum,59.24279531,18.23388276,2361735,https://www.booli.se/bostad/677603
+2018-02-14,booli_brf_id,Myggdalsvägen 110,,2.0,74.0,2295000,2295000,31000,3816,0,bostadsrätt,,,,Centrum,59.24068974,18.23597097,3063690,https://www.booli.se/bostad/677959
+2018-02-15,booli_brf_id,Myggdalsvägen 98,,3.0,90.0,2675000,2295000,29700,5043,16.6,bostadsrätt,,,,Bollmora,59.241512,18.237442,3079863,https://www.booli.se/annons/3079863
+2018-03-16,booli_brf_id,Myggdalsvägen 6,,2.0,74.0,2395000,2395000,32400,3974,0,bostadsrätt,,,,Centrum,59.24317,18.23178,3091148,https://www.booli.se/annons/3091148
+2018-03-27,booli_brf_id,Myggdalsvägen 8,,2.0,49.5,2060000,1850000,41600,2638,11.4,bostadsrätt,,,,Tyresö Centrum,59.243294,18.23196,3108941,https://www.booli.se/bostad/677850
+2018-04-05,booli_brf_id,Myggdalsvägen 78,,3.0,88.5,2295000,2295000,25900,4722,0,bostadsrätt,,,,Tyresö Centrum,59.2413409,18.2356555,3104392,https://www.booli.se/bostad/677698
+2018-04-23,booli_brf_id,Myggdalsvägen 14,,4.0,90.0,2700000,2395000,30000,5160,12.7,bostadsrätt,,,,Bollmora,59.24337575,18.23287873,3119370,https://www.booli.se/bostad/677777
+2018-04-25,booli_brf_id,Myggdalsvägen 102,,2.0,74.0,2585000,2195000,34900,3992,17.8,bostadsrätt,,,,Bollmora,59.24123667,18.23704158,3128820,https://www.booli.se/bostad/677893
+2018-04-30,booli_brf_id,Myggdalsvägen 12,,3.0,90.0,2350000,2395000,26100,5218,-1.9,bostadsrätt,,,,Tyresö Centrum,59.24347598,18.23264145,3086938,https://www.booli.se/bostad/677761
+2018-05-04,booli_brf_id,Myggdalsvägen 62,,1.5,45.0,1900000,1495000,42200,3387,27.1,bostadsrätt,,,,Bollmora,59.24226748,18.23546632,3135042,https://www.booli.se/bostad/678121
+2018-05-22,booli_brf_id,Myggdalsvägen 28,,4.0,88.5,2950000,2395000,33300,4995,23.2,bostadsrätt,,,,Centrum,59.24279347,18.23225195,3152154,https://www.booli.se/annons/3152154
+2018-05-23,booli_brf_id,Myggdalsvägen 10,,2.0,74.0,2150000,1995000,29100,3974,7.8,bostadsrätt,,,,Bollmora,59.24342071,18.23215771,3149012,https://www.booli.se/annons/3149012
+2018-06-18,booli_brf_id,Myggdalsvägen 46,,4.0,92.0,3000000,2575000,32600,5252,16.5,bostadsrätt,,,,Bollmora,59.24275,18.23429,3179444,https://www.booli.se/annons/3179444
+2018-08-24,booli_brf_id,Myggdalsvägen 22,,4.0,94.5,2520000,2250000,26700,5183,12,bostadsrätt,,,,Bollmora,59.2431092,18.2328416,3204725,https://www.booli.se/annons/3204725
+2018-09-02,booli_brf_id,Myggdalsvägen 18,,4.0,92.0,3520000,2500000,38300,5222,40.8,bostadsrätt,,,,Bollmora,59.2431794,18.2333729,3223475,https://www.booli.se/bostad/677806
+2018-09-14,booli_brf_id,Myggdalsvägen 122,,3.0,88.5,2395000,2395000,27100,4878,0,bostadsrätt,,,,Bollmora,59.24132428,18.23537469,3149113,https://www.booli.se/annons/3149113
+2018-09-19,booli_brf_id,Myggdalsvägen 64,,4.0,92.0,3050000,2495000,33200,5105,22.2,bostadsrätt,,,,Tyresö Centrum,59.24216767,18.2357153,3234139,https://www.booli.se/bostad/678137
+2018-10-26,booli_brf_id,Myggdalsvägen 82,,4.0,94.0,2500000,2495000,26600,5051,0.2,bostadsrätt,,,,Tyresö Centrum,59.2412,18.236183,3255267,https://www.booli.se/annons/3255267
+2018-10-26,booli_brf_id,Myggdalsvägen 98,,3.0,90.0,2600000,2295000,28900,4866,13.3,bostadsrätt,,,,Tyresö Centrum,59.241512,18.237442,3261617,https://www.booli.se/bostad/678030
+2018-11-09,booli_brf_id,Myggdalsvägen 76,,4.0,94.0,2320000,2395000,24700,5168,-7,bostadsrätt,,,,Bollmora,59.2414757,18.2357506,3255227,https://www.booli.se/annons/3255227
+2018-11-15,booli_brf_id,Myggdalsvägen 72,,4.0,94.0,2700000,2495000,28700,5168,8.2,bostadsrätt,,,,Bollmora,59.24192,18.23603,3259173,https://www.booli.se/annons/3259173
+2018-11-15,booli_brf_id,Myggdalsvägen 28,,3.0,88.5,2700000,2495000,30500,4995,8.2,bostadsrätt,,,,Bollmora,59.24279347,18.23225195,3274243,https://www.booli.se/annons/3274243
+2018-12-11,booli_brf_id,Myggdalsvägen 22,,4.0,94.0,2800000,2495000,29800,7706,12.2,bostadsrätt,,,,Bollmora,59.2431092,18.2328416,3291741,https://www.booli.se/bostad/677558
+2018-12-13,booli_brf_id,Myggdalsvägen 110,,2.0,49.5,2005000,1895000,40500,2600,5.8,bostadsrätt,,,,Bollmora,59.24068974,18.23597097,3254554,https://www.booli.se/annons/3254554
+2019-01-04,booli_brf_id,Myggdalsvägen 8,,2.0,49.5,2000000,1850000,40400,2677,8.1,bostadsrätt,,,,Bollmora,59.243294,18.23196,3304242,https://www.booli.se/annons/3304242
+2019-02-20,booli_brf_id,Myggdalsvägen 112,,4.0,94.5,2150000,2195000,22800,5183,-2.1,bostadsrätt,,,,Bollmora,59.24088,18.23545,3299107,https://www.booli.se/annons/3299107
+2019-02-21,booli_brf_id,Myggdalsvägen 22,,4.0,94.0,2580000,2295000,27400,5051,12.4,bostadsrätt,,,,Bollmora,59.2431092,18.2328416,3171337,https://www.booli.se/annons/3171337
+2019-02-27,booli_brf_id,Myggdalsvägen 46,,4.0,90.0,2410000,2150000,26800,5306,12.1,bostadsrätt,,,,Bollmora,59.24275,18.23429,3335298,https://www.booli.se/annons/3335298
+2019-03-07,booli_brf_id,Myggdalsvägen 70,,4.0,94.0,2400000,2095000,25500,5051,14.6,bostadsrätt,,,,Bollmora,59.242078,18.235996,3340005,https://www.booli.se/annons/3340005
+2019-03-07,booli_brf_id,Myggdalsvägen 34,,3.0,88.5,2850000,2850000,32200,4878,0,bostadsrätt,,,,Bollmora,59.24289501,18.23363639,3353417,https://www.booli.se/annons/3353417
+2019-03-28,booli_brf_id,Myggdalsvägen 14,,4.0,90.0,2925000,2495000,32500,5043,17.2,bostadsrätt,,,,Tyresö Centrum,59.24337575,18.23287873,3328716,https://www.booli.se/bostad/677773
+2019-04-09,booli_brf_id,Myggdalsvägen 12,,4.0,92.0,3000000,,32600,5105,3.6,bostadsrätt,,,,Tyresö Centrum,59.24347598,18.23264145,3333841,https://www.booli.se/bostad/677760
+2019-04-09,booli_brf_id,Myggdalsvägen 110,,2.0,49.5,1835000,1695000,37100,2677,8.3,bostadsrätt,,,,Tyresö Centrum,59.24068974,18.23597097,3365405,https://www.booli.se/bostad/677957
+2019-04-17,booli_brf_id,Myggdalsvägen 84,,3.0,82.5,2600000,2395000,31500,4882,8.6,bostadsrätt,,,,Bollmora,59.24131578,18.23636811,3294664,https://www.booli.se/bostad/677715
+2019-05-03,booli_brf_id,Myggdalsvägen 100,,2.0,74.0,2500000,2295000,33800,3895,8.9,bostadsrätt,,,,Bollmora,59.24132428,18.2374441,3384159,https://www.booli.se/annons/3384159
+2019-05-08,booli_brf_id,Myggdalsvägen 56,,4.0,94.0,2625000,2375000,27900,5051,10.5,bostadsrätt,,,,Tyresö Centrum,59.24212,18.23463,3428738,https://www.booli.se/annons/3428738
+2019-05-11,booli_brf_id,Myggdalsvägen 86,,3.0,88.5,2250000,1895000,25400,7621,18.7,bostadsrätt,,,,Tyresö Centrum,59.2416595,18.2363827,3430155,https://www.booli.se/bostad/677725
+2019-05-15,booli_brf_id,Myggdalsvägen 12,,4.0,90.0,2975000,2895000,33100,5100,2.8,bostadsrätt,,,,Bollmora,59.24347598,18.23264145,3434223,https://www.booli.se/annons/3434223
+2019-05-15,booli_brf_id,Myggdalsvägen 74,,3.0,82.5,2020000,1995000,24500,4336,1.3,bostadsrätt,,,,Bollmora,59.24162058,18.23608157,3434684,https://www.booli.se/bostad/677738
+2019-05-22,booli_brf_id,Myggdalsvägen 36,,4.0,89.0,2600000,2495000,29200,4878,4.2,bostadsrätt,,,,Tyresö Centrum,59.24279531,18.23388276,3260441,https://www.booli.se/bostad/677604
+2019-06-03,booli_brf_id,Myggdalsvägen 66,,3.0,88.5,2450000,2375000,27700,4995,-1.8,bostadsrätt,,,,Bollmora,59.24197174,18.23554512,3443106,https://www.booli.se/annons/3443106
+2019-06-05,booli_brf_id,Myggdalsvägen 26,,4.0,88.5,2800000,2495000,31600,4722,12.2,bostadsrätt,,,,Bollmora,59.24291502,18.2324397,3094603,https://www.booli.se/annons/3094603
+2019-06-05,booli_brf_id,Myggdalsvägen 100,,2.0,74.0,2400000,2200000,32400,3935,9.1,bostadsrätt,,,,Bollmora,59.24132428,18.2374441,3447407,https://www.booli.se/annons/3447407
+2019-06-19,booli_brf_id,Myggdalsvägen 32,,4.0,88.5,2650000,2495000,29900,4878,6.2,bostadsrätt,,,,Centrum,59.24256321,18.23264852,3385748,https://www.booli.se/annons/3385748
+2019-06-27,booli_brf_id,Myggdalsvägen 14,,3.0,90.0,2900000,,32200,5160,,bostadsrätt,,,,Bollmora,59.24337575,18.23287873,3459625,https://www.booli.se/annons/3459625
+2019-06-27,booli_brf_id,Myggdalsvägen 114,,3.0,82.5,2300000,2295000,27900,4275,0.2,bostadsrätt,,,,Tyresö Centrum,59.240993,18.235645,3463526,https://www.booli.se/bostad/677521
+2019-07-08,booli_brf_id,Myggdalsvägen 108,,2.0,49.0,2020000,1995000,41200,2770,1.3,bostadsrätt,,,,Bollmora,59.24081309,18.23616312,3498537,https://www.booli.se/bostad/677942
+2019-07-29,booli_brf_id,Myggdalsvägen 60,,1.0,45.0,1835000,1395000,40800,2646,31.5,bostadsrätt,,,,Tyresö Centrum,59.24237,18.235218,3525894,https://www.booli.se/bostad/678107
+2019-08-15,booli_brf_id,Myggdalsvägen 90,,4.0,90.0,2200000,2395000,24400,5277,-8.1,bostadsrätt,,,,Bollmora,59.24190947,18.23646829,3534942,https://www.booli.se/annons/3534942
+2019-08-16,booli_brf_id,Myggdalsvägen 86,,3.0,88.5,2450000,2290000,27700,4995,7,bostadsrätt,,,,Tyresö Centrum,59.2416595,18.2363827,3530311,https://www.booli.se/annons/3530311
+2019-08-18,booli_brf_id,Myggdalsvägen 28,,3.0,89.0,2750000,2595000,30900,5170,6,bostadsrätt,,,,Bollmora,59.24279347,18.23225195,3520775,https://www.booli.se/annons/3520775
+2019-08-20,booli_brf_id,Myggdalsvägen 26,,3.0,88.5,2600000,2495000,29400,5048,4.2,bostadsrätt,,,,Bollmora,59.24291502,18.2324397,3327422,https://www.booli.se/annons/3327422
+2019-08-20,booli_brf_id,Myggdalsvägen 104,,5.0,114.5,3120000,2995000,27200,6378,4.2,bostadsrätt,,,,Bollmora,59.2411091,18.23684959,3518277,https://www.booli.se/annons/3518277
+2019-08-20,booli_brf_id,Myggdalsvägen 42,,3.0,88.5,2050000,2095000,23200,5009,-2.1,bostadsrätt,,,,Bollmora,59.24247,18.23374,3524405,https://www.booli.se/bostad/677623
+2019-09-06,booli_brf_id,Myggdalsvägen 26,,3.0,88.5,2650000,2395000,29900,5048,10.6,bostadsrätt,,,,Bollmora,59.24291502,18.2324397,3563749,https://www.booli.se/bostad/677569
+2019-09-22,booli_brf_id,Myggdalsvägen 92,,2.0,45.0,1795000,1795000,39900,2646,-5.3,bostadsrätt,,,,Bollmora,59.24180966,18.23671729,3515426,https://www.booli.se/bostad/677977
+2019-09-23,booli_brf_id,Myggdalsvägen 60,,4.0,92.0,2995000,2495000,32600,5405,20,bostadsrätt,,,,Bollmora,59.24237,18.235218,3579977,https://www.booli.se/bostad/678115
+2019-11-20,booli_brf_id,Myggdalsvägen 16,,4.0,92.0,2900000,2495000,31500,5162,16.2,bostadsrätt,,,,Bollmora,59.2432776,18.2331198,3663845,https://www.booli.se/annons/3663845
+2019-11-21,booli_brf_id,Myggdalsvägen 14,,4.0,90.0,2540000,2390000,28200,5371,6.3,bostadsrätt,,,,Tyresö Centrum,59.24337575,18.23287873,3645176,https://www.booli.se/annons/3645176
+2019-11-24,booli_brf_id,Myggdalsvägen 100,,2.0,49.5,1900000,1995000,38400,2791,-4.8,bostadsrätt,,,,Bollmora,59.24132428,18.2374441,3578146,https://www.booli.se/annons/3578146
+2019-12-22,booli_brf_id,Myggdalsvägen 90,,4.0,90.0,2850000,2395000,31700,5462,19,bostadsrätt,,,,Tyresö Centrum,59.24190947,18.23646829,3671112,https://www.booli.se/annons/3671112
+2020-01-19,booli_brf_id,Myggdalsvägen 112,,4.0,94.0,2720000,2495000,28900,5227,9,bostadsrätt,,,,Centrum,59.24088,18.23545,3684379,https://www.booli.se/annons/3684379
+2020-02-05,booli_brf_id,Myggdalsvägen 112,,3.0,82.5,2495000,2495000,30200,4368,0,bostadsrätt,,,,Centrum,59.24088,18.23545,3716045,https://www.booli.se/bostad/677515
+2020-02-05,booli_brf_id,Myggdalsvägen 100,,2.0,74.0,2050000,1995000,27700,4113,2.8,bostadsrätt,,,,Tyresö Centrum,59.24132428,18.2374441,3716165,https://www.booli.se/bostad/677869
+2020-02-13,booli_brf_id,Myggdalsvägen 64,,4.0,90.0,2600000,1995000,28900,4813,30.3,bostadsrätt,,,,Tyresö Centrum,59.24216767,18.2357153,3722768,https://www.booli.se/bostad/678134
+2020-02-15,booli_brf_id,Myggdalsvägen 10,,2.0,49.5,1935000,1795000,39100,2770,7.8,bostadsrätt,,,,Tyresö Centrum,59.24342071,18.23215771,3722732,https://www.booli.se/annons/3722732
+2020-02-17,booli_brf_id,Myggdalsvägen 6,,2.0,49.5,2075000,1795000,41900,2690,15.6,bostadsrätt,,,,Bollmora,59.24317,18.23178,3716172,https://www.booli.se/annons/3716172
+2020-04-09,booli_brf_id,Myggdalsvägen 104,,2.0,74.0,2250000,2400000,30400,4070,-6.3,bostadsrätt,,,,Bollmora,59.2411091,18.23684959,3776654,https://www.booli.se/annons/3776654
+2020-05-06,booli_brf_id,Myggdalsvägen 104,,2.0,74.0,1995000,1995000,27000,4031,0,bostadsrätt,,,,Bollmora,59.2411091,18.23684959,3805195,https://www.booli.se/bostad/677901
+2020-05-14,booli_brf_id,Myggdalsvägen 10,,2.0,49.5,2000000,1895000,40400,2730,5.5,bostadsrätt,,,,Bollmora,59.24342071,18.23215771,3583802,https://www.booli.se/bostad/677747
+2020-05-29,booli_brf_id,Myggdalsvägen 98,,4.0,90.0,2500000,2495000,27800,4813,0.2,bostadsrätt,,,,Bollmora,59.241512,18.237442,3760332,https://www.booli.se/annons/3760332
+2020-06-04,booli_brf_id,Myggdalsvägen 76,,4.0,94.5,2300000,1995000,24300,5243,15.3,bostadsrätt,,,,Tyresö Centrum,59.2414757,18.2357506,3833470,https://www.booli.se/bostad/677693
+2020-06-14,booli_brf_id,Myggdalsvägen 104,,2.0,49.5,1800000,1850000,36400,2730,-2.7,bostadsrätt,,,,Bollmora,59.2411091,18.23684959,3771236,https://www.booli.se/annons/3771236
+2020-06-17,booli_brf_id,Myggdalsvägen 106,,2.0,74.0,2095000,2095000,28300,4031,0,bostadsrätt,,,,Bollmora,59.2409407,18.2363661,3856811,https://www.booli.se/annons/3856811
+2020-07-06,booli_brf_id,Myggdalsvägen 116,,2.0,78.0,3100000,2850000,39700,4064,8.8,bostadsrätt,,,,Bollmora,59.24093381,18.23519306,3863855,https://www.booli.se/annons/3863855
+2020-08-13,booli_brf_id,Myggdalsvägen 92,,4.0,90.0,2650000,2595000,29400,5279,2.1,bostadsrätt,,,,Tyresö Centrum,59.24180966,18.23671729,3747367,https://www.booli.se/bostad/677982
+2020-08-14,booli_brf_id,Myggdalsvägen 16,,4.0,92.0,2900000,2900000,31500,5162,0,bostadsrätt,,,,Bollmora,59.2432776,18.2331198,3890110,https://www.booli.se/annons/3890110
+2020-08-14,booli_brf_id,Myggdalsvägen 6,,2.0,49.5,1800000,1495000,36400,2867,20.4,bostadsrätt,,,,Bollmora,59.24317,18.23178,3907854,https://www.booli.se/annons/3907854
+2020-09-09,booli_brf_id,Myggdalsvägen 104,,2.0,74.0,1950000,1995000,26400,4338,-2.3,bostadsrätt,,,,Centrala,59.2411091,18.23684959,3924974,https://www.booli.se/annons/3924974
+2020-09-09,booli_brf_id,Myggdalsvägen 98,,4.0,90.0,2745000,2495000,30500,5480,10,bostadsrätt,,,,Bollmora,59.241512,18.237442,3937378,https://www.booli.se/annons/3937378
+2020-09-14,booli_brf_id,Myggdalsvägen 104,,2.0,49.5,2000000,2000000,40400,2931,5.5,bostadsrätt,,,,Bollmora,59.2411091,18.23684959,3939649,https://www.booli.se/annons/3939649
+2020-09-18,booli_brf_id,Myggdalsvägen 102,,2.0,49.5,2000000,1895000,40400,2760,5.5,bostadsrätt,,,,Centrala,59.24123667,18.23704158,3909222,https://www.booli.se/annons/3909222
+2020-10-01,booli_brf_id,Myggdalsvägen 20,,2.0,45.0,1850000,1900000,41100,2651,5.7,bostadsrätt,,,,Bollmora,59.24308322,18.23360633,3907011,https://www.booli.se/bostad/677812
+2020-10-09,booli_brf_id,Myggdalsvägen,,4.0,89.5,2850000,2795000,31800,5230,2,bostadsrätt,,,,Bollmora,59.24295388,18.23315263,3736836,https://www.booli.se/annons/3736836
+2020-10-09,booli_brf_id,Myggdalsvägen 26,,3.0,88.5,2575000,2575000,29100,5048,0,bostadsrätt,,,,Tyresö Centrum,59.24291502,18.2324397,3749182,https://www.booli.se/bostad/677571
+2020-10-09,booli_brf_id,Myggdalsvägen 22,,3.0,82.5,2000000,1495000,24200,6615,33.8,bostadsrätt,,,,Tyresö Centrum,59.2431092,18.2328416,3841879,https://www.booli.se/bostad/677551
+2020-10-09,booli_brf_id,Myggdalsvägen 98,,3.0,90.0,2800000,2395000,31100,5639,16.9,bostadsrätt,,,,Tyresö Centrum,59.241512,18.237442,3897482,https://www.booli.se/annons/3897482
+2020-10-09,booli_brf_id,Myggdalsvägen 114,,4.0,94.0,2400000,2395000,25500,5489,0.2,bostadsrätt,,,,Tyresö Centrum,59.240993,18.235645,3914608,https://www.booli.se/bostad/677524
+2020-10-13,booli_brf_id,Myggdalsvägen 72,,4.0,94.0,2800000,2495000,29800,5616,12.2,bostadsrätt,,,,Tyresö Centrum,59.24192,18.23603,3984048,https://www.booli.se/bostad/677679
+2020-10-13,booli_brf_id,Myggdalsvägen 46,,4.0,90.0,2875000,2495000,31900,5767,15.2,bostadsrätt,,,,Bollmora,59.24275,18.23429,3995642,https://www.booli.se/bostad/678074
+2020-10-26,booli_brf_id,Myggdalsvägen 10,,2.0,49.5,1795000,1795000,36300,2738,0,bostadsrätt,,,,Centrala,59.24342071,18.23215771,3962670,https://www.booli.se/annons/3962670
+2020-10-29,booli_brf_id,Myggdalsvägen 92,,4.0,90.0,2385000,2375000,26500,5415,0.4,bostadsrätt,,,,Tyresö Centrum,59.24180966,18.23671729,4000634,https://www.booli.se/annons/4000634
+2020-11-12,booli_brf_id,Myggdalsvägen 20,,3.0,90.0,2560000,2195000,28400,5552,16.6,bostadsrätt,,,,Tyresö Centrum,59.24308322,18.23360633,4021903,https://www.booli.se/bostad/677823
+2020-11-26,booli_brf_id,Myggdalsvägen 36,,2.0,77.5,1995000,1995000,25700,4267,-9.1,bostadsrätt,,,,Bollmora,59.24279531,18.23388276,4003344,https://www.booli.se/bostad/677602
+2020-11-30,booli_brf_id,Myggdalsvägen 98,,4.0,92.0,2400000,2395000,26100,5835,0.2,bostadsrätt,,,,Tyresö Centrum,59.241512,18.237442,3057739,https://www.booli.se/bostad/678029
+2020-11-30,booli_brf_id,Myggdalsvägen 68,,4.0,88.5,2500000,2395000,28200,5259,4.4,bostadsrätt,,,,Bollmora,59.24185323,18.23521606,3985547,https://www.booli.se/bostad/677661
+2020-12-11,booli_brf_id,Myggdalsvägen 48,,1.5,45.0,2000000,,44400,2778,,bostadsrätt,,,,Centrala,59.24264945,18.23453368,4060843,https://www.booli.se/bostad/678079
+2020-12-29,booli_brf_id,Myggdalsvägen 110,,2.0,49.5,1950000,1950000,39400,2867,0,bostadsrätt,,,,Bollmora,59.24068974,18.23597097,3847924,https://www.booli.se/bostad/677954
+2021-01-21,booli_brf_id,Myggdalsvägen 96,,3.0,92.0,2395000,2395000,26000,5611,0,bostadsrätt,,,,Tyresö Centrum,59.24161159,18.23720161,4029173,https://www.booli.se/bostad/678011
+2021-02-12,booli_brf_id,Myggdalsvägen 120,,4.0,88.5,2750000,2395000,31100,5428,14.8,bostadsrätt,,,,Bollmora,59.2411939,18.2350863,4103031,https://www.booli.se/annons/4103031
+2021-02-16,booli_brf_id,Myggdalsvägen 28,,4.0,88.5,3400000,,38400,4887,,bostadsrätt,,,,Tyresö Centrum,59.24279347,18.23225195,3811444,https://www.booli.se/annons/3811444
+2021-02-16,booli_brf_id,Myggdalsvägen 28,,4.0,88.5,3400000,2595000,38400,5131,31,bostadsrätt,,,,Bollmora,59.24279347,18.23225195,4109983,https://www.booli.se/annons/4109983
+2021-03-05,booli_brf_id,Myggdalsvägen 122,,4.0,88.5,3300000,,37300,5259,,bostadsrätt,,,,,59.24132428,18.23537469,4139696,https://www.booli.se/bostad/677546
+2021-03-16,booli_brf_id,Myggdalsvägen 86,,4.0,88.5,2625000,2495000,29700,5301,5.2,bostadsrätt,,,,Tyresö Centrum,59.2416595,18.2363827,4121163,https://www.booli.se/bostad/677728
+2021-04-01,booli_brf_id,Myggdalsvägen 8,,2.0,49.5,1860000,1890000,37600,2909,-1.6,bostadsrätt,,,,Centrala,59.243294,18.23196,4155142,https://www.booli.se/annons/4155142
+2021-04-09,booli_brf_id,Myggdalsvägen 90,,4.0,90.0,2850000,2595000,31700,5735,14.2,bostadsrätt,,,,Tyresö Centrum,59.24190947,18.23646829,4084102,https://www.booli.se/annons/4084102
+2021-04-11,booli_brf_id,Myggdalsvägen 50,,4.0,93.0,2625000,2625000,28200,5803,5.2,bostadsrätt,,,,Centrala,59.24255181,18.23477789,4122486,https://www.booli.se/annons/4122486
+2021-04-16,booli_brf_id,Myggdalsvägen 54,,3.0,82.5,2550000,2295000,30900,4586,11.1,bostadsrätt,,,,Bollmora,59.2422178,18.2343372,4139400,https://www.booli.se/bostad/3955117
+2021-04-27,booli_brf_id,Myggdalsvägen 68,,4.0,88.5,2650000,2495000,29900,5048,6.2,bostadsrätt,,,,Bollmora,59.24185323,18.23521606,4143168,https://www.booli.se/annons/4143168
+2021-04-27,booli_brf_id,Myggdalsvägen 98,,4.0,90.0,3000000,2495000,33300,5639,20.2,bostadsrätt,,,,Bollmora,59.241512,18.237442,4144152,https://www.booli.se/bostad/678028
+2021-04-27,booli_brf_id,Myggdalsvägen 108,,2.0,74.0,2330000,2095000,31500,4319,11.2,bostadsrätt,,,,Bollmora,59.24081309,18.23616312,4193342,https://www.booli.se/annons/4193342
+2021-04-28,booli_brf_id,Myggdalsvägen 12,,3.0,90.0,2800000,2495000,31100,5671,12.2,bostadsrätt,,,,Bollmora,59.24347598,18.23264145,4194146,https://www.booli.se/annons/4194146
+2021-05-03,booli_brf_id,Myggdalsvägen 82,,4.0,94.5,2615000,2595000,27700,5632,0.8,bostadsrätt,,,,Bollmora,59.2412,18.236183,4131746,https://www.booli.se/annons/4131746
+2021-05-11,booli_brf_id,Myggdalsvägen 108,,2.0,74.0,2200000,2095000,29700,4063,5,bostadsrätt,,,,Tyresö Centrum,59.24081309,18.23616312,4201511,https://www.booli.se/annons/4201511
+2021-06-30,booli_brf_id,Myggdalsvägen 100,,2.0,49.5,1900000,1950000,38400,2931,-3.8,bostadsrätt,,,,Bollmora,59.24132428,18.2374441,4160919,https://www.booli.se/annons/4160919
+2021-07-02,booli_brf_id,Myggdalsvägen 26,,4.0,88.5,3050000,,34500,5301,,bostadsrätt,,,,Tyresö Centrum,59.24291502,18.2324397,4287744,https://www.booli.se/annons/4287744
+2021-08-19,booli_brf_id,Myggdalsvägen 48,,3.0,92.0,2575000,,28000,5691,,bostadsrätt,,,,Bollmora,59.24264945,18.23453368,4321104,https://www.booli.se/annons/4321104
+2021-09-02,booli_brf_id,Myggdalsvägen 10,,2.0,49.5,2300000,,46500,3054,,bostadsrätt,,,,Bollmora,59.24342071,18.23215771,4320424,https://www.booli.se/annons/4320424
+2021-09-29,booli_brf_id,Myggdalsvägen 76,,3.0,85.5,2700000,2495000,31600,5057,8.2,bostadsrätt,,,,Bollmora,59.2414757,18.2357506,4378395,https://www.booli.se/bostad/677690
+2021-10-12,booli_brf_id,Myggdalsvägen 104,,2.0,74.0,2400000,2400000,32400,4490,0,bostadsrätt,,,,Bollmora,59.2411091,18.23684959,4382509,https://www.booli.se/bostad/677904
+2021-10-14,booli_brf_id,Myggdalsvägen 64,,4.0,90.0,3340000,2695000,37100,6749,23.9,bostadsrätt,,,,Bollmora,59.24216767,18.2357153,4394964,https://www.booli.se/bostad/678146
+2021-10-15,booli_brf_id,Myggdalsvägen 24,,4.0,94.0,2870000,2495000,30500,5897,15,bostadsrätt,,,,Centrala,59.24300092,18.23311844,4390174,https://www.booli.se/annons/4390174
+2021-10-16,booli_brf_id,Myggdalsvägen 34,,4.0,88.5,2850000,2675000,32200,5566,6.5,bostadsrätt,,,,Tyresö Centrum,59.24289501,18.23363639,4387597,https://www.booli.se/annons/4387597
+2021-10-30,booli_brf_id,Myggdalsvägen 84,,3.0,82.5,2730000,2495000,33100,4882,9.4,bostadsrätt,,,,Bollmora,59.24131578,18.23636811,4387348,https://www.booli.se/bostad/677715
+2021-11-20,booli_brf_id,Myggdalsvägen 72,,3.0,85.5,2550000,2350000,29800,5575,8.5,bostadsrätt,,,,Bollmora,59.24192,18.23603,4427801,https://www.booli.se/bostad/677673
+2021-12-01,booli_brf_id,Myggdalsvägen 104,,2.0,49.5,2050000,1950000,41400,3077,5.1,bostadsrätt,,,,Bollmora,59.2411091,18.23684959,4417117,https://www.booli.se/annons/4417117
+2022-01-18,booli_brf_id,Myggdalsvägen 102,,2.0,49.5,1925000,1750000,38900,3054,10,bostadsrätt,,,,Bollmora,59.24123667,18.23704158,4463042,https://www.booli.se/annons/4463042
+2022-01-20,booli_brf_id,Myggdalsvägen 116,,2.0,77.5,3100000,,40000,4480,,bostadsrätt,,,,Bollmora,59.24093381,18.23519306,4340033,https://www.booli.se/bostad/677527
+2022-01-20,booli_brf_id,Myggdalsvägen 18,,3.0,90.0,3150000,2795000,35000,5820,12.7,bostadsrätt,,,,Bollmora,59.2431794,18.2333729,4454301,https://www.booli.se/annons/4454301
+2022-01-26,booli_brf_id,Myggdalsvägen 50,,4.0,92.0,2765000,2450000,30100,6127,12.9,bostadsrätt,,,,Bollmora,59.24255181,18.23477789,4494555,https://www.booli.se/bostad/678103
+2022-01-27,booli_brf_id,Myggdalsvägen 108,,2.0,74.0,2600000,2395000,35100,4535,8.6,bostadsrätt,,,,Bollmora,59.24081309,18.23616312,4426524,https://www.booli.se/annons/4426524
+2022-02-09,booli_brf_id,Myggdalsvägen 30,,3.0,88.5,3770000,3495000,42600,5611,7.9,bostadsrätt,,,,Bollmora,59.24266336,18.23240722,4473111,https://www.booli.se/bostad/677582
+2022-02-10,booli_brf_id,Myggdalsvägen 18,,2.0,45.0,1950000,1875000,43300,2783,4,bostadsrätt,,,,Tyresö Centrum,59.2431794,18.2333729,4490618,https://www.booli.se/bostad/677798
+2022-03-06,booli_brf_id,Myggdalsvägen 108,,2.0,74.0,2400000,2100000,32400,4535,14.3,bostadsrätt,,,,Bollmora,59.24081309,18.23616312,4525444,https://www.booli.se/annons/4525444
+2022-03-23,booli_brf_id,Myggdalsvägen 16,,4.0,90.0,3220000,2795000,35800,5754,15.2,bostadsrätt,,,,Bollmora,59.2432776,18.2331198,4557618,https://www.booli.se/annons/4557618
+2022-03-30,booli_brf_id,Myggdalsvägen 78,,4.0,88.5,3525000,2495000,39800,5388,41.3,bostadsrätt,,,,Bollmora,59.2413409,18.2356555,4569003,https://www.booli.se/annons/4569003
+2022-03-31,booli_brf_id,Myggdalsvägen 118,,2.0,77.5,2730000,2395000,35200,4457,14,bostadsrätt,,,,Bollmora,59.24103,18.234955,4569033,https://www.booli.se/bostad/677533
+2022-04-04,booli_brf_id,Myggdalsvägen 100,,2.0,49.5,2200000,,44400,3010,,bostadsrätt,,,,Tyresö Centrum,59.24132428,18.2374441,4575532,https://www.booli.se/bostad/677867
+2022-04-11,booli_brf_id,Myggdalsvägen 14,,3.0,92.0,3200000,2795000,34800,5825,14.5,bostadsrätt,,,,Tyresö Centrum,59.24337575,18.23287873,4573038,https://www.booli.se/bostad/677774
+2022-04-11,booli_brf_id,Myggdalsvägen 102,,2.0,74.0,2450000,,33100,4555,,bostadsrätt,,,,Bollmora,59.24123667,18.23704158,4593968,https://www.booli.se/bostad/677891
+2022-04-19,booli_brf_id,Myggdalsvägen 14,,4.0,90.0,2950000,2695000,32800,5686,9.5,bostadsrätt,,,,Tyresö Centrum,59.24337575,18.23287873,4587938,https://www.booli.se/bostad/677771
+2022-04-22,booli_brf_id,Myggdalsvägen 26,,3.0,88.5,3300000,2695000,37300,5566,22.4,bostadsrätt,,,,Bollmora,59.24291502,18.2324397,4445946,https://www.booli.se/annons/4445946
+2022-05-04,booli_brf_id,Myggdalsvägen 102,,2.0,49.5,2200000,,44400,2966,,bostadsrätt,,,,Bollmora,59.24123667,18.23704158,4408990,https://www.booli.se/annons/4408990
+2022-05-11,booli_brf_id,Myggdalsvägen 20,,4.0,90.0,3650000,2795000,40600,5552,30.6,bostadsrätt,,,,Bollmora,59.24308322,18.23360633,4586199,https://www.booli.se/bostad/677823
+2022-05-17,booli_brf_id,Myggdalsvägen 40,,4.0,94.0,3000000,2995000,31900,5897,0.2,bostadsrätt,,,,Bollmora,59.24258896,18.23306358,4511154,https://www.booli.se/bostad/677621
+2022-05-25,booli_brf_id,Myggdalsvägen 60,,4.0,90.0,3500000,3400000,38900,5686,2.9,bostadsrätt,,,,Tyresö Centrum,59.24237,18.235218,4646091,https://www.booli.se/bostad/678118
+2022-05-30,booli_brf_id,Myggdalsvägen 60,,4.0,90.0,4050000,,45000,5888,,bostadsrätt,,,,,59.24237,18.235218,4704118,https://www.booli.se/bostad/678110
+2022-06-17,booli_brf_id,Myggdalsvägen 50,,3.0,90.0,3100000,3250000,34400,6183,-4.6,bostadsrätt,,,,Bollmora,59.24255181,18.23477789,4676227,https://www.booli.se/annons/4676227
+2022-07-31,booli_brf_id,Myggdalsvägen 66,,4.0,88.5,3265000,2925000,36900,5699,16.8,bostadsrätt,,,,Tyresö Centrum,59.24197174,18.23554512,4692096,https://www.booli.se/bostad/677656
+2022-08-09,booli_brf_id,Myggdalsvägen 48,,4.0,92.0,3050000,,33200,6257,,bostadsrätt,,,,Bollmora,59.24264945,18.23453368,4706495,https://www.booli.se/annons/4706495
+2022-08-19,booli_brf_id,Myggdalsvägen 6,,2.0,49.5,2100000,1950000,42400,3019,7.7,bostadsrätt,,,,Bollmora,59.24317,18.23178,4704836,https://www.booli.se/bostad/677840
+2022-09-06,booli_brf_id,Myggdalsvägen 100,,2.0,74.0,1975000,2095000,26700,4666,-5.7,bostadsrätt,,,,Tyresö Centrum,59.24132428,18.2374441,4723384,https://www.booli.se/bostad/677863
+2022-09-16,booli_brf_id,Myggdalsvägen 22,,4.0,94.0,2970000,2395000,31600,6051,24,bostadsrätt,,,,Bollmora,59.2431092,18.2328416,4756525,https://www.booli.se/annons/4756525
+2022-09-23,booli_brf_id,Myggdalsvägen 90,,3.0,90.0,2750000,2850000,30600,6111,-3.5,bostadsrätt,,,,Bollmora,59.24190947,18.23646829,4742689,https://www.booli.se/bostad/677964
+2022-10-19,booli_brf_id,Myggdalsvägen 98,,4.0,90.0,2450000,2495000,27200,5572,-1.8,bostadsrätt,,,,Bollmora,59.241512,18.237442,4781995,https://www.booli.se/annons/4781995
+2022-11-03,booli_brf_id,Myggdalsvägen 110,,2.0,49.5,2000000,1995000,40400,3207,0.3,bostadsrätt,,,,Bollmora,59.24068974,18.23597097,4782974,https://www.booli.se/annons/4782974
+2022-11-10,booli_brf_id,Myggdalsvägen 86,,5.0,88.5,2900000,2695000,32800,5984,7.6,bostadsrätt,,,,Bollmora,59.2416595,18.2363827,4805265,https://www.booli.se/annons/4805265
+2022-12-02,booli_brf_id,Myggdalsvägen 88,,3.0,88.5,2600000,,29400,5984,,bostadsrätt,,,,Bollmora,59.24154977,18.23666318,4844269,https://www.booli.se/bostad/677737
+2023-02-03,booli_brf_id,Myggdalsvägen 92,,4.0,90.0,2650000,2650000,29400,5999,-3.6,bostadsrätt,,,,Bollmora,59.24180966,18.23671729,4207958,https://www.booli.se/bostad/677976
+2023-03-01,booli_brf_id,Myggdalsvägen 8,,2.0,49.5,2200000,2095000,44400,3115,5,bostadsrätt,,,,Bollmora,59.243294,18.23196,4800300,https://www.booli.se/bostad/677847
+2023-03-02,booli_brf_id,Myggdalsvägen 6,,2.0,49.5,1700000,1650000,34300,3319,3,bostadsrätt,,,,Bollmora,59.24317,18.23178,4547068,https://www.booli.se/annons/4547068
+2023-03-28,booli_brf_id,Myggdalsvägen 12,,4.0,90.0,2850000,,31700,6639,,bostadsrätt,,,,Bollmora,59.24347598,18.23264145,4923359,https://www.booli.se/annons/4923359
+2023-04-16,booli_brf_id,Myggdalsvägen 64,,2.0,45.0,1910000,1985000,42400,3068,19.7,bostadsrätt,,,,Bollmora,59.24216767,18.2357153,4860675,https://www.booli.se/bostad/678135
+2023-04-18,booli_brf_id,Myggdalsvägen 72,,3.0,85.5,2250000,2295000,26300,5575,-2,bostadsrätt,,,,Bollmora,59.24192,18.23603,4894782,https://www.booli.se/bostad/677673
+2023-04-24,booli_brf_id,Myggdalsvägen 8,,2.0,,2025000,2195000,,,-7.7,bostadsrätt,,,,Bollmora,59.243294,18.23196,4919292,https://www.booli.se/annons/4919292
+2023-05-15,booli_brf_id,Myggdalsvägen 102,,2.0,74.0,2450000,2450000,33100,5000,0,bostadsrätt,,,,Bollmora,59.24123667,18.23704158,4913767,https://www.booli.se/annons/4913767
+2023-06-22,booli_brf_id,Myggdalsvägen 92,,4.0,90.0,2500000,2295000,27800,6344,-10.6,bostadsrätt,,,,Bollmora,59.24180966,18.23671729,4029956,https://www.booli.se/annons/4029956
+2023-08-24,booli_brf_id,Myggdalsvägen 34,,4.0,88.5,2450000,2495000,27700,6136,-1.8,bostadsrätt,,,,Centrala Tyresö,59.24289501,18.23363639,5057313,https://www.booli.se/annons/5057313
+2023-09-10,booli_brf_id,Myggdalsvägen 86,,4.0,88.5,2495000,2495000,28200,6136,0,bostadsrätt,,,,Centrala Tyresö,59.2416595,18.2363827,5016030,https://www.booli.se/annons/5016030
+2023-09-21,booli_brf_id,Myggdalsvägen 62,,3.0,92.0,2250000,2250000,24500,6495,0,bostadsrätt,,,,Centrala Tyresö,59.24226748,18.23546632,5055967,https://www.booli.se/bostad/678127
+2023-10-01,booli_brf_id,Myggdalsvägen 30,,3.0,88.5,2200000,2095000,24900,6136,5,bostadsrätt,,,,Centrala Tyresö,59.24266336,18.23240722,5100035,https://www.booli.se/annons/5100035
+2023-10-13,booli_brf_id,Myggdalsvägen 16,,3.0,90.0,2495000,2495000,27700,6528,0,bostadsrätt,,,,Centrala Tyresö,59.2432776,18.2331198,4936902,https://www.booli.se/annons/4936902
+2023-10-19,booli_brf_id,Myggdalsvägen 74,,4.0,94.0,2500000,2495000,26600,6672,-10.6,bostadsrätt,,,,Tyresö Centrum,59.24162058,18.23608157,4667377,https://www.booli.se/bostad/677686
+2023-11-23,booli_brf_id,Myggdalsvägen 104,,2.0,49.5,1900000,1850000,38400,3077,2.7,bostadsrätt,,,,Centrala Tyresö,59.2411091,18.23684959,5171250,https://www.booli.se/annons/5171250
+2023-12-06,booli_brf_id,Myggdalsvägen 32,,5.0,88.5,2400000,,27100,6598,2.1,bostadsrätt,,,,Centrala Tyresö,59.24256321,18.23264852,5094624,https://www.booli.se/annons/5094624
+2023-12-13,booli_brf_id,Myggdalsvägen 10,,2.0,49.5,1900000,1995000,38400,3485,-4.8,bostadsrätt,,,,Tyresö Centrum,59.24342071,18.23215771,5030926,https://www.booli.se/annons/5030926
+2024-01-12,booli_brf_id,Myggdalsvägen 92,,4.0,92.0,2250000,2095000,24500,6938,7.4,bostadsrätt,,,,Tyresö Centrum,59.24180966,18.23671729,5174657,https://www.booli.se/bostad/677987
+2024-01-22,booli_brf_id,Myggdalsvägen 88,,2.0,77.5,2050000,1995000,26500,5186,2.8,bostadsrätt,,,,Centrala Tyresö,59.24154977,18.23666318,5186490,https://www.booli.se/bostad/677731
+2024-02-04,booli_brf_id,Myggdalsvägen 28,,3.0,88.5,2795000,2795000,31600,6598,0,bostadsrätt,,,,Centrala Tyresö,59.24279347,18.23225195,5068167,https://www.booli.se/annons/5068167
+2024-02-07,booli_brf_id,Myggdalsvägen 78,,4.0,88.5,2610000,2495000,29500,6237,4.6,bostadsrätt,,,,Centrala Tyresö,59.2413409,18.2356555,5177624,https://www.booli.se/annons/5177624
+2024-02-09,booli_brf_id,Myggdalsvägen 108,,2.0,74.0,2025000,1695000,27400,5198,12.8,bostadsrätt,,,,Centrala Tyresö,59.24081309,18.23616312,5194370,https://www.booli.se/annons/5194370
+2024-02-16,booli_brf_id,Myggdalsvägen 102,,2.0,74.0,1695000,1695000,22900,6004,0,bostadsrätt,,,,Tyresö Centrum,59.24123667,18.23704158,5211166,https://www.booli.se/bostad/677887
+2024-04-01,booli_brf_id,Myggdalsvägen 78,,3.5,88.5,2275000,1795000,25700,,26.7,bostadsrätt,,,,Centrala Tyresö,59.2413409,18.2356555,5256153,https://www.booli.se/annons/5256153
+2024-04-10,booli_brf_id,Myggdalsvägen 12,,4.0,92.0,2350000,1895000,25500,,24,bostadsrätt,,,,Centrala Tyresö,59.24347598,18.23264145,5253186,https://www.booli.se/annons/5253186
+2024-04-12,booli_brf_id,Myggdalsvägen 28,,4.0,88.5,2500000,,28200,,,bostadsrätt,,,,Centrala Tyresö,59.24279347,18.23225195,5255264,https://www.booli.se/annons/5255264
+2024-04-15,booli_brf_id,Myggdalsvägen 62,,2.0,45.0,1450000,1495000,32200,3387,-3,bostadsrätt,,,,Centrala Tyresö,59.24226748,18.23546632,5255541,https://www.booli.se/bostad/678121
+2024-04-25,booli_brf_id,Myggdalsvägen 64,,4.0,90.0,2600000,2195000,28900,,18.5,bostadsrätt,,,,Centrala Tyresö,59.24216767,18.2357153,5288142,https://www.booli.se/annons/5288142
+2024-04-30,booli_brf_id,Myggdalsvägen 48,,4.0,90.0,2595000,2595000,28800,6900,0,bostadsrätt,,,,Centrum,59.24264945,18.23453368,4800451,https://www.booli.se/annons/4800451
+2024-05-17,booli_brf_id,Myggdalsvägen 96,,4.0,90.0,2295000,2295000,25500,7074,0,bostadsrätt,,,,Tyresö Centrum,59.24161159,18.23720161,5305119,https://www.booli.se/bostad/678010
+2024-05-24,booli_brf_id,Myggdalsvägen 10,,2.0,74.0,2600000,,35100,5512,,bostadsrätt,,,,Centrala Tyresö,59.24342071,18.23215771,5342232,https://www.booli.se/annons/5342232
+2024-06-19,booli_brf_id,Myggdalsvägen 106,,2.0,74.0,2200000,2295000,29700,5512,-4.1,bostadsrätt,,,,Centrala Tyresö,59.2409407,18.2363661,4856879,https://www.booli.se/bostad/677917
+2024-06-20,booli_brf_id,Myggdalsvägen 34,,4.0,88.5,2000000,,22600,6765,,bostadsrätt,,,,Centrala Tyresö,59.24289501,18.23363639,5357690,https://www.booli.se/annons/5357690
+2024-07-09,booli_brf_id,Myggdalsvägen 64,,4.0,90.0,2950000,,32800,6749,,bostadsrätt,,,,Tyresö Centrum,59.24216767,18.2357153,5356795,https://www.booli.se/bostad/678146
+2024-07-17,booli_brf_id,Myggdalsvägen 52,,4.0,94.5,2700000,2200000,28600,7189,-6.7,bostadsrätt,,,,Tyresö Centrum,59.242538,18.234825,5243886,https://www.booli.se/bostad/677636
+2024-07-18,booli_brf_id,Myggdalsvägen 64,,4.0,92.0,2675000,2495000,29100,7080,7.2,bostadsrätt,,,,Centrala Tyresö,59.24216767,18.2357153,5323653,https://www.booli.se/annons/5323653
+2024-07-25,booli_brf_id,Myggdalsvägen 88,,4.0,88.5,2550000,,28800,6928,6.5,bostadsrätt,,,,Centrala Tyresö,59.24154977,18.23666318,5073942,https://www.booli.se/annons/5073942
+2024-07-31,booli_brf_id,Myggdalsvägen 98,,3.0,90.0,2750000,,30600,6994,,bostadsrätt,,,,Tyresö Centrum,59.241512,18.237442,5406288,https://www.booli.se/bostad/678022
+2024-08-05,booli_brf_id,Myggdalsvägen 52,,3.0,82.5,2120000,1995000,25700,5853,1.2,bostadsrätt,,,,Tyresö Centrum,59.242538,18.234825,5260490,https://www.booli.se/bostad/677634
+2024-08-08,booli_brf_id,Myggdalsvägen 102,,2.0,74.0,1795000,1795000,24300,5348,0,bostadsrätt,,,,Tyresö Centrum,59.24123667,18.23704158,5346487,https://www.booli.se/bostad/677879
+2024-09-03,booli_brf_id,Myggdalsvägen 22,,3.0,82.5,2350000,,28500,6615,,bostadsrätt,,,,Tyresö Centrum,59.2431092,18.2328416,5445656,https://www.booli.se/bostad/677551
+2024-09-12,booli_brf_id,Myggdalsvägen 96,,4.0,90.0,2800000,2495000,31100,7158,12.2,bostadsrätt,,,,Centrala Tyresö,59.24161159,18.23720161,5430913,https://www.booli.se/bostad/678012
+2024-10-09,booli_brf_id,Myggdalsvägen 38,,4.0,94.5,2500000,2595000,26500,7026,-3.7,bostadsrätt,,,,Centrala Tyresö,59.2427109,18.2332473,5335836,https://www.booli.se/annons/5335836
+2024-11-08,booli_brf_id,Myggdalsvägen 88,,4.0,88.0,2350000,2295000,26700,6765,-1.9,bostadsrätt,,,,Centrala Tyresö,59.24154977,18.23666318,5474753,https://www.booli.se/annons/5474753
+2024-11-15,booli_brf_id,Myggdalsvägen 94,,4.0,88.0,2350000,2495000,26700,7197,-21.5,bostadsrätt,,,,Centrala Tyresö,59.24170851,18.23696084,5388666,https://www.booli.se/annons/5388666
+2024-11-19,booli_brf_id,Myggdalsvägen 110,,5.0,114.5,3850000,,33600,8737,,bostadsrätt,,,,Centrala Tyresö,59.24068974,18.23597097,5533803,https://www.booli.se/annons/5533803
+2024-12-21,booli_brf_id,Myggdalsvägen 46,,3.0,92.0,2500000,2695000,27200,6835,-12.3,bostadsrätt,,,,Tyresö Centrum,59.24275,18.23429,5466080,https://www.booli.se/bostad/678077
+2025-01-07,booli_brf_id,Myggdalsvägen 24,,3.0,85.5,2000000,,23400,6147,,bostadsrätt,,,,Centrala Tyresö,59.24300092,18.23311844,5556146,https://www.booli.se/annons/5556146
+2025-01-15,booli_brf_id,Myggdalsvägen 20,,3.0,90.0,2050000,2050000,22800,7158,-18,bostadsrätt,,,,Centrala Tyresö,59.24308322,18.23360633,5445595,https://www.booli.se/annons/5445595
+2025-01-30,booli_brf_id,Myggdalsvägen 6,,2.0,49.5,2000000,1895000,40400,3966,5.5,bostadsrätt,,,,Tyresö Centrum,59.24317,18.23178,5498627,https://www.booli.se/annons/5498627
+2025-02-05,booli_brf_id,Myggdalsvägen 96,,2.0,45.0,1595000,1450000,35400,3721,10,bostadsrätt,,,,,59.24161159,18.23720161,5586725,https://www.booli.se/bostad/678005
+2025-02-14,booli_brf_id,Myggdalsvägen 14,,3.0,92.0,2000000,,21700,7518,,bostadsrätt,,,,Centrala Tyresö,59.24337575,18.23287873,5603740,https://www.booli.se/annons/5603740
+2025-02-25,booli_brf_id,Myggdalsvägen 18,,2.0,45.0,1800000,1795000,40000,3722,0.3,bostadsrätt,,,,Centrala Tyresö,59.2431794,18.2333729,5566904,https://www.booli.se/annons/5566904
+2025-03-24,booli_brf_id,Myggdalsvägen 56,,4.0,94.0,1850000,1850000,19700,7706,-25.9,bostadsrätt,,,,Tyresö Centrum,59.24212,18.23463,5505105,https://www.booli.se/bostad/677645
+2025-04-09,booli_brf_id,Myggdalsvägen 84,,4.0,94.0,1800000,1895000,19100,7005,-24.8,bostadsrätt,,,,Centrala Tyresö,59.24131578,18.23636811,5540833,https://www.booli.se/annons/5540833
+2025-05-19,booli_brf_id,Myggdalsvägen 60,,3.0,90.0,2195000,2195000,24400,7781,0,bostadsrätt,,,,Centrala Tyresö,59.24237,18.235218,5631656,https://www.booli.se/bostad/678108
+2025-05-20,booli_brf_id,Myggdalsvägen 6,,2.0,74.0,1800000,1995000,24300,6121,-14.1,bostadsrätt,,,,Tyresö Centrum,59.24317,18.23178,5586628,https://www.booli.se/bostad/677832
+2025-05-27,booli_brf_id,Myggdalsvägen 14,,3.0,90.0,1950000,,21700,7424,,bostadsrätt,,,,Tyresö Centrum,59.24337575,18.23287873,5576836,https://www.booli.se/bostad/677781
+2025-06-04,booli_brf_id,Myggdalsvägen 22,,4.0,94.0,2200000,,23400,7706,,bostadsrätt,,,,Centrala Tyresö,59.2431092,18.2328416,5623286,https://www.booli.se/bostad/677558
+2025-06-24,booli_brf_id,Myggdalsvägen 98,,4.0,90.0,1900000,2195000,21100,7603,-13.4,bostadsrätt,,,,Tyresö Centrum,59.241512,18.237442,5576312,https://www.booli.se/bostad/678020
+2025-06-30,booli_brf_id,Myggdalsvägen 104,,2.0,74.0,2250000,2295000,30400,6091,-2,bostadsrätt,,,,Tyresö Centrum,59.2411091,18.23684959,5497465,https://www.booli.se/bostad/677910
+2025-08-15,booli_brf_id,Myggdalsvägen 116,,4.0,88.5,2225000,1995000,25100,7442,-10.8,bostadsrätt,,,,Centrala Tyresö,59.24093381,18.23519306,5376530,https://www.booli.se/annons/5376530
+2025-08-28,booli_brf_id,Myggdalsvägen 18,,3.0,90.0,2000000,2095000,22200,7694,-4.5,bostadsrätt,,,,Centrala Tyresö,59.2431794,18.2333729,5741180,https://www.booli.se/bostad/677801
+2025-09-03,booli_brf_id,Myggdalsvägen 102,,2.0,74.0,2125000,1995000,28700,6004,6.5,bostadsrätt,,,,Centrala Tyresö,59.24123667,18.23704158,5784594,https://www.booli.se/bostad/677887
+2025-09-08,booli_brf_id,Myggdalsvägen 106,,2.0,49.5,1415000,1550000,28600,3844,-16.5,bostadsrätt,,,,Centrala Tyresö,59.2409407,18.2363661,5722313,https://www.booli.se/bostad/677930
+2025-10-03,booli_brf_id,Myggdalsvägen 84,,4.0,94.0,1795000,1795000,19100,7706,0,bostadsrätt,,,,Centrala Tyresö,59.24131578,18.23636811,5528353,https://www.booli.se/annons/5528353
+2025-10-14,booli_brf_id,Myggdalsvägen 90,,4.0,90.0,2075000,2075000,23100,8051,0,bostadsrätt,,,,,59.24190947,18.23646829,5856217,https://www.booli.se/annons/5856217
+2025-11-14,booli_brf_id,Myggdalsvägen 108,,2.0,74.0,1750000,1750000,23600,5942,-7.7,bostadsrätt,,,,Tyresö Centrum,59.24081309,18.23616312,5791774,https://www.booli.se/bostad/677937
+2025-11-24,booli_brf_id,Myggdalsvägen 34,,4.0,88.5,2250000,2295000,25400,7442,-9.8,bostadsrätt,,,,Centrala Tyresö,59.24289501,18.23363639,5447176,https://www.booli.se/annons/5447176
+2025-12-10,booli_brf_id,Myggdalsvägen 14,,3.0,92.0,2050000,1995000,22300,7609,2.8,bostadsrätt,,,,Tyresö Centrum,59.24337575,18.23287873,5940689,https://www.booli.se/bostad/677772
+2025-12-15,booli_brf_id,Myggdalsvägen 86,,4.0,88.5,2050000,,23200,7621,-6.6,bostadsrätt,,,,Centrala Tyresö,59.2416595,18.2363827,5343879,https://www.booli.se/bostad/677725
+2025-12-22,booli_brf_id,Myggdalsvägen 100,,2.0,74.0,2200000,,29700,6091,0.2,bostadsrätt,,,,Centrala Tyresö,59.24132428,18.2374441,5519351,https://www.booli.se/annons/5519351
+2026-01-24,booli_brf_id,Myggdalsvägen 92,,4.0,92.0,2265000,2195000,24600,7877,-1.3,bostadsrätt,,,,Centrala Tyresö,59.24180966,18.23671729,5926010,https://www.booli.se/annons/5926010
+2026-01-27,booli_brf_id,Myggdalsvägen 90,,4.0,92.0,1695000,1695000,18400,7968,0,bostadsrätt,,,,Centrala Tyresö,59.24190947,18.23646829,5975168,https://www.booli.se/annons/5975168
+2026-02-12,booli_brf_id,Myggdalsvägen 18,,3.0,92.0,2000000,2000000,21700,8013,0,bostadsrätt,,,,Centrala Tyresö,59.2431794,18.2333729,6006798,https://www.booli.se/bostad/677808
+2026-02-13,booli_brf_id,Myggdalsvägen 94,,3.0,92.0,1895000,1895000,20600,7877,0,bostadsrätt,,,,Central,59.24170851,18.23696084,5959880,https://www.booli.se/bostad/677997
+2026-02-15,booli_brf_id,Myggdalsvägen 92,,,90.0,2500000,2450000,27800,7275,2,bostadsrätt,,,,Centrala Tyresö,59.24180966,18.23671729,5953827,https://www.booli.se/annons/5953827
+2026-03-10,booli_brf_id,Myggdalsvägen 26,,4.0,89.0,2300000,2295000,25800,7442,-6.1,bostadsrätt,,,,Centrala Tyresö,59.24291502,18.2324397,5953635,https://www.booli.se/annons/5953635
+2026-03-12,booli_brf_id,Myggdalsvägen 90,,3.0,92.0,2520000,2495000,27400,7609,1,bostadsrätt,,,,Centrala Tyresö,59.24190947,18.23646829,5954535,https://www.booli.se/annons/5954535
+2026-03-15,booli_brf_id,Myggdalsvägen 64,,4.0,90.0,2295000,2295000,25500,7781,0,bostadsrätt,,,,Centrala Tyresö,59.24216767,18.2357153,4806292,https://www.booli.se/bostad/678140
+2026-03-17,booli_brf_id,Myggdalsvägen 102,,2.0,49.5,1595000,1595000,32200,4084,0,bostadsrätt,,,,Centrala Tyresö,59.24123667,18.23704158,5953079,https://www.booli.se/annons/5953079
+2026-03-21,booli_brf_id,Myggdalsvägen 96,,4.0,90.0,2295000,2295000,25500,7603,0,bostadsrätt,,,,Centrala Tyresö,59.24161159,18.23720161,5596105,https://www.booli.se/bostad/678006
+2026-04-07,booli_brf_id,Myggdalsvägen 110,,5.0,114.5,3500000,,30600,9505,-7.8,bostadsrätt,,,,Centrum,59.24068974,18.23597097,5379515,https://www.booli.se/bostad/677955
+2026-04-19,booli_brf_id,Myggdalsvägen 122,,3.0,88.5,2000000,1995000,22600,7442,0.3,bostadsrätt,,,,Centrala Tyresö,59.24132428,18.23537469,6046546,https://www.booli.se/annons/6046546
+2026-04-30,booli_brf_id,Myggdalsvägen 118,,4.0,88.5,2100000,2195000,23700,7621,-4.3,bostadsrätt,,,,Centrum,59.24103,18.234955,6081836,https://www.booli.se/bostad/677537
+2026-05-05,booli_brf_id,Myggdalsvägen 38,,3.0,82.5,1700000,1595000,20600,6438,6.6,bostadsrätt,,,,Centrala Tyresö,59.2427109,18.2332473,6091237,https://www.booli.se/bostad/677610
+2026-05-10,booli_brf_id,Myggdalsvägen 64,,4.0,90.0,2295000,2295000,25500,7694,0,bostadsrätt,,,,Centrala Tyresö,59.24216767,18.2357153,6082791,https://www.booli.se/bostad/678138
+2026-05-22,booli_brf_id,Myggdalsvägen 52,,4.0,94.0,2295000,2295000,24400,7706,-8,bostadsrätt,,,,Centrum,59.242538,18.234825,5522740,https://www.booli.se/bostad/677637
+2026-05-23,booli_brf_id,Myggdalsvägen 22,,3.0,82.5,2110000,2095000,25600,6615,0.7,bostadsrätt,,,,Centrum,59.2431092,18.2328416,6065105,https://www.booli.se/bostad/677551
+2026-06-03,booli_brf_id,Myggdalsvägen 14,,3.0,90.0,2600000,,28900,7781,-5.5,bostadsrätt,,,,Centrum,59.24337575,18.23287873,5445479,https://www.booli.se/bostad/677775

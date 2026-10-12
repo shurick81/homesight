@@ -1,0 +1,5 @@
+year_from,year_to,status,kind,scope,cost_kr,text,file,page,x,y,width,height
+2023,2024,done,stambyte,avlopp;våtrum,,2023-2024 Stambyte och renovering av badrum,arsredovisning-2024-2025-brf-pluto2.pdf,5,43,98,219,11
+2023,2025,done,stambyte,,86082895,"Total utgiften för stambytet blev 86 082 895 kr, mot offert på 79 845 572 kr.",arsredovisning-2024-2025-brf-pluto2.pdf,4,42,151,320,11
+2023,2024,in_progress,stambyte,avlopp;våtrum,,badrum och byta avloppsstammar.,hsb-brf-pluto-arsredovisning-2023-2024.pdf,4,45,216,138,9
+2008,2021,done,individual_bathrooms,golvbrunnar;avlopp,,2008-2021 Byte till golvbrunnar och eventuellt stammar när boende renoverar sina badrum,arsredovisning-2024-2025-brf-pluto2.pdf,5,43,167,401,11

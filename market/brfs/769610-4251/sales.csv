@@ -1,0 +1,39 @@
+sold_date,linked_by,address,apartment_number,rooms,living_area_m2,final_price_kr,asking_price_kr,kr_per_m2,monthly_fee_kr,price_change_pct,object_type,object_form,tenure,broker_agency,area_name,lat,lng,listing_id,booli_url
+2014-01-17,booli_brf_id,Axel Wennergrens väg 4,,4.0,113.5,3070000,2895000,27000,6616,6,bostadsrätt,,,,Bollmora,59.24620948,18.22090144,1530531,https://www.booli.se/annons/1530531
+2014-01-17,booli_brf_id,Axel Wennergrens väg 6,,3.0,75.0,2050000,1695000,27300,5187,20.9,bostadsrätt,,,,Bollmora,59.24601161,18.22121592,1564421,https://www.booli.se/annons/1564421
+2014-01-21,booli_brf_id,Axel Wennergrens väg 2,,4.0,88.0,2225000,2225000,25300,5358,0,bostadsrätt,,,,Bollmora,59.24642547,18.22046436,1573802,https://www.booli.se/annons/1573802
+2014-05-30,booli_brf_id,Axel Wennergrens väg 2,,2.0,64.0,1680000,1495000,26300,4494,12.4,bostadsrätt,,,,Bollmora,59.24642547,18.22046436,1660763,https://www.booli.se/annons/1660763
+2014-08-27,booli_brf_id,Axel Wennergrens väg 4,,2.0,64.0,1850000,1595000,28900,4194,16,bostadsrätt,,,,Bollmora,59.24620948,18.22090144,1712561,https://www.booli.se/annons/1712561
+2015-05-16,booli_brf_id,Axel Wennergrens väg 2,,4.0,88.0,3050000,2800000,34700,5358,8.9,bostadsrätt,,,,Bollmora,59.24642547,18.22046436,1867187,https://www.booli.se/bostad/416978
+2015-05-29,booli_brf_id,Axel Wennergrens väg 4,,3.0,75.0,2100000,1950000,28000,4727,7.7,bostadsrätt,,,,Bollmora,59.24620948,18.22090144,1878815,https://www.booli.se/annons/1878815
+2016-01-28,booli_brf_id,Axel Wennergrens väg 6,,4.0,88.0,3425000,2995000,38900,5358,14.4,bostadsrätt,,,,Bollmora,59.24601161,18.22121592,2020939,https://www.booli.se/annons/2020939
+2016-10-13,booli_brf_id,Axel Wennergrens väg 2,,3.0,75.0,2950000,2495000,39300,4967,18.2,bostadsrätt,,,,Bollmora,59.24642547,18.22046436,2185919,https://www.booli.se/bostad/416980
+2017-01-26,booli_brf_id,Axel Wennergrens väg 6,,4.0,88.0,3600000,2975000,40900,5364,21,bostadsrätt,,,,Bollmora,59.24601161,18.22121592,2239989,https://www.booli.se/annons/2239989
+2017-04-27,booli_brf_id,Axel Wennergrens väg 4,,2.0,64.0,2410000,2250000,37700,4194,7.1,bostadsrätt,,,,Tyresö Centrum,59.24620948,18.22090144,2297956,https://www.booli.se/annons/2297956
+2017-09-29,booli_brf_id,Axel Wennergrens väg 4,,4.0,88.0,3195000,3195000,36300,5358,0,bostadsrätt,,,,Tyresö Centrum,59.24620948,18.22090144,2410223,https://www.booli.se/bostad/416963
+2018-02-19,booli_brf_id,Axel Wennergrens väg 6,,3.0,75.0,2525000,2495000,33700,4727,-6.3,bostadsrätt,,,,Bollmora,59.24601161,18.22121592,3043771,https://www.booli.se/annons/3043771
+2019-02-01,booli_brf_id,Axel Wennergrens väg 4,,2.0,64.0,2230000,1995000,34800,4194,11.8,bostadsrätt,,,,Tyresö Centrum,59.24620948,18.22090144,3250814,https://www.booli.se/annons/3250814
+2019-02-07,booli_brf_id,Axel Wennergrens väg 2,,3.0,77.0,2395000,2395000,31100,4848,0,bostadsrätt,,,,Bollmora,59.24642547,18.22046436,3302272,https://www.booli.se/annons/3302272
+2020-04-08,booli_brf_id,Axel Wennergrens väg 4,,2.0,59.0,2145000,2095000,36400,3990,-6.5,bostadsrätt,,,,Bollmora,59.24620948,18.22090144,3079890,https://www.booli.se/annons/3079890
+2020-05-04,booli_brf_id,Axel Wennergrens väg 6,,3.0,75.0,2600000,2650000,34700,4727,2,bostadsrätt,,,,Bollmora,59.24601161,18.22121592,3782482,https://www.booli.se/annons/3782482
+2020-05-11,booli_brf_id,Axel Wennergrens väg 2,,2.0,59.0,2200000,,37300,3905,,bostadsrätt,,,,Bollmora,59.24642547,18.22046436,3825107,https://www.booli.se/annons/3825107
+2020-05-29,booli_brf_id,Axel Wennergrens väg 2,,4.0,88.0,2995000,2995000,34000,5358,0,bostadsrätt,,,,Tyresö Centrum,59.24642547,18.22046436,3803582,https://www.booli.se/annons/3803582
+2020-08-08,booli_brf_id,Axel Wennergrens väg 2,,3.0,77.5,2650000,2395000,34200,4727,10.6,bostadsrätt,,,,Tyresö Centrum,59.24642547,18.22046436,3894417,https://www.booli.se/annons/3894417
+2020-11-06,booli_brf_id,Axel Wennergrens väg 6,,4.0,88.0,3200000,2995000,36400,5364,6.8,bostadsrätt,,,,Bollmora,59.24601161,18.22121592,4000709,https://www.booli.se/annons/4000709
+2021-01-27,booli_brf_id,Axel Wennergrens väg 2,,3.0,77.5,2900000,,37400,4847,,bostadsrätt,,,,Tyresö Centrum,59.24642547,18.22046436,4096254,https://www.booli.se/bostad/416982
+2021-02-01,booli_brf_id,Axel Wennergrens väg 2,,2.0,45.5,2160000,1995000,47500,3298,8.3,bostadsrätt,,,,Entréplan,59.24642547,18.22046436,4061586,https://www.booli.se/bostad/416930
+2021-05-28,booli_brf_id,Axel Wennergrens väg 2,,2.0,64.0,2400000,2195000,37500,4194,9.3,bostadsrätt,,,,Bollmora,59.24642547,18.22046436,4248427,https://www.booli.se/annons/4248427
+2021-09-01,booli_brf_id,Axel Wennergrens väg 2,,3.0,75.0,3250000,,43300,4967,,bostadsrätt,,,,,59.24642547,18.22046436,4357890,https://www.booli.se/bostad/416980
+2021-10-31,booli_brf_id,Axel Wennergrens väg 4,,3.0,75.0,3500000,2695000,46700,4727,29.9,bostadsrätt,,,,Bollmora,59.24620948,18.22090144,4422346,https://www.booli.se/annons/4422346
+2021-11-02,booli_brf_id,Axel Wennergrens väg 4,,4.0,88.0,4000000,,45500,5358,,bostadsrätt,,,,,59.24620948,18.22090144,4441414,https://www.booli.se/bostad/416963
+2022-04-12,booli_brf_id,Axel Wennergrens väg 6,,3.0,75.0,3500000,,46700,4727,,bostadsrätt,,,,Bollmora,59.24601161,18.22121592,4597441,https://www.booli.se/annons/4597441
+2022-06-01,booli_brf_id,Axel Wennergrens väg 2,,3.0,77.5,3800000,2895000,49000,4848,31.3,bostadsrätt,,,,Bollmora,59.24642547,18.22046436,4651397,https://www.booli.se/annons/4651397
+2022-08-15,booli_brf_id,Axel Wennergrens väg 4,,3.0,75.0,4000000,3500000,53300,4721,14.3,bostadsrätt,,,,Bollmora,59.24620948,18.22090144,4663298,https://www.booli.se/annons/4663298
+2023-03-27,booli_brf_id,Axel Wennergrens väg 4,,2.0,64.0,2150000,2295000,33600,4194,-6.3,bostadsrätt,,,,Tyresö Centrum,59.24620948,18.22090144,4896668,https://www.booli.se/annons/4896668
+2023-05-12,booli_brf_id,Axel Wennergrens väg 4,,2.0,59.5,2520000,,42400,3990,,bostadsrätt,,,,Bollmora,59.24620948,18.22090144,4960018,https://www.booli.se/bostad/416953
+2024-04-24,booli_brf_id,Axel Wennergrens väg 2,,3.0,77.5,3100000,3200000,40000,5284,3.5,bostadsrätt,,,,Centrala Tyresö,59.24642547,18.22046436,5264313,https://www.booli.se/bostad/416929
+2024-06-03,booli_brf_id,Axel Wennergrens väg 4,,4.0,114.0,5700000,5695000,50000,7211,0.1,bostadsrätt,,,,Centrala Tyresö,59.24620948,18.22090144,5265398,https://www.booli.se/bostad/416952
+2025-02-18,booli_brf_id,Axel Wennergrens väg 6,,3.0,75.0,3495000,3495000,46600,5306,0,bostadsrätt,,,,Centrala Tyresö,59.24601161,18.22121592,4331387,https://www.booli.se/annons/4331387
+2025-02-27,booli_brf_id,Axel Wennergrens väg 4,,3.0,75.0,3380000,,45100,5307,,bostadsrätt,,,,Tyresö Centrum,59.24620948,18.22090144,5619634,https://www.booli.se/annons/5619634
+2026-02-14,booli_brf_id,Axel Wennergrens väg 6,,3.0,75.0,3150000,,42000,5466,,bostadsrätt,,,,,59.24601161,18.22121592,6011159,https://www.booli.se/bostad/416944
+2026-04-15,booli_brf_id,Axel Wennergrens väg 4,,2.0,64.0,2625000,2295000,41000,4849,14.4,bostadsrätt,,,,Centrala Tyresö,59.24620948,18.22090144,6049323,https://www.booli.se/annons/6049323

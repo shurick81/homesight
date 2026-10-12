@@ -1,0 +1,6 @@
+sold_date,linked_by,address,apartment_number,rooms,living_area_m2,final_price_kr,asking_price_kr,kr_per_m2,monthly_fee_kr,price_change_pct,object_type,object_form,tenure,broker_agency,area_name,lat,lng,listing_id,booli_url
+2020-05-02,booli_brf_id,Åvägen 11C,,6.0,174.0,5920000,5595000,34000,4356,5.8,bostadsrätt,,,,Öringe,59.24817721,18.25101451,3802049,https://www.booli.se/annons/3802049
+2020-05-15,address_link,Åvägen 11D,,6.0,174.0,5720000,,32900,,2.2,radhus,,,,Öringe,59.24808121,18.25107765,3781599,https://www.booli.se/annons/3781599
+2020-05-27,booli_brf_id,Åvägen 11C,,6.0,174.0,5875000,5875000,33800,4356,0,bostadsrätt,,,,Öringe,59.24817721,18.25101451,3844043,https://www.booli.se/annons/3844043
+2025-12-15,address_link,Åvägen 11C,,6.0,174.0,5775000,5850000,33200,,-1.3,radhus,,,,Öringe,59.24817721,18.25101451,5926571,https://www.booli.se/annons/5926571
+2026-04-24,address_link,Åvägen 11B,,5.0,119.0,5100000,4795000,42900,,6.4,radhus,,,,Öringe,59.24797058,18.25067711,6082199,https://www.booli.se/annons/6082199

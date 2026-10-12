@@ -1,0 +1,48 @@
+# Profile of the BRF: stable facts (from the reports, with source), the derived stambyte assessment and data notes.
+# Not read by the verification scripts. Per-year counts and areas live in property_states.csv.
+name: HSB Bostadsrättsförening Gäddan i Tyresö
+short_name: Gäddan
+orgnr: 769604-8383
+municipality: Tyresö
+fiscal_year: 01-01 – 12-31
+management: HSB Stockholm
+source: arsredovisning-2025.pdf p3–7
+links:
+  hsb: https://www.hsb.se/stockholm/brf/gaddan/om-gaddan/arsredovisning/
+built_from: 1961
+built_to: 1963
+built_basis: byggnadsår
+registered: 1999-09-24              # acquired the property 2001-04-02
+verified_through: 2025              # last fiscal year that passes verify-brf-data (2016–2025 chained, 2015 as opening balance)
+
+stambyte:                        # derived from pipe_works.csv; rubric in annual_reviews/brfs/README.md
+  as_of: 2026-10-11
+  last:
+    years: 2011–2013
+    kind: stambyte
+    scope: [våtrum]                # "Stambyte med badrumsrenovering"; drains and water pipes not itemised
+    confidence: high
+    basis: arsredovisning-2025.pdf p7 "2011 – 2013 Stambyte med badrumsrenovering"; also in every report since 2016.
+  next:
+    from: 2053
+    to: 2063
+    status: estimated
+    scope: []
+    confidence: low
+    basis: Last stambyte completed 2013; pipes usually last 40–50 years.
+  report: |
+    Full stambyte with bathroom renovation 2011–2013. The water pipes in the basements were flushed and
+    relined in 2023 (planned for 2022). No further pipe work is planned in the reports.
+
+data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
+  Three report layouts: HSB template 2015–2020 (BR lists avräkningskonto and placeringar, stored as 3/4/5),
+  Fastighetsägarna 2021–2024 (liquidity includes the förvaltare's client account inside övriga fordringar,
+  so state 2 is the KF "Likvida medel"), HSB again 2025 (KF figure, includes the HSB avräkningskonto).
+  2016–2020 have planerat underhåll as its own RR line (16); later years have it inside Driftkostnader (31).
+  2021–2024 KFs have no interest lines: 7 and 15 come from the RR. "Betald inkomstskatt" in the KF
+  (2021 −2 981, 2022 +4 470, 2023 +500) is stored as 56 so that the cash identity holds.
+  2023: 15 includes "Resultat från andelar i koncernföretag" 247 kr. 2017: fastighetsskatt is a
+  refund (+482 102). 2022: a −61 kr kundförlust reversal is left unassigned in Driftkostnader.
+  2024: the RR Driftskostnader (−19 013 891) was restated to −17 702 549 in the 2025 report (HSB layout).
+  Debt identity: every year's gap is exactly the KF "Insatser & upplåtelseavgifter" (hyresrätter
+  converted to bostadsrätter), not borrowing.

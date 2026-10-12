@@ -1,0 +1,67 @@
+# Profile of the BRF: stable facts (from the reports, with source), the derived stambyte assessment and data notes.
+# Not read by the verification scripts. Per-year counts and areas live in property_states.csv.
+name: Brf Karlsön
+short_name: Karlsön
+orgnr: 769616-7928
+municipality: Stockholm
+area: Kärrtorp
+property: [Hävringe 2]           # acquired 2008; tomträtt
+addresses: Karlsövägen 1–3, Söderarmsvägen 25–29
+built_from: 2008
+built_to: 2008
+built_basis: värdeår             # "Värdeåret är 2008"
+registered: 2007-06-08
+fiscal_year: 01-01 – 12-31
+management: NABO (ekonomisk förvaltning); Åkerlunds Fastighetsservice (teknisk förvaltning, städning); auditor Margareta Kleberg (auktoriserad)
+verified_through: 2025           # 2021–2023 chained (2020 opening); 2025 unchained (2024 not public)
+source: Arsredovisning-2025-Brf-Karlson.pdf p4–6
+links:
+  website: https://www.brfkarlson.se/
+  reports: https://www.brfkarlson.se/?rID=1066&page=ekonomi
+
+land_lease:                      # tomträtt: the kommun owns the land; the association pays a yearly ground rent
+  source: Arsredovisning-2025-Brf-Karlson.pdf p4, p15
+  avgald_kr_per_year: 231000     # note 8, 2025 (also 231 000 in 2024)
+  period_ends: 2027-09-30        # "Tomträttsavgälden löper ut 2027-09-30": the kommun sets a new avgäld from then
+  taxeringsvarde_mark_kr: 33000000
+
+major_works:
+  source: Arsredovisning-2025-Brf-Karlson.pdf p5
+  done:
+    - {years: 2023, what: Elbilsladdning; IMD gemensamhetsel; LED i allmänna utrymmen; nya lås källargångar}
+    - {years: 2024, what: Solceller i drift; radonmätning}
+    - {years: 2025, what: Värmeoptimering och ny energideklaration; golvbeläggning källargångar; stamspolning}
+  planned:
+    - {years: 2026, what: Ommålning övre sophuset; golvbeläggning}
+
+stambyte:                        # derived from pipe_works.csv; rubric in annual_reviews/brfs/README.md
+  as_of: 2026-10-12
+  last:
+    years: null                  # original pipes, värdeår 2008
+    kind: none
+    scope: []
+    confidence: high
+    basis: Built around 2008 (värdeår); the 2025 report lists only a stamspolning (2025).
+  next:
+    from: 2048
+    to: 2058
+    status: estimated
+    scope: []
+    confidence: low
+    basis: Original pipes from about 2008; usually 40–50 years.
+  report: |
+    Newer building (värdeår 2008) on a tomträtt in Kärrtorp. The ground rent, 231 000 kr a year, is fixed
+    until 2027-09-30, when the kommun sets a new one from current land values: the main cost risk ahead.
+    Loans 26.8 MSEK (7 028 kr/m²) at Stadshypotek, 2.39–2.79%, resetting 2026-10, 2027-12 and 2028-10;
+    2 MSEK extra amortisation in 2025. Losses every year (−228 001 kr in 2025); fees +15% in 2025 and +2% in 2026.
+
+data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
+  2021: BR short-term loans 203 471 vs 200 000 in the loan note (also in the 2022 comparison column); DEBT shows ±3 471 in 2021/2022.
+  2021: the board table prints "Cecilia Wassman", the signature page "Cecilia Wassberg"; stored as in the table (p4).
+  2021–2022: the income note ("Rörelseintäkter") includes övriga rörelseintäkter, so only 17 and 18 are mapped; the rest of 0 stays unassigned.
+  Area basis: 2021–2022 lokalarea 572 m² (total 4 386), 2023 313 m² (total 4 127); stored as printed.
+  2022: the extra stämma (Feb 2023) moved a third of the loans (~10 MSEK) to a variable rate (5.05% end of 2023).
+  Source: the association's website (2016–2023 on the Ekonomi page, 2025 on the start page); 2024 not found publicly.
+  Cash (2) is the KF figure: bank 1 229 463 + Nabo klientmedel 928 609 + Borgo 743 344 (in Övriga fordringar).
+  "Byggnadernas totalyta är 4 127 kvm" (p4) is not stored: the report does not say what the 313 m² beyond the 3 814 m² of bostadsrätter is.
+  Note 4 "Övrigt" (70 683) stays unassigned under Fastighetsskötsel och lokalvård.

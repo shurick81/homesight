@@ -1,0 +1,51 @@
+# Profile of the BRF: stable facts (from the reports, with source), the derived stambyte assessment and data notes.
+# Not read by the verification scripts. Per-year counts and areas live in property_states.csv.
+name: Brf Silvertärnan
+short_name: Silvertärnan
+orgnr: 769611-6131
+municipality: Tyresö
+address: Axel Wennergrens väg 16–22, Tyresö
+property: [Järnet 10]            # plus a gemensamhetsanläggning shared with Björktrasten and Tornsvalan
+built_from: 2006
+built_to: 2006
+built_basis: värdeår
+registered: 2004-11-09
+fiscal_year: 01-01 – 12-31
+management: Simpleko AB (ekonomisk); Ekströms Allservice (fastighetsskötsel)
+verified_through: 2024        # 2020–2024 chained, 2019 as opening balance
+source: Arsredovisning-2024.pdf p4–7
+links:
+  own: https://www.brfsilvertarnan.se/?rID=1089&page=%C3%A5rsredovisning   # documents via /showfile/?filID=N
+
+major_works:                     # "Utförda historiska underhåll" / "Planerade underhåll"
+  source: Arsredovisning-2024.pdf p5–6
+  done:
+    - {years: 2015, what: Brandsyn; genomgång av tak; sanering av vindsutrymmen}
+    - {years: 2016, what: Underhåll hissar}
+    - {years: 2017, what: Målning av entréer; byte av kodlås; upprustning gemensamhetslokalen}
+    - {years: 2018, what: Utvändig målning av förråd; OVK}
+    - {years: 2019, what: Underhåll grönytor; brandskydd; OVK-åtgärder}
+    - {years: 2020, what: Taksäkerhet; tvättstuga; renovering hissar}
+    - {years: 2023, what: Brandsyn; grönytor; kodlås port 22; hissbromsar}
+    - {years: 2024, what: Ommålning trapphus port 22 och 18; OVK; rensning ventilationskanaler; betongpelare}
+  planned:
+    - {years: 2025, what: Kodlås portar; LED-belysning; målning balkonger; vatten på fasad gavel port 16}
+
+stambyte:                        # derived from pipe_works.csv; rubric in annual_reviews/brfs/README.md
+  as_of: 2026-10-11
+  last:
+    years: null                  # original pipes from 2006
+    kind: none
+    scope: []
+    confidence: high             # a 2006 building, and the works list 2015–2025 has no pipe work at all
+    basis: Värdeår 2006; works list 2015–2024 and the 2025 plan (2024 report p5–6) mention no stammar.
+  next:
+    from: 2046
+    to: 2056
+    status: estimated
+    scope: []
+    confidence: low
+    basis: Original 2006 pipes; usually 40–50 years. Underhållsplan 2023–2072 (updated 2024) exists but has not been seen.
+  report: |
+    Original pipes from 2006, never flushed according to the reports (unlike its neighbour Björktrasten,
+    flushed 2023 and 2025). No stambyte for 20+ years; the underhållsplan to 2072 would date it.

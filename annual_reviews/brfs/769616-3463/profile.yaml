@@ -1,0 +1,56 @@
+# Profile of the BRF: stable facts (from the reports, with source), the derived stambyte assessment and data notes.
+# Not read by the verification scripts. Per-year counts and areas live in property_states.csv.
+name: HSB Bostadsrättsförening Rödingen i Tyresö
+short_name: Rödingen
+orgnr: 769616-3463
+municipality: Tyresö
+property: [Tyresö Gäddan 13]     # bought 2013 via the company Tyradal 1 Mark AB (2022 report p13)
+built_from: 2013
+built_to: 2013
+built_basis: byggnadsår          # 2022 table "Nybyggnadsår byggnad 2013"; the 2021 report says "byggd år 2012-2013"
+registered: 2012
+fiscal_year: 01-01 – 12-31
+management: HSB Stockholm
+verified_through: 2022           # 2021–2022; 2021 unchained (the 2020 report is not public)
+source: arsredovisning_2022_brf-rodingen_2468.pdf p4–6
+links:
+  hsb: https://www.hsb.se/stockholm/brf/rodingen/om-brf-rodingen/styrelsen-20152016/arsredovisning-2014/
+
+major_works:                     # "Sedan föreningen startade har följande större åtgärder genomförts"
+  source: arsredovisning_2022_brf-rodingen_2468.pdf p6
+  done:
+    - {years: 2019, what: 5-årsbesiktning; portkoder borttagna; nytt elavtal}
+    - {years: 2021, what: Stamspolning i alla lägenheter; genomgång av trädgårdsmiljön}   # 2021 report p2
+    - {years: 2022, what: Brytskydd på entrédörrarna}
+  planned_5_years:
+    - {years: 2023, what: Åtgärda fuktskadan i garaget (garantifel från nyproduktionen)}
+    - {years: 2024, what: Mätning av radon}
+
+stambyte:                        # derived from pipe_works.csv; rubric in annual_reviews/brfs/README.md
+  as_of: 2026-10-11
+  last:
+    years: null                  # original pipes, built 2013
+    kind: none
+    scope: []
+    confidence: high             # a 2013 building cannot have had one
+    basis: Built 2013; the major works lists (2021 p2, 2022 p6) have only a stamspolning in 2021.
+  next:
+    from: 2053
+    to: 2063
+    status: estimated
+    scope: []
+    confidence: low
+    basis: Original 2013 pipes; usually 40–50 years. Nothing planned beyond the 2021 stamspolning.
+  report: |
+    New building (2013) with original pipes; stamspolning in all apartments in 2021. No stambyte for
+    decades. What matters sooner: 51.5 MSEK of loans (9 419 kr/m²), of which 32.8 MSEK had rates resetting
+    in 2023 from 0.69–2.26%, so interest costs will have risen sharply after 2022; fees rose 4% in 2022 and
+    4% in 2023; a moisture damage in the garage (a warranty claim from construction) was unresolved in 2022.
+    The 2023–2025 reports are not public, so none of this can be followed past 2022.
+
+data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
+  Not public: 2020, and 2023–2025 (handed out to members and on Mitt HSB only; the HSB page lists 2007–2008, 2010–2019, 2021–2022).
+  2021 is a scanned report (OCR); every value checked against its note total or the RR/BR sums.
+  2021 counts 67 garage and parking places in one number (cat 6); 2022 lists 20 garage (3) + 48 p-platser (4).
+  2021 Övriga externa kostnader: note lines sum to 110 207 vs 110 206 printed (rounding); 2022 Driftkostnader likewise 1 kr.
+  The property was bought through a company (RedU9): a deferred tax of 15 457 000 kr over book value is valued at 0 (2022 p13).

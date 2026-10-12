@@ -1,0 +1,99 @@
+sold_date,linked_by,address,apartment_number,rooms,living_area_m2,final_price_kr,asking_price_kr,kr_per_m2,monthly_fee_kr,price_change_pct,object_type,object_form,tenure,broker_agency,area_name,lat,lng,listing_id,booli_url
+2015-10-30,booli_brf_id,Barrskogsvägen 9,,3.0,77.0,2750000,2695000,35700,4837,2,bostadsrätt,,,,Bollmora,59.23894656,18.21870525,1976604,https://www.booli.se/annons/1976604
+2015-11-25,booli_brf_id,Barrskogsvägen 6,,3.0,81.0,2850000,2850000,35200,4848,0,bostadsrätt,,,,Hanviken,59.23871317,18.21832836,2002911,https://www.booli.se/annons/2002911
+2015-12-08,booli_brf_id,Barrskogsvägen 9,,4.0,99.0,3395000,3395000,34300,5394,0,bostadsrätt,,,,Farmarstigen,59.23894656,18.21870525,1998177,https://www.booli.se/annons/1998177
+2016-01-14,booli_brf_id,Barrskogsvägen 9,,1.0,37.0,1800000,1750000,48600,2757,9.1,bostadsrätt,,,,Farmarstigen,59.23894656,18.21870525,2019815,https://www.booli.se/annons/2019815
+2016-01-20,booli_brf_id,Barrskogsvägen 11,,3.0,77.0,3000000,2950000,39000,4465,1.7,bostadsrätt,,,,Farmarstigen,59.23888107,18.21886888,2019814,https://www.booli.se/annons/2019814
+2016-01-20,booli_brf_id,Barrskogsvägen 9,,1.0,37.0,1975000,1750000,53400,2757,12.9,bostadsrätt,,,,Farmarstigen,59.23894656,18.21870525,2024583,https://www.booli.se/annons/2024583
+2016-02-11,booli_brf_id,Barrskogsvägen 11,,4.0,99.0,3295000,3295000,33300,5614,0,bostadsrätt,,,,Hanviken,59.23888107,18.21886888,2022394,https://www.booli.se/annons/2022394
+2016-02-22,booli_brf_id,Barrskogsvägen 4,,3.0,81.0,2900000,2850000,35800,4628,1.8,bostadsrätt,,,,Hanviken,59.23900121,18.21777488,2039610,https://www.booli.se/annons/2039610
+2016-02-29,booli_brf_id,Barrskogsvägen 9,,4.0,99.0,3495000,3600000,35300,5394,-2.9,bostadsrätt,,,,Farmarstigen,59.23894656,18.21870525,2041863,https://www.booli.se/annons/2041863
+2016-03-04,booli_brf_id,Barrskogsvägen 4,,4.0,93.0,3750000,3750000,40300,5162,0,bostadsrätt,,,,Farmarstigen,59.23900121,18.21777488,2043291,https://www.booli.se/annons/2043291
+2016-03-18,booli_brf_id,Barrskogsvägen 9,,4.0,99.0,3550000,3795000,35900,5394,1.6,bostadsrätt,,,,Hanviken,59.23894656,18.21870525,1997513,https://www.booli.se/annons/1997513
+2016-03-22,booli_brf_id,Barrskogsvägen 4,,2.0,55.0,2500000,2200000,45500,3532,13.6,bostadsrätt,,,,Hanviken,59.23900121,18.21777488,2048813,https://www.booli.se/annons/2048813
+2016-04-07,booli_brf_id,Barrskogsvägen 11,,3.0,77.0,3250000,2995000,42200,4465,8.5,bostadsrätt,,,,Hanviken,59.23888107,18.21886888,2058697,https://www.booli.se/annons/2058697
+2016-06-10,booli_brf_id,Barrskogsvägen 9,,4.0,99.0,4100000,4100000,41400,5394,20.8,bostadsrätt,,,,Hanviken,59.23894656,18.21870525,2082938,https://www.booli.se/annons/2082938
+2016-06-10,booli_brf_id,Barrskogsvägen 4,,3.0,81.0,3200000,3350000,39500,4619,-4.5,bostadsrätt,,,,Trädgårdsstaden,59.23900121,18.21777488,2095352,https://www.booli.se/annons/2095352
+2016-11-03,booli_brf_id,Lövskogsvägen 1,,4.0,93.0,3620000,3395000,38900,5163,6.6,bostadsrätt,,,,Tyresö Centrum,59.23914,18.216974,2195576,https://www.booli.se/annons/2195576
+2017-02-24,booli_brf_id,Barrskogsvägen 9,,1.0,37.0,2370000,1895000,64100,2757,25.1,bostadsrätt,,,,Hanviken,59.23894656,18.21870525,2256051,https://www.booli.se/annons/2256051
+2017-04-10,booli_brf_id,Barrskogsvägen 9,,2.0,55.0,2500000,2195000,45500,3532,13.9,bostadsrätt,,,,Tyresö Centrum,59.23894656,18.21870525,2296493,https://www.booli.se/annons/2296493
+2017-05-25,booli_brf_id,Barrskogsvägen 11,,1.0,37.0,2290000,1995000,61900,2757,14.8,bostadsrätt,,,,Hanviken,59.23888107,18.21886888,2313813,https://www.booli.se/annons/2313813
+2017-08-24,booli_brf_id,Barrskogsvägen 6,,4.0,93.0,3520000,3495000,37800,5163,0.7,bostadsrätt,,,,Hanviken,59.23871317,18.21832836,2301653,https://www.booli.se/annons/2301653
+2017-09-13,booli_brf_id,Barrskogsvägen 6,,3.0,81.0,3400000,3175000,42000,4619,7.1,bostadsrätt,,,,Tyresö Skogsstad,59.23871317,18.21832836,2404938,https://www.booli.se/annons/2404938
+2017-12-01,booli_brf_id,Barrskogsvägen 4,,3.0,81.0,3200000,3095000,39500,4619,3.4,bostadsrätt,,,,Tyresö Skogsstad,59.23900121,18.21777488,2382398,https://www.booli.se/annons/2382398
+2018-02-21,booli_brf_id,Barrskogsvägen 11,,4.0,99.0,3370000,3295000,34000,5394,-3.6,bostadsrätt,,,,Tyresö Skogsstad,59.23888107,18.21886888,3062321,https://www.booli.se/annons/3062321
+2018-06-19,booli_brf_id,Barrskogsvägen 11,,4.0,99.0,3450000,3295000,34800,5394,4.7,bostadsrätt,,,,Tyresö Skogsstad,59.23888107,18.21886888,3173207,https://www.booli.se/annons/3173207
+2019-01-31,booli_brf_id,Barrskogsvägen 6,,3.0,81.0,3250000,2995000,40100,4619,8.5,bostadsrätt,,,,Tyresö Skogsstad,59.23871317,18.21832836,3179006,https://www.booli.se/annons/3179006
+2019-02-24,booli_brf_id,Barrskogsvägen 9,,4.0,99.0,3300000,3250000,33300,5394,1.5,bostadsrätt,,,,Tyresö Skogsstad,59.23894656,18.21870525,3322286,https://www.booli.se/annons/3322286
+2019-03-19,booli_brf_id,Barrskogsvägen 4,,3.0,81.0,3100000,3100000,38300,4619,0,bostadsrätt,,,,Tyresö Skogsstad,59.23900121,18.21777488,3363945,https://www.booli.se/annons/3363945
+2019-03-27,booli_brf_id,Barrskogsvägen 9,,2.0,55.0,2450000,2295000,44500,3752,6.8,bostadsrätt,,,,Tyresö Skogsstad,59.23894656,18.21870525,3367115,https://www.booli.se/bostad/4041553
+2019-05-04,booli_brf_id,Lövskogsvägen 1,,4.0,93.0,3400000,2995000,36600,5162,13.5,bostadsrätt,,,,Tyresö Skogsstad,59.23914,18.216974,3303047,https://www.booli.se/annons/3303047
+2019-05-08,booli_brf_id,Barrskogsvägen 11,,3.0,77.0,3000000,2690000,39000,4685,11.5,bostadsrätt,,,,Hanviken,59.23888107,18.21886888,3343983,https://www.booli.se/bostad/4041575
+2019-05-15,booli_brf_id,Barrskogsvägen 11,,2.0,55.0,2300000,2400000,41800,3949,0.2,bostadsrätt,,,,Bollmora,59.23888107,18.21886888,3413605,https://www.booli.se/bostad/4041576
+2019-05-31,booli_brf_id,Lövskogsvägen 1,,4.0,93.0,3525000,3195000,37900,5382,10.3,bostadsrätt,,,,Tyresö Skogsstad,59.23914,18.216974,3438898,https://www.booli.se/bostad/4041584
+2019-06-28,booli_brf_id,Lövskogsvägen 1,,4.0,93.0,3300000,2995000,35500,5162,10.2,bostadsrätt,,,,Tyresö Skogsstad,59.23914,18.216974,3464788,https://www.booli.se/bostad/4041594
+2019-09-16,booli_brf_id,Barrskogsvägen 9,,3.0,77.0,3000000,,39000,4465,,bostadsrätt,,,,Tyresö Skogsstad,59.23894656,18.21870525,3581988,https://www.booli.se/annons/3581988
+2019-09-27,booli_brf_id,Barrskogsvägen 9,,3.0,77.0,3250000,2995000,42200,4688,8.5,bostadsrätt,,,,Hanviken,59.23894656,18.21870525,3562086,https://www.booli.se/bostad/4041549
+2019-10-04,booli_brf_id,Barrskogsvägen 11,,1.0,37.0,1980000,1895000,53500,2757,4.5,bostadsrätt,,,,Hanviken,59.23888107,18.21886888,3514644,https://www.booli.se/annons/3514644
+2019-10-04,booli_brf_id,Barrskogsvägen 9,,1.0,37.0,1950000,1875000,52700,2757,4,bostadsrätt,,,,Bollmora,59.23894656,18.21870525,3554167,https://www.booli.se/annons/3554167
+2019-10-07,booli_brf_id,Barrskogsvägen 11,,4.0,99.0,3600000,3600000,36400,5394,0,bostadsrätt,,,,Tyresö Centrum,59.23888107,18.21886888,3466643,https://www.booli.se/annons/3466643
+2019-10-11,booli_brf_id,Barrskogsvägen 4,,3.0,81.0,3300000,2995000,40700,6627,10.2,bostadsrätt,,,,Tyresö Skogsstad,59.23900121,18.21777488,3615108,https://www.booli.se/bostad/4102168
+2019-11-07,booli_brf_id,Barrskogsvägen 9,,4.0,99.0,3650000,3395000,36900,5394,7.5,bostadsrätt,,,,Tyresö Bollmora,59.23894656,18.21870525,3648862,https://www.booli.se/bostad/4041560
+2020-01-10,booli_brf_id,Barrskogsvägen 9,,3.0,77.0,3300000,2995000,42900,6219,10.2,bostadsrätt,,,,Bollmora,59.23894656,18.21870525,3668636,https://www.booli.se/bostad/4041563
+2020-02-16,booli_brf_id,Barrskogsvägen 4,,3.0,81.0,3250000,2995000,40100,4619,8.5,bostadsrätt,,,,Tyresö Skogsstad,59.23900121,18.21777488,3730782,https://www.booli.se/bostad/4102163
+2020-02-19,booli_brf_id,Barrskogsvägen 9,,1.5,37.0,1975000,1895000,53400,2757,4.2,bostadsrätt,,,,Tyresö Skogsstad,59.23894656,18.21870525,3688690,https://www.booli.se/bostad/4041547
+2020-03-24,booli_brf_id,Barrskogsvägen 4,,3.0,81.0,3300000,,40700,,,bostadsrätt,,,,Hanviken,59.23900121,18.21777488,2352139,https://www.booli.se/annons/2352139
+2020-05-08,booli_brf_id,Barrskogsvägen 6,,4.0,93.0,3550000,,38200,5162,,bostadsrätt,,,,Tyresö Skogsstad,59.23871317,18.21832836,3827416,https://www.booli.se/annons/3827416
+2020-05-26,booli_brf_id,Barrskogsvägen 6,,4.0,93.0,3325000,3295000,35800,5382,0.9,bostadsrätt,,,,Centrala Tyresö,59.23871317,18.21832836,3794339,https://www.booli.se/annons/3794339
+2020-07-10,booli_brf_id,Barrskogsvägen 4,,2.0,55.0,2300000,2195000,41800,3532,4.8,bostadsrätt,,,,Hanviken,59.23900121,18.21777488,3784191,https://www.booli.se/bostad/4102167
+2020-08-20,booli_brf_id,Barrskogsvägen 11,,2.0,55.0,2350000,2195000,42700,3532,7.1,bostadsrätt,,,,Hanviken,59.23888107,18.21886888,3900634,https://www.booli.se/annons/3900634
+2020-09-09,booli_brf_id,Lövskogsvägen 1,,5.0,93.0,3560000,3395000,38300,5162,4.9,bostadsrätt,,,,Hanviken,59.23914,18.216974,3887572,https://www.booli.se/annons/3887572
+2020-09-10,booli_brf_id,Lövskogsvägen 1,,2.0,55.0,2410000,2295000,43800,3709,5,bostadsrätt,,,,Skogsstad,59.23914,18.216974,3688652,https://www.booli.se/bostad/4041599
+2020-10-07,booli_brf_id,Lövskogsvägen 1,,3.0,80.0,3550000,3195000,44400,4799,11.1,bostadsrätt,,,,Tyresö Skogsstad,59.23914,18.216974,3939204,https://www.booli.se/annons/3939204
+2021-01-20,booli_brf_id,Barrskogsvägen 6,,4.0,93.0,3600000,3495000,38700,5162,3,bostadsrätt,,,,Tyresö Skogsstad,59.23871317,18.21832836,4059349,https://www.booli.se/annons/4059349
+2021-05-16,booli_brf_id,Barrskogsvägen 11,,4.0,99.0,3800000,3395000,38400,5394,11.9,bostadsrätt,,,,Tyresö Skogsstad,59.23888107,18.21886888,4200489,https://www.booli.se/annons/4200489
+2021-06-09,booli_brf_id,Barrskogsvägen 9,,2.0,55.0,2500000,,45500,3532,,bostadsrätt,,,,Tyresö Skogsstad,59.23894656,18.21870525,4163258,https://www.booli.se/annons/4163258
+2021-06-16,booli_brf_id,Barrskogsvägen 4,,4.0,93.0,3900000,,41900,5162,,bostadsrätt,,,,Tyresö Skogsstad,59.23900121,18.21777488,4269381,https://www.booli.se/annons/4269381
+2021-09-29,booli_brf_id,Barrskogsvägen 11,,1.5,37.0,1890000,1975000,51100,3956,-4.3,bostadsrätt,,,,Tyresö Skogsstad,59.23888107,18.21886888,4366924,https://www.booli.se/bostad/4041568
+2021-10-30,booli_brf_id,Lövskogsvägen 1,,3.0,80.0,3950000,3195000,49400,4579,23.6,bostadsrätt,,,,Tyresö Skogsstad,59.23914,18.216974,4368839,https://www.booli.se/annons/4368839
+2021-11-15,booli_brf_id,Lövskogsvägen 1,,4.0,93.0,3950000,,42500,5162,,bostadsrätt,,,,Tyresö Skogsstad,59.23914,18.216974,4433084,https://www.booli.se/annons/4433084
+2022-02-09,booli_brf_id,Barrskogsvägen 11,,2.0,55.0,2620000,,47600,3849,,bostadsrätt,,,,Tyresö Skogsstad,59.23888107,18.21886888,4501908,https://www.booli.se/annons/4501908
+2022-02-11,booli_brf_id,Barrskogsvägen 4,,3.0,81.0,4200000,3875000,51900,4619,8.4,bostadsrätt,,,,Hanviken,59.23900121,18.21777488,4520952,https://www.booli.se/annons/4520952
+2022-04-19,booli_brf_id,Barrskogsvägen 9,,1.0,37.0,2100000,1995000,56800,2977,5.3,bostadsrätt,,,,Tyresö Centrum,59.23894656,18.21870525,4588606,https://www.booli.se/bostad/4041552
+2022-04-23,booli_brf_id,Lövskogsvägen 1,,3.0,80.0,4500000,3595000,56300,4579,25.2,bostadsrätt,,,,Tyresö Skogsstad,59.23914,18.216974,4602622,https://www.booli.se/annons/4602622
+2022-05-04,booli_brf_id,Barrskogsvägen 4,,2.0,55.0,2800000,2395000,50900,3532,16.9,bostadsrätt,,,,Hanviken,59.23900121,18.21777488,4596536,https://www.booli.se/bostad/4102167
+2022-05-11,booli_brf_id,Barrskogsvägen 9,,4.0,99.0,4750000,3495000,48000,5394,35.9,bostadsrätt,,,,Hanviken,59.23894656,18.21870525,4614794,https://www.booli.se/bostad/4041558
+2022-05-19,booli_brf_id,Barrskogsvägen 6,,3.0,81.0,4540000,3695000,56000,4619,22.9,bostadsrätt,,,,Tyresö Skogsstad,59.23871317,18.21832836,4143451,https://www.booli.se/annons/4143451
+2022-06-03,booli_brf_id,Barrskogsvägen 9,,2.0,55.0,2550000,2495000,46400,3752,2.2,bostadsrätt,,,,Tyresö Centrum,59.23894656,18.21870525,4644715,https://www.booli.se/bostad/4041553
+2023-06-07,booli_brf_id,Barrskogsvägen 9,,3.0,77.0,3850000,3795000,50000,4688,1.4,bostadsrätt,,,,Skogsstaden Tyresö,59.23894656,18.21870525,4702136,https://www.booli.se/bostad/4041549
+2023-06-10,booli_brf_id,Barrskogsvägen 9,,4.0,99.0,4400000,3995000,44400,5664,10.1,bostadsrätt,,,,Skogsstaden Tyresö,59.23894656,18.21870525,4796702,https://www.booli.se/bostad/4041555
+2023-08-03,booli_brf_id,Barrskogsvägen 11,,2.0,55.0,2550000,2495000,46400,3949,2.2,bostadsrätt,,,,Tyresö Centrum,59.23888107,18.21886888,4981794,https://www.booli.se/bostad/4041576
+2023-08-13,booli_brf_id,Barrskogsvägen 6,,3.0,81.0,3700000,,45700,4850,5.9,bostadsrätt,,,,Tyresö Skogsstad,59.23871317,18.21832836,5013745,https://www.booli.se/annons/5013745
+2023-09-29,booli_brf_id,Lövskogsvägen 1,,2.0,55.0,2495000,2495000,45400,3709,0,bostadsrätt,,,,Tyresö Skogsstad,59.23914,18.216974,5100233,https://www.booli.se/bostad/4041599
+2023-10-06,booli_brf_id,Barrskogsvägen 11,,4.0,99.0,4195000,4195000,42400,7514,0,bostadsrätt,,,,Skogsstaden Tyresö,59.23888107,18.21886888,5035353,https://www.booli.se/bostad/4041574
+2023-10-29,booli_brf_id,Barrskogsvägen 4,,3.0,81.0,3500000,3195000,43200,4850,9.5,bostadsrätt,,,,Tyresö Skogsstad,59.23900121,18.21777488,5125300,https://www.booli.se/annons/5125300
+2023-12-18,booli_brf_id,Lövskogsvägen 1,,4.0,93.0,4150000,,44600,5421,-3.4,bostadsrätt,,,,Skogsstaden Tyresö,59.23914,18.216974,5093428,https://www.booli.se/annons/5093428
+2023-12-29,booli_brf_id,Barrskogsvägen 4,,3.0,81.0,3500000,,43200,5432,,bostadsrätt,,,,Tyresö Skogsstad,59.23900121,18.21777488,5069454,https://www.booli.se/annons/5069454
+2024-04-04,booli_brf_id,Barrskogsvägen 6,,4.0,93.0,4250000,4250000,45700,6071,6.4,bostadsrätt,,,,Skogsstaden I Tyresö,59.23871317,18.21832836,5173289,https://www.booli.se/bostad/4041532
+2024-05-06,booli_brf_id,Barrskogsvägen 6,,4.0,93.0,4250000,,45700,6071,,bostadsrätt,,,,Skogsstaden I Tyresö,59.23871317,18.21832836,5279623,https://www.booli.se/bostad/4041538
+2024-05-29,booli_brf_id,Barrskogsvägen 9,,3.0,77.0,3500000,,45500,,,bostadsrätt,,,,Tyresö Skogsstad,59.23894656,18.21870525,5342393,https://www.booli.se/annons/5342393
+2024-05-30,booli_brf_id,Barrskogsvägen 6,,3.0,81.0,3550000,3495000,43800,5672,-6.5,bostadsrätt,,,,Skogsstaden I Tyresö,59.23871317,18.21832836,5282800,https://www.booli.se/bostad/4041542
+2024-05-30,booli_brf_id,Barrskogsvägen 6,,4.0,93.0,4200000,,45200,6071,,bostadsrätt,,,,Skogsstad,59.23871317,18.21832836,5343805,https://www.booli.se/bostad/4041537
+2024-09-26,booli_brf_id,Barrskogsvägen 6,,4.0,93.0,4300000,,46200,6071,,bostadsrätt,,,,Skogsstad,59.23871317,18.21832836,5410070,https://www.booli.se/annons/5410070
+2024-09-30,booli_brf_id,Barrskogsvägen 9,,2.0,55.0,2400000,2450000,43600,4154,-2,bostadsrätt,,,,Skogsstad,59.23894656,18.21870525,5442653,https://www.booli.se/bostad/4041548
+2025-02-18,booli_brf_id,Barrskogsvägen 6,,4.0,93.0,4250000,3995000,45700,6253,6.4,bostadsrätt,,,,Skogsstad,59.23871317,18.21832836,5598685,https://www.booli.se/bostad/4041533
+2025-03-18,booli_brf_id,Barrskogsvägen 4,,4.0,93.0,4100000,,44100,6253,,bostadsrätt,,,,Skogsstad,59.23900121,18.21777488,4143572,https://www.booli.se/annons/4143572
+2025-04-10,booli_brf_id,Barrskogsvägen 4,,3.0,81.0,3695000,,45600,5595,,bostadsrätt,,,,Skogsstad,59.23900121,18.21777488,5642202,https://www.booli.se/bostad/4102153
+2025-04-15,booli_brf_id,Barrskogsvägen 9,,3.0,77.0,3300000,3295000,42900,5408,0.2,bostadsrätt,,,,Skogsstad,59.23894656,18.21870525,5114347,https://www.booli.se/annons/5114347
+2025-05-10,booli_brf_id,Barrskogsvägen 9,,3.0,77.0,3300000,,42900,5408,,bostadsrätt,,,,Skogsstad,59.23894656,18.21870525,5686435,https://www.booli.se/bostad/4041559
+2025-06-03,booli_brf_id,Barrskogsvägen 11,,3.0,77.0,3350000,,43500,5408,,bostadsrätt,,,,,59.23888107,18.21886888,5748297,https://www.booli.se/bostad/4041586
+2025-09-21,booli_brf_id,Barrskogsvägen 9,,2.0,55.0,2195000,2195000,39900,4920,0,bostadsrätt,,,,Skogsstad,59.23894656,18.21870525,5841740,https://www.booli.se/bostad/4041562
+2025-09-29,booli_brf_id,Barrskogsvägen 4,,3.0,81.0,3450000,3395000,42600,6434,1.6,bostadsrätt,,,,Skogsstad,59.23900121,18.21777488,5769682,https://www.booli.se/bostad/4102162
+2025-10-17,booli_brf_id,Barrskogsvägen 9,,3.5,77.0,2950000,2695000,38300,6219,1.9,bostadsrätt,,,,Skogsstad,59.23894656,18.21870525,5826758,https://www.booli.se/bostad/4041563
+2025-10-31,booli_brf_id,Barrskogsvägen 11,,4.0,99.0,3995000,3995000,40400,7514,0,bostadsrätt,,,,Skogsstaden Tyresö,59.23888107,18.21886888,5847711,https://www.booli.se/bostad/4041574
+2025-11-05,booli_brf_id,Barrskogsvägen 11,,4.0,99.0,4050000,4150000,40900,7514,-5.7,bostadsrätt,,,,Centrala Tyresö,59.23888107,18.21886888,5855005,https://www.booli.se/annons/5855005
+2025-11-28,booli_brf_id,Barrskogsvägen 6,,3.0,81.0,3850000,,47500,6434,,bostadsrätt,,,,Skogsstaden Tyresö,59.23871317,18.21832836,5218257,https://www.booli.se/bostad/4041534
+2026-04-14,booli_brf_id,Barrskogsvägen 6,,2.0,55.0,2710000,,49300,5068,,bostadsrätt,,,,Centrala Tyresö,59.23871317,18.21832836,6026579,https://www.booli.se/annons/6026579
+2026-05-11,booli_brf_id,Lövskogsvägen 1,,3.0,80.0,3100000,3100000,38800,6569,-3,bostadsrätt,,,,Centrala Tyresö,59.23914,18.216974,5904412,https://www.booli.se/annons/5904412
+2026-05-24,booli_brf_id,Barrskogsvägen 11,,1.0,37.0,1800000,1795000,48600,3956,0.3,bostadsrätt,,,,Skogsstad,59.23888107,18.21886888,5819340,https://www.booli.se/bostad/4041568
+2026-05-29,booli_brf_id,Barrskogsvägen 4,,3.0,81.0,3900000,3750000,48100,6627,4,bostadsrätt,,,,Centrala Tyresö,59.23900121,18.21777488,6050628,https://www.booli.se/bostad/4102168

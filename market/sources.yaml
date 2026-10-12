@@ -1,0 +1,30 @@
+# Where market/ came from: the data repo's Booli cache, written by tools/booli/import_from_data_repo.py.
+# snapshot = date of the last commit that changed the input file (the scrape it holds).
+imported: 2026-10-12
+data_repo: https://github.com/llm-brf/data
+data_repo_commit: 1864e38
+inputs:
+  brf_details:
+    file: data/processed/booli/brf_details_booli.csv
+    snapshot: 2026-08-02
+    commit: 7153879
+  sales:
+    file: data/processed/booli/sales_booli.csv
+    snapshot: 2026-08-02
+    commit: 7153879
+  advertisements:
+    file: data/processed/booli/advertisements_booli.csv
+    snapshot: 2026-10-10
+    commit: 1864e38
+  residences:
+    file: data/processed/booli/brf_residences_booli.csv
+    snapshot: 2026-08-02
+    commit: 7153879
+  allabrf_links:
+    file: data/processed/booli/brf_address_links_allabrf.csv
+    snapshot: 2026-06-21
+    commit: 8481a3b
+  areas:
+    file: data/processed/booli/booli_areas.csv
+    snapshot: 2026-08-02
+    commit: 7153879

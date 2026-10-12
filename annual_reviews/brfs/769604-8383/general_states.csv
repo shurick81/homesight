@@ -1,0 +1,109 @@
+year,category_id,value,file,page,x,y,width,height
+2021,0,2021-01-01 – 2021-12-31,arsredovisning-2021.pdf,2,277,115,46,9
+2021,1,Anders Olsson,arsredovisning-2021.pdf,2,71,452,58,9
+2021,2,Ann-Sofie Hagberg,arsredovisning-2021.pdf,2,71,464,76,9
+2021,3,Stig Agehall;Leif Wågensand (t.o.m. 2021-08-16);Pia Lander (fr.o.m. 2021-08-16);Mathias Kvick (fr.o.m. 2021-06-16);Elleonore Lindgren (fr.o.m. 2021-06-16),arsredovisning-2021.pdf,2,71,476,76,57
+2021,10,Stefan Simic,arsredovisning-2021.pdf,2,71,537,50,9
+2021,8,Pia Lander (t.o.m. 2021-06-16);Caroline Ängeskog (fr.o.m. 2021-06-16),arsredovisning-2021.pdf,2,71,501,404,70
+2021,4,Bo Johansson;Lars Lagerstedt;Berit Corre Forsberg,arsredovisning-2021.pdf,3,71,101,83,33
+2021,5,Jerker Dahlin (t.o.m. 2021-06-16);Ingrid Lindegren (fr.o.m. 2021-06-16);BoRevision AB,arsredovisning-2021.pdf,2,217,660,302,58
+2021,9,Ingrid Lindegren;Joakim Häll,arsredovisning-2021.pdf,18,85,502,278,10
+2021,6,71,arsredovisning-2021.pdf,2,,,,
+2021,11,1961-1963,arsredovisning-2021.pdf,2,440,205,43,9
+2025,0,2025-01-01 – 2025-12-31,arsredovisning-2025.pdf,3,50,60,25,9
+2025,1,Anders Olsson,arsredovisning-2025.pdf,3,76,518,59,7
+2025,2,Mathias Kvick,arsredovisning-2025.pdf,3,76,529,58,8
+2025,3,Pia Lander;Ann-Sofie Hagberg;Marika Gartelius;Marcus Karlsson (fr.o.m. 2025-06-11);Kurt Fredriksson (t.o.m. 2025-09-16),arsredovisning-2025.pdf,3,76,541,79,52
+2025,10,Madeleine Eklöf,arsredovisning-2025.pdf,3,76,597,68,7
+2025,4,Stig Agehall;Olle Holmström;Anna Strandberg,arsredovisning-2025.pdf,4,76,120,71,32
+2025,5,Jerker Dahlin;Kungsbron Borevision AB,arsredovisning-2025.pdf,3,229,676,142,32
+2025,9,Joakim Häll;Jerker Dahlin,arsredovisning-2025.pdf,23,65,655,207,10
+2025,6,65,arsredovisning-2025.pdf,3,,,,
+2025,11,1961-1963,arsredovisning-2025.pdf,3,127,225,42,7
+2024,0,2024-01-01 – 2024-12-31,arsredovisning-2024.pdf,4,360,127,45,7
+2024,1,Anders Olsson,arsredovisning-2024.pdf,4,77,536,59,7
+2024,2,Ann-Sofie Hagberg,arsredovisning-2024.pdf,4,77,547,79,9
+2024,3,Stig Agehall;Pia Lander;Mathias Kvick;Elleonore Lindgren (t.o.m. 2024-06-05);Marika Gartelius (fr.o.m. 2024-06-05);Kurt Fredriksson (fr.o.m. 2024-06-05),arsredovisning-2024.pdf,4,77,558,80,63
+2024,8,Marika Gartelius (t.o.m. 2024-06-05),arsredovisning-2024.pdf,4,77,602,70,7
+2024,5,Ingrid Lindegren (t.o.m. 2024-06-05);Jerker Dahlin (fr.o.m. 2024-06-05),arsredovisning-2024.pdf,4,348,716,122,18
+2024,4,Dan Asplund;Bo Johansson;Anna Strandberg,arsredovisning-2024.pdf,5,80,183,71,32
+2024,9,Joakim Häll;Jerker Dahlin,arsredovisning-2024.pdf,20,93,428,273,8
+2024,6,70,arsredovisning-2024.pdf,4,,,,
+2024,11,1961-1963,arsredovisning-2024.pdf,4,129,221,42,7
+2023,0,2023-01-01 – 2023-12-31,arsredovisning-2023.pdf,4,360,122,46,7
+2023,1,Anders Olsson,arsredovisning-2023.pdf,4,78,520,59,7
+2023,2,Ann-Sofie Hagberg,arsredovisning-2023.pdf,4,78,530,79,9
+2023,3,Stig Agehall;Pia Lander;Mathias Kvick;Elleonore Lindgren,arsredovisning-2023.pdf,4,78,542,80,42
+2023,8,Marika Gartelius,arsredovisning-2023.pdf,4,265,598,72,7
+2023,5,Ingrid Lindegren;BoRevision AB,arsredovisning-2023.pdf,4,232,677,151,52
+2023,4,Dan Asplund;Bo Johansson;Anna Strandberg,arsredovisning-2023.pdf,5,78,143,71,32
+2023,9,Ingrid Lindegren;Joakim Häll,arsredovisning-2023.pdf,21,93,489,267,10
+2023,6,59,arsredovisning-2023.pdf,4,,,,
+2023,11,1961-1963,arsredovisning-2023.pdf,4,129,216,43,7
+2022,0,2022-01-01 – 2022-12-31,arsredovisning-2022.pdf,4,360,132,45,8
+2022,1,Anders Olsson,arsredovisning-2022.pdf,4,79,484,59,8
+2022,2,Ann-Sofie Hagberg,arsredovisning-2022.pdf,4,78,495,78,10
+2022,3,Stig Agehall;Pia Lander;Mathias Kvick;Elleonore Lindgren,arsredovisning-2022.pdf,4,78,506,80,43
+2022,10,Stefan Simic,arsredovisning-2022.pdf,4,78,551,52,8
+2022,8,Caroline Ängeskog,arsredovisning-2022.pdf,4,265,572,80,11
+2022,5,Ingrid Lindegren;BoRevision AB,arsredovisning-2022.pdf,4,231,653,150,52
+2022,4,Bo Johansson;Dan Asplund;Berit Corre Forsberg,arsredovisning-2022.pdf,5,82,123,86,32
+2022,9,Ingrid Lindegren;Joakim Häll,arsredovisning-2022.pdf,21,92,501,266,10
+2022,6,43,arsredovisning-2022.pdf,4,,,,
+2022,11,1961-1963,arsredovisning-2022.pdf,4,131,225,43,8
+2020,0,2020-01-01 – 2020-12-31,arsredovisning-2020.pdf,3,281,136,42,6
+2020,1,Anders Olsson,arsredovisning-2020.pdf,3,90,462,53,7
+2020,2,Ann-Sofie Hagberg,arsredovisning-2020.pdf,3,90,473,70,9
+2020,3,Margareta Sverkersdotter;Leif Wågensand;Stig Agehall;Pia Lander (fr.o.m. 2020-06-18);Linnea Häggren (fr.o.m. 2020-06-18),arsredovisning-2020.pdf,3,90,484,97,54
+2020,10,Stefan Simic,arsredovisning-2020.pdf,3,90,541,46,7
+2020,8,Pia Lander (t.o.m. 2020-06-18);Linnea Häggren (t.o.m. 2020-06-18),arsredovisning-2020.pdf,3,90,519,57,20
+2020,5,Jerker Dahlin;BoRevision AB,arsredovisning-2020.pdf,3,224,645,119,40
+2020,4,Bo Johansson;Lars Lagerstedt;Berit Corre Forsberg,arsredovisning-2020.pdf,4,93,123,75,32
+2020,9,Jerker Dahlin;Joakim Häll,arsredovisning-2020.pdf,18,77,427,207,6
+2020,6,17,arsredovisning-2020.pdf,3,,,,
+2020,11,1961-1963,arsredovisning-2020.pdf,3,430,221,39,6
+2019,0,2019-01-01 – 2019-12-31,arsredovisning-2019.pdf,3,280,129,43,6
+2019,1,Anders Olsson,arsredovisning-2019.pdf,3,82,454,55,7
+2019,2,Dan Asplund (t.o.m. 2019-06-03);Ann-Sofie Hagberg (fr.o.m. 2019-06-10),arsredovisning-2019.pdf,3,82,466,72,55
+2019,3,Margareta Sverkersdotter;Leif Wågensand;Tomas Hedman;Stig Agehall (fr.o.m. 2019-06-03);Maria Wahlin (t.o.m. 2019-12-31),arsredovisning-2019.pdf,3,82,477,101,65
+2019,10,Stefan Simic,arsredovisning-2019.pdf,3,82,548,47,7
+2019,8,Pia Lander;Linnea Häggren (fr.o.m. 2019-06-03),arsredovisning-2019.pdf,3,260,571,118,8
+2019,5,Jerker Dahlin;BoRevision AB,arsredovisning-2019.pdf,3,222,655,125,53
+2019,4,Bo Johansson;Lars Lagerstedt;Berit Corre Forsberg,arsredovisning-2019.pdf,4,83,115,78,32
+2019,9,Jerker Dahlin;Joakim Häll,arsredovisning-2019.pdf,18,68,396,204,6
+2019,6,58,arsredovisning-2019.pdf,3,,,,
+2019,11,1961-1963,arsredovisning-2019.pdf,3,436,216,41,6
+2018,0,2018-01-01 – 2018-12-31,arsredovisning-2018.pdf,3,280,126,42,6
+2018,1,Anders Olsson,arsredovisning-2018.pdf,3,91,453,53,7
+2018,2,Dan Asplund,arsredovisning-2018.pdf,3,91,464,46,9
+2018,3,Margareta Sverkersdotter;Leif Wågensand;Tomas Hedman;Ann-Sofie Hagberg;Maria Wåhlin (fr.o.m. 2018-06-05),arsredovisning-2018.pdf,3,90,475,96,52
+2018,10,Therese Andersson Kasinsky,arsredovisning-2018.pdf,3,90,532,105,8
+2018,8,Vaios Makris (fr.o.m. 2018-06-05);Maria Wåhlin (t.o.m. 2018-06-05),arsredovisning-2018.pdf,3,91,521,216,40
+2018,5,Jerker Dahlin;BoRevision AB,arsredovisning-2018.pdf,3,224,668,119,30
+2018,4,Bo Johansson;Lars Lagerstedt;Berit Corre Forsberg,arsredovisning-2018.pdf,4,90,114,75,30
+2018,9,Jerker Dahlin;Martin Fredriksson,arsredovisning-2018.pdf,18,77,386,218,15
+2018,6,44,arsredovisning-2018.pdf,3,,,,
+2018,11,1961-1963,arsredovisning-2018.pdf,3,428,210,39,6
+2017,0,2017-01-01 – 2017-12-31,arsredovisning-20172.pdf,2,285,164,42,6
+2017,1,Anders Olsson,arsredovisning-20172.pdf,2,98,482,52,7
+2017,2,Dan Asplund,arsredovisning-20172.pdf,2,99,493,45,8
+2017,3,Margareta Sverkersdotter;Leif Wågensand;Lars Lagerstedt;Tomas Hedman;Ann-Sofie Hagberg,arsredovisning-20172.pdf,2,98,504,95,53
+2017,10,Therese Andersson Kasinsky,arsredovisning-20172.pdf,2,98,560,103,8
+2017,8,Maria Wåhlin,arsredovisning-20172.pdf,2,258,582,50,7
+2017,5,Jerker Dahlin;BoRevision AB,arsredovisning-20172.pdf,2,229,661,118,29
+2017,4,Rickard Nirling;Berit Corre Forsberg;Bo Johansson (fr.o.m. 2017-06-01),arsredovisning-20172.pdf,3,98,162,74,29
+2017,9,Jerker Dahlin;Pontus Stormsköld,arsredovisning-20172.pdf,17,,,,
+2017,6,50,arsredovisning-20172.pdf,2,,,,
+2017,11,1961-1963,arsredovisning-20172.pdf,2,430,246,39,6
+2016,0,2016-01-01 – 2016-12-31,arsredovisning-2016.pdf,3,271,120,46,7
+2016,1,Anders Olsson,arsredovisning-2016.pdf,3,66,482,56,7
+2016,2,Dan Asplund,arsredovisning-2016.pdf,3,66,494,50,9
+2016,3,Margareta Sverkersdotter;Leif Wågensand;Lars Lagerstedt;Stefan Elenius (t.o.m. 2016-04-05);Tomas Hedman (fr.o.m. 2016-05-30);Ann-Sofie Hagberg,arsredovisning-2016.pdf,3,66,507,104,70
+2016,10,Thomas Karlsson (t.o.m. 2016-02-29);Therese Andersson Kasinsky (fr.o.m. 2016-03-01),arsredovisning-2016.pdf,3,66,580,114,22
+2016,8,Anders Kindblom (t.o.m. 2016-05-30);Maria Wåhlin (fr.o.m. 2016-05-30),arsredovisning-2016.pdf,3,66,482,433,144
+2016,5,Jerker Dahlin;BoRevision AB,arsredovisning-2016.pdf,3,211,717,131,31
+2016,4,Mathias Kvick;Rickard Nirling;Berit Corre Forsberg,arsredovisning-2016.pdf,4,67,143,80,33
+2016,9,Jerker Dahlin;Karin Pettersson,arsredovisning-2016.pdf,18,,,,
+2016,6,59,arsredovisning-2016.pdf,3,,,,
+2016,11,1961-1963,arsredovisning-2016.pdf,3,434,211,42,7
+2025,13,Ingående anskaffningsvärde mark,arsredovisning-2025.pdf,18,100,92,112,63

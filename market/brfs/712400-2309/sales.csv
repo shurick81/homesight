@@ -1,0 +1,134 @@
+sold_date,linked_by,address,apartment_number,rooms,living_area_m2,final_price_kr,asking_price_kr,kr_per_m2,monthly_fee_kr,price_change_pct,object_type,object_form,tenure,broker_agency,area_name,lat,lng,listing_id,booli_url
+2012-09-23,booli_brf_id,Bollmoravägen 104,,3.0,74.0,1600000,1495000,21600,4024,7,bostadsrätt,,,,Tyresö Centrum,59.24381,18.213515,1265395,https://www.booli.se/annons/1265395
+2013-02-04,booli_brf_id,Bollmoravägen 90,,3.0,74.0,1495000,1495000,20200,4024,0,bostadsrätt,,,,Lindalen,59.2433752,18.2139878,1336230,https://www.booli.se/bostad/336836
+2013-02-18,booli_brf_id,Bollmoravägen 116,,2.0,65.0,1325000,1250000,20400,3585,6,bostadsrätt,,,,Lindalen,59.24357732,18.21233094,1350890,https://www.booli.se/annons/1350890
+2013-05-28,booli_brf_id,Bollmoravägen 154,,3.0,74.0,1600000,1495000,21600,4024,7,bostadsrätt,,,,Lindalen,59.24349812,18.20858653,1416018,https://www.booli.se/annons/1416018
+2013-09-10,booli_brf_id,Bollmoravägen 126,,3.0,81.0,1545000,1545000,19100,4681,-0.3,bostadsrätt,,,,Lindalen,59.2436695,18.2114229,1470077,https://www.booli.se/annons/1470077
+2013-09-24,booli_brf_id,Bollmoravägen 170,,4.0,95.0,1395000,1290000,14700,5395,8.1,bostadsrätt,,,,Bollmora,59.24351,18.20731,1505468,https://www.booli.se/annons/1505468
+2013-10-19,booli_brf_id,Herkulesvägen 22,,2.0,60.0,1460000,1350000,24300,3449,8.1,bostadsrätt,,,,Lindalen,59.2444864,18.207703,1524423,https://www.booli.se/annons/1524423
+2014-01-22,booli_brf_id,Bollmoravägen 96,,4.0,90.0,1750000,1395000,19400,5081,25.4,bostadsrätt,,,,Lindalen,59.24386133,18.21401964,1565183,https://www.booli.se/bostad/336827
+2014-02-27,booli_brf_id,Bollmoravägen 162,,4.0,95.0,1850000,1595000,19500,5395,16,bostadsrätt,,,,Lindalen,59.24350762,18.20762939,1590008,https://www.booli.se/annons/1590008
+2014-03-29,booli_brf_id,Bollmoravägen 94,,3.0,81.0,1610000,1395000,19900,4681,15.4,bostadsrätt,,,,Lindalen,59.2436643,18.213992,1611748,https://www.booli.se/annons/1611748
+2014-04-27,booli_brf_id,Bollmoravägen 156,,3.0,77.0,2010000,1695000,26100,4417,18.6,bostadsrätt,,,,Lindalen,59.24364511,18.20859166,1631528,https://www.booli.se/annons/1631528
+2014-07-29,booli_brf_id,Bollmoravägen 108,,2.0,64.0,1500000,1295000,23400,3692,15.8,bostadsrätt,,,,Lindalen,59.24357826,18.21275389,1699540,https://www.booli.se/annons/1699540
+2014-08-27,booli_brf_id,Herkulesvägen 30,,2.0,60.0,1735000,1400000,28900,3449,23.9,bostadsrätt,,,,Lindalen,59.24439175,18.2080144,1709318,https://www.booli.se/annons/1709318
+2014-10-05,booli_brf_id,Bollmoravägen 98,,3.0,78.0,1400000,1195000,17900,6253,17.2,bostadsrätt,,,,Bollmora,59.243453,18.2136829,1746702,https://www.booli.se/bostad/336822
+2014-10-21,booli_brf_id,Bollmoravägen 166,,2.0,64.0,1660000,1395000,25900,5499,19,bostadsrätt,,,,Lindalen,59.24377943,18.20763778,1755510,https://www.booli.se/bostad/336714
+2015-01-31,booli_brf_id,Herkulesvägen 24,,3.0,77.0,2065000,1650000,26800,4417,25.2,bostadsrätt,,,,Lindalen,59.2442625,18.2077075,1802457,https://www.booli.se/bostad/434886
+2015-02-16,booli_brf_id,Herkulesvägen 32,,3.0,77.0,2250000,2095000,29200,4417,7.4,bostadsrätt,,,,Lindalen,59.2443387,18.208212,1810280,https://www.booli.se/bostad/434874
+2015-03-20,booli_brf_id,Bollmoravägen 120,,3.0,74.0,1815000,1695000,24500,6611,3.7,bostadsrätt,,,,Lindalen,59.24387966,18.21242409,1825062,https://www.booli.se/bostad/336788
+2015-04-08,booli_brf_id,Bollmoravägen 168,,4.0,95.0,2220000,1990000,23400,5395,11.6,bostadsrätt,,,,Lindalen,59.24393,18.20764,1831047,https://www.booli.se/bostad/336709
+2015-05-05,booli_brf_id,Bollmoravägen 114,,4.0,90.0,2550000,1995000,28300,,27.8,bostadsrätt,,,,Lindalen,59.24346805,18.21241757,1852541,https://www.booli.se/bostad/336799
+2015-10-31,booli_brf_id,Bollmoravägen 100,,2.0,64.0,2100000,1675000,32800,3692,25.4,bostadsrätt,,,,Lindalen,59.2435232,18.2135089,1983577,https://www.booli.se/bostad/336818
+2015-11-16,booli_brf_id,Bollmoravägen 160,,4.0,95.0,2635000,2350000,27700,5395,12.1,bostadsrätt,,,,Lindalen,59.2438625,18.2083888,1987363,https://www.booli.se/annons/1987363
+2016-02-24,booli_brf_id,Bollmoravägen 116,,3.0,77.0,2750000,2195000,35700,4417,25.3,bostadsrätt,,,,Lindalen,59.24357732,18.21233094,2035146,https://www.booli.se/bostad/336795
+2016-02-25,booli_brf_id,Bollmoravägen 174,,3.0,77.0,2580000,1995000,33500,6577,29.3,bostadsrätt,,,,Lindalen,59.24446818,18.20872307,2036661,https://www.booli.se/bostad/336703
+2016-03-17,booli_brf_id,Bollmoravägen 146,,3.0,78.0,2520000,1975000,32300,4409,27.6,bostadsrätt,,,,Lindalen,59.2435,18.208906,2051312,https://www.booli.se/bostad/336748
+2016-03-24,booli_brf_id,Bollmoravägen 130,,3.0,81.0,2210000,1975000,27300,4681,11.9,bostadsrätt,,,,Tyresö Centrum,59.24360022,18.21113701,2047652,https://www.booli.se/annons/2047652
+2016-05-31,booli_brf_id,Bollmoravägen 118,,3.0,64.0,2350000,2295000,36700,3692,2.4,bostadsrätt,,,,Lindalen,59.24373738,18.21242696,2091497,https://www.booli.se/bostad/336790
+2016-06-11,booli_brf_id,Herkulesvägen 20,,4.0,95.0,2850000,2300000,30000,5395,23.9,bostadsrätt,,,,Lindalen,59.2446305,18.2077051,2117187,https://www.booli.se/bostad/434892
+2016-10-04,booli_brf_id,Bollmoravägen 122,,3.0,77.0,2250000,1625000,29200,4417,38.5,bostadsrätt,,,,Lindalen,59.2434017,18.211419,2169684,https://www.booli.se/annons/2169684
+2016-12-13,booli_brf_id,Bollmoravägen 166,,3.0,77.0,2365000,2195000,30700,6264,7.7,bostadsrätt,,,,Lindalen,59.24377943,18.20763778,2218736,https://www.booli.se/bostad/336715
+2017-02-04,booli_brf_id,Bollmoravägen 166MP,,3.0,77.0,2735000,2250000,35500,4417,21.6,bostadsrätt,,,,Lindalen,59.24373847,18.20770383,2240715,https://www.booli.se/annons/2240715
+2017-03-24,booli_brf_id,Bollmoravägen 132,,2.0,64.0,2460000,2100000,38400,3692,17.1,bostadsrätt,,,,Lindalen,59.24372794,18.21114826,2249906,https://www.booli.se/annons/2249906
+2017-03-24,booli_brf_id,Herkulesvägen 22,,2.0,60.0,2295000,1995000,38300,3449,15,bostadsrätt,,,,Lindalen,59.2444864,18.207703,2275746,https://www.booli.se/annons/2275746
+2017-03-30,booli_brf_id,Bollmoravägen 126,,3.0,77.0,2400000,2100000,31200,4417,14.3,bostadsrätt,,,,Lindalen,59.2436695,18.2114229,2283383,https://www.booli.se/annons/2283383
+2017-06-02,booli_brf_id,Bollmoravägen 92,,2.0,60.0,2365000,2095000,39400,3449,12.9,bostadsrätt,,,,Lindalen,59.24359132,18.21401122,2314654,https://www.booli.se/annons/2314654
+2017-06-16,booli_brf_id,Bollmoravägen 174,,3.0,81.0,2415000,2125000,29800,4681,13.6,bostadsrätt,,,,Lindalen,59.24446818,18.20872307,2340480,https://www.booli.se/annons/2340480
+2017-09-16,booli_brf_id,Bollmoravägen 144,,2.0,64.0,2650000,2195000,41400,3766,20.7,bostadsrätt,,,,Lindalen,59.2436829,18.2096618,2398641,https://www.booli.se/annons/2398641
+2017-10-13,booli_brf_id,Bollmoravägen 98MP,,4.0,90.0,2650000,2395000,29400,5182,10.6,bostadsrätt,,,,Lindalen,59.243453,18.2136829,2403757,https://www.booli.se/annons/2403757
+2017-10-31,booli_brf_id,Bollmoravägen 132,,3.0,77.0,2495000,2495000,32400,4505,0,bostadsrätt,,,,Tyresö Centrum,59.24372794,18.21114826,3014411,https://www.booli.se/bostad/336771
+2017-11-14,booli_brf_id,Bollmoravägen 114,,3.0,78.0,2540000,2395000,32600,4498,6.1,bostadsrätt,,,,Lindalen,59.24346805,18.21241757,3029643,https://www.booli.se/bostad/336798
+2018-01-31,booli_brf_id,Bollmoravägen 94,,3.0,81.0,3000000,2695000,37000,4775,11.3,bostadsrätt,,,,Tyresö Centrum,59.2436643,18.213992,3069928,https://www.booli.se/bostad/336829
+2018-06-15,booli_brf_id,Bollmoravägen 120,,3.0,78.0,2500000,2395000,32100,4498,0.2,bostadsrätt,,,,Lindalen,59.24387966,18.21242409,3155248,https://www.booli.se/annons/3155248
+2018-10-03,booli_brf_id,Herkulesvägen 30,,3.0,77.0,2735000,2195000,35500,4505,24.6,bostadsrätt,,,,Lindalen,59.24439175,18.2080144,3246115,https://www.booli.se/annons/3246115
+2018-11-21,booli_brf_id,Herkulesvägen 28,,3.0,74.0,2250000,2195000,30400,4228,2.5,bostadsrätt,,,,Lindalen,59.2445377,18.20801857,3241587,https://www.booli.se/bostad/434879
+2018-12-14,booli_brf_id,Bollmoravägen 108,,3.0,60.0,2400000,1995000,40000,3518,20.3,bostadsrätt,,,,Lindalen,59.24357826,18.21275389,3299249,https://www.booli.se/annons/3299249
+2019-02-01,booli_brf_id,Bollmoravägen 170,,4.0,90.0,2820000,2495000,31300,5182,13,bostadsrätt,,,,Lindalen,59.24351,18.20731,3317163,https://www.booli.se/annons/3317163
+2019-04-16,booli_brf_id,Bollmoravägen 174,,3.0,77.0,2600000,2490000,33800,6577,4.4,bostadsrätt,,,,Lindalen,59.24446818,18.20872307,3020260,https://www.booli.se/bostad/336703
+2019-05-23,booli_brf_id,Bollmoravägen 98,,3.0,78.0,2640000,2495000,33800,6253,5.8,bostadsrätt,,,,Pluto,59.243453,18.2136829,3441752,https://www.booli.se/bostad/336822
+2019-07-04,booli_brf_id,Bollmoravägen 168,,3.0,74.0,1925000,1995000,26000,4228,-10.5,bostadsrätt,,,,Lindalen,59.24393,18.20764,3440159,https://www.booli.se/annons/3440159
+2019-08-15,booli_brf_id,Bollmoravägen 166,,2.0,60.0,1995000,1995000,33300,3518,0,bostadsrätt,,,,Tyresö Centrum,59.24377943,18.20763778,3522924,https://www.booli.se/annons/3522924
+2019-10-22,booli_brf_id,Bollmoravägen 164,,2.0,60.0,1925000,1795000,32100,3518,-3.5,bostadsrätt,,,,Pluto,59.24362569,18.20769846,3580126,https://www.booli.se/annons/3580126
+2019-11-08,booli_brf_id,Bollmoravägen 128,,3.0,81.0,2700000,2495000,33300,7466,8.2,bostadsrätt,,,,Lindalen,59.24350254,18.21113337,3640229,https://www.booli.se/bostad/3914879
+2019-11-29,booli_brf_id,Bollmoravägen 124,,3.0,64.0,2100000,1995000,32800,3766,5.3,bostadsrätt,,,,Pluto,59.2435629,18.21158477,3670325,https://www.booli.se/annons/3670325
+2020-01-24,booli_brf_id,Bollmoravägen 98,,3.0,74.0,2400000,2249000,32400,4228,6.7,bostadsrätt,,,,Lindalen,59.243453,18.2136829,3704113,https://www.booli.se/annons/3704113
+2020-01-28,booli_brf_id,Bollmoravägen 114,,3.0,74.0,2550000,2495000,34500,4228,2.2,bostadsrätt,,,,Pluto,59.24346805,18.21241757,3697543,https://www.booli.se/annons/3697543
+2020-02-06,booli_brf_id,Bollmoravägen 146,,3.0,74.0,2600000,2395000,35100,4228,8.6,bostadsrätt,,,,Lindalen,59.2435,18.208906,3703491,https://www.booli.se/annons/3703491
+2020-03-12,booli_brf_id,Bollmoravägen 96,,3.0,78.0,2020000,1995000,25900,4498,-12,bostadsrätt,,,,Tyresö Centrum,59.24386133,18.21401964,3724052,https://www.booli.se/annons/3724052
+2020-04-03,booli_brf_id,Herkulesvägen 22,,2.0,60.0,2100000,1995000,35000,3518,5.3,bostadsrätt,,,,Pluto,59.2444864,18.207703,3776545,https://www.booli.se/bostad/434891
+2020-07-16,booli_brf_id,Bollmoravägen 104,,4.0,95.0,2795000,2795000,29400,5503,0,bostadsrätt,,,,Tyresö Centrum,59.24381,18.213515,3865902,https://www.booli.se/bostad/336809
+2020-07-21,booli_brf_id,Bollmoravägen 120,,3.0,78.0,2300000,2300000,29500,4498,-4,bostadsrätt,,,,Pluto,59.24387966,18.21242409,3831143,https://www.booli.se/annons/3831143
+2020-07-24,booli_brf_id,Bollmoravägen 92,,3.0,81.0,2400000,2495000,29600,4774,9.3,bostadsrätt,,,,Tyresö Centrum,59.24359132,18.21401122,3752182,https://www.booli.se/bostad/3914891
+2020-10-30,booli_brf_id,Bollmoravägen 114,,4.0,78.0,2695000,2695000,34600,4498,0,bostadsrätt,,,,Lindalen,59.24346805,18.21241757,3906295,https://www.booli.se/annons/3906295
+2020-11-12,booli_brf_id,Bollmoravägen 166,,3.0,77.0,2460000,2395000,31900,4505,2.7,bostadsrätt,,,,Pluto,59.24377943,18.20763778,4022067,https://www.booli.se/annons/4022067
+2020-11-21,booli_brf_id,Bollmoravägen 112,,4.0,95.0,2505000,2295000,26400,7652,-13.5,bostadsrätt,,,,Lindalen,59.24387749,18.21274107,4023431,https://www.booli.se/bostad/3974264
+2020-11-25,booli_brf_id,Bollmoravägen 152,,3.0,78.0,1995000,1995000,25600,4498,0,bostadsrätt,,,,Pluto,59.24391013,18.20891952,4022899,https://www.booli.se/annons/4022899
+2021-01-19,booli_brf_id,Herkulesvägen 24,,2.0,60.0,1930000,1895000,32200,3518,1.8,bostadsrätt,,,,Lindalen,59.2442625,18.2077075,4079367,https://www.booli.se/bostad/434887
+2021-03-30,booli_brf_id,Bollmoravägen 162,,3.0,74.0,2600000,2600000,35100,4228,2,bostadsrätt,,,,Lindalen,59.24350762,18.20762939,4150962,https://www.booli.se/bostad/336724
+2021-05-19,booli_brf_id,Herkulesvägen 24,,2.0,60.0,2400000,2195000,40000,3518,20.3,bostadsrätt,,,,Bollmora,59.2442625,18.2077075,4174271,https://www.booli.se/annons/4174271
+2021-05-28,booli_brf_id,Bollmoravägen 148,,2.5,60.0,2260000,1995000,37700,3518,13.3,bostadsrätt,,,,Centrala,59.2435691,18.2088803,4218293,https://www.booli.se/annons/4218293
+2021-06-22,booli_brf_id,Bollmoravägen 170,,4.0,95.0,3300000,2995000,34700,5503,10.2,bostadsrätt,,,,Lindalen,59.24351,18.20731,3434915,https://www.booli.se/bostad/336705
+2021-07-06,booli_brf_id,Herkulesvägen 28,,3.0,74.0,2700000,2395000,36500,4228,12.7,bostadsrätt,,,,Lindalen,59.2445377,18.20801857,4248663,https://www.booli.se/bostad/434879
+2021-09-01,booli_brf_id,Bollmoravägen 94,,3.0,81.0,3100000,2995000,38300,4775,3.5,bostadsrätt,,,,Lindalen,59.2436643,18.213992,4302089,https://www.booli.se/bostad/336829
+2021-09-03,booli_brf_id,Bollmoravägen 134,,2.0,64.0,2080000,1850000,32500,3766,12.4,bostadsrätt,,,,Lindalen,59.2434082,18.2101628,4335678,https://www.booli.se/bostad/3914876
+2021-09-14,booli_brf_id,Bollmoravägen 100,,2.0,60.0,2200000,1895000,36700,3518,16.1,bostadsrätt,,,,Lindalen,59.2435232,18.2135089,4319106,https://www.booli.se/annons/4319106
+2021-10-10,booli_brf_id,Bollmoravägen 104,,3.0,74.0,2850000,2395000,38500,4228,19,bostadsrätt,,,,Tyresö Centrum,59.24381,18.213515,4281964,https://www.booli.se/annons/4281964
+2021-10-22,booli_brf_id,Bollmoravägen 126,,2.0,60.0,2250000,1995000,37500,3518,12.8,bostadsrätt,,,,Tyresö Centrum,59.2436695,18.2114229,4415427,https://www.booli.se/annons/4415427
+2021-11-23,booli_brf_id,Bollmoravägen 96,,4.0,95.0,3225000,2895000,33900,5503,11.4,bostadsrätt,,,,Lindalen,59.24386133,18.21401964,4436051,https://www.booli.se/bostad/336825
+2021-11-25,booli_brf_id,Bollmoravägen 90,,4.0,95.0,3275000,2695000,34500,5503,21.5,bostadsrätt,,,,Lindalen,59.2433752,18.2139878,4417076,https://www.booli.se/annons/4417076
+2021-12-03,booli_brf_id,Bollmoravägen 106,,3.0,78.0,2600000,,33300,,,bostadsrätt,,,,Lindalen,59.24346331,18.21273552,4454111,https://www.booli.se/annons/4454111
+2022-03-18,booli_brf_id,Bollmoravägen 92,,3.0,81.0,2750000,2750000,34000,4774,0,bostadsrätt,,,,Lindalen,59.24359132,18.21401122,4548346,https://www.booli.se/bostad/3914891
+2022-03-31,booli_brf_id,Bollmoravägen 148,,3.0,77.0,3020000,2395000,39200,4505,26.1,bostadsrätt,,,,Lindalen,59.2435691,18.2088803,4563726,https://www.booli.se/annons/4563726
+2022-04-15,booli_brf_id,Bollmoravägen 100,,3.0,77.0,3240000,2795000,42100,4505,15.9,bostadsrätt,,,,Lindalen,59.2435232,18.2135089,4583703,https://www.booli.se/bostad/336819
+2022-05-13,booli_brf_id,Bollmoravägen 158,,3.0,81.0,3100000,,38300,4774,,bostadsrätt,,,,,59.2437747,18.2085958,4642457,https://www.booli.se/bostad/336751
+2022-05-18,booli_brf_id,Bollmoravägen 98,,4.0,95.0,3300000,2795000,34700,5503,18.1,bostadsrätt,,,,Lindalen,59.243453,18.2136829,4614768,https://www.booli.se/annons/4614768
+2022-06-03,booli_brf_id,Bollmoravägen 162,,4.0,78.0,2800000,2695000,35900,4498,3.9,bostadsrätt,,,,Tyresö Centrum,59.24350762,18.20762939,4640664,https://www.booli.se/bostad/336722
+2022-06-09,booli_brf_id,Herkulesvägen 26,,4.0,95.0,3170000,2795000,33400,5503,13.4,bostadsrätt,,,,Lindalen,59.2441983,18.2076989,4659627,https://www.booli.se/annons/4659627
+2022-09-02,booli_brf_id,Herkulesvägen 26,,3.0,78.0,2650000,2650000,34000,6698,0,bostadsrätt,,,,Lindalen,59.2441983,18.2076989,4737577,https://www.booli.se/bostad/434881
+2022-09-09,booli_brf_id,Herkulesvägen 24,,3.0,81.0,2945000,2195000,36400,4774,34.2,bostadsrätt,,,,Pluto,59.2442625,18.2077075,4748366,https://www.booli.se/annons/4748366
+2022-12-07,booli_brf_id,Bollmoravägen 138,,2.0,60.0,2400000,2350000,40000,3518,2.1,bostadsrätt,,,,Pluto,59.243683,18.2101687,4843765,https://www.booli.se/annons/4843765
+2023-01-17,booli_brf_id,Bollmoravägen 106,,4.0,90.0,2595000,2595000,28800,5545,0,bostadsrätt,,,,Lindalen,59.24346331,18.21273552,4797222,https://www.booli.se/annons/4797222
+2023-04-14,booli_brf_id,Bollmoravägen 112,,4.0,95.0,3050000,2995000,32100,7652,1.8,bostadsrätt,,,,Upp,59.24387749,18.21274107,4675770,https://www.booli.se/bostad/3974264
+2023-05-05,booli_brf_id,Bollmoravägen 124,,2.0,60.0,2250000,2195000,37500,3764,2.5,bostadsrätt,,,,Tyresö Centrum,59.2435629,18.21158477,4937657,https://www.booli.se/bostad/336784
+2023-09-01,booli_brf_id,Bollmoravägen 146,,3.0,74.0,2450000,2450000,33100,5112,0,bostadsrätt,,,,Centrala Tyresö,59.2435,18.208906,5054790,https://www.booli.se/annons/5054790
+2023-09-07,booli_brf_id,Bollmoravägen 126,,2.0,64.0,2350000,2195000,36700,4554,7.1,bostadsrätt,,,,Pluto,59.2436695,18.2114229,5064868,https://www.booli.se/annons/5064868
+2023-09-10,booli_brf_id,Herkulesvägen 32,,3.0,77.0,2430000,2495000,31600,,-2.6,bostadsrätt,,,,Lindalen,59.2443387,18.208212,5045778,https://www.booli.se/annons/5045778
+2023-11-13,booli_brf_id,Bollmoravägen 92,,3.0,81.0,3050000,2895000,37700,5773,5.4,bostadsrätt,,,,Centrala Tyresö,59.24359132,18.21401122,5064990,https://www.booli.se/annons/5064990
+2024-01-24,booli_brf_id,Bollmoravägen 120,,3.0,78.0,2300000,2250000,29500,5438,-6.1,bostadsrätt,,,,Centrala Tyresö,59.24387966,18.21242409,4795339,https://www.booli.se/annons/4795339
+2024-02-16,booli_brf_id,Bollmoravägen 108,,2.0,64.0,2000000,2095000,31300,5237,-4.5,bostadsrätt,,,,Tyresö Centrum,59.24357826,18.21275389,5221005,https://www.booli.se/bostad/336806
+2024-04-18,booli_brf_id,Bollmoravägen 112,,5.0,95.0,3300000,,34700,7652,,bostadsrätt,,,,Centrala Tyresö,59.24387749,18.21274107,5262943,https://www.booli.se/annons/5262943
+2024-04-18,booli_brf_id,Bollmoravägen 112,,5.0,95.0,3300000,,34700,7652,,bostadsrätt,,,,,59.24387749,18.21274107,5302759,https://www.booli.se/bostad/3974264
+2024-05-02,booli_brf_id,Herkulesvägen 32,,2.0,64.0,1950000,1995000,30500,5237,-2.3,bostadsrätt,,,,Tyresö Centrum,59.2443387,18.208212,5270647,https://www.booli.se/bostad/434873
+2024-05-06,booli_brf_id,Bollmoravägen 166,,3.0,77.0,2595000,2595000,33700,6264,0,bostadsrätt,,,,Pluto,59.24377943,18.20763778,5262840,https://www.booli.se/bostad/336715
+2024-05-06,booli_brf_id,Bollmoravägen 130,,2.0,64.0,1875000,,29300,5237,,bostadsrätt,,,,Centrala Tyresö,59.24360022,18.21113701,5271024,https://www.booli.se/bostad/336774
+2024-06-16,booli_brf_id,Bollmoravägen 106,,4.0,95.0,2700000,2795000,28400,7651,-3.4,bostadsrätt,,,,Centrala Tyresö,59.24346331,18.21273552,5298515,https://www.booli.se/annons/5298515
+2024-06-28,booli_brf_id,Bollmoravägen 166,,3.0,81.0,2400000,2295000,29600,6639,4.6,bostadsrätt,,,,Centrala Tyresö,59.24377943,18.20763778,5296895,https://www.booli.se/annons/5296895
+2024-08-06,booli_brf_id,Bollmoravägen 126,,3.0,81.0,2500000,2400000,30900,6971,4.2,bostadsrätt,,,,Centrala Tyresö,59.2436695,18.2114229,5417569,https://www.booli.se/annons/5417569
+2024-08-16,booli_brf_id,Bollmoravägen 132,,2.0,60.0,2400000,2395000,40000,4891,0.2,bostadsrätt,,,,Centrala Tyresö,59.24372794,18.21114826,5358437,https://www.booli.se/annons/5358437
+2024-09-03,booli_brf_id,Bollmoravägen 120,,4.0,90.0,2775000,2850000,30800,7206,-7.3,bostadsrätt,,,,Centrala Tyresö,59.24387966,18.21242409,5188643,https://www.booli.se/annons/5188643
+2024-09-09,booli_brf_id,Bollmoravägen 128,,3.0,81.0,2535000,2375000,31300,6971,6.7,bostadsrätt,,,,Centrala Tyresö,59.24350254,18.21113337,5429351,https://www.booli.se/annons/5429351
+2024-10-02,booli_brf_id,Bollmoravägen 98,,3.0,78.0,2495000,2595000,32000,6253,-9.3,bostadsrätt,,,,Centrala Tyresö,59.243453,18.2136829,4726115,https://www.booli.se/bostad/336822
+2025-01-17,booli_brf_id,Bollmoravägen 96,,4.0,95.0,2950000,,31100,8035,5.5,bostadsrätt,,,,Centrala Tyresö,59.24386133,18.21401964,5237491,https://www.booli.se/annons/5237491
+2025-01-17,booli_brf_id,Bollmoravägen 166,,3.0,64.0,2395000,2395000,37400,5499,0,bostadsrätt,,,,Centrala Tyresö,59.24377943,18.20763778,5547680,https://www.booli.se/bostad/336714
+2025-02-09,booli_brf_id,Bollmoravägen 174,,3.0,77.0,2595000,2595000,33700,6577,0,bostadsrätt,,,,Lindalen,59.24446818,18.20872307,5582916,https://www.booli.se/bostad/336703
+2025-02-10,booli_brf_id,Bollmoravägen 106,,4.0,95.0,2950000,,31100,8605,,bostadsrätt,,,,Centrala Tyresö,59.24346331,18.21273552,5589488,https://www.booli.se/bostad/3914887
+2025-03-12,booli_brf_id,Bollmoravägen 166,,2.0,60.0,1995000,1995000,33300,5136,0,bostadsrätt,,,,Centrala Tyresö,59.24377943,18.20763778,5474500,https://www.booli.se/bostad/336716
+2025-03-17,booli_brf_id,Bollmoravägen 100,,2.0,60.0,1995000,1995000,33300,,0,bostadsrätt,,,,Centrala Tyresö,59.2435232,18.2135089,5162505,https://www.booli.se/annons/5162505
+2025-04-03,booli_brf_id,Bollmoravägen 92,,2.0,64.0,1715000,1725000,26800,5609,-0.6,bostadsrätt,,,,,59.24359132,18.21401122,5638544,https://www.booli.se/bostad/3914892
+2025-04-29,booli_brf_id,Bollmoravägen 176,,3.0,74.0,2395000,2395000,32400,6172,0,bostadsrätt,,,,Centrala Tyresö,59.24392764,18.20732494,5062265,https://www.booli.se/annons/5062265
+2025-05-16,booli_brf_id,Bollmoravägen 124,,3.0,64.0,2395000,2395000,37400,5499,-4,bostadsrätt,,,,Tyresö Centrum,59.2435629,18.21158477,4389876,https://www.booli.se/bostad/336782
+2025-09-08,booli_brf_id,Bollmoravägen 92,,2.0,64.0,2150000,1995000,33600,5609,7.8,bostadsrätt,,,,Bollmora,59.24359132,18.21401122,5765601,https://www.booli.se/bostad/3914892
+2025-09-15,booli_brf_id,Bollmoravägen 122,,3.0,77.0,2395000,2485000,31100,6577,-3.6,bostadsrätt,,,,Centrala Tyresö,59.2434017,18.211419,5660252,https://www.booli.se/annons/5660252
+2025-09-23,booli_brf_id,Bollmoravägen 106,,3.0,78.0,2400000,2495000,30800,6697,-3.8,bostadsrätt,,,,Centrala Tyresö,59.24346331,18.21273552,5764834,https://www.booli.se/annons/5764834
+2025-10-16,booli_brf_id,Bollmoravägen 100,,3.0,60.0,2100000,1895000,35000,5239,10.8,bostadsrätt,,,,,59.2435232,18.2135089,5880322,https://www.booli.se/bostad/336820
+2025-11-17,booli_brf_id,Bollmoravägen 136,,4.0,81.0,2295000,2295000,28300,7110,-11.6,bostadsrätt,,,,Centrala Tyresö,59.2435542,18.2101668,5885079,https://www.booli.se/annons/5885079
+2025-11-24,booli_brf_id,Herkulesvägen 26,,3.0,78.0,2675000,2695000,34300,6698,-0.7,bostadsrätt,,,,Lindalen,59.2441983,18.2076989,5693895,https://www.booli.se/bostad/434881
+2026-01-27,booli_brf_id,Herkulesvägen 28,,4.0,95.0,2650000,2695000,27900,8605,-1.7,bostadsrätt,,,,Lindalen,59.2445377,18.20801857,5913349,https://www.booli.se/bostad/434876
+2026-01-29,booli_brf_id,Herkulesvägen 32,,2.0,60.0,2150000,1995000,35800,5501,7.8,bostadsrätt,,,,Lindalen,59.2443387,18.208212,5885508,https://www.booli.se/bostad/434875
+2026-03-30,booli_brf_id,Bollmoravägen 120,,3.0,74.0,2700000,,36500,6611,0.2,bostadsrätt,,,,Centrala Tyresö,59.24387966,18.21242409,5963252,https://www.booli.se/bostad/336788
+2026-03-31,booli_brf_id,Bollmoravägen 122,,3.0,77.0,2325000,2395000,30200,7044,-6.8,bostadsrätt,,,,Centrala Tyresö,59.2434017,18.211419,5884305,https://www.booli.se/bostad/3914885
+2026-04-01,booli_brf_id,Bollmoravägen 154,,3.0,78.0,2295000,2295000,29400,7033,0,bostadsrätt,,,,Bollmora,59.24349812,18.20858653,6050287,https://www.booli.se/bostad/336732
+2026-05-27,booli_brf_id,Bollmoravägen 128,,3.0,81.0,2275000,2275000,28100,7466,0,bostadsrätt,,,,Centrala Tyresö,59.24350254,18.21113337,6108480,https://www.booli.se/bostad/3914879
+2026-06-15,booli_brf_id,Bollmoravägen 162,,3.0,78.0,2395000,2395000,30700,7033,0,bostadsrätt,,,,Centrala Tyresö,59.24350762,18.20762939,5514912,https://www.booli.se/annons/5514912
+2026-06-18,booli_brf_id,Bollmoravägen 158,,3.0,81.0,2295000,2295000,28300,7466,-8,bostadsrätt,,,,Lindalen,59.2437747,18.2085958,6045302,https://www.booli.se/annons/6045302
