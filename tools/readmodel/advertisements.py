@@ -301,11 +301,11 @@ def flatten_brf_sales_history(ads, sales):
             a[f"brf_num_sales_{y}"] = n
         for y in SALES_YEARS:
             n = a[f"brf_num_sales_{y}"]
-            a[f"brf_turnover_{y}"] = (stats.round_numeric(n * 100 / units, 1)
+            a[f"brf_turnover_{y}"] = (stats.round_fraction(Fraction(n * 100, units), 1)
                                       if n is not None and units else None)
         for w in SALES_WINDOWS:
             n = None if ss is None else sum(1 for s in ss if s["yr"] > SALES_LATEST - w)
-            a[f"brf_turnover_agg_{w}y"] = stats.round_numeric(n * 100 / units, 1) if n is not None and units else None
+            a[f"brf_turnover_agg_{w}y"] = stats.round_fraction(Fraction(n * 100, units), 1) if n is not None and units else None
 
 
 def _fee_points(ss):
@@ -372,13 +372,14 @@ def flatten_brf_projections(ads, sales):
 def flatten_brf_loan_per_m2(ads):
     for a in ads:
         loan, area = a["brf_total_loan_kr"], a["brf_total_living_area_m2"]
-        a["brf_loan_per_m2"] = stats.round_numeric(loan / area, 1) if loan is not None and area else None
+        a["brf_loan_per_m2"] = stats.round_fraction(Fraction(loan, area), 1) if loan is not None and area else None
 
 
 def flatten_fee_per_m2(ads):
     for a in ads:
         fee, area = a["monthly_fee_kr"], a["living_area_m2"]
-        a["monthly_fee_per_m2"] = stats.round_numeric(fee / area, 1) if fee is not None and area else None
+        a["monthly_fee_per_m2"] = (stats.round_fraction(Fraction(fee) / Fraction(str(area)), 1)
+                                   if fee is not None and area else None)
 
 
 def flatten_brf_pct_for_sale(ads):
@@ -388,7 +389,8 @@ def flatten_brf_pct_for_sale(ads):
         count[a["brf_booli_id"]] = count.get(a["brf_booli_id"], 0) + 1
     for a in ads:
         units = a["brf_num_units"]
-        a["brf_pct_for_sale"] = stats.round_numeric(count[a["brf_booli_id"]] * 100 / units, 1) if units else None
+        a["brf_pct_for_sale"] = (stats.round_fraction(Fraction(count[a["brf_booli_id"]] * 100, units), 1)
+                                 if units else None)
 
 
 INDEX_CSV = REPO / "annual_reviews" / "brfs" / "index.csv"
@@ -429,16 +431,8 @@ def flatten_city(ads):
         a["city"] = CITY_BY_KOMMUN.get(a["kommun"])
 
 
-@functools.lru_cache(maxsize=1)
-def market():
-    """(advertisements, sales): every listing fully flattened except the geo benchmarks
-    (tools/readmodel/geo.py adds those), and every staged sale. Cached: the advertisements and the geo
-    containers are built from the same pass."""
-    links = _address_links()
-    brfs = import_brf_details()
-    all_sales = import_sales(links)
-    sales = sales_by_brf(all_sales)
-    ads = import_advertisements(*build_residence_staging(links))
+def flatten(ads, brfs, sales):
+    """The flatten chain (flatten_all, in the data repo's order) over listing documents."""
     flatten_brf(ads, brfs)
     flatten_brf_price_trend(ads, sales)
     flatten_brf_price_history(ads, sales)
@@ -451,4 +445,38 @@ def market():
     flatten_brf_pct_for_sale(ads)
     flatten_city(ads)
     flatten_brf_report(ads)
+
+
+@functools.lru_cache(maxsize=1)
+def staged():
+    """(BRF details by booli_brf_id, every staged sale, sales by booli_brf_id, listing documents unflattened)."""
+    links = _address_links()
+    brfs = import_brf_details()
+    all_sales = import_sales(links)
+    return brfs, all_sales, sales_by_brf(all_sales), import_advertisements(*build_residence_staging(links))
+
+
+@functools.lru_cache(maxsize=1)
+def market():
+    """(advertisements, sales): every listing fully flattened except the geo benchmarks
+    (tools/readmodel/geo.py adds those), and every staged sale. Cached: the advertisements, geo and brfs
+    containers are built from the same pass."""
+    brfs, all_sales, sales, ads = staged()
+    flatten(ads, brfs, sales)
     return ads, all_sales
+
+
+def unlisted_brf(booli_brf_id):
+    """A listing-shaped document for a BRF with no listing, flattened like one (brf_* from its Booli details
+    and sales; kommun, område and city from its most recent sale), so that GET /brfs can show a BRF with a
+    verified report even when nothing is for sale. Its own listing fields are empty and brf_pct_for_sale is
+    0 (flatten_brf_pct_for_sale counts this document itself)."""
+    brfs, _, sales, _ = staged()
+    last = max(sales.get(booli_brf_id, []), key=lambda s: s["sold_date"], default={})
+    doc = {"listing_id": None, "brf_booli_id": booli_brf_id, "kommun": last.get("kommun"),
+           "area_name": last.get("area_name"), "object_form": "lägenhet", "tenure": "bostadsrätt",
+           "kr_per_m2": None, "monthly_fee_kr": None, "living_area_m2": None, "city": None}
+    flatten([doc], brfs, sales)
+    if doc["brf_pct_for_sale"] is not None:
+        doc["brf_pct_for_sale"] = 0.0
+    return doc

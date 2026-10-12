@@ -61,10 +61,11 @@ Requires Python 3 with pdfplumber, PyYAML and pytesseract, plus tesseract (with 
 | in Sweden | ≈ 31 000 active (33 850 registered) | [hittabrf.se](https://www.hittabrf.se/faktaaktiva.asp), undated; active = owns and manages a property. The Riksbank (2018, from Bolagsverket) gave 32 000 registered, 26 000 active |
 | in Stockholm (kommun) | ≈ 5 750 active (9 976 in Stockholms län) | [brfregistret.se](https://register.brfregistret.se/hur-manga-bostadsrattsforeningar-finns-i-stockholm/), 2022-02-16; active = owns or manages a residential building and is VAT-registered. [hittabrf.se](https://www.hittabrf.se/brfstockholm.asp) gives only 3 645 active plus 493 registered, undated |
 | in Tyresö | ≈ 93 | listed for the postort Tyresö on [svenskbrf.se](https://www.svenskbrf.se/forening/tyreso); not an official count |
-| identified in this dataset | 12 | all in Tyresö; rows of `annual_reviews/brfs/index.csv` |
+| tracked for annual reports | 14 | 12 in Tyresö, Karlsön and Passadvinden in Stockholm; `annual_reviews/brfs/tracked.csv` |
+| with Booli market data | ≈ 3 100 | every BRF with an apartment for sale in Stockholm, Nacka, Solna and Tyresö (`GET /brfs`) |
 | 10 years of årsredovisningar downloaded | 2 | Sjötungan, Gäddan; the others have 3–9 of their last 10 fiscal years; the rest is not public |
-| structured data extracted | 12 | at least the latest report of each |
-| verified | 12 | every extracted year passes verify-brf-data; 6 of them over the full 5 years (Sjötungan, Gäddan, Bergfoten, Björktrasten, Skogsgläntan, Pluto) |
+| structured data extracted | 13 | at least the latest report of each; not Passadvinden (no public report) |
+| verified | 13 | every extracted year passes verify-brf-data: 51 of the 70 reports of the last 5 fiscal years, all that are held; 6 BRFs over the full 5 years (Björktrasten, Laxtrappan, Bergfoten, Gäddan, Sjötungan, Skogsgläntan); see `annual_reviews/brfs/coverage.md` |
 
 Coverage rule: download the annual reports of the last **10** fiscal years where they are public, and extract
 and verify the last **5** fiscal years, plus the closing balances of the year before as the opening balance
@@ -106,7 +107,7 @@ them the cooperative-stock fields of their område, kommun and city), `street_na
 | base URL | https://homesight-api.azurewebsites.net |
 | changes | [CHANGELOG.md](CHANGELOG.md) |
 | resource group | `homesight` (Sweden Central), subscription "Azure subscription 1" |
-| endpoints (0.7.0) | `GET /llms.txt`, `GET /health`, `GET /openapi.json`, `GET /brfs`, `GET /brfs/{orgnr}`, `GET /brfs/{orgnr}/financials`, `GET /advertisements`, `GET /cities`, `GET /kommuns`, `GET /areas`, `GET /sales/stats/avg-price-per-sqm` |
+| endpoints (0.8.0) | `GET /llms.txt`, `GET /health`, `GET /openapi.json`, `GET /brfs`, `GET /brfs/{orgnr}`, `GET /brfs/{orgnr}/financials`, `GET /advertisements`, `GET /cities`, `GET /kommuns`, `GET /areas`, `GET /sales/stats/avg-price-per-sqm` |
 
 **Same principles as the data repo.**
 - *Read model:* one container per resource, each document a finished response row. Everything a request

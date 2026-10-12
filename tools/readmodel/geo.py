@@ -224,14 +224,28 @@ def _jsonb_order(row):
     return {k: row[k] for k in sorted(row, key=lambda k: (len(k.encode()), k.encode()))}
 
 
+def copy_down(rows, levels):
+    """flatten_geo_benchmarks onto listing-shaped rows: the same-type benchmark and the history summaries of
+    each ancestor (område, kommun, city)."""
+    for a in rows:
+        bucket = _bucket(a["object_form"])
+        for prefix, parent in (("area", levels["areas"].get(_key(a, LEVELS["areas"]))),
+                               ("kommun", levels["kommuns"].get(_key(a, LEVELS["kommuns"]))),
+                               ("city", levels["cities"].get(_key(a, LEVELS["cities"])))):
+            for stat in ("avg_kr_per_m2", "median_kr_per_m2"):
+                a[f"{prefix}_{stat}"] = parent[f"{stat}_{bucket}"] if parent and bucket else None
+            for col in ADS_HISTORY_SUMMARY:
+                a[f"{prefix}_{col}"] = _collapsed(parent, col, bucket) if parent else None
+
+
 def _doc_id(*parts):
     return hashlib.sha1("\x1f".join(parts).encode()).hexdigest()[:20]
 
 
 @functools.lru_cache(maxsize=1)
 def build_all():
-    """(advertisements with geo benchmarks, kommuns, areas, cities): flatten_geo_benchmarks and the three
-    populate_* steps."""
+    """(advertisements with geo benchmarks, levels, kommuns, areas, cities): flatten_geo_benchmarks and the
+    three populate_* steps."""
     ads, sales = market()
     levels = {name: _level(name, ads, sales) for name in LEVELS}
     cities, kommuns, areas = levels["cities"], levels["kommuns"], levels["areas"]
@@ -247,16 +261,7 @@ def build_all():
             row[f"kommun_{col}"] = k[col] if k else None
             row[f"city_{col}"] = c[col] if c else None
 
-    # copy-down onto every listing: the same-type benchmark and the history summaries of each ancestor
-    for a in ads:
-        bucket = _bucket(a["object_form"])
-        for prefix, parent in (("area", areas.get(_key(a, LEVELS["areas"]))),
-                               ("kommun", kommuns.get(_key(a, LEVELS["kommuns"]))),
-                               ("city", cities.get(_key(a, LEVELS["cities"])))):
-            for stat in ("avg_kr_per_m2", "median_kr_per_m2"):
-                a[f"{prefix}_{stat}"] = parent[f"{stat}_{bucket}"] if parent and bucket else None
-            for col in ADS_HISTORY_SUMMARY:
-                a[f"{prefix}_{col}"] = _collapsed(parent, col, bucket) if parent else None
+    copy_down(ads, levels)
 
     price_stats = _price_stats(sales)
     for (kommun,), row in kommuns.items():
@@ -266,7 +271,7 @@ def build_all():
         ordered = sorted(rows.values(), key=sort_key)
         return [dict(_jsonb_order(r), id=_doc_id(*id_parts(r)), order=i) for i, r in enumerate(ordered)]
 
-    return (ads,
+    return (ads, levels,
             docs(kommuns, lambda r: collation_key(r["kommun"]), lambda r: (r["kommun"],)),
             docs(areas, lambda r: (collation_key(r["kommun"]), collation_key(r["area_name"])),
                  lambda r: (r["kommun"], r["area_name"])),
@@ -277,13 +282,18 @@ def advertisements():
     return build_all()[0]
 
 
-def kommuns():
+def levels():
+    """{"cities"|"kommuns"|"areas": {key: row}}, before ordering, for copy_down."""
     return build_all()[1]
 
 
-def areas():
+def kommuns():
     return build_all()[2]
 
 
-def cities():
+def areas():
     return build_all()[3]
+
+
+def cities():
+    return build_all()[4]

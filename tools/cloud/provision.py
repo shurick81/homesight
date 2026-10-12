@@ -31,7 +31,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO))
-from tools.readmodel.containers import CONTAINERS, api_ads  # noqa: E402
+from tools.readmodel.containers import CONTAINERS, api_ads, api_brfs  # noqa: E402
 
 RESOURCE_GROUP = "homesight"
 FUNCTION_APP = "homesight-api"
@@ -64,17 +64,24 @@ def inactive(live):
 
 
 def _create(container, doc, attempts=30):
-    """create_item, retried on 429 for as long as it takes: serverless caps a partition at 5 000 RU/s, which a
-    bulk load of large documents reaches; the SDK's own retries give up after about 30 s."""
+    """create_item, retried on 429 for as long as it takes (serverless caps a partition at 5 000 RU/s, which a
+    bulk load of large documents reaches; the SDK's own retries give up after about 30 s) and on a dropped
+    connection (a 409 on the retry then means the lost attempt was written)."""
+    from azure.core.exceptions import ServiceRequestError, ServiceResponseError
     from azure.cosmos.exceptions import CosmosHttpResponseError
 
     for attempt in range(attempts):
         try:
             return container.create_item(doc)
         except CosmosHttpResponseError as e:
+            if e.status_code == 409 and attempt > 0:
+                return None   # written by the attempt whose response was lost
             if e.status_code != 429 or attempt == attempts - 1:
                 raise
-            time.sleep(min(2 ** attempt, 20))
+        except (ServiceRequestError, ServiceResponseError):   # a dropped connection
+            if attempt == attempts - 1:
+                raise
+        time.sleep(min(2 ** attempt, 20))
 
 
 def provision(target):
@@ -144,6 +151,25 @@ def verify(db, expected):
         print(f"  {label}: {len(rows)} rows, {ru:.1f} RU")
     print(f"verified: counts {expected}; {len(api_ads.SORTS)} sorts, "
           f"avg {total_ru / len(api_ads.SORTS):.1f} RU, max {worst[0]:.1f} RU ({worst[1]})")
+
+    # /brfs: every sort, the homesight filter, and the fiscal years of a BRF with a report
+    brfs = db.get_container_client("brfs")
+    total_ru, worst = 0.0, (0.0, "")
+    for sort in api_brfs.SORTS:
+        rows, ru = api_brfs.query(brfs, api_brfs.parse({"sort": sort}), {})
+        if len(rows) != 10:
+            sys.exit(f"verify: /brfs sort={sort} returned {len(rows)} rows")
+        total_ru += ru
+        worst = max(worst, (ru, sort))
+    rows, ru = api_brfs.query(brfs, api_brfs.parse({"has_report": "true"}), {})
+    if not rows or not all(r["brf_report_fiscal_year"] for r in rows):
+        sys.exit("verify: /brfs?has_report=true returned no BRF with a report")
+    years = list(brfs.query_items("SELECT * FROM c WHERE c.type = 'financial_year'",
+                                  partition_key=rows[0]["brf_org_number"]))
+    if not years:
+        sys.exit(f"verify: no financial_year documents for {rows[0]['brf_org_number']}")
+    print(f"verified /brfs: {len(api_brfs.SORTS)} sorts, avg {total_ru / len(api_brfs.SORTS):.1f} RU, "
+          f"max {worst[0]:.1f} RU ({worst[1]}); has_report: {len(rows)} rows, {ru:.1f} RU")
 
 
 def flip(target):

@@ -18,9 +18,10 @@ from pathlib import Path
 import azure.functions as func
 
 import advertisements
+import brfs
 from params import _parse_brf_name_search, _parse_kommun, _parse_rooms, _parse_year
 
-API_VERSION = "0.7.0"
+API_VERSION = "0.8.0"
 HERE = Path(__file__).parent
 ORGNR_RE = re.compile(r"^\d{6}-\d{4}$")
 CORS = {"Access-Control-Allow-Origin": "*"}   # public read-only data, no credentials
@@ -83,25 +84,40 @@ def openapi(req: func.HttpRequest) -> func.HttpResponse:
 
 @app.route(route="brfs", methods=["GET"])
 def list_brfs(req: func.HttpRequest) -> func.HttpResponse:
-    items = container("brfs").query_items(
-        "SELECT * FROM c WHERE c.type = 'brf_summary' ORDER BY c.name",
-        enable_cross_partition_query=True)
-    brfs = [_clean(d) for d in items]
-    return _json({"count": len(brfs), "brfs": brfs})
+    start = time.perf_counter()
+    try:
+        args = brfs.parse(req.params)
+    except ValueError as e:
+        return _error(400, str(e))
+    rows, ru = brfs.query(container("brfs"), args, req.params)
+    logging.info(json.dumps({"type": "timing", "path": "/brfs", "sort": args["sort"],
+                             "filters": [k for k in brfs.FILTERS if args[k] is not None],
+                             "rows": len(rows), "ru": round(ru, 2),
+                             "total_ms": round((time.perf_counter() - start) * 1000, 1)}))
+    return _json(brfs.response(rows, args))
+
+
+def _brf_row(orgnr):
+    """The BRF's "brf" document (a point read), or None."""
+    from azure.cosmos.exceptions import CosmosResourceNotFoundError
+
+    try:
+        return container("brfs").read_item(item="brf", partition_key=orgnr)
+    except CosmosResourceNotFoundError:
+        return None
 
 
 @app.route(route="brfs/{orgnr}", methods=["GET"])
 def get_brf(req: func.HttpRequest) -> func.HttpResponse:
-    from azure.cosmos.exceptions import CosmosResourceNotFoundError
-
+    """The BRF's /brfs row plus `report`: the summary of its extracted annual reports (null if none)."""
     orgnr = req.route_params.get("orgnr", "")
     if not ORGNR_RE.match(orgnr):
         return _error(400, "orgnr must be a Swedish organisationsnummer like 712400-1467")
-    try:
-        doc = container("brfs").read_item(item="summary", partition_key=orgnr)
-    except CosmosResourceNotFoundError:
-        return _error(404, f"no BRF with orgnr {orgnr} in this dataset; GET /brfs lists the ones covered")
-    return _json(_clean(doc))
+    doc = _brf_row(orgnr)
+    if doc is None:
+        return _error(404, f"no BRF with orgnr {orgnr} in this dataset: GET /brfs covers BRFs with an apartment "
+                           f"for sale in the covered kommuns, and those with extracted annual reports")
+    return _json(brfs.clean(doc, brfs.HIDDEN_FIELDS - {"report"}))
 
 
 @app.route(route="brfs/{orgnr}/financials", methods=["GET"])
@@ -115,15 +131,15 @@ def get_brf_financials(req: func.HttpRequest) -> func.HttpResponse:
     if include - {"values"}:
         return _error(400, "include must be: values")
     docs = list(container("brfs").query_items(
-        "SELECT * FROM c WHERE c.type IN ('financial_year', 'brf_summary') ORDER BY c.id DESC",
-        partition_key=orgnr))
-    summary = next((d for d in docs if d["type"] == "brf_summary"), None)
-    if summary is None:
-        return _error(404, f"no BRF with orgnr {orgnr} in this dataset; GET /brfs lists the ones covered")
+        "SELECT * FROM c WHERE c.type IN ('financial_year', 'brf')", partition_key=orgnr))
+    report = next((d.get("report") for d in docs if d["type"] == "brf"), None)
+    if report is None:
+        return _error(404, f"no extracted annual reports for orgnr {orgnr}; GET /brfs?has_report=true lists "
+                           f"the BRFs that have them")
     years = sorted((d for d in docs if d["type"] == "financial_year"), key=lambda d: -d["fiscal_year"])
     drop = {"orgnr", "name"} | (set() if "values" in include else {"values"})
-    return _json({"orgnr": orgnr, "name": summary.get("name"),
-                  "verified_through": summary.get("verified_through"), "count": len(years),
+    return _json({"orgnr": orgnr, "name": report.get("name"),
+                  "verified_through": report.get("verified_through"), "count": len(years),
                   "years": [{k: v for k, v in _clean(d).items() if k not in drop} for d in years]})
 
 

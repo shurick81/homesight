@@ -5,6 +5,8 @@
                     is fetched through a narrow filter (its kommun and exact price, area, build year, ...).
     kommuns, areas, cities
                     every row, and the row order.
+    brfs            every /brfs row (fetched by brf_name_search, narrowed by kommun/omrade), and the first page
+                    of every sort, unfiltered and in one kommun
     sales_stats     /sales/stats/avg-price-per-sqm for every year/rooms combination we hold, plus a few that
                     should be 404.
     all             (default) all of the above
@@ -218,6 +220,61 @@ def parity_level(name, args):
         print("row order differs")
 
 
+def parity_brfs(args):
+    from tools.readmodel import brfs as readmodel_brfs
+    from tools.readmodel.containers import api_brfs
+
+    docs = readmodel_brfs.build()
+    # rows only homesight has (verified BRFs with nothing for sale) are not compared
+    listed = [d for d in docs if d["active_listing_count"] > 0]
+    ours = {d["brf_org_number"]: api_brfs.clean(d) for d in listed}
+    print(f"{len(listed)} BRF rows with listings; {len(docs) - len(listed)} homesight-only (no listing)")
+
+    def selector(d):
+        name = d["brf_name"].lower()
+        for keys in ((), ("kommun",), ("kommun", "area_name")):
+            hit = [o for o in listed if name in o["brf_name"].lower() and all(o[k] == d[k] for k in keys)]
+            if len(hit) <= 10:
+                q = {"brf_name_search": d["brf_name"]}
+                q.update({("omrade" if k == "area_name" else k): d[k] for k in keys})
+                return json.dumps(q, sort_keys=True, ensure_ascii=False)
+        return None
+
+    def fetch_all():
+        queries = {q for q in map(selector, listed) if q}
+        rows = {}
+        with ThreadPoolExecutor(args.workers) as pool:
+            for page in pool.map(lambda q: get("brfs?" + urllib.parse.urlencode(dict(json.loads(q), limit=10)))["brfs"],
+                                 queries):
+                rows.update({r["brf_org_number"]: r for r in page})
+        sorts = {}
+        for sort in api_brfs.SORTS:
+            for scope in ({}, {"kommun": "Tyresö"}):
+                key = json.dumps(dict(scope, sort=sort), ensure_ascii=False)
+                sorts[key] = [r["brf_org_number"]
+                              for r in get("brfs?" + urllib.parse.urlencode(dict(scope, sort=sort, limit=10)))["brfs"]]
+        return {"rows": rows, "sorts": sorts}
+
+    theirs = cached(args.cache, "brfs", fetch_all)
+    report("brfs", ours, theirs["rows"], args.show)
+
+    def first_page(sort, kommun=None):
+        field, direction = api_brfs.SORTS[sort]
+        rows = [d for d in listed if kommun is None or d["kommun"] == kommun]
+        have = sorted((d for d in rows if d[field] is not None), key=lambda d: d["brf_org_number"])
+        have.sort(key=lambda d: d[field], reverse=direction == "DESC")
+        rest = sorted((d for d in rows if d[field] is None), key=lambda d: d["brf_org_number"])
+        return [d["brf_org_number"] for d in (have + rest)[:10]]
+
+    wrong = []
+    for key, orgs in theirs["sorts"].items():
+        q = json.loads(key)
+        if first_page(q["sort"], q.get("kommun")) != orgs:
+            wrong.append(key)
+    print(f"sort order: {len(theirs['sorts']) - len(wrong)}/{len(theirs['sorts'])} first pages identical"
+          + (f"; differ: {wrong}" if wrong else ""))
+
+
 def parity_sales_stats(args):
     from tools.readmodel import sales_stats
 
@@ -260,7 +317,7 @@ def get(path):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("endpoint", nargs="?", default="all",
-                    choices=["all", "advertisements", *geo.LEVELS, "sales_stats"])
+                    choices=["all", "advertisements", *geo.LEVELS, "brfs", "sales_stats"])
     ap.add_argument("--kommun", help="advertisements: only this kommun")
     ap.add_argument("--show", type=int, default=3, help="examples per field")
     ap.add_argument("--workers", type=int, default=8)
@@ -271,9 +328,12 @@ def main():
     args = ap.parse_args()
     if args.data_repo_linking:
         advertisements.LINKING = "data-repo"
-    for name in (["advertisements", *geo.LEVELS, "sales_stats"] if args.endpoint == "all" else [args.endpoint]):
+    for name in (["advertisements", *geo.LEVELS, "brfs", "sales_stats"] if args.endpoint == "all"
+                 else [args.endpoint]):
         if name == "advertisements":
             parity_advertisements(args)
+        elif name == "brfs":
+            parity_brfs(args)
         elif name == "sales_stats":
             parity_sales_stats(args)
         else:

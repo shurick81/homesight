@@ -16,16 +16,16 @@ All endpoints are GET, public, and return JSON (this file is Markdown). Amounts 
 - [GET /cities]({BASE}/cities): the same for the city (Stockholm: every kommun in Stockholms län that is covered).
 - [GET /sales/stats/avg-price-per-sqm]({BASE}/sales/stats/avg-price-per-sqm): average sold kr/m² over completed sales, optionally `?year=` and `?rooms=`.
 
-## Verified BRF layer (annual reports)
+## BRFs
 
-- [GET /brfs]({BASE}/brfs): the BRFs whose annual reports are extracted, one summary each (orgnr, size, build year, land tenure, pipe replacement (stambyte), report coverage). Only these BRFs have this layer.
-- [GET /brfs/{orgnr}]({BASE}/brfs/712400-1467): one BRF's summary.
-- [GET /brfs/{orgnr}/financials]({BASE}/brfs/712400-1467/financials): every extracted fiscal year: income, costs, interest, loans, cash, per-m² figures and ratios (e.g. interest as a share of fees). `?include=values` adds where each number is printed in the report (file, page).
-- Listings of these BRFs also carry `brf_report_*` fields (latest verified year) in /advertisements.
+- [GET /brfs]({BASE}/brfs): one row per BRF with an apartment for sale (about 3 100), at most 10 per request: Booli's facts, loan per m², price and avgift history with trends and forecasts, turnover, share for sale, the current listings, and its område/kommun/city benchmarks. Same contract as the Real Estate Data API; filters `brf_name_search`, `kommun`, `omrade`, `min_brf_units`, ... and sorts `loan_asc`, `price_trend_5y_desc`, ...
+- `has_report=true`: only the BRFs whose annual reports are extracted and verified (listed even when nothing is for sale). Their rows also carry `brf_report_*` (latest verified year: loans, cash, fees, costs and interest per m², ground rent), `brf_land_tenure` and `brf_stambyte_*`.
+- [GET /brfs/{orgnr}]({BASE}/brfs/712400-1467): one BRF's row plus `report` (size, build years, land tenure, reports held and verified, stambyte assessment; null without extracted reports).
+- [GET /brfs/{orgnr}/financials]({BASE}/brfs/712400-1467/financials): every verified fiscal year: income, costs, interest, loans, cash, per-m² figures and ratios (e.g. interest as a share of fees). `?include=values` adds where each number is printed in the report (file, page).
 
 ## Caveats
 
 - Market data is a snapshot, not live: listings were captured August to October 2026 and sales run to July 2026. A listing may already be sold.
-- Booli's BRF figures (`brf_total_loan_kr`, `brf_economy`, ...) are as Booli shows them, unverified; `brf_report_*` and /brfs/{orgnr}/financials are from the annual reports and verified.
+- Booli's BRF figures (`brf_total_loan_kr`, `brf_loan_per_m2`, `brf_economy`, ...) are as Booli shows them, unverified; `brf_report_*`, `report` and /brfs/{orgnr}/financials are from the annual reports and verified. Prefer the verified figures where both exist.
 - School fields (`school_*`, `*_school_socio_index*`) are not available yet: NULL, and the school filters match nothing.
 - An empty result means nothing matched in the covered kommuns, not that nothing exists.

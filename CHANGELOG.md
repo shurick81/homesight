@@ -11,6 +11,25 @@ not the API, and is listed under **Data**.
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-10-12
+
+### Changed
+- **Breaking:** `GET /brfs` follows the Real Estate Data API's contract: one row per BRF with an apartment for
+  sale (about 3 100), filters (`brf_name_search`, `kommun`, `omrade`, `min_brf_units`, ...), 32 sorts and at
+  most 10 rows per request, instead of the list of BRFs with extracted reports. Those BRFs are now found with
+  `has_report=true` and are listed even when nothing is for sale.
+- **Breaking:** `GET /brfs/{orgnr}` returns the BRF's `/brfs` row, with the former summary under `report`
+  (null for a BRF without extracted reports). Every BRF in `/brfs` can be read this way.
+
+### Added
+- `has_report` filter on `/brfs` (homesight only), and the verified layer (`brf_report_*`, `brf_land_tenure`,
+  `brf_stambyte_*`) on `/brfs` rows.
+
+### Known differences from the data API
+- About 55 more BRFs (the extra listing links). For a BRF whose listings span several områden, `area_name`
+  and the benchmarks come from the område with most of its listings (the data repo takes an arbitrary
+  listing). The first page of every sort is otherwise identical.
+
 ## [0.7.0] - 2026-10-12
 
 ### Added
