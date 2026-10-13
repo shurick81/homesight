@@ -11,6 +11,18 @@ not the API, and is listed under **Data**.
 
 ## [Unreleased]
 
+## [0.10.0] - 2026-10-13
+
+### Added
+- `id` and `created_at` on every listing, as in the Real Estate Data API (missed in the migration): `id` is
+  the row's position in the import, `created_at` when the row was loaded. Rows with an equal sort value are
+  now ordered by `id` descending, as there, instead of by `listing_id`, so tied rows come in the same order.
+- The spec documents every nearest-school field (`school_1..5_*`) and `avg_school_socio_index*`, which the
+  0.9.0 spec left out.
+
+### Changed
+- `tools/cloud/parity.py` also reports fields the data API serves that are missing here.
+
 ## [0.9.0] - 2026-10-13
 
 ### Added

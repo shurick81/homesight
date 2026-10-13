@@ -14,6 +14,7 @@ import functools
 import gzip
 import json
 import re
+from datetime import datetime, timezone
 from fractions import Fraction
 from pathlib import Path
 
@@ -252,6 +253,13 @@ def import_advertisements(by_residence, by_address, by_relaxed):
             "city": None,
             "brf_booli_id": link_advertisement_brf(r, by_residence, by_address, by_relaxed),
         }
+    # id and created_at as in the data repo's advertisements table: the BIGSERIAL row id, assigned in the
+    # order the listings first appear in the snapshot (stored as `seq`: Cosmos reserves `id`), and when the
+    # row was loaded (this build)
+    loaded = datetime.now(timezone.utc).isoformat()
+    for n, d in enumerate(docs.values(), 1):
+        d["seq"] = n
+        d["created_at"] = loaded
     return list(docs.values())
 
 

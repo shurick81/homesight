@@ -98,7 +98,9 @@ FILTERS = {
     "min_school_index_3":     (lambda v: p._parse_index(v, "min_school_index_3"), "avg_school_socio_index_3", ">="),
 }
 SPATIAL_FIELD = "geo"          # GeoJSON point; `location` {lat, lng} is the served form
-TIEBREAK_FIELD = "listing_id"
+# rows with an equal sort value are ordered by the data repo's row id, newest first (ORDER BY ..., id DESC).
+# Cosmos reserves `id` for the document key (= listing_id), so the row id is stored as `seq`, served as `id`.
+TIEBREAK_FIELD = "seq"
 HIDDEN_FIELDS = {"id", "geo", "brf_booli_id"}   # brf_booli_id is Booli's internal id; never served
 
 
@@ -117,7 +119,10 @@ def parse(qs):
 
 
 def _clean(doc):
-    return {k: v for k, v in doc.items() if not k.startswith("_") and k not in HIDDEN_FIELDS}
+    """A stored document as served: Cosmos fields and internal fields dropped, `seq` served as `id`."""
+    out = {"id": doc.get("seq")}
+    out.update((k, v) for k, v in doc.items() if not k.startswith("_") and k not in HIDDEN_FIELDS | {"seq"})
+    return out
 
 
 def query(container, args):

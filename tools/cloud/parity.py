@@ -45,6 +45,7 @@ from tools.readmodel import advertisements, geo  # noqa: E402
 from tools.readmodel.containers import api_ads  # noqa: E402
 
 DATA_API = "https://wqyh106uo0.execute-api.eu-north-1.amazonaws.com"
+NOT_COMPARED = {"created_at"}   # when the row was loaded: differs by definition
 LIMIT = 10
 
 
@@ -149,7 +150,7 @@ def compare(ours, theirs, show, keyed_by=None):
                     "linked only in the data repo" if a["brf_name"] is None else "linked to another BRF")
             links[kind].append(key)
         for k, v in a.items():
-            if k not in t or k in unmigrated or (relinked and k.startswith("brf_")):
+            if k not in t or k in unmigrated or k in NOT_COMPARED or (relinked and k.startswith("brf_")):
                 continue
             if not same(v, t[k]):
                 diffs[k] += 1
@@ -162,9 +163,12 @@ def report(name, ours, theirs, show):
     diffs, examples, unmigrated, links = compare(ours, theirs, show)
     missing = [k for k in ours if k not in theirs]
     only_ours = sorted({k for a in ours.values() for k in a} - {k for t in theirs.values() for k in t})
+    only_theirs = sorted({k for t in theirs.values() for k in t} - {k for a in ours.values() for k in a})
     print(f"== {name}: compared {len(ours) - len(missing)}; not in the data API: {len(missing)} {missing[:5]}")
     if only_ours:
         print(f"fields the data API does not serve: {', '.join(only_ours)}")
+    if only_theirs:
+        print(f"MISSING HERE (the data API serves them): {', '.join(only_theirs)}")
     if unmigrated:
         print(f"not migrated (NULL here): {', '.join(unmigrated)}")
     for kind, ids in links.items():
@@ -191,7 +195,7 @@ def cached(cache, name, fetch_all):
 
 def parity_advertisements(args):
     ads = [a for a in geo.advertisements() if not args.kommun or a["kommun"] == args.kommun]
-    ours = {a["listing_id"]: {k: v for k, v in a.items() if k not in api_ads.HIDDEN_FIELDS} for a in ads}
+    ours = {a["listing_id"]: api_ads._clean(a) for a in ads}   # as served
     todo, unreachable = groups(ads)
     print(f"{len(ads)} listings; {len(unreachable)} not selectable through the data API's filters")
 

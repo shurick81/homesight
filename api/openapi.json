@@ -2,7 +2,7 @@
   "openapi": "3.0.3",
   "info": {
     "title": "homesight BRF API",
-    "version": "0.9.0",
+    "version": "0.10.0",
     "description": "Read-only data for deciding which Swedish apartment to buy, built for LLM agents. Two layers:\n\n- **Market (Booli snapshot)** for Stockholm, Nacka, Solna and Tyresö: apartments and houses for sale (GET /advertisements), one row per BRF with an apartment for sale (GET /brfs), område/kommun/city statistics (GET /areas, /kommuns, /cities) and sold prices (GET /sales/stats/avg-price-per-sqm). These follow the contract of the Real Estate Data API (llm-brf.github.io); Booli's BRF figures are as Booli shows them, unverified.\n- **Verified BRF layer:** for BRFs whose annual reports (årsredovisningar) are extracted, every figure is taken from the report and verified, and links back to the page it came from: `brf_report_*` on /brfs and /advertisements rows, GET /brfs/{orgnr} (`report`) and GET /brfs/{orgnr}/financials. GET /brfs?has_report=true lists these BRFs.\n\nA BRF is identified by its organisationsnummer (orgnr, format NNNNNN-NNNN). Amounts are SEK, areas m², fees per month; a fiscal year that does not follow the calendar year is labelled by the year it starts. GET /llms.txt is a short guide."
   },
   "paths": {
@@ -434,7 +434,7 @@
       "get": {
         "summary": "List property advertisements",
         "operationId": "listAdvertisements",
-        "description": "Returns property listings to support a purchase decision. Like sales, each row is fully self-contained (denormalized \"One Big Table\" model): besides the listing's own fields it embeds the housing cooperative (brf_*) and the five geographically nearest schools (school_1..5_*), plus a derived `avg_school_socio_index` averaging the socio-economic index of nearby schools. This is Skolverket's *Index på skolenhetsnivå* (socioekonomiskt index); a higher value corresponds to a higher modelled share of students not expected to become eligible for a national programme in upper-secondary school. See the `avg_school_socio_index` field for the full definition and the source link.\n\nThe result set is **capped at 10 rows**. Rather than paging the whole market, choose a `sort` that matches what you're optimising for (lowest price per m², largest BRF, nearby-school socio-economic index, …) and narrow with the filters below; you then get the 10 best matches in one cheap request. Default order is most recently listed first.\n\n**Coverage in this API:** every listing of the Real Estate Data API, in the kommuns Stockholm, Nacka, Solna and Tyresö (Booli snapshot). Differences from it: a listing is also linked to its BRF by the Booli apartment id in its URL and by its address with the entrance letter, so about 150 more listings carry brf_* fields (and the brf_pct_for_sale of their BRF counts them); street_name has no trailing space or stray digit; a regression-derived trend or forecast that falls exactly on .5 can round the other way. The nearest-school block comes from the same Skolverket editions (2023–2026); a projection or trend that falls exactly on a rounding tie can differ by 0.1, and where two schools share one address the fifth-nearest can be the other one. Rows with an equal sort value, and rows without it (always last), are ordered by listing_id, newest first.\n\n\n**Verified BRF layer (homesight):** for BRFs whose annual reports are extracted, every listing also carries brf_report_* (debt, fees, costs and interest per m², cash, ground rent, from the BRF's own årsredovisning), brf_land_tenure and the stambyte assessment. GET /brfs/{orgnr}/financials has all years and the full breakdown.\n",
+        "description": "Returns property listings to support a purchase decision. Like sales, each row is fully self-contained (denormalized \"One Big Table\" model): besides the listing's own fields it embeds the housing cooperative (brf_*) and the five geographically nearest schools (school_1..5_*), plus a derived `avg_school_socio_index` averaging the socio-economic index of nearby schools. This is Skolverket's *Index på skolenhetsnivå* (socioekonomiskt index); a higher value corresponds to a higher modelled share of students not expected to become eligible for a national programme in upper-secondary school. See the `avg_school_socio_index` field for the full definition and the source link.\n\nThe result set is **capped at 10 rows**. Rather than paging the whole market, choose a `sort` that matches what you're optimising for (lowest price per m², largest BRF, nearby-school socio-economic index, …) and narrow with the filters below; you then get the 10 best matches in one cheap request. Default order is most recently listed first.\n\n**Coverage in this API:** every listing of the Real Estate Data API, in the kommuns Stockholm, Nacka, Solna and Tyresö (Booli snapshot). Differences from it: a listing is also linked to its BRF by the Booli apartment id in its URL and by its address with the entrance letter, so about 150 more listings carry brf_* fields (and the brf_pct_for_sale of their BRF counts them); street_name has no trailing space or stray digit; a regression-derived trend or forecast that falls exactly on .5 can round the other way. The nearest-school block comes from the same Skolverket editions (2023–2026); a projection or trend that falls exactly on a rounding tie can differ by 0.1, and where two schools share one address the fifth-nearest can be the other one. Rows with an equal sort value, and rows without it (always last), are ordered by `id`, highest first (as in the Real Estate Data API).\n\n\n**Verified BRF layer (homesight):** for BRFs whose annual reports are extracted, every listing also carries brf_report_* (debt, fees, costs and interest per m², cash, ground rent, from the BRF's own årsredovisning), brf_land_tenure and the stambyte assessment. GET /brfs/{orgnr}/financials has all years and the full breakdown.\n",
         "parameters": [
           {
             "name": "property_type",
@@ -1325,6 +1325,15 @@
         "description": "A property listing, fully denormalized — one flat row, no nested objects except `location`. Fields fall into three groups:\n• Listing core — listing_id, listed_date, asking_price_kr, property_type, street_name, street_number, apartment_number, rooms, living_area_m2, kr_per_m2, monthly_fee_kr (the BRF avgift in kr/month; NULL for listings with no fee), construction_year (the building's construction year), broker_agency, description, attributes (JSONB), photo_urls (ordered array of listing photos, primary first; each {url, primaryLabel, alt} so floor plans and maps are distinguishable from photos), source_url, kommun, location {lat, lng}.\n• BRF block (recovered by matching the listing address to the BRF residences export; NULL for non-coop listings or unmatched addresses) — brf_booli_id, brf_name, brf_org_number, brf_construction_year, brf_num_units, brf_num_rental_units, brf_total_living_area_m2, brf_plot_ownership, brf_is_genuine, brf_total_loan_kr, brf_annual_report_year, brf_has_valid_annual_report, brf_economy (JSONB).\n• Nearest-5 schools — school_1_* (closest) … school_5_*, each with: _skolenhetskod, _name, _type, _distance_m, _socio_index_2023 / _2024 / _2025 / _2026, _ineligible_pct_latest, _ineligible_pct_prev. Cross-school rollups are precomputed as flat columns at import time and ride along on every row, for three nearest-school radii (1 = closest, 3, 5): a current latest-year average (`avg_school_socio_index_1` / `_3` / `avg_school_socio_index`) and a three-year-ahead projection of each (`avg_school_socio_index_1_forecast` / `_3_forecast` / `avg_school_socio_index_forecast`), fitted by least squares to each school's per-year history.\n• Geo hierarchy block (benchmarks copied down from the geo hierarchy) — `city` (the level above kommun) plus this listing's ancestor aggregates carried onto the row so it is self-contained: `area_avg_kr_per_m2` / `area_median_kr_per_m2`, `kommun_avg_kr_per_m2` / `kommun_median_kr_per_m2`, `city_avg_kr_per_m2` / `city_median_kr_per_m2` — each the avg/median asking price per m² over listings of the SAME boende type (this listing's object_type) at that ancestor level. Compare a listing's own `kr_per_m2` against these to position it within its område, kommun, and city — like for like — without a second query.\nThe properties below are a representative sample; additionalProperties is true so new flat columns appear without a spec change — the live response is authoritative for the full column list.\n",
         "additionalProperties": true,
         "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Row id: the listing's position in the import (as in the Real Estate Data API). Rows with an equal sort value are ordered by id, highest first. Not stable across data refreshes; use listing_id to identify a listing."
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "When this row was loaded into the database (the last data import), not when the listing appeared on Booli; see listed_date for that."
+          },
           "listing_id": {
             "type": "string",
             "example": "4123456"
@@ -1435,6 +1444,12 @@
             "type": "string",
             "example": "Tyresö"
           },
+          "area_name": {
+            "type": "string",
+            "nullable": true,
+            "description": "Sub-kommun område (neighborhood / stadsdel, Booli descriptiveAreaName). The value the `omrade` filter operates on. NULL when Booli supplies no område for the listing.\n",
+            "example": "Trollbäcken"
+          },
           "location": {
             "type": "object",
             "nullable": true,
@@ -1544,6 +1559,348 @@
             "description": "Share of the BRF's apartments sold in 2026 (`brf_num_sales_2026 / brf_num_units × 100`). One per year `brf_turnover_2021…2026`, plus the cumulative `brf_turnover_agg_3y` / `brf_turnover_agg_5y` (sales summed over the window ÷ units × 100) as the robust comparison level.\n",
             "example": 3.0
           },
+          "kommun_turnover_br_agg_5y": {
+            "type": "number",
+            "nullable": true,
+            "description": "COPIED DOWN from the kommun — the kommun's 5-year cumulative BR turnover, so a listing can be compared to its kommun's liquidity in one row. Every ancestor's sold-history SUMMARY rides along this way: `{area,kommun,city}_{sold_kr_per_m2,sold_fee_per_m2,turnover_br}_*` (last-year + 3y/5y trend/agg + forecast). The per-year history is NOT copied down — it lives on the område/kommun/city rows (GET /areas etc.).\n",
+            "example": 6.0
+          },
+          "avg_school_socio_index_1": {
+            "type": "number",
+            "nullable": true,
+            "description": "The closest school's latest-year socio-economic index. The value the `school_index_1_*` sort and `min_school_index_1` filter operate on.\n",
+            "example": 92.0
+          },
+          "avg_school_socio_index_3": {
+            "type": "number",
+            "nullable": true,
+            "description": "Average latest-year socio-economic index across the 3 nearest schools (a tighter radius). The value the `school_index_3_*` sort and `min_school_index_3` filter operate on.\n",
+            "example": 89.1
+          },
+          "avg_school_socio_index": {
+            "type": "number",
+            "nullable": true,
+            "description": "Average latest-year socio-economic index across the (up to five) nearest schools, ignoring those whose index is suppressed. The value the `school_index_*` sort and `min_school_index` filter operate on. Source: Skolverket's *Index på skolenhetsnivå* (socioekonomiskt index), the dataset underlying the state grant *Statsbidrag för stärkt kunskapsutveckling* (tidigare *Statsbidrag för likvärdig skola*). Per Skolverket the index models students' preconditions from socioeconomic factors that affect the probability that a student at the school becomes eligible for a national programme in upper-secondary school; a higher index corresponds to a higher modelled share of students not expected to become eligible. Definition and source: https://www.skolverket.se/styrning-och-ansvar/statsbidrag/hitta-statsbidrag/statsbidrag-for-starkt-kunskapsutveckling-2026\n",
+            "example": 88.4
+          },
+          "avg_school_socio_index_1_forecast": {
+            "type": "number",
+            "nullable": true,
+            "description": "Three-year-ahead least-squares projection of the closest school's index. Sort-only via `school_forecast_1_*`. NULL without enough history.\n",
+            "example": 93.0
+          },
+          "avg_school_socio_index_3_forecast": {
+            "type": "number",
+            "nullable": true,
+            "description": "Three-year-ahead projection of `avg_school_socio_index_3`. Sort-only via `school_forecast_3_*`. NULL without enough history.\n",
+            "example": 90.0
+          },
+          "avg_school_socio_index_forecast": {
+            "type": "number",
+            "nullable": true,
+            "description": "Three-year-ahead projection of `avg_school_socio_index`. For each of the nearest schools a least-squares line is fitted to its available per-year socio-economic index (2023–2026) and extrapolated; those per-school projections are averaged, ignoring schools with fewer than two years of data. Sort-only via `school_forecast_*`. NULL when no nearby school has enough history to establish a trend.\n",
+            "example": 91.2
+          },
+          "school_1_skolenhetskod": {
+            "type": "string",
+            "nullable": true,
+            "description": "Skolverket school-unit code (skolenhetskod) of the nearest school unit with known coordinates.",
+            "example": "74174879"
+          },
+          "school_1_name": {
+            "type": "string",
+            "nullable": true,
+            "description": "Name of the nearest school unit (as in its latest located edition).",
+            "example": "Kumla skola"
+          },
+          "school_1_type": {
+            "type": "string",
+            "nullable": true,
+            "description": "Huvudmannatyp of the nearest school: Kommun, Enskild (independent) or Kommunalförbund och regioner; published from the 2026 edition only, else null.",
+            "example": "Kommun"
+          },
+          "school_1_distance_m": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Geodesic distance in metres from the listing to the nearest school.",
+            "example": 420
+          },
+          "school_1_socio_index_2023": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the nearest school in Skolverket's 2023 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_1_socio_index_2024": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the nearest school in Skolverket's 2024 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_1_socio_index_2025": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the nearest school in Skolverket's 2025 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_1_socio_index_2026": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the nearest school in Skolverket's 2026 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_1_ineligible_pct_latest": {
+            "type": "number",
+            "nullable": true,
+            "description": "Expected share of pupils not eligible for upper secondary school (andel obehöriga, %) at the nearest school, 2026 edition.",
+            "example": 12.4
+          },
+          "school_1_ineligible_pct_prev": {
+            "type": "number",
+            "nullable": true,
+            "description": "The same share at the nearest school in the 2025 edition.",
+            "example": 11.9
+          },
+          "school_2_skolenhetskod": {
+            "type": "string",
+            "nullable": true,
+            "description": "Skolverket school-unit code (skolenhetskod) of the 2nd nearest school unit with known coordinates.",
+            "example": "74174879"
+          },
+          "school_2_name": {
+            "type": "string",
+            "nullable": true,
+            "description": "Name of the 2nd nearest school unit (as in its latest located edition).",
+            "example": "Kumla skola"
+          },
+          "school_2_type": {
+            "type": "string",
+            "nullable": true,
+            "description": "Huvudmannatyp of the 2nd nearest school: Kommun, Enskild (independent) or Kommunalförbund och regioner; published from the 2026 edition only, else null.",
+            "example": "Kommun"
+          },
+          "school_2_distance_m": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Geodesic distance in metres from the listing to the 2nd nearest school.",
+            "example": 420
+          },
+          "school_2_socio_index_2023": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the 2nd nearest school in Skolverket's 2023 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_2_socio_index_2024": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the 2nd nearest school in Skolverket's 2024 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_2_socio_index_2025": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the 2nd nearest school in Skolverket's 2025 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_2_socio_index_2026": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the 2nd nearest school in Skolverket's 2026 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_2_ineligible_pct_latest": {
+            "type": "number",
+            "nullable": true,
+            "description": "Expected share of pupils not eligible for upper secondary school (andel obehöriga, %) at the 2nd nearest school, 2026 edition.",
+            "example": 12.4
+          },
+          "school_2_ineligible_pct_prev": {
+            "type": "number",
+            "nullable": true,
+            "description": "The same share at the 2nd nearest school in the 2025 edition.",
+            "example": 11.9
+          },
+          "school_3_skolenhetskod": {
+            "type": "string",
+            "nullable": true,
+            "description": "Skolverket school-unit code (skolenhetskod) of the 3rd nearest school unit with known coordinates.",
+            "example": "74174879"
+          },
+          "school_3_name": {
+            "type": "string",
+            "nullable": true,
+            "description": "Name of the 3rd nearest school unit (as in its latest located edition).",
+            "example": "Kumla skola"
+          },
+          "school_3_type": {
+            "type": "string",
+            "nullable": true,
+            "description": "Huvudmannatyp of the 3rd nearest school: Kommun, Enskild (independent) or Kommunalförbund och regioner; published from the 2026 edition only, else null.",
+            "example": "Kommun"
+          },
+          "school_3_distance_m": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Geodesic distance in metres from the listing to the 3rd nearest school.",
+            "example": 420
+          },
+          "school_3_socio_index_2023": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the 3rd nearest school in Skolverket's 2023 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_3_socio_index_2024": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the 3rd nearest school in Skolverket's 2024 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_3_socio_index_2025": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the 3rd nearest school in Skolverket's 2025 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_3_socio_index_2026": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the 3rd nearest school in Skolverket's 2026 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_3_ineligible_pct_latest": {
+            "type": "number",
+            "nullable": true,
+            "description": "Expected share of pupils not eligible for upper secondary school (andel obehöriga, %) at the 3rd nearest school, 2026 edition.",
+            "example": 12.4
+          },
+          "school_3_ineligible_pct_prev": {
+            "type": "number",
+            "nullable": true,
+            "description": "The same share at the 3rd nearest school in the 2025 edition.",
+            "example": 11.9
+          },
+          "school_4_skolenhetskod": {
+            "type": "string",
+            "nullable": true,
+            "description": "Skolverket school-unit code (skolenhetskod) of the 4th nearest school unit with known coordinates.",
+            "example": "74174879"
+          },
+          "school_4_name": {
+            "type": "string",
+            "nullable": true,
+            "description": "Name of the 4th nearest school unit (as in its latest located edition).",
+            "example": "Kumla skola"
+          },
+          "school_4_type": {
+            "type": "string",
+            "nullable": true,
+            "description": "Huvudmannatyp of the 4th nearest school: Kommun, Enskild (independent) or Kommunalförbund och regioner; published from the 2026 edition only, else null.",
+            "example": "Kommun"
+          },
+          "school_4_distance_m": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Geodesic distance in metres from the listing to the 4th nearest school.",
+            "example": 420
+          },
+          "school_4_socio_index_2023": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the 4th nearest school in Skolverket's 2023 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_4_socio_index_2024": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the 4th nearest school in Skolverket's 2024 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_4_socio_index_2025": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the 4th nearest school in Skolverket's 2025 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_4_socio_index_2026": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the 4th nearest school in Skolverket's 2026 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_4_ineligible_pct_latest": {
+            "type": "number",
+            "nullable": true,
+            "description": "Expected share of pupils not eligible for upper secondary school (andel obehöriga, %) at the 4th nearest school, 2026 edition.",
+            "example": 12.4
+          },
+          "school_4_ineligible_pct_prev": {
+            "type": "number",
+            "nullable": true,
+            "description": "The same share at the 4th nearest school in the 2025 edition.",
+            "example": 11.9
+          },
+          "school_5_skolenhetskod": {
+            "type": "string",
+            "nullable": true,
+            "description": "Skolverket school-unit code (skolenhetskod) of the 5th nearest school unit with known coordinates.",
+            "example": "74174879"
+          },
+          "school_5_name": {
+            "type": "string",
+            "nullable": true,
+            "description": "Name of the 5th nearest school unit (as in its latest located edition).",
+            "example": "Kumla skola"
+          },
+          "school_5_type": {
+            "type": "string",
+            "nullable": true,
+            "description": "Huvudmannatyp of the 5th nearest school: Kommun, Enskild (independent) or Kommunalförbund och regioner; published from the 2026 edition only, else null.",
+            "example": "Kommun"
+          },
+          "school_5_distance_m": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Geodesic distance in metres from the listing to the 5th nearest school.",
+            "example": 420
+          },
+          "school_5_socio_index_2023": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the 5th nearest school in Skolverket's 2023 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_5_socio_index_2024": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the 5th nearest school in Skolverket's 2024 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_5_socio_index_2025": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the 5th nearest school in Skolverket's 2025 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_5_socio_index_2026": {
+            "type": "number",
+            "nullable": true,
+            "description": "Socio-economic index of the 5th nearest school in Skolverket's 2026 edition (higher = a higher modelled share of pupils not eligible for upper secondary school, i.e. a harder intake; null where Skolverket suppresses it).",
+            "example": 92.0
+          },
+          "school_5_ineligible_pct_latest": {
+            "type": "number",
+            "nullable": true,
+            "description": "Expected share of pupils not eligible for upper secondary school (andel obehöriga, %) at the 5th nearest school, 2026 edition.",
+            "example": 12.4
+          },
+          "school_5_ineligible_pct_prev": {
+            "type": "number",
+            "nullable": true,
+            "description": "The same share at the 5th nearest school in the 2025 edition.",
+            "example": 11.9
+          },
           "brf_report_fiscal_year": {
             "type": "integer",
             "nullable": true,
@@ -1618,18 +1975,6 @@
             "type": "string",
             "nullable": true,
             "description": "in_progress, decided, planned or estimated (from pipe age only)."
-          },
-          "area_name": {
-            "type": "string",
-            "nullable": true,
-            "description": "Sub-kommun område (neighborhood / stadsdel, Booli descriptiveAreaName). The value the `omrade` filter operates on. NULL when Booli supplies no område for the listing.\n",
-            "example": "Trollbäcken"
-          },
-          "kommun_turnover_br_agg_5y": {
-            "type": "number",
-            "nullable": true,
-            "description": "COPIED DOWN from the kommun — the kommun's 5-year cumulative BR turnover, so a listing can be compared to its kommun's liquidity in one row. Every ancestor's sold-history SUMMARY rides along this way: `{area,kommun,city}_{sold_kr_per_m2,sold_fee_per_m2,turnover_br}_*` (last-year + 3y/5y trend/agg + forecast). The per-year history is NOT copied down — it lives on the område/kommun/city rows (GET /areas etc.).\n",
-            "example": 6.0
           }
         }
       },
