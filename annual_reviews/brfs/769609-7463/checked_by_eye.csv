@@ -1,0 +1,9 @@
+table,year,category_id,note
+financial_events,2021,30,"Sum of the Drift lines that map to no other category (serviceavtal, trivselåtgärder, förbrukning); more terms than the verifier's subset search tries; children of Driftkostnader add up (validate.py)"
+financial_events,2021,42,"Sum of the övriga externa lines that map to no other category (incl. Fastighetsavgift, which this report prints under Övriga externa kostnader); verifier subset limit; children add up"
+financial_events,2022,53,Sum of besiktnings-/brandskyddslines (OCR line breaks); verifier subset limit
+financial_events,2022,2,Sum of the Fastighetsskötsel lines mapped to 50-55; verifier subset limit; children of Driftkostnader add up
+financial_events,2022,30,Remainder lines of Driftkostnader; verifier subset limit
+financial_events,2022,42,Remainder lines of Övriga externa kostnader (incl. Fastighetsavgift); verifier subset limit
+financial_events,2024,12,KF 'Förändring av kortfristiga skulder' -14 351 554 plus 'Förändring skatteskuld/fordran' 6 548 (the latter has no category of its own); the amounts are printed on p12
+financial_events,2024,30,"Remainder lines of Driftkostnader (trivselåtgärder, serviceavtal, förbrukning); verifier subset limit"

@@ -1,0 +1,14 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Safiren
+short_name: Safiren
+orgnr: 716421-7320
+municipality: Tyresö
+verified_through: 2025
+data_notes: '2020 is held for its closing balances only. 2020-2022 are scanned reports (OCR with the Swedish model); 2021''s cash flow statement
+  and Övriga rörelseintäkter were read on the page image (checked_by_eye.csv) and cross-checked against the 2022 report. The 2023 and 2024 PDFs
+  have a text layer without ligature glyphs (tt, ft, fl, ti), so their metadata.yaml says `ocr: force` and the pages are read by OCR.
+
+  2021 is only partly broken down: the note lines of the 2021 scan are too damaged to read reliably, so Driftkostnader and övriga externa have
+  fewer children than later years (cat 2, 27, 42 not stored). Property: 2 hyreslägenheter and 55 bostadsrätter on 4 140 kvm plus 611 kvm garage,
+  so Total yta (4 751) is not stored (garage area has no category). The 2025 report has loans of 4 000 000 long-term and 3 200 000 short-term;
+  2022-2024 all loans are short-term.'

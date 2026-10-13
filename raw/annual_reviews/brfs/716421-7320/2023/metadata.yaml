@@ -1,0 +1,8 @@
+file: Arsredovisning_2023_Brf_Safiren.pdf
+document: årsredovisning
+fiscal_year: 2023
+source:
+  url: https://brfsafiren.bostadsratterna.se/system/files/brfsafiren_bostadsratterna_se/2024/f63e3d5236e1226df9eeba3f93a49da2/brf_safiren_716421-7320_-_arsredovisning_2023.pdf
+sha256: 617ec8b0f0d0208a9187c4d3748c277163877dda3f7dba80991300e50e6589d8
+ocr: force
+note: "Text layer lacks the ligature glyphs (tt, ft, fl, ti ...: Ne oomsä ning), so label matching fails; pages are read by OCR (tools/brf/pdfwords.py, ocr: force)."

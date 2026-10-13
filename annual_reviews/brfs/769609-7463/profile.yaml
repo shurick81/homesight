@@ -1,0 +1,12 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Tornsvalan i Tyresö
+short_name: Tornsvalan
+orgnr: 769609-7463
+municipality: Tyresö
+verified_through: 2024
+data_notes: '2020 is held for its closing balances only (scan, OCR). 2021 is a scanned report (OCR). 2023 and 2025 are not published on the association''s
+  site, so they are missing. Reports are K2 (Fastum / SBC style): ''Förändring av kortfristiga skulder'' in the cash flow also carries repayments
+  of loans that fall due within a year, so the debt identity shows a large ''non-loan financing'' (INFO).
+
+  Fastighetsavgift is printed under Övriga externa kostnader and stays there (cat 42 remainder). The board is listed as ledamöter without roles.
+  Property: 59 bostadsrättslägenheter, bostadsarea 3 738 kvm (prose, cat 12). Land tenure is not stated (the site is ''Järnet 8'', 6 794 kvm).'

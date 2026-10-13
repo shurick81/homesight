@@ -1,0 +1,8 @@
+table,year,category_id,note
+financial_events,2021,10,"Ökning (+) minskning (-) kortfristiga skulder 22 253: the OCR leaves the amount on a line of its own; read on the page image (p11), the 2022 report repeats it as comparison"
+financial_events,2021,9,-28 661 read on the page image (the OCR drops the minus sign: '28.661')
+financial_events,2021,8,"Kassaflöde från investeringar 0, page image"
+financial_events,2021,3,"Kassaflöde från finansieringsverksamheten -200 000, page image"
+financial_events,2021,4,Övriga rörelseintäkter 487: the OCR dropped the line; Summa rörelseintäkter 2 181 764 minus Nettoomsättning 2 181 277 (the 2022 report repeats 2021's figures as comparison)
+financial_events,2023,1,"RR line 'Driftskostnader 4,5,6,7': the note references '4,5,6,7' are read as an amount left of the value, so the verifier reports COLUMN; -1 816 496 is the 2023 column"
+financial_events,2024,1,"Same: note references '4,5,6,7' before the amount, -2 028 453 is the 2024 column"

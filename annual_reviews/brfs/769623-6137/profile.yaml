@@ -1,0 +1,13 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Tyresö View 1
+short_name: Tyresö View 1
+orgnr: 769623-6137
+municipality: Tyresö
+verified_through: 2025
+data_notes: '2020 is held for its closing balances only (financial_states). 2022 and earlier use the older HSB layout (interest from the RR, no
+  cash flow interest lines); 2025 is a scanned report (OCR, Swedish model), every value checked by the sum and cash identities.
+
+  2025: no long-term loans are printed (all 89 165 540 is short-term, the 26 130 000 shown there is the 2024 comparison); Förråd (3, 12 m²) appear
+  in the property table and the total area now includes them (10 718). Garage places (86) are leased from Green Park Forellen 23 AB, not owned.
+
+  Lokaler are ''hyresrätt''. Board and auditor lists are as printed; mid-year changes are marked fr.o.m./t.o.m.'

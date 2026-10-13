@@ -1,0 +1,11 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: HSB Brf Delfinen i Tyresö
+short_name: Delfinen
+orgnr: 712400-1624
+municipality: Tyresö
+verified_through: 2025
+data_notes: '2020 is held for its closing balances only (financial_states, partly scanned font). 2021-2022 use the older HSB layout. Fastighetsskötsel
+  is printed as one aggregate line (''Fastighetsskötsel, lokalvård och samfälligheter'' / ''och förvaltning''), so category 2 is that line plus
+  the separate snow line and the aggregate is the unassigned remainder of 2.
+
+  2025 garage places have an area (420 m²) that has no category, so Total yta is not stored for 2025.'

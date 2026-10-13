@@ -1,0 +1,7 @@
+file: Arsredovisning_2023_Skogslunden_repaired.pdf
+document: årsredovisning
+fiscal_year: 2023
+source:
+  url: https://brfskogslunden.bostadsratterna.se/system/files/brfskogslunden_bostadsratterna_se/2024/6d218e74f1ee6e30ee43906d033b3957/arsredovisning_2023_brf_skogslunden.pdf
+sha256: a195fc1128cc140586e96d1c2d0ce6dc7829b0efe7572466572096f9e019b3a7
+note: "The original file (sha256 e2d3fc9c860ef530feb46d9b1b2a83ec9ef755414fac611d59869a50a1f4f85b) has a damaged page tree that pdfplumber cannot read (0 pages); this copy was re-written with pdftocairo -pdf, content unchanged (scanned pages)."

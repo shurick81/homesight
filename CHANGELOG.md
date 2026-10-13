@@ -124,6 +124,11 @@ not the API, and is listed under **Data**.
 
 ## Data
 
+- 2026-10-13: Centrala Tyresö: Tyresö View 1, Diamanten, Björkbacken, Delfinen, Skogslunden and Safiren
+  (2020–2025), Tornsvalan (2020–2022, 2024), Almandinen (2023) and Peppargränd 1 (2021) extracted and verified;
+  older reports of Gösen, Laken, Soluret, Siklöjan, Strömstaren, Trädgården 278 and Kringlan 2 (2019–2025)
+  downloaded, not yet extracted. `tools/brf/pdfwords.py` OCRs scans that carry a GetAccept stamp and honours
+  `ocr: force` in a document's `metadata.yaml`.
 - 2026-10-12: Passadvinden 2025 (from Booli's BRF page) and 2020 (svenskbrf.se, scanned) extracted and verified,
   each unchained; its 2020 sewer renovation under the house recorded. Every tracked BRF now has verified data
   (53 of 70 reports of the last five years held, all verified).

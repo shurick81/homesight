@@ -46,11 +46,25 @@ def _ocr(page, res=300, psm=3):
 # e-signing services stamp every page of a scanned report with a line of text ("Transaktion 0922… Signerat
 # AW, BM"), so the page has a text layer although its content is only an image; such lines (and a bare
 # page number) do not count as text when deciding to OCR.
-_STAMP = re.compile(r"^(Transaktion \d{8,} Signerat\b.*|\d{1,3})$")
+_STAMP = re.compile(r"^(Transaktion \d{8,} Signerat\b.*|Detta dokumentet har signerats genom digitala signeringstjänsten GetAccept\.|Fingerprint: [0-9a-f]{20,}|\d{1,3})$")
 
 
 def _content_words(ws):
-    return [w for line in lines_of(ws) if not _STAMP.match(" ".join(x["text"] for x in line)) for w in line]
+    return [w for line in lines_of(ws) if not _STAMP.match(" ".join(x["text"] for x in line)) for w in line if re.search(r"\w", w["text"])]
+
+
+def _force_ocr(path):
+    """True when the document's metadata.yaml says `ocr: force`: its text layer is unreliable (for example
+    ligature glyphs missing: "Ne oomsä ning"), so every page is read by OCR instead."""
+    meta = os.path.join(os.path.dirname(os.path.abspath(path)), "metadata.yaml")
+    if not os.path.exists(meta):
+        return False
+    try:
+        import yaml
+        with open(meta, encoding="utf-8") as f:
+            return (yaml.safe_load(f) or {}).get("ocr") == "force"
+    except Exception:
+        return False
 
 
 def page_count(path):
@@ -76,7 +90,7 @@ def words(path, pageno, second_pass=False):
         page = pdf.pages[pageno - 1]
         ws = [{k: w[k] for k in ("text", "x0", "top", "x1", "bottom")}
               for w in page.extract_words(keep_blank_chars=False, use_text_flow=False)]
-        ocr = len(_content_words(ws)) < 5 or second_pass
+        ocr = len(_content_words(ws)) < 5 or second_pass or _force_ocr(path)
         if ocr:
             ws = _ocr(page, 400, 6) if second_pass else _ocr(page)
     os.makedirs(os.path.dirname(cache), exist_ok=True)

@@ -1,0 +1,19 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Skogslunden
+short_name: Skogslunden
+orgnr: 769626-8841
+municipality: Tyresö
+verified_through: 2025
+data_notes: '2020, 2022 and 2023 are scanned reports (OCR with the Swedish model; the 2023 file is a re-written copy because the original page
+  tree cannot be read, see its metadata.yaml); 2020 is held for its closing balances only. 2019 is held only as an unreadable file at the source
+  and is not imported.
+
+  Two layouts: 2020-2022 (Not N, sub-sections inside Driftkostnader) and 2023-2025 (NOT N, drift over notes 4-8). Summed values stay on one page,
+  so Samfällighetsavgifter (p14) are unassigned in 2023-2025 and the p13 lines in 2023.
+
+  2020-2022 have no cash flow statement; cash, financing, investment and working-capital items come from the ''Förändring likvida medel'' table
+  in the förvaltningsberättelse (p3). The BR has no Kassa och bank line (cash sits in Övriga fordringar inkl SBC klientmedel), and the 2024-2025
+  reports likewise report liquidity through the KF.
+
+  Board lists are as printed (roles in 2021-2022: ordförande, ledamot, suppleant; later reports use ''styrelseledamot''; the 2025 report lists
+  no suppleant). Auditors are given as person + firm.'

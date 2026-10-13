@@ -1,0 +1,4 @@
+table,year,category_id,note
+financial_states,2021,1,Printed 'Not 14 45 248 788'-style note reference left of the amount (the verifier reads it as an amount and reports COLUMN); 45 248 788 is the 2021 column
+financial_states,2021,0,Same: 3 340 296 is the 2021 column
+financial_events,2021,19,Elintäkter 16 178 + Elintäkter moms 440 068 + laddstolpe moms 5 384 + öresutjämning 2: the note's other lines (verifier subset limit with the small öresutjämning term)

@@ -1,0 +1,14 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Diamanten i Tyresö
+short_name: Diamanten
+orgnr: 769609-7752
+municipality: Tyresö
+verified_through: 2025
+data_notes: '2020 is held for its closing balances only. 2020-2021 are scanned reports (OCR) in the Riksbyggen layout; 2021 Uppvärmning (-1 726
+  409) was read on the page image (checked_by_eye.csv).
+
+  The 2022 report prints a cash flow statement with a sign error (investeringar +34 571 984, likvida medel 62 334 307; BR kassa 4 483 995 + avräkningskonto
+  1 590 291 = 6 074 286). Stored as printed; the 2023 report''s opening liquidity is entered in restatements.csv.
+
+  2022-2025 include rental apartments (hyresrätt) and, from 2024, garage areas that have no category, so Total yta (m²) is not stored for 2024-2025.
+  2021 counts 158 apartments (older Riksbyggen prose), 2022 onward 128-136 bostadsrätter plus 22-30 hyresrätter.'

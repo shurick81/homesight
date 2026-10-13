@@ -1,0 +1,12 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: HSB Brf Björkbacken i Tyresö
+short_name: Björkbacken
+orgnr: 712400-0139
+municipality: Tyresö
+verified_through: 2025
+data_notes: '2020 is held for its closing balances only. The 2020-2022 reports have no cash flow statement, so cat 2 (cash) and the KF items are
+  not stored for those years and the CASH check cannot run for 2021-2022; the 2023 report''s opening liquidity (6 357 582) is in restatements.csv.
+  HSB keeps most liquidity as klientmedel inside Övriga fordringar, so Kassa och bank alone understates cash.
+
+  Notes: Driftkostnader are one note over two pages (p15-16); the remainder (cat 30) is taken from p15 and the maintenance lines (31) from p16.
+  2025 is a scanned report (OCR).'

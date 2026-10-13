@@ -1,0 +1,55 @@
+year,category_id,value,file,page,x,y,width,height
+2021,0,2021-01-01 – 2021-12-31,Arsredovisning_2021_Brf_Tyreso_View_1.pdf,2,56,114,86,8
+2021,13,Ingående anskaffningsvärde mark,Arsredovisning_2021_Brf_Tyreso_View_1.pdf,13,106,164,126,8
+2021,1,Sören Ahlfors,Arsredovisning_2021_Brf_Tyreso_View_1.pdf,18,62,128,85,12
+2021,3,Sören Ahlfors;Peder Holmström;Robert Laine;Bo Björksten;Ralf Nordlöf (t.o.m. 2021-05-20);Mats Sjöblom;Lars Walter (t.o.m. 2021-02-19),Arsredovisning_2021_Brf_Tyreso_View_1.pdf,3,56,456,45,62
+2021,8,Henry Andersson;Lars Gustafsson (t.o.m. 2021-05-20);Gun Holst (fr.o.m. 2021-05-20),Arsredovisning_2021_Brf_Tyreso_View_1.pdf,3,56,528,58,131
+2021,4,Gunilla Höijer;Håkan Larsson;Rolf Cullberg,Arsredovisning_2021_Brf_Tyreso_View_1.pdf,4,145,153,163,8
+2021,5,Hans-Ola Jonsson;Jacob Biderholt;Parameter Revision AB,Arsredovisning_2021_Brf_Tyreso_View_1.pdf,4,56,113,232,17
+2021,9,Jacob Biderholt;Hans Ola Jonsson,Arsredovisning_2021_Brf_Tyreso_View_1.pdf,18,62,337,102,164
+2021,6,76,Arsredovisning_2021_Brf_Tyreso_View_1.pdf,3,406,397,8,8
+2021,11,2014,Arsredovisning_2021_Brf_Tyreso_View_1.pdf,2,164,308,17,8
+2022,0,2022-01-01 – 2022-12-31,Arsredovisning_2022_Brf_Tyreso_View_1.pdf,8,394,114,61,22
+2022,13,Ingående anskaffningsvärde mark,Arsredovisning_2022_Brf_Tyreso_View_1.pdf,14,102,175,117,8
+2022,1,Sören Ahlfors (t.o.m. 2022-05-24);Hans Johansson (fr.o.m. 2022-05-24),Arsredovisning_2022_Brf_Tyreso_View_1.pdf,3,46,133,67,26
+2022,2,Jimmy Jonsson (fr.o.m. 2022-05-24; t.o.m. 2022-11-28);Staffan Rauge (fr.o.m. 2022-11-28),Arsredovisning_2022_Brf_Tyreso_View_1.pdf,3,46,306,62,43
+2022,3,Bo Björksten;Peder Holmström (t.o.m. 2022-06-12);Gun Holst (fr.o.m. 2022-05-24);Erik Henry Andersson (fr.o.m. 2022-05-24);Robert Laine (t.o.m. 2022-05-24);Mats Sjöblom (t.o.m. 2022-05-24);Katja Karlsson (fr.o.m. 2022-05-24),Arsredovisning_2022_Brf_Tyreso_View_1.pdf,3,46,168,58,164
+2022,8,Gun Holst (t.o.m. 2022-05-24);Erik Henry Andersson (t.o.m. 2022-05-24);Staffan Rauge (t.o.m. 2022-11-28);Kent Wilhelm Holm (fr.o.m. 2022-05-24),Arsredovisning_2022_Brf_Tyreso_View_1.pdf,3,46,340,77,44
+2022,4,Gunilla Höijer;Håkan Larsson;Rolf Cullberg,Arsredovisning_2022_Brf_Tyreso_View_1.pdf,3,138,581,191,9
+2022,5,Fredrik Dehlin;Jacob Biderholt;Parameter Revision AB,Arsredovisning_2022_Brf_Tyreso_View_1.pdf,3,45,541,278,22
+2022,9,Jacob Biderholt,Arsredovisning_2022_Brf_Tyreso_View_1.pdf,18,62,337,94,12
+2022,6,71,Arsredovisning_2022_Brf_Tyreso_View_1.pdf,3,308,620,10,9
+2022,7,3,Arsredovisning_2022_Brf_Tyreso_View_1.pdf,3,395,620,11,9
+2022,11,2014,Arsredovisning_2022_Brf_Tyreso_View_1.pdf,2,424,387,20,9
+2023,0,2023-01-01 – 2023-12-31,Arsredovisning_2023_Brf_Tyreso_View_1.pdf,8,427,98,46,19
+2023,13,Ingående anskaffningsvärde mark,Arsredovisning_2023_Brf_Tyreso_View_1.pdf,15,96,151,136,9
+2023,1,Staffan Rauge (fr.o.m. 2023-05-22);Hans Johansson (t.o.m. 2023-05-22),Arsredovisning_2023_Brf_Tyreso_View_1.pdf,3,46,144,67,44
+2023,3,Bo Björksten (t.o.m. 2023-05-22);Gun Holst;Erik Henry Andersson;Sören Ahlfors (fr.o.m. 2023-05-22);Ray Holmlund (fr.o.m. 2023-05-22);Jimmy Jonsson (t.o.m. 2023-05-22);Katja Karlsson,Arsredovisning_2023_Brf_Tyreso_View_1.pdf,3,46,195,58,112
+2023,8,Staffan Rauge (t.o.m. 2023-05-22);Kenth Jonsson (fr.o.m. 2023-05-22);Gun Holmström (fr.o.m. 2023-05-22);Kent Wilhelm Holm (t.o.m. 2023-05-22),Arsredovisning_2023_Brf_Tyreso_View_1.pdf,3,46,316,76,44
+2023,4,Gunilla Höijer;Rolf Cullberg,Arsredovisning_2023_Brf_Tyreso_View_1.pdf,3,138,528,128,9
+2023,5,Göran Aldenberg;Jacob Biderholt;Parameter Revision AB,Arsredovisning_2023_Brf_Tyreso_View_1.pdf,3,123,488,238,9
+2023,9,Göran Aldenberg;Jacob Biderholt,Arsredovisning_2023_Brf_Tyreso_View_1.pdf,20,62,335,348,12
+2023,6,61,Arsredovisning_2023_Brf_Tyreso_View_1.pdf,3,308,572,10,9
+2023,7,3,Arsredovisning_2023_Brf_Tyreso_View_1.pdf,3,457,572,10,9
+2023,11,2014,Arsredovisning_2023_Brf_Tyreso_View_1.pdf,2,424,396,20,9
+2024,0,2024-01-01 – 2024-12-31,Arsredovisning_2024_Brf_Tyreso_View_1.pdf,8,427,98,46,19
+2024,13,Ingående anskaffningsvärde mark,Arsredovisning_2024_Brf_Tyreso_View_1.pdf,15,96,151,136,9
+2024,1,Staffan Rauge,Arsredovisning_2024_Brf_Tyreso_View_1.pdf,3,46,144,57,9
+2024,3,Gun Holst (t.o.m. 2024-05-23);Erik Henry Andersson;Raija Saar (fr.o.m. 2024-05-23);Sören Ahlfors;Ray Holmlund;Katja Karlsson,Arsredovisning_2024_Brf_Tyreso_View_1.pdf,3,46,161,58,95
+2024,8,Bengt Ljungberg (fr.o.m. 2024-05-23);Kenth Jonsson (t.o.m. 2024-05-23);Gun Holmström (t.o.m. 2024-05-23),Arsredovisning_2024_Brf_Tyreso_View_1.pdf,3,46,264,66,44
+2024,4,Rolf Cullberg;Gunilla Höijer,Arsredovisning_2024_Brf_Tyreso_View_1.pdf,3,138,477,128,9
+2024,5,Svante Wedin;Parameter Revision AB,Arsredovisning_2024_Brf_Tyreso_View_1.pdf,3,121,436,96,22
+2024,9,Svante Wedin;Jacob Biderholt,Arsredovisning_2024_Brf_Tyreso_View_1.pdf,20,62,335,348,12
+2024,6,70,Arsredovisning_2024_Brf_Tyreso_View_1.pdf,3,308,520,10,9
+2024,11,2014,Arsredovisning_2024_Brf_Tyreso_View_1.pdf,2,424,409,20,9
+2025,0,2025-01-01 – 2025-12-31,Arsredovisning_2025_Brf_Tyreso_View_1.pdf,8,430,82,42,17
+2025,13,Ingående anskaffningsvärde mark,Arsredovisning_2025_Brf_Tyreso_View_1.pdf,16,115,142,133,9
+2025,3,Erik Henry Andersson;Raija Saar;Sören Ahlfors;Ray Holmlund;Katja Karlsson,Arsredovisning_2025_Brf_Tyreso_View_1.pdf,3,66,422,88,74
+2025,1,Staffan Rauge,Arsredovisning_2025_Brf_Tyreso_View_1.pdf,3,67,406,55,9
+2025,8,Bengt Ljungberg;Gun Holmström,Arsredovisning_2025_Brf_Tyreso_View_1.pdf,3,66,504,67,23
+2025,4,Rolf Cullberg;Gunilla Höijer,Arsredovisning_2025_Brf_Tyreso_View_1.pdf,3,159,652,132,9
+2025,5,Svante Wedin;Parameter Revision AB,Arsredovisning_2025_Brf_Tyreso_View_1.pdf,3,146,618,327,8
+2025,9,Jacob Biderholt;Svante Wedin,Arsredovisning_2025_Brf_Tyreso_View_1.pdf,20,327,166,50,60
+2025,6,60,Arsredovisning_2025_Brf_Tyreso_View_1.pdf,3,327,692,9,7
+2025,7,4,Arsredovisning_2025_Brf_Tyreso_View_1.pdf,3,477,692,4,6
+2025,11,2014,Arsredovisning_2025_Brf_Tyreso_View_1.pdf,2,427,355,19,7

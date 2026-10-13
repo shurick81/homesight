@@ -1,0 +1,39 @@
+year,category_id,value,file,page,x,y,width,height
+2021,0,2021-01-01 – 2021-12-31,ar-2021.pdf,8,384,138,44,26
+2021,1,Håkan Axelsson,ar-2021.pdf,6,73,108,63,8
+2021,3,Kjell Rogander;Jimmy Johansson;Eva Liljegren;Jonny Laderman;Joakim Wahlqvist;Lars-Göran Olofsson,ar-2021.pdf,6,73,120,81,70
+2021,8,Caroline Emanuelsson;Rickard Boberg;Sara Holmkvist,ar-2021.pdf,6,73,219,87,32
+2021,5,Per Engzell,ar-2021.pdf,6,72,281,45,9
+2021,4,Rose-Marie Rogander;Petra Netteblad;Patrik Apelgren,ar-2021.pdf,6,72,330,86,34
+2021,11,1981-1982,ar-2021.pdf,4,211,371,43,7
+2021,13,Föreningen äger fastigheterna Diamanten 7 samt Turkosen 4,ar-2021.pdf,4,66,359,115,9
+2022,1,Håkan Axelsson,ar-2022.pdf,3,47,134,64,7
+2022,3,Kjell Rogander;Lars-Göran Olofsson;Eva Liljegren;Jimmy Johansson;Patrik Stenqvist;Joakim Wahlqvist,ar-2022.pdf,3,46,151,83,95
+2022,8,Mattias Stråhle (fr.o.m. 2022-05-23);Robert John Fredriksson (fr.o.m. 2022-05-23);Mattias Åkerström (fr.o.m. 2022-05-23),ar-2022.pdf,3,47,254,97,42
+2022,4,Rose-Marie Rogander;Patrik Appelgren;Petra Nettelbladt;Robin Söderman,ar-2022.pdf,3,139,496,321,8
+2022,5,Per Engzell;Engzell Revision AB,ar-2022.pdf,3,116,455,143,9
+2022,6,22,ar-2022.pdf,3,309,548,9,7
+2023,0,2023-01-01 – 2023-12-31,ar-2023.pdf,8,427,98,46,19
+2023,13,Ingående anskaffningsvärde mark,ar-2023.pdf,15,96,151,136,9
+2023,1,Håkan Axelsson (t.o.m. 2023-07-18);Jimmy Johansson (fr.o.m. 2023-07-18),ar-2023.pdf,3,46,144,72,26
+2023,3,Jimmy Johansson (t.o.m. 2023-07-18);Kjell Rogander;Lars-Göran Olofsson;Eva Liljegren (t.o.m. 2023-07-18);Patrik Stenqvist;Joakim Wahlqvist;Mattias Åkerström (fr.o.m. 2023-07-18);Maria Stenberg (fr.o.m. 2023-04-27; t.o.m. 2023-07-18),ar-2023.pdf,3,46,178,83,216
+2023,8,Mattias Åkerström (t.o.m. 2023-07-18);Mattias Stråhle (t.o.m. 2023-07-18);Maria Jonsson (fr.o.m. 2023-07-18);Christoffer Karlsson (fr.o.m. 2023-07-18);Robert John Fredriksson (t.o.m. 2023-07-18),ar-2023.pdf,3,46,299,98,78
+2023,4,Rose-Marie Rogander;Patrik Appelgren;Robin Söderman,ar-2023.pdf,3,138,549,249,9
+2023,5,Per Engzell;Engzell Revision AB,ar-2023.pdf,3,153,509,142,9
+2023,6,27,ar-2023.pdf,3,437,772,10,9
+2024,0,2024-01-01 – 2024-12-31,ar-2024.pdf,8,427,98,46,19
+2024,13,Ingående anskaffningsvärde mark,ar-2024.pdf,15,96,403,136,9
+2024,1,Jimmy Johansson,ar-2024.pdf,3,46,144,72,9
+2024,3,Kjell Rogander Dödsbo (t.o.m. 2024-05-28);Lars-Göran Olofsson;Patrik Stenqvist;Maria Jonsson (fr.o.m. 2024-06-17);Mats Nilsson (fr.o.m. 2024-06-17);Joakim Wahlqvist;Christoffer Karlsson (fr.o.m. 2024-06-17);Mattias Åkerström (t.o.m. 2024-05-28),ar-2024.pdf,3,46,161,93,164
+2024,8,Maria Jonsson (t.o.m. 2024-06-17);Christoffer Karlsson (t.o.m. 2024-06-17);Jimmy Faraj (fr.o.m. 2024-06-17);Sandra Pettersson (fr.o.m. 2024-06-17),ar-2024.pdf,3,46,230,79,130
+2024,4,Patrik Appelgren;Tomas Bertzon;Fredrik Molin,ar-2024.pdf,3,138,488,189,9
+2024,5,Per Engzell;Engzells Revisionsbyrå AB,ar-2024.pdf,3,123,461,404,9
+2024,6,27,ar-2024.pdf,3,305,532,10,9
+2025,0,2025-01-01 – 2025-12-31,ar-2025.pdf,8,429,86,47,21
+2025,13,Ingående anskaffningsvärde mark,ar-2025.pdf,16,94,150,142,11
+2025,1,Lars-Göran Olofsson (fr.o.m. 2025-07-07);Jimmy Johansson (t.o.m. 2025-07-07),ar-2025.pdf,3,43,128,89,45
+2025,3,Lars-Göran Olofsson (t.o.m. 2025-07-07);Thomas Berntzon (fr.o.m. 2025-07-07);Patrik Stenqvist;Maria Jonsson;Mats Nilsson;Joakim Wahlqvist;Christoffer Karlsson,ar-2025.pdf,3,43,146,89,131
+2025,8,Lisa Alm (fr.o.m. 2025-07-07);Jimmy Faraj;Sandra Pettersson (t.o.m. 2025-07-07),ar-2025.pdf,3,43,284,75,45
+2025,4,Patrik Appelgren;Fredrik Molin;Maria Blomqvist,ar-2025.pdf,3,141,470,213,11
+2025,5,Per Engzell;Engzells Revisionsbyrå AB,ar-2025.pdf,3,115,434,170,11
+2025,6,22,ar-2025.pdf,3,320,513,11,11

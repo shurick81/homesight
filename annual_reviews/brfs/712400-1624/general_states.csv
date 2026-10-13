@@ -1,0 +1,41 @@
+year,category_id,value,file,page,x,y,width,height
+2021,1,Annica Eliasson,arsredovisning_21_delfinen_2145ny.pdf,9,59,220,57,8
+2021,2,Thomas Keller,arsredovisning_21_delfinen_2145ny.pdf,9,59,231,53,8
+2021,3,Jens Wallin;Stefan Gustafsson;Håkan Rosén,arsredovisning_21_delfinen_2145ny.pdf,9,59,252,49,30
+2021,10,Jane Svensk,arsredovisning_21_delfinen_2145ny.pdf,9,59,285,46,8
+2021,6,15,arsredovisning_21_delfinen_2145ny.pdf,9,303,154,9,8
+2022,0,2022-01-01 – 2022-12-31,arsredovisning_22_delfinen.pdf,12,396,116,60,22
+2022,1,Annica Eliasson,arsredovisning_22_delfinen.pdf,6,47,640,64,9
+2022,2,Thomas Keller,arsredovisning_22_delfinen.pdf,6,47,657,58,9
+2022,3,Jens Wallin;Stefan Gustafsson;Håkan Rosén;Agneta Wennberg,arsredovisning_22_delfinen.pdf,6,47,674,217,61
+2022,10,Jane Svensk,arsredovisning_22_delfinen.pdf,6,47,741,51,9
+2022,4,Gulhan Peker;Hans Hillerlöv,arsredovisning_22_delfinen.pdf,7,137,241,131,9
+2022,5,Miroslawa Stecki;BoRevision i Sverige Aktiebolag,arsredovisning_22_delfinen.pdf,7,45,201,144,23
+2022,6,16,arsredovisning_22_delfinen.pdf,7,306,280,10,9
+2022,7,1,arsredovisning_22_delfinen.pdf,7,384,280,5,9
+2022,11,1984 och 1985,arsredovisning_22_delfinen.pdf,6,426,363,58,9
+2023,0,2023-01-01 – 2023-12-31,publik-arsredovisning---delfinen.pdf,7,427,98,46,19
+2023,13,Ingående anskaffningsvärde mark,publik-arsredovisning---delfinen.pdf,14,96,151,136,9
+2023,1,Annica Eliasson,publik-arsredovisning---delfinen.pdf,2,46,663,64,9
+2023,3,Thomas Keller (t.o.m. 2023-07-01);Jens Wallin;Stefan Gustafsson;Håkan Rosén;Agneta Wennberg;Jane Svensk,publik-arsredovisning---delfinen.pdf,2,46,681,74,95
+2023,4,Gulhan Peker;Hans Hillerlöv,publik-arsredovisning---delfinen.pdf,3,138,214,133,9
+2023,5,Miroslawa Stecki;BoRevision i Sverige Aktiebolag,publik-arsredovisning---delfinen.pdf,3,45,173,146,22
+2023,6,15,publik-arsredovisning---delfinen.pdf,3,308,253,10,9
+2023,11,1984 och 1985,publik-arsredovisning---delfinen.pdf,2,424,387,60,9
+2024,0,2024-01-01 – 2024-12-31,arsredovisning_2024.pdf,14,427,98,46,19
+2024,13,Ingående anskaffningsvärde mark,arsredovisning_2024.pdf,21,96,389,136,9
+2024,1,Annica Eliasson,arsredovisning_2024.pdf,8,46,144,64,9
+2024,3,Jens Wallin;Stefan Gustafsson;Håkan Rosén;Agneta Wennberg;Jane Svensk,arsredovisning_2024.pdf,8,46,161,74,78
+2024,8,Gulhan Peker (fr.o.m. 2024-05-15),arsredovisning_2024.pdf,8,46,247,55,9
+2024,4,Hans Hillerlöf;Anders Olausson,arsredovisning_2024.pdf,8,138,411,144,9
+2024,5,Miroslawa Stecki;Kungsbron Borevision AB,arsredovisning_2024.pdf,8,45,371,146,22
+2024,6,15,arsredovisning_2024.pdf,8,308,455,10,9
+2024,11,1984 och 1985,arsredovisning_2024.pdf,7,424,396,60,9
+2025,0,2025-01-01 – 2025-12-31,arsredovisning_25.pdf,8,429,86,47,21
+2025,13,Ingående anskaffningsvärde mark,arsredovisning_25.pdf,16,94,281,142,11
+2025,1,Annica Eliasson,arsredovisning_25.pdf,3,43,128,69,11
+2025,3,Jens Wallin;Stefan Gustafsson;Håkan Rosén;Agneta Wennberg;Jane Svensk;Gulhan Peker (fr.o.m. 2025-05-28),arsredovisning_25.pdf,3,43,146,76,97
+2025,8,Gulhan Peker (t.o.m. 2025-05-28);Peter Wahtramäe (fr.o.m. 2025-05-28),arsredovisning_25.pdf,3,43,249,72,28
+2025,4,Hans Hillerlöf;Andreas Dahlborg,arsredovisning_25.pdf,3,141,419,160,11
+2025,5,Mira Stecki;Kungsbron Borevision AB,arsredovisning_25.pdf,3,42,383,134,23
+2025,6,20,arsredovisning_25.pdf,3,320,461,11,11

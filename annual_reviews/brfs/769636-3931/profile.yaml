@@ -1,0 +1,13 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Almandinen
+short_name: Almandinen
+orgnr: 769636-3931
+municipality: Tyresö
+verified_through: 2023
+data_notes: 'Only the 2023 report is published on the association''s site (the year the buildings were completed; 145 apartments, 6 650 m²). Amounts
+  are in tkr and stored x 1000, so the verifier cannot find them as printed; every such row is listed in checked_by_eye.csv. The first full year:
+  Årsavgifter 2 380 tkr and Övriga rörelseintäkter 6 920 tkr (mostly ''Avräkning byggherre'' 6 869 tkr, a compensation from the developer); no
+  depreciation was booked in 2023. Investments, member contributions (281 866 tkr in Inbetalda medlemsinsatser) and the loan 83 314 tkr come with
+  the completion, so the debt identity has a large non-loan financing item.
+
+  The 2024 and 2025 reports are behind the members'' login (brfalmandinen.se/foreningen/ekonomi-utloggad) and not public.'

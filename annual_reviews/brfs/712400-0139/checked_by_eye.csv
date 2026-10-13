@@ -1,0 +1,2 @@
+table,year,category_id,note
+financial_events,2021,30,"Sum of the 9 Drift lines that map to no other category (Övriga fastighetskostnader, panter och överlåtelser, juridiska åtgärder, medlemsavgifter m.fl.); too many terms for the verifier to find the subset, but the children of Driftkostnader then add up exactly (validate.py)"
