@@ -1,0 +1,6 @@
+table,year,category_id,note
+financial_events,2021,2,"Fastighetsskötsel + Städning, sopor och dyl. + Sotning/OVK lines of the flat drift note (aggregate lines, no separate 50-55 split); verifier subset limit, children of Driftkostnader add up"
+financial_events,2022,2,Same lines as 2021; verifier subset limit
+financial_events,2023,2,Same lines as 2021; verifier subset limit
+financial_events,2025,19,"Sum of the Nettoomsättning lines other than årsavgifter and hyror (kabel-TV/bredband, övriga intäkter, statliga bidrag); verifier subset limit"
+financial_events,2021,9,Förändring av kortfristiga fordringar exkl klientmedelskonto -3 539 019: the 2021 scan/OCR splits the amount over two lines; read on the page and repeated as comparison in the 2022 report

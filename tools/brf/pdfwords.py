@@ -46,7 +46,7 @@ def _ocr(page, res=300, psm=3):
 # e-signing services stamp every page of a scanned report with a line of text ("Transaktion 0922… Signerat
 # AW, BM"), so the page has a text layer although its content is only an image; such lines (and a bare
 # page number) do not count as text when deciding to OCR.
-_STAMP = re.compile(r"^(Transaktion \d{8,} Signerat\b.*|Detta dokumentet har signerats genom digitala signeringstjänsten GetAccept\.|Fingerprint: [0-9a-f]{20,}|\d{1,3})$")
+_STAMP = re.compile(r"^(Transaktion \d{8,} Signerat\b.*|Detta dokumentet har signerats genom digitala signeringstjänsten GetAccept\.|Fingerprint: [0-9a-f]{20,}|Electronically signed .*|https://sign\.visma\.net/\S+.*|\d{1,3})$")
 
 
 def _content_words(ws):

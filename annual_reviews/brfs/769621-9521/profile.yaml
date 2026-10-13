@@ -1,0 +1,14 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Fyrhöjden
+short_name: Fyrhöjden
+orgnr: 769621-9521
+municipality: Stockholm
+verified_through: 2025
+data_notes: 'Kärrtorp, Stockholm (not Tyresö). Land is a tomträtt from Stockholms stad (new agreement from 2019-01-01): Tomträttsavgäld 1 667
+  700 kr/year is category 57. Published on the BRF''s own site (brffyrhojden.se; 2023-2025 via Google Drive links) from 2012; 2019-2025 imported,
+  2019 and 2020 for closing balances only (2020 is a scan with a garbled text layer; only equity and cash were read).
+
+  2021-2023 use a flat HSB/Visma-style drift note (Fastighetsskötsel, Städning, sopor och dyl. and Sotning/OVK are aggregate lines, so category
+  2 is their sum without a 50-55 split); 2024-2025 use the SBC note layout. 2023 is a scan with an e-signing stamp (OCR). Board marks (avgick)
+  are not recorded for 2021-2023. Property: 187-188 bostadsrätter, 11-13 hyreslägenheter, 21-23 lokaler; 2025 total area is not stored (the printed
+  14 335 kvm includes areas without a category).'

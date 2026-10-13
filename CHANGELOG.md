@@ -136,6 +136,8 @@ not the API, and is listed under **Data**.
 
 ## Data
 
+- 2026-10-13: Brf Fyrhöjden (Kärrtorp, Stockholm; tomträtt) 2021–2025 extracted and verified (2019–2020 held for
+  closing balances); `tools/brf/pdfwords.py` also ignores the Visma e-signing stamp.
 - 2026-10-13: Centrala Tyresö: Tyresö View 1, Diamanten, Björkbacken, Delfinen, Skogslunden and Safiren
   (2020–2025), Tornsvalan (2020–2022, 2024), Almandinen (2023) and Peppargränd 1 (2021) extracted and verified;
   older reports of Gösen, Laken, Soluret, Siklöjan, Strömstaren, Trädgården 278 and Kringlan 2 (2019–2025)
