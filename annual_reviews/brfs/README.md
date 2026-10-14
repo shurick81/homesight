@@ -302,3 +302,16 @@ Because the category ids are shared, any analysis written for one BRF works for 
 `tools/brf/compare.py` groups the categories into comparable buckets and prints kr per m² or shares; the
 compare-brfs skill (`.claude/skills/compare-brfs/`) documents the buckets, the area basis and the pitfalls. Per-flat and
 per-m² measures (e.g. årsavgift per m², debt per m²) use `property_states`.
+
+## Where reports are found
+
+Look in this order; check the org number and the fiscal year inside every PDF before importing (names repeat
+across kommuns: a "Brf Soluret" site can belong to Haninge).
+
+1. `tools/brf/allabrf.py ORGNR NAME`: allabrf.se's document list asks for BankID, but every document an
+   association made public is linked from its `/dokument` page and downloads without login.
+2. The association's own site (`brf<name>.se`, `<name>.bostadsratterna.se`, `/showfile/?filID=` sites,
+   WordPress uploads, Google Drive links); some answer only to a browser user-agent, and some block an IP
+   that crawls too fast.
+3. HSB's association pages (`hsb.se/stockholm/brf/<slug>/`, files under `/contentassets/`).
+4. svenskbrf.se (`/forening/<ort>/<omrade>/<slug>/dokument/arsredovisning/`), mostly up to 2020.
