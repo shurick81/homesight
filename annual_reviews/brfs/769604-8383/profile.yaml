@@ -13,7 +13,7 @@ built_from: 1961
 built_to: 1963
 built_basis: byggnadsår
 registered: 1999-09-24              # acquired the property 2001-04-02
-verified_through: 2025              # last fiscal year that passes verify-brf-data (2016–2025 chained, 2015 as opening balance)
+verified_through: 2025              # last fiscal year that passes verify-brf-data (2012–2025 chained; 2011 unchained, no 2010 report)
 
 stambyte:                        # derived from pipe_works.csv; rubric in annual_reviews/brfs/README.md
   as_of: 2026-10-11
@@ -46,3 +46,11 @@ data_notes: |                    # caveats about the extracted values, for whoev
   2024: the RR Driftskostnader (−19 013 891) was restated to −17 702 549 in the 2025 report (HSB layout).
   Debt identity: every year's gap is exactly the KF "Insatser & upplåtelseavgifter" (hyresrätter
   converted to bostadsrätter), not borrowing.
+  2011–2015 (scans, OCR; HSB's archive folder hsb.se/contentassets/86f4935…/): the same HSB template, financial figures only
+  (FY and the statements; no board or property rows). In 2011–2013 the RR has no Övriga externa kostnader or Personalkostnader:
+  Drift (Not 2) includes a Personalkostnader line, which is stored as 6, and Fastighetsskatt is its own RR line, so 1 is Drift minus
+  personnel plus Fastighetsskatt (as in later years); 30 is Övriga avgifter + Övriga driftskostnader. 2014 prints all loans on one
+  line (stored in 1; the 2015 report splits off 3 000 000 as short-term). 'El, enhetsmätning' and 'Vatten, enhetsmätning' are in 17
+  as in 2014+.
+  2013: the KF adds back depreciation 5 029 374 (RR 5 059 734) and so ends at 34 057 618, 30 360 below the balance sheet's
+  liquidity (34 087 978, stored as 2+3+5); the 2014 report's opening liquidity is the balance sheet figure.

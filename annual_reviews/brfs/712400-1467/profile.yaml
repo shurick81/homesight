@@ -8,7 +8,7 @@ property: [Bollmora 1:388, Bollmora 2:399, Bollmora 2:400, Bollmora 2:401]   # p
 registered: 1965-01-30
 fiscal_year: 01-01 – 12-31
 maintenance_plan_until: 2074-12-31
-verified_from: 2016           # 2003–2015 are held but not verified (README: Verification status)
+verified_from: 2011           # 2003–2010 are held but not verified (README: Verification status)
 verified_through: 2025        # last fiscal year that passes verify-brf-data
 source: stamma2026.pdf p8–10
 
@@ -53,4 +53,16 @@ stambyte:                        # derived from pipe_works.csv; rubric in annual
 
 data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
   Fully itemised operating-cost notes (skötsel, städ, trädgård, snö apart).
-  Verified 2016–2025; 2003–2014 imported but not usable (see annual_reviews/brfs/README.md).
+  Verified 2011–2025 (2011 unchained, 2012–2025 chained); 2003–2010 imported but not usable (see annual_reviews/brfs/README.md).
+  2011–2013 (scans, OCR) use the old HSB layout: the RR has no Personalkostnader or Övriga externa kostnader line, so the personnel
+  line of the Drift note (Not 2) is cat 6, Fastighetsskatt joins Driftkostnader (1, 28) and 30 is Övriga avgifter + Övriga
+  driftskostnader. Each year's rows come from its own report (an earlier extraction had used the next report's comparison column).
+  Liquidity: the 2011 and 2012 reports count avräkningskonto and kassa (stored 2+3); from 2013 the KF also counts placeringskonto and
+  kortfristiga placeringar (4, 5), so restatements.csv holds the 2013 opening liquidity (the 2012 comparison column of the 2013 balance
+  sheet) and the 2011 opening (the 2011 KF) as the KFs print them. The balance sheet prints loans on one line in 2013-2014; the
+  short-term part (0) is the total minus 'Långfristiga skulder exklusive kortfristig del' in Not 16.
+  2012: the report's own KF (Årets kassaflöde 7 551 420, working capital +1 099 050) does not tie to its balance sheet: liquidity
+  rose 7 550 513 (906 kr less); the 2013 report's comparison column restates it, so the cash check for 2012 reports that difference.
+
+warnings:                        # a caveat about one year, shown to API readers (quality label `note`)
+  2012: The year's own cash flow statement is 906 kr off its balance sheet (the next report restates its comparison column).

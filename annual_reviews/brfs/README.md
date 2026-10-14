@@ -298,10 +298,10 @@ Scanned reports are OCR'd (cached in `.cache/pdfwords/`, keyed by the PDF's sha2
 | years | sources | cash identity (3) | debt identity (4) |
 |---|---|---|---|
 | 2016–2025 (2015 as opening balance) | all values verified against the imported PDFs; 2 by eye | holds (±1 kr) | holds exactly |
-| 2012–2014 | PDFs imported, not verified | holds (±20 kr) | gap = inbetalda insatser och upplåtelseavgifter |
-| 2003–2011 | PDFs imported, not verified | broken (gaps up to ±18 MSEK) | broken in most years |
+| 2011–2015 | each year from its own report (scans); sums and the personnel split by eye | holds (±20 kr) except 2012 (906 kr, a flaw in the report's own KF) | gap = inbetalda insatser och upplåtelseavgifter |
+| 2003–2010 | PDFs imported, not verified | broken (gaps up to ±18 MSEK) | broken in most years |
 
-Only 2015–2025 is in scope for analysis. 2004–2011 would need re-extraction (working-capital and some financing lines are missing, and some states come
+2011–2025 is in scope for analysis (15 years). 2004–2010 would need re-extraction (working-capital and some financing lines are missing, and some states come
 from a later report's comparison column).
 
 ### Bergfoten (712400-0089)

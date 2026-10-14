@@ -107,3 +107,8 @@ year,category_id,value,file,page,x,y,width,height
 2016,6,59,arsredovisning-2016.pdf,3,,,,
 2016,11,1961-1963,arsredovisning-2016.pdf,3,434,211,42,7
 2025,13,Ingående anskaffningsvärde mark,arsredovisning-2025.pdf,18,100,92,112,63
+2015,0,2015-01-01 – 2015-12-31,arsredovisning-20151.pdf,7,393,95,57,19
+2014,0,2014-01-01 – 2014-12-31,Arsredovisning_2014_HSB_Brf_Gaddan.pdf,6,393,94,57,19
+2013,0,2013-01-01 – 2013-12-31,Arsredovisning_2013_HSB_Brf_Gaddan.pdf,9,382,111,52,18
+2012,0,2012-01-01 – 2012-12-31,Arsredovisning_2012_HSB_Brf_Gaddan.pdf,9,379,84,56,18
+2011,0,2011-01-01 – 2011-12-31,Arsredovisning_2011_HSB_Brf_Gaddan.pdf,8,390,78,59,19

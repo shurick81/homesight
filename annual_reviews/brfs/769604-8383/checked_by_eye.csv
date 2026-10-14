@@ -1,3 +1,6 @@
 table,year,category_id,note
 general_states,2017,9,"Jerker Dahlin signs by hand above ""Av föreningen vald revisor"" without a printed name (p17); named as the elected auditor in the förvaltningsberättelse p2"
 general_states,2016,9,"Jerker Dahlin signs by hand above ""Av föreningen vald revisor"" without a printed name (p18); named as the elected auditor in the förvaltningsberättelse p3"
+financial_events,2013,1,"Drift 15 385 472 (RR) minus the personnel line 704 650 (Not 2) plus Fastighetsskatt 560 930 (RR); the RR has no Personalkostnader line, so the personnel inside Drift is cat 6 and the tax joins Driftkostnader as in later years; the children then add up (validate.py)"
+financial_events,2012,1,"Drift 14 699 440 (RR) minus the personnel line 504 103 (Not 2) plus Fastighetsskatt 619 045 (RR); the RR has no Personalkostnader line, so the personnel inside Drift is cat 6 and the tax joins Driftkostnader as in later years; the children then add up (validate.py)"
+financial_events,2011,1,"Drift 13 736 219 (RR) minus the personnel line 572 386 (Not 2) plus Fastighetsskatt 592 648 (RR); the RR has no Personalkostnader line, so the personnel inside Drift is cat 6 and the tax joins Driftkostnader as in later years; the children then add up (validate.py)"

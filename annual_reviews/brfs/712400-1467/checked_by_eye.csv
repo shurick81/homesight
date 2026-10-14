@@ -1,3 +1,16 @@
 table,year,category_id,note
 general_states,2015,9,Olle Wicander signs by hand without a printed name (p16); named as auditor in the förvaltningsberättelse p5
 general_states,2017,9,"Printed name ""Olena Zozulyak"" under the BoRevision signature (p15), OCR cannot read it"
+financial_events,2011,1,"Drift 18 334 838 (RR) minus the personnel line 841 472 (Not 2) plus Fastighetsskatt 1 163 156 (RR); the RR has no Personalkostnader line, so the personnel inside Drift is cat 6 and the tax joins Driftkostnader as in later years; the children then add up (validate.py)"
+financial_events,2012,1,"Drift 18 900 794 (RR) minus the personnel line 833 691 (Not 2) plus Fastighetsskatt 1 201 460 (RR); the RR has no Personalkostnader line, so the personnel inside Drift is cat 6 and the tax joins Driftkostnader as in later years; the children then add up (validate.py)"
+general_states,2011,9,"Lena Strömbäck (BoRevision) is printed; the elected auditor Alfonso Morales signs by hand without a printed name (named in the förvaltningsberättelse p5)"
+general_states,2012,9,"Elias Nesru (BoRevision) is printed; the elected auditor Alfonso Morales signs by hand without a printed name (named in the förvaltningsberättelse p4)"
+restatements,2013,2,"The 2012 comparison column of the 2013 balance sheet (kassa och bank); a comparison column is the source of a restated opening balance"
+restatements,2013,3,"The 2012 comparison column of the 2013 balance sheet (avräkningskonto HSB Stockholm); a comparison column is the source of a restated opening balance"
+restatements,2013,5,"The 2012 comparison column of the 2013 balance sheet (kortfristiga placeringar); a comparison column is the source of a restated opening balance"
+financial_events,2013,1,"Drift 19 522 197 (Not 2 total; the RR line is garbled in the scan) minus the personnel line 901 083 plus Fastighetsskatt 901 420 (RR); the RR has no Personalkostnader line, so personnel is cat 6 and the tax joins Driftkostnader as in later years; the children then add up (validate.py)"
+financial_events,2014,34,"Hyror och arrenden is 1 800 in both columns of Not 3 (2014 and 2013), so the verifier sees another amount to its left"
+financial_states,2013,0,"Short-term part of Skulder till kreditinstitut: the balance sheet prints one line (135 486 832); the split is the total minus Långfristiga skulder exklusive kortfristig del (128 396 379) in Not 16"
+financial_states,2014,0,"Short-term part of Skulder till kreditinstitut: the balance sheet prints one line (128 396 382); the split is the total minus Långfristiga skulder exklusive kortfristig del (125 552 133) in Not 16"
+general_states,2013,9,"Elias Nesru (BoRevision) is printed; the elected auditor Alfonso Morales signs by hand without a printed name (named in the förvaltningsberättelse p4)"
+general_states,2014,9,"Jonny Pegestam signs by hand without a printed name (named as the elected auditor in the förvaltningsberättelse); Hans Kypengren (BoRevision) is printed"

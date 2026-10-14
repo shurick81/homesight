@@ -1,0 +1,5 @@
+year,category_id,amount,file,page,x,y,width,height,note
+2011,2,18268264,arsredovisning2012.pdf,11,390,447,59,8,KF Likvida medel vid årets början: the 2011 report counts avräkningskonto and kassa (not the kortfristiga placeringar the 2010 balance sheet lists).
+2013,2,5464543,arsredovisning_2013.pdf,8,482,434,43,8,"2012 comparison column of the 2013 balance sheet: from 2013 the KF counts avräkningskonto, placeringskonto and kortfristiga placeringar as likvida medel (the 2012 report counted only avräkningskonto and kassa), so the opening liquidity is restated to the 2012 kassa och bank (2), avräkningskonto (3) and kortfristiga placeringar (5)."
+2013,3,10619925,arsredovisning_2013.pdf,8,477,335,49,8,See the row above: 2012 avräkningskonto HSB Stockholm.
+2013,5,9914311,arsredovisning_2013.pdf,8,482,409,43,8,See the row above: 2012 kortfristiga placeringar.
