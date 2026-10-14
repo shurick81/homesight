@@ -108,7 +108,7 @@ address tying for fifth-nearest. With `--data-repo-linking` only the ties and th
 | base URL | https://homesight-api.azurewebsites.net |
 | changes | [CHANGELOG.md](CHANGELOG.md) |
 | resource group | `homesight` (Sweden Central), subscription "Azure subscription 1" |
-| endpoints (0.10.0) | `GET /llms.txt`, `GET /health`, `GET /openapi.json`, `GET /brfs`, `GET /brfs/{orgnr}`, `GET /brfs/{orgnr}/financials`, `GET /advertisements`, `GET /cities`, `GET /kommuns`, `GET /areas`, `GET /sales/stats/avg-price-per-sqm` |
+| endpoints (0.10.1) | `GET /llms.txt`, `GET /health`, `GET /openapi.json`, `GET /brfs`, `GET /brfs/{orgnr}`, `GET /brfs/{orgnr}/financials`, `GET /advertisements`, `GET /cities`, `GET /kommuns`, `GET /areas`, `GET /sales/stats/avg-price-per-sqm` |
 
 **Same principles as the data repo.**
 - *Read model:* one container per resource, each document a finished response row. Everything a request
@@ -149,7 +149,7 @@ python3.12 -m venv .venv && .venv/bin/pip install -r tools/requirements.txt
 az deployment group create -g homesight -f infra/main.bicep -p infra/main.bicepparam
 
 # code (Azure installs requirements.txt: remote build)
-(cd api && zip -r ../api.zip *.py host.json requirements.txt openapi.json)
+(cd api && zip -r ../api.zip *.py host.json requirements.txt openapi.json llms.txt)
 az functionapp deployment source config-zip -g homesight -n homesight-api --src api.zip --build-remote true
 ```
 
