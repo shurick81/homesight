@@ -2,3 +2,4 @@
 -r ../api/requirements.txt
 -r booli/requirements.txt
 geographiclib==2.0
+pdfplumber==0.11.8   # read model: which cited pages are scanned (tools/brf/pdfwords.py)

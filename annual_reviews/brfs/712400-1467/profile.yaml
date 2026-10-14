@@ -8,6 +8,7 @@ property: [Bollmora 1:388, Bollmora 2:399, Bollmora 2:400, Bollmora 2:401]   # p
 registered: 1965-01-30
 fiscal_year: 01-01 – 12-31
 maintenance_plan_until: 2074-12-31
+verified_from: 2016           # 2003–2015 are held but not verified (README: Verification status)
 verified_through: 2025        # last fiscal year that passes verify-brf-data
 source: stamma2026.pdf p8–10
 

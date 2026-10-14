@@ -67,6 +67,20 @@ def _force_ocr(path):
         return False
 
 
+def is_scanned(path, pageno):
+    """True when page `pageno` is read by OCR: from the OCR cache when the page has been read, else decided
+    from its text layer as words() would, without running OCR."""
+    cache = os.path.join(os.path.normpath(CACHE), sha256(path), f"{pageno}.json")
+    if os.path.exists(cache):
+        with open(cache, encoding="utf-8") as f:
+            return json.load(f)["ocr"]
+    if _force_ocr(path):
+        return True
+    with pdfplumber.open(path) as pdf:
+        ws = pdf.pages[pageno - 1].extract_words(keep_blank_chars=False, use_text_flow=False)
+    return len(_content_words(ws)) < 5
+
+
 def page_count(path):
     with pdfplumber.open(path) as pdf:
         return len(pdf.pages)

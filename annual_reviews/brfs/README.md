@@ -35,8 +35,30 @@ annual_reviews/brfs/                             values extracted from the docum
 `profile.yaml` is the one file that holds **derived judgement** (when the next stambyte is likely, by the
 rubric below), kept apart from the extracted values. Facts copied from a report name their `source` (file
 and page); the `stambyte` assessment is dated with `as_of`; `verified_through` is the last fiscal year that
-passes the verify-brf-data checks; `data_notes` records caveats about the extracted values (merged lines,
-restatements, unreadable fonts). The verification scripts do not read it; `build_index.py` does.
+passes the verify-brf-data checks (and `verified_from`, when set, the first: older years are held but not
+verified); `data_notes` records caveats about the extracted values (merged lines, restatements, unreadable
+fonts), and `warnings` (`{year: text}`) a caveat about one year that readers of the API should see. The
+verification scripts do not read it; `build_index.py` and the read model do.
+
+The read model (`tools/readmodel/financials.py`) labels every fiscal year with a `quality` and the
+`warnings` behind it, so a reader can tell how far each year's figures were checked:
+
+| quality | meaning |
+|---|---|
+| `verified` | every value found at its place in the report; the cash flows add up to the change in liquidity since the previous report |
+| `verified_with_caveats` | verified, but some check could not run or relies on a person: see `warnings` |
+| `check_failed` | the cash flows do not add up (`cash_check_failed`): some value is wrong or missing |
+| `unverified` | extracted, not verified |
+
+| warning | when |
+|---|---|
+| `unverified` | the year is outside `verified_from`–`verified_through` |
+| `cash_check_failed` | top-level events differ from the change in liquidity by more than 25 kr |
+| `cash_not_stored` | no liquidity figure (the report has no cash flow statement), so the cash check cannot run |
+| `no_opening_balance` | the previous year's balances are not held (nor restated), so the cash check cannot run |
+| `checked_by_eye` | some values are in `checked_by_eye.csv` (not matched by the verifier) |
+| `scanned` | some values were read by OCR from scanned pages |
+| `note` | the profile's `warnings` entry for the year |
 
 `index.csv` is generated from the profiles and the extracted tables by `tools/brf/build_index.py`; do not
 edit it by hand.

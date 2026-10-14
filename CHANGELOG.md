@@ -12,6 +12,21 @@ deploy the code (README), then `provision` + `flip`.
 
 ## [Unreleased]
 
+## [0.11.0] - 2026-10-14
+
+### Added
+- A quality label on every fiscal year of the annual-report data: `quality` (`verified`,
+  `verified_with_caveats`, `check_failed`, `unverified`) and `warnings` (`{code, message}`) in
+  `GET /brfs/{orgnr}/financials`, saying which checks could not run or failed: `cash_check_failed`,
+  `cash_not_stored` (no cash flow statement), `no_opening_balance` (previous report not held), `checked_by_eye`,
+  `scanned` (values read by OCR), `note` (a caveat written in the BRF's profile), `unverified`. Each of `values`
+  also says whether it was `checked_by_eye`. Listings and `/brfs` rows carry the latest year's label as
+  `brf_report_quality` and `brf_report_warnings`.
+
+### Fixed
+- Sjötungan 2003–2015 were served as `verified: true`; only 2016–2025 are verified (profile `verified_from`).
+  They are now `unverified`, and 2004–2011 also `cash_check_failed`.
+
 ## [0.10.1] - 2026-10-14
 
 ### Data

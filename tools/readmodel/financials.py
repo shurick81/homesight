@@ -11,6 +11,7 @@ earlier year when that year's report does not give it). Every stored value keeps
 (`values`: page and box), and the document its source URL, so any number can be checked.
 """
 import csv
+import sys
 from pathlib import Path
 
 import yaml
@@ -57,6 +58,74 @@ def _source_urls(org):
     return out
 
 
+CASH_TOLERANCE = 25                           # kr, as tools/brf/validate.py
+LIQUIDITY, DEBT = (2, 3, 4, 5), (0, 1)
+TOP_EVENTS = {c for c, (_, parent) in EVENT_CATS.items() if parent is None}
+
+# quality label of a year, worst first; warnings say why it is not "verified"
+QUALITY = ("unverified", "check_failed", "verified_with_caveats", "verified")
+
+
+def _scanned_pages(pdf, pages):
+    """The cited pages of `pdf` that are read by OCR (tools/brf/pdfwords.py decides as the verifier did)."""
+    sys.path.insert(0, str(REPO / "tools" / "brf"))
+    import pdfwords
+    try:
+        return {p for p in pages if pdfwords.is_scanned(str(pdf), p)}
+    except Exception:                         # an unreadable file: say nothing rather than guess
+        return set()
+
+
+def _warnings(org, y, verified, ev, st, restated, eye, values, source, manual):
+    """[{code, message}] for year y: what the checks could not establish, or found wrong."""
+    out = []
+
+    def warn(code, message):
+        out.append({"code": code, "message": message})
+
+    if not verified:
+        warn("unverified", "Extracted but not yet verified against the report.")
+    cur, prev = st.get(y, {}), st.get(y - 1)
+    if not any(c in cur for c in LIQUIDITY):
+        warn("cash_not_stored", "The report has no cash flow statement (or no liquidity figure), so cash is not "
+                                "stored and the cash flow cannot be checked.")
+    elif prev is None and not any(c in restated.get(y, {}) for c in LIQUIDITY):
+        warn("no_opening_balance", "The previous year's report is not held, so this year's cash and debt "
+                                   "movements are not checked against its closing balances.")
+    else:
+        opening = (sum(restated[y][c] for c in LIQUIDITY if c in restated[y])
+                   if any(c in restated.get(y, {}) for c in LIQUIDITY)
+                   else sum((prev or {}).get(c, 0) for c in LIQUIDITY))
+        flows = sum(a for c, a in ev.get(y, {}).items() if c in TOP_EVENTS)
+        diff = flows - (sum(cur.get(c, 0) for c in LIQUIDITY) - opening)
+        if abs(diff) > CASH_TOLERANCE:
+            warn("cash_check_failed", f"The year's cash flows do not add up to the change in liquidity (off by "
+                                      f"{diff} kr): a value may be wrong or missing.")
+    if eye:
+        warn("checked_by_eye", f"{len(eye)} value(s) could not be matched automatically (sums over several lines, "
+                               f"garbled scans) and were confirmed by eye on the page.")
+    if source and source.get("file"):
+        pdf = RAW / org / str(y) / source["file"]
+        cited = {v["page"] for v in values}
+        scanned = _scanned_pages(pdf, cited) if pdf.exists() else set()
+        n = sum(1 for v in values if v["page"] in scanned)
+        if n:
+            warn("scanned", f"{n} of {len(values)} values were read from scanned pages by OCR; a misread digit "
+                            f"that also fits the report's totals is unlikely but possible.")
+    if manual:
+        warn("note", str(manual).strip())
+    return out
+
+
+def _quality(warnings):
+    codes = {w["code"] for w in warnings}
+    if "unverified" in codes:
+        return "unverified"
+    if "cash_check_failed" in codes:
+        return "check_failed"
+    return "verified_with_caveats" if codes else "verified"
+
+
 def _per_m2(amount, area):
     return round(amount / area, 1) if amount is not None and area else None
 
@@ -65,6 +134,7 @@ def brf_years(org):
     """{year: document} for one BRF."""
     prof = yaml.safe_load((BRFS / org / "profile.yaml").open(encoding="utf-8")) or {}
     verified_through = int(prof.get("verified_through") or 0)
+    verified_from = int(prof.get("verified_from") or 0)     # older years held but not verified (Sjötungan)
     tables = {t: _rows(BRFS / org / f"{t}.csv")
               for t in ("financial_events", "financial_states", "property_states", "general_states")}
     years = sorted({int(r["year"]) for r in tables["financial_events"]})
@@ -81,6 +151,11 @@ def brf_years(org):
     ev, st, pr, gs = (by_year("financial_events"), by_year("financial_states"),
                       by_year("property_states"), by_year("general_states", "value"))
     areas = {y: (p.get(8) or p.get(12)) for y, p in pr.items() if p.get(8) or p.get(12)}
+    restated = {}
+    for r in _rows(BRFS / org / "restatements.csv"):
+        restated.setdefault(int(r["year"]), {})[int(r["category_id"])] = int(r["amount"])
+    eye = {(r["table"], int(r["year"]), int(r["category_id"])) for r in _rows(BRFS / org / "checked_by_eye.csv")}
+    manual = {int(k): v for k, v in (prof.get("warnings") or {}).items()}
 
     docs = {}
     for y in years:
@@ -105,7 +180,7 @@ def brf_years(org):
         doc = {
             "id": f"fy-{y}", "type": "financial_year", "orgnr": org, "name": prof.get("name"),
             "fiscal_year": y, "period": g.get(0),
-            "verified": y <= verified_through,
+            "verified": verified_from <= y <= verified_through,
             "opening_balance_held": (y - 1) in state_years,
             "report": sources.get(y),
             "income": income, "costs": costs, "cash_flow": cash_flow, "balance_sheet": balance,
@@ -138,6 +213,12 @@ def brf_years(org):
                 for r in tables[t] if int(r["year"]) == y
             ],
         }
+        for v in doc["values"]:
+            v["checked_by_eye"] = (v["table"], y, v["category_id"]) in eye
+        doc["warnings"] = _warnings(org, y, doc["verified"], ev, st, restated,
+                                    [v for v in doc["values"] if v["checked_by_eye"]], doc["values"],
+                                    doc["report"], manual.get(y))
+        doc["quality"] = _quality(doc["warnings"])
         docs[y] = doc
     return docs
 

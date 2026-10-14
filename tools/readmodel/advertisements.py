@@ -418,6 +418,8 @@ def flatten_brf_report(ads):
         a.update({
             "brf_report_fiscal_year": d["fiscal_year"] if d else None,
             "brf_report_verified": d["verified"] if d else None,
+            "brf_report_quality": d["quality"] if d else None,
+            "brf_report_warnings": [w["code"] for w in d["warnings"]] if d else None,
             "brf_report_url": ((d or {}).get("report") or {}).get("url"),
             "brf_report_loans_kr": bs.get("loans_kr"),
             "brf_report_loans_per_m2": pm.get("loans_kr"),

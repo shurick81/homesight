@@ -2,7 +2,7 @@
   "openapi": "3.0.3",
   "info": {
     "title": "homesight BRF API",
-    "version": "0.10.1",
+    "version": "0.11.0",
     "description": "Read-only data for deciding which Swedish apartment to buy, built for LLM agents. Two layers:\n\n- **Market (Booli snapshot)** for Stockholm, Nacka, Solna and Tyresö: apartments and houses for sale (GET /advertisements), one row per BRF with an apartment for sale (GET /brfs), område/kommun/city statistics (GET /areas, /kommuns, /cities) and sold prices (GET /sales/stats/avg-price-per-sqm). These follow the contract of the Real Estate Data API (llm-brf.github.io); Booli's BRF figures are as Booli shows them, unverified.\n- **Verified BRF layer:** for BRFs whose annual reports (årsredovisningar) are extracted, every figure is taken from the report and verified, and links back to the page it came from: `brf_report_*` on /brfs and /advertisements rows, GET /brfs/{orgnr} (`report`) and GET /brfs/{orgnr}/financials. GET /brfs?has_report=true lists these BRFs.\n\nA BRF is identified by its organisationsnummer (orgnr, format NNNNNN-NNNN). Amounts are SEK, areas m², fees per month; a fiscal year that does not follow the calendar year is labelled by the year it starts. GET /llms.txt is a short guide."
   },
   "paths": {
@@ -1909,7 +1909,35 @@
           "brf_report_verified": {
             "type": "boolean",
             "nullable": true,
-            "description": "The brf_report_* figures passed all checks against the report."
+            "description": "The brf_report_* year is verified against the report; brf_report_quality and brf_report_warnings say what could not be checked."
+          },
+          "brf_report_quality": {
+            "type": "string",
+            "enum": [
+              "verified",
+              "verified_with_caveats",
+              "check_failed",
+              "unverified"
+            ],
+            "nullable": true,
+            "description": "How far the brf_report_* year was checked (see FinancialYear.quality): verified, verified_with_caveats, check_failed or unverified. Null when no report of this BRF is extracted."
+          },
+          "brf_report_warnings": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "enum": [
+                "unverified",
+                "cash_check_failed",
+                "cash_not_stored",
+                "no_opening_balance",
+                "checked_by_eye",
+                "scanned",
+                "note"
+              ]
+            },
+            "description": "Warning codes of the brf_report_* year (see FinancialYear.warnings; the messages are in GET /brfs/{orgnr}/financials). Empty when the year is fully verified."
           },
           "brf_report_url": {
             "type": "string",
@@ -2018,7 +2046,42 @@
           },
           "verified": {
             "type": "boolean",
-            "description": "Every value found at its place in the report and the totals and year-to-year identities hold."
+            "description": "The year is verified: every value found at its place in the report. `quality` and `warnings` say which checks could not run."
+          },
+          "quality": {
+            "type": "string",
+            "enum": [
+              "verified",
+              "verified_with_caveats",
+              "check_failed",
+              "unverified"
+            ],
+            "description": "How far this year's figures were checked: verified (every value found at its place in the report and the cash flows add up to the change in liquidity), verified_with_caveats (verified, but a check could not run or relies on a person: see warnings), check_failed (a check failed: treat the figures with care), unverified."
+          },
+          "warnings": {
+            "type": "array",
+            "description": "Why the year is not plain `verified`: unverified (not yet checked against the report); cash_check_failed (the cash flows do not add up to the change in liquidity: a value is wrong or missing); cash_not_stored (no cash flow statement, so cash is not stored and the cash check cannot run); no_opening_balance (the previous year's report is not held, so the cash check cannot run); checked_by_eye (some values could not be matched automatically and were confirmed by a person on the page); scanned (some values were read by OCR from a scanned report); note (a caveat written for this year).",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "enum": [
+                    "unverified",
+                    "cash_check_failed",
+                    "cash_not_stored",
+                    "no_opening_balance",
+                    "checked_by_eye",
+                    "scanned",
+                    "note"
+                  ]
+                },
+                "message": {
+                  "type": "string",
+                  "description": "The caveat in words, with the amounts involved."
+                }
+              }
+            }
           },
           "opening_balance_held": {
             "type": "boolean",
@@ -2288,7 +2351,7 @@
           },
           "values": {
             "type": "array",
-            "description": "Only with include=values: every stored number with table, category_id, category, value, page (1-based PDF page) and box [x, y, width, height] in PDF points from the top-left.",
+            "description": "Only with include=values: every stored number with table, category_id, category, value, page (1-based PDF page) and box [x, y, width, height] in PDF points from the top-left, and checked_by_eye (true when the verifier could not match the value and a person confirmed it on the page).",
             "items": {
               "type": "object"
             }
@@ -2921,7 +2984,35 @@
           "brf_report_verified": {
             "type": "boolean",
             "nullable": true,
-            "description": "The brf_report_* figures passed all checks against the report."
+            "description": "The brf_report_* year is verified against the report; brf_report_quality and brf_report_warnings say what could not be checked."
+          },
+          "brf_report_quality": {
+            "type": "string",
+            "enum": [
+              "verified",
+              "verified_with_caveats",
+              "check_failed",
+              "unverified"
+            ],
+            "nullable": true,
+            "description": "How far the brf_report_* year was checked (see FinancialYear.quality): verified, verified_with_caveats, check_failed or unverified. Null when no report of this BRF is extracted."
+          },
+          "brf_report_warnings": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "enum": [
+                "unverified",
+                "cash_check_failed",
+                "cash_not_stored",
+                "no_opening_balance",
+                "checked_by_eye",
+                "scanned",
+                "note"
+              ]
+            },
+            "description": "Warning codes of the brf_report_* year (see FinancialYear.warnings; the messages are in GET /brfs/{orgnr}/financials). Empty when the year is fully verified."
           },
           "brf_report_url": {
             "type": "string",
