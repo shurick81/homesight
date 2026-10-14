@@ -1,0 +1,8 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Solhöjden i Tyresö
+short_name: Solhöjden
+orgnr: 769616-7878
+municipality: Tyresö
+verified_through: 2024
+data_notes: 'FY2023 and FY2024 from allabrf.se; 2024 is a scan (OCR), where OCR splits Övriga externa kostnader as ''-2 129717''; the row holds
+  -2 129 717. Liquidity includes Övriga kortfristiga placeringar (KF likvida medel).'

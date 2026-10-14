@@ -3,8 +3,9 @@ name: Brf Peppargränd 1
 short_name: Peppargränd 1
 orgnr: 769613-2013
 municipality: Tyresö
-verified_through: 2021
-data_notes: 'Only FY2021 is extracted; the 2020 ''Påskrivet bokslut'' (scan) and older reports (2012-2019, svenskbrf.se) are imported or listed
-  at the source but not extracted. The 2022-2025 reports are not published. SBC layout (notes in sub-sections); the large 2021 loss comes from
+verified_through: 2024
+data_notes: 'FY2021 and FY2024 are extracted (2024 from allabrf.se, unchained: 2022-2023 are not published). 2024 is a
+  newer SBC layout (Operativ drift och underhåll, cat 1; Sotning and Brandskydd are cat 53, Övriga köpta tjänster cat 30). The 2020 ''Påskrivet bokslut'' (scan) and older reports (2012-2019, svenskbrf.se) are imported or listed
+  at the source but not extracted. 2021: SBC layout (notes in sub-sections); the large 2021 loss comes from
   Periodiskt underhåll 7 173 513 (roof and facade). Cash comes from the ''Förändring likvida medel'' table (p8): this report''s balance sheet
   has the cash inside Övriga fordringar.'

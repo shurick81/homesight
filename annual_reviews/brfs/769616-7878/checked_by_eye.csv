@@ -1,0 +1,2 @@
+table,year,category_id,note
+financial_events,2023,18,"Hyror bostäder 6 573 529 + lokaler 94 461 + garage och parkeringsplatser 762 192 + förbrukningsbaserad -117 + övrigt 475 767 in Not 2 (p13); the verifier does not try sums of five lines, but Not 2 then adds up to Nettoomsättning (validate.py)"

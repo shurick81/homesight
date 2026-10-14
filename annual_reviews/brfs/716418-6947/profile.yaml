@@ -1,0 +1,8 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: HSB Brf Trädgården nr 278 i Tyresö
+short_name: Trädgården 278
+orgnr: 716418-6947
+municipality: Tyresö
+verified_through: 2021
+data_notes: 'Fiscal year 1 July - 30 June, filed under the year it starts: 2021 is 2021-07-01 - 2022-06-30 (from allabrf.se). The FY2019
+  report (svenskbrf.se) is imported but not extracted; other years are not public.'

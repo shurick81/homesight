@@ -1,11 +1,14 @@
 orgnr,name,municipality,built_from,built_to,built_source,land_tenure,apartments,living_area_m2,fiscal_year,reports_held,extracted_fy,verified_through,stambyte_last,stambyte_next,stambyte_next_status,stambyte_next_confidence,stamspolning_done,stamspolning_next,stamspolning_regular
 712400-0089,HSB Bostadsrättsförening Bergfoten i Tyresö,Tyresö,1964,1966,"report byggnadsår (1964 och 1966, FY2025)",äganderätt,180,15909,01-01 – 12-31,2019–2025,2025,2025,2023–2024,2064–2074,estimated,low,2019,,once
 712400-0139,HSB Brf Björkbacken i Tyresö,Tyresö,1964,1964,"report byggnadsår (1964, FY2025)",äganderätt,383,33588,,2020–2025,2025,2025,,,,,,,
-712400-0808,HSB Brf Laken i Tyresö,Tyresö,1962,1962,"report byggnadsår (1962, FY2020)",,273,19500,,2019–2020,2020,2020,,,,,,,
+712400-0444,HSB Brf Gösen i Tyresö,Tyresö,,,,äganderätt,,,,2019–2021;2023,2023,2023,,,,,,,
+712400-0808,HSB Brf Laken i Tyresö,Tyresö,1962,1962,"report byggnadsår (1962, FY2020)",,273,19500,,2019–2020;2022,2022,2022,,,,,,,
 712400-1426,HSB Bostadsrättsförening Siken i Tyresö,Tyresö,1961,1963,"report byggnadsår (1961 och 1963, FY2024)",äganderätt,208,16948,05-01 – 04-30,2018–2024,2024,2024,1999–2000,2040–2050,estimated,low,,,none recorded
 712400-1467,HSB Brf Sjötungan,Tyresö,1966,1968,"report byggnadsår (1966-68, FY2021)",äganderätt,604,50388,01-01 – 12-31,2003–2025,2025,2025,1990 (partial_stambyte),2026–2035,decided,high,2008,,once
 712400-1624,HSB Brf Delfinen i Tyresö,Tyresö,1984,1985,"report byggnadsår (1984 och 1985, FY2024)",äganderätt,94,7077,,2020–2025,2025,2025,,,,,,,
 712400-2309,HSB Brf Pluto i Tyresö,Tyresö,1970,1971,"report byggnadsår (1970 och 1971, FY2024)",äganderätt,208,15764,07-01 – 06-30,2017–2024,2024,2024,2023–2024,2065–2075,estimated,low,,,none recorded
+716418-6897,HSB Brf Soluret i Tyresö,Tyresö,,,,äganderätt,,,,2019–2021;2023,2023,2023,,,,,,,
+716418-6947,HSB Brf Trädgården nr 278 i Tyresö,Tyresö,,,,,,,,2019;2021,2021,2021,,,,,,,
 716421-3436,Brf Laxtrappan,Tyresö,1992,1993,"report byggnadsår (1992/1993, FY2022)",äganderätt,98,8806,01-01 – 12-31,2017–2025,2025,2025,none,2033–2043,estimated,low,2018;2023,,regular
 716421-7320,Brf Safiren,Tyresö,,,,äganderätt,55,4140,,2020–2025,2025,2025,,,,,,,
 769604-8383,HSB Bostadsrättsförening Gäddan i Tyresö,Tyresö,1961,1963,"report byggnadsår (1961-1963, FY2025)",äganderätt,379,32546,01-01 – 12-31,2015–2025,2025,2025,2011–2013,2053–2063,estimated,low,2023,,once
@@ -14,13 +17,19 @@ orgnr,name,municipality,built_from,built_to,built_source,land_tenure,apartments,
 769610-4251,Brf Björktrasten,Tyresö,2005,2005,"report värdeår (2005, FY2025)",äganderätt,60,4735,01-01 – 12-31,2017–2025,2025,2025,none,2045–2055,estimated,low,2019;2023;2025,,regular
 769611-6131,Brf Silvertärnan,Tyresö,2006,2006,"report byggnadsår (2006, FY2022)",äganderätt,64,4126,01-01 – 12-31,2019–2025,2025,2025,none,2046–2056,estimated,low,,,none recorded
 769612-0844,Brf Passadvinden,Stockholm,2006,2007,"report byggnadsår (2006-2007, FY2025)",äganderätt,29,2081,01-01 – 12-31,2020;2025,2025,2025,2020 (ground_pipes),2047–2057,estimated,low,2020;2024,,regular
-769613-2013,Brf Peppargränd 1,Tyresö,2006,2006,"report byggnadsår (2006, FY2021)",,36,,,2019–2021,2021,2021,,,,,,,
-769616-3463,HSB Bostadsrättsförening Rödingen i Tyresö,Tyresö,2013,2013,"report byggnadsår (2013, FY2022)",äganderätt,72,5468,01-01 – 12-31,2016–2019;2021–2022,2022,2022,none,2053–2063,estimated,low,2021,,once
+769613-2013,Brf Peppargränd 1,Tyresö,2006,2006,"report byggnadsår (2006, FY2021)",,36,,,2019–2021;2024,2024,2024,,,,,,,
+769616-3463,HSB Bostadsrättsförening Rödingen i Tyresö,Tyresö,2013,2013,"report byggnadsår (2013, FY2022)",äganderätt,72,5468,01-01 – 12-31,2016–2019;2021–2022;2024,2024,2024,none,2053–2063,estimated,low,2021,,once
+769616-7878,Brf Solhöjden i Tyresö,Tyresö,,,,äganderätt,,,,2023–2024,2024,2024,,,,,,,
 769616-7928,Brf Karlsön,Stockholm,2008,2008,"report värdeår (2008, FY2025)",tomträtt,58,3814,01-01 – 12-31,2016–2023;2025,2025,2025,none,2048–2058,estimated,low,2025,,once
+769617-6325,HSB Brf Pigghajen i Tyresö,Tyresö,,,,äganderätt,,,,2021;2024,2024,2024,,,,,,,
 769621-9521,Brf Fyrhöjden,Stockholm,,,,tomträtt,188,12039,,2019–2025,2025,2025,,,,,,,
 769623-6137,Brf Tyresö View 1,Tyresö,2014,2014,"report byggnadsår (2014, FY2025)",äganderätt,125,10480,,2019–2025,2025,2025,,,,,,,
+769625-3744,Brf Tyresö Trädgårdar,Tyresö,,,,,,,,2022,2022,2022,,,,,,,
 769626-8841,Brf Skogslunden,Tyresö,2014,2014,"report byggnadsår (2014, FY2025)",äganderätt,64,5337,,2020–2025,2025,2025,,,,,,,
 769626-9864,Bostadsrättsföreningen Stortorpet 1,Tyresö,2017,2017,"report byggnadsår (2017, FY2025)",äganderätt,6,826,01-01 – 12-31,2021;2025,2025,2025,none,2057–2067,estimated,low,,,none recorded
 769628-4574,HSB Brf Skogsgläntan i Tyresö,Tyresö,2015,2015,"report byggnadsår (2015, FY2025)",äganderätt,86,6622,01-01 – 12-31,2019–2025,2025,2025,none,2055–2065,estimated,low,2021,2026,regular
 769629-8590,Brf Odlingslotten i Tyresö,Tyresö,2015,2015,"report byggnadsår (2015, FY2025)",äganderätt,4,516,01-01 – 12-31,2025,2025,2025,none,2055–2065,estimated,low,,,none recorded
-769636-3931,Brf Almandinen,Tyresö,,,,,145,6650,,2023,2023,2023,,,,,,,
+769632-9536,Riksbyggen Brf Steget,Tyresö,,,,,,,,2021–2022,2022,2022,,,,,,,
+769635-7933,Brf Kvarteret Skogsbacken i Tyresö,Tyresö,,,,,,,,2021–2022,2022,2022,,,,,,,
+769636-3931,Brf Almandinen,Tyresö,,,,,145,6650,,2023–2024,2024,2024,,,,,,,
+769640-9999,Brf Sander,Tyresö,,,,,,,,2023–2024,2024,2024,,,,,,,

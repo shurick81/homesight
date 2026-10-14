@@ -1,0 +1,9 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Tyresö Trädgårdar
+short_name: Tyresö Trädgårdar
+orgnr: 769625-3744
+municipality: Tyresö
+verified_through: 2022
+data_notes: 'Only FY2022 (allabrf.se, a scan). An own small-format report: the RR has Årsavgifter och hyror and one Driftskostnader line, whose
+  note (titled Övriga externa kostnader) also holds Redovisning (29), Styrelsearvoden and Revisionsarvoden, which therefore stay in cat 30 with
+  the mixed lines Renhållning/städning/snö and Fastighetsförvaltning/reparation/underhåll. KF ''Betald skatt'' 8 425 is added to cat 12.'

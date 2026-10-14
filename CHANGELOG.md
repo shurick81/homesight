@@ -12,6 +12,14 @@ deploy the code (README), then `provision` + `flip`.
 
 ## [Unreleased]
 
+## [0.10.1] - 2026-10-14
+
+### Data
+- 20 annual reports from allabrf.se extracted and verified (`tools/brf/allabrf.py`): Gösen 2021, 2023;
+  Laken 2022; Soluret 2021, 2023; Trädgården 278 FY2021; Peppargränd 1 2024; Rödingen 2024; Almandinen 2024;
+  and the new BRFs Solhöjden 2023–2024, Pigghajen 2021, 2024, Tyresö Trädgårdar 2022, Steget FY2021–FY2022,
+  Kvarteret Skogsbacken 2021–2022 and Sander 2023–2024 (a new build).
+
 ## [0.10.0] - 2026-10-13
 
 ### Added
@@ -137,6 +145,9 @@ deploy the code (README), then `provision` + `flip`.
 
 ## Data
 
+- 2026-10-14 (0.10.1): 20 reports from allabrf.se extracted and verified, six of them for BRFs new to the data
+  (Solhöjden, Pigghajen, Tyresö Trädgårdar, Steget, Kvarteret Skogsbacken, Sander); Steget and Skogsbacken print
+  no cash flow statement, so their cash is not stored.
 - 2026-10-14: HSB Brf Laken 2020 (and 2019 closing balances) extracted and verified; no later report is public.
 - 2026-10-13: Brf Fyrhöjden (Kärrtorp, Stockholm; tomträtt) 2021–2025 extracted and verified (2019–2020 held for
   closing balances); `tools/brf/pdfwords.py` also ignores the Visma e-signing stamp.

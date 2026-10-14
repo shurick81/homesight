@@ -1,0 +1,2 @@
+table,year,category_id,note
+financial_events,2022,12,"KF Förändring av kortfristiga skulder (-72 981) plus Betald skatt (8 425), the only KF line without a category of its own; two lines apart, so the verifier cannot pair them, but the KF then adds up to Årets kassaflöde (validate.py CASH)"

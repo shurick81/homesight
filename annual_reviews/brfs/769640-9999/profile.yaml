@@ -1,0 +1,9 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Sander
+short_name: Sander
+orgnr: 769640-9999
+municipality: Tyresö
+verified_through: 2024
+data_notes: 'A new build: 2023 and 2024 are construction years with no operations (the RR is all zeros; income and costs before the settlement
+  with the developer are netted, 2024 Not 1). Only the cash flow and balances are stored. The byggnadskreditiv 144 322 175 is a short-term loan
+  (cat 0); final inspection was approved 2025-02-12, so 2025 is the first operating year.'

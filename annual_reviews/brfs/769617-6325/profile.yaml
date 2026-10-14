@@ -1,0 +1,9 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: HSB Brf Pigghajen i Tyresö
+short_name: Pigghajen
+orgnr: 769617-6325
+municipality: Tyresö
+verified_through: 2024
+data_notes: 'FY2021 and FY2024 from allabrf.se, both scans (OCR); 2022-2023 are not public, so 2024 is unchained. 2021 is the old HSB layout:
+  the scan puts note values one line above their labels, and the KF has no interest lines (7 and 15 come from the RR). 2024: Fastighetsskötsel,
+  lokalvård och samfälligheter is one aggregate line, so category 2 is it plus Snö (55) without a 50-54 split.'

@@ -11,7 +11,7 @@ built_basis: byggnadsår          # 2022 table "Nybyggnadsår byggnad 2013"; the
 registered: 2012
 fiscal_year: 01-01 – 12-31
 management: HSB Stockholm
-verified_through: 2022           # 2021–2022; 2021 unchained (the 2020 report is not public)
+verified_through: 2024           # 2021–2022 and 2024; 2021 and 2024 unchained (2020 and 2023 are not public)
 source: arsredovisning_2022_brf-rodingen_2468.pdf p4–6
 links:
   hsb: https://www.hsb.se/stockholm/brf/rodingen/om-brf-rodingen/styrelsen-20152016/arsredovisning-2014/
@@ -49,7 +49,8 @@ stambyte:                        # derived from pipe_works.csv; rubric in annual
     The 2023–2025 reports are not public, so none of this can be followed past 2022.
 
 data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
-  Not public: 2020, and 2023–2025 (handed out to members and on Mitt HSB only; the HSB page lists 2007–2008, 2010–2019, 2021–2022).
+  Not public: 2020, 2023 and 2025 (handed out to members and on Mitt HSB only; the HSB page lists 2007–2008, 2010–2019, 2021–2022).
+  2024 is public on allabrf.se (tools/brf/allabrf.py).
   2021 is a scanned report (OCR); every value checked against its note total or the RR/BR sums.
   2021 counts 67 garage and parking places in one number (cat 6); 2022 lists 20 garage (3) + 48 p-platser (4).
   2021 Övriga externa kostnader: note lines sum to 110 207 vs 110 206 printed (rounding); 2022 Driftkostnader likewise 1 kr.

@@ -1,0 +1,8 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: HSB Brf Gösen i Tyresö
+short_name: Gösen
+orgnr: 712400-0444
+municipality: Tyresö
+verified_through: 2023
+data_notes: 'FY2021 and FY2023 from allabrf.se (tools/brf/allabrf.py); 2019-2020 (svenskbrf.se) are imported but not extracted, 2022 and
+  2024-2025 are not public. Both years are unchained (no previous-year report), so the CASH check does not run.'

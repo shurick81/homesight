@@ -3,9 +3,10 @@ name: HSB Brf Laken i Tyresö
 short_name: Laken
 orgnr: 712400-0808
 municipality: Tyresö
-verified_through: 2020
-data_notes: 'Only FY2020 is extracted (2019 as closing balances from the scan). Later reports are not public: brflaken.se keeps its archive behind
-  a member login (and blocked this IP after a crawl), allabrf lists 2018, 2019 and 2022 behind BankID, and svenskbrf.se stops at 2020.
+verified_through: 2022
+data_notes: 'FY2020 and FY2022 are extracted (2019 as closing balances from the scan). 2022 comes from allabrf.se, whose /dokument page links the
+  public PDFs directly (tools/brf/allabrf.py); 2021 and 2023-2025 are not public: brflaken.se keeps its archive behind a member login (and blocked
+  this IP after a crawl), and svenskbrf.se stops at 2020. With 2021 missing, 2022 is unchained (no CASH/DEBT check).
 
   The balance sheet lists kortfristiga placeringar (13 500 000) separately, but the cash flow statement counts them, avräkningskonto and placeringskonto
   as likvida medel, so cat 2 is the KF figure (16 577 897) and cat 5 is not stored. Fastighetsskötsel och lokalvård is one aggregate line (category
