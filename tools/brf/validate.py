@@ -159,9 +159,9 @@ def main():
     # identities between consecutive years
     tops = {cid for cid, (_, parent) in ecats.items() if parent is None}
     for y in sorted(all_states):
-        if (years and y not in years) or y - 1 not in all_states or y not in all_events:
+        if (years and y not in years) or y not in all_events or (y - 1 not in all_states and y not in restated):
             continue
-        cur, prev, ev = all_states[y], all_states[y - 1], all_events[y]
+        cur, prev, ev = all_states[y], all_states.get(y - 1, {}), all_events[y]
         flows = sum(a for cid, a in ev.items() if cid in tops)
         has_close = any(c in cur for c in LIQUIDITY)
         has_open = any(c in prev for c in LIQUIDITY) or any(c in restated.get(y, {}) for c in LIQUIDITY)
@@ -176,7 +176,7 @@ def main():
         else:
             print(f"INFO  CASH  {y}: not checked, no liquidity stored for "
                   f"{y if not has_close else y - 1} (the report has no cash flow statement)")
-        if FINANCING in ev:
+        if FINANCING in ev and y - 1 in all_states:
             d_debt = sum(cur.get(c, 0) for c in DEBT) - opening(y, prev, DEBT)
             gap = ev[FINANCING] - d_debt
             print(f"{'OK' if not gap else 'INFO':5} DEBT  {y}: financing {ev[FINANCING]:>12}  vs  change in loans "

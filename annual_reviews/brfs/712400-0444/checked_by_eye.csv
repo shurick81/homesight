@@ -1,0 +1,7 @@
+table,year,category_id,note
+financial_states,2017,1,"Skulder till kreditinstitut 27 426 028 (2017 column): the balance sheet prints assets and liabilities side by side on one page, so the asset columns sit to the left of it"
+financial_events,2013,1,"Drift (RR, Not 2 total) minus the Personalkostnader line of Not 2 plus Fastighetsskatt (RR): the RR has no Personalkostnader line, so the personnel inside Drift is cat 6 and the tax joins Driftkostnader as in later years; the children then add up (validate.py)"
+financial_events,2012,1,"Drift (RR, Not 2 total) minus the Personalkostnader line of Not 2 plus Fastighetsskatt (RR): the RR has no Personalkostnader line, so the personnel inside Drift is cat 6 and the tax joins Driftkostnader as in later years; the children then add up (validate.py)"
+financial_events,2011,1,"Drift (RR, Not 2 total) minus the Personalkostnader line of Not 2 plus Fastighetsskatt (RR): the RR has no Personalkostnader line, so the personnel inside Drift is cat 6 and the tax joins Driftkostnader as in later years; the children then add up (validate.py)"
+restatements,2013,3,"The 2012 comparison column of the 2013 balance sheet (avräkningskonto HSB Stockholm); a comparison column is the source of a restated opening balance"
+restatements,2013,5,"The 2012 comparison column of the 2013 balance sheet (kortfristiga placeringar); a comparison column is the source of a restated opening balance"

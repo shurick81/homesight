@@ -1,0 +1,4 @@
+year,category_id,amount,file,page,x,y,width,height,note
+2013,2,1420,Arsredovisning_2013_HSB_Brf_Gosen.pdf,11,437,436,24,8,"2012 comparison column of the 2013 balance sheet: from 2013 the KF counts the kortfristiga placeringar as likvida medel (the 2011-2012 reports counted only avräkningskonto and kassa), so the opening liquidity is restated to the 2012 kassa och bank (2), avräkningskonto (3) and kortfristiga placeringar (5)."
+2013,3,1927610,Arsredovisning_2013_HSB_Brf_Gosen.pdf,11,496,352,44,8,See the row above: 2012 avräkningskonto HSB Stockholm.
+2013,5,1600000,Arsredovisning_2013_HSB_Brf_Gosen.pdf,11,497,412,44,8,See the row above: 2012 kortfristiga placeringar.

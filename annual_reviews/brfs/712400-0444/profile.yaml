@@ -3,6 +3,17 @@ name: HSB Brf Gösen i Tyresö
 short_name: Gösen
 orgnr: 712400-0444
 municipality: Tyresö
-verified_through: 2023
-data_notes: 'FY2021 and FY2023 from allabrf.se (tools/brf/allabrf.py); 2019-2020 (svenskbrf.se) are imported but not extracted, 2022 and
-  2024-2025 are not public. Both years are unchained (no previous-year report), so the CASH check does not run.'
+verified_through: 2025
+data_notes: 'Every year 2011-2025 except 2024 is held: 2011-2016, 2022 and 2025 from HSB''s folder (links from the user), 2017-2021 from
+  svenskbrf.se and allabrf.se, 2023 from allabrf.se. 2024 is not found (a Hemnet report for "Brf Gösen" is a homonym, org.nr 714400-0481).
+  2011-2013 use the old HSB layout: Drift (Not 2) includes a Personalkostnader line (stored as 6) and Fastighetsskatt is its own RR line, so 1
+  is Drift minus personnel plus Fastighetsskatt and 30 is Övriga avgifter + Övriga driftskostnader. The 2011-2012 KFs count avräkningskonto
+  and kassa as liquidity; from 2013 they also count the kortfristiga placeringar, so restatements.csv holds the 2013 opening liquidity (the
+  2012 comparison column). 2014: the RR has Jämförelsestörande poster -300 000 (a settlement with BTH Bygg AB, Not 5), which no category
+  holds, so the 2014 cash check is 300 000 off. 2020 has all loans as short-term (cat 0).'
+
+sources:                         # checked by tools/brf/source_gap.py
+  - {url: https://www.hsb.se/contentassets/2f7eba1bc77b41bbabbc16378b0db4c2/, note: "HSB archive folder (no listing page): 2011-2016, 2022, 2025"}
+
+warnings:
+  2014: The income statement has a one-off settlement cost of 300 000 kr (jämförelsestörande post) that no category holds, so the year's cash flows do not add up by that amount.

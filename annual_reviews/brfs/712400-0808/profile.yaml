@@ -4,7 +4,7 @@ short_name: Laken
 orgnr: 712400-0808
 municipality: Tyresö
 verified_through: 2022
-data_notes: 'FY2020 and FY2022 are extracted (2019 as closing balances from the scan). 2022 comes from allabrf.se, whose /dokument page links the
+data_notes: 'FY2019, FY2020 and FY2022 are extracted (2019 entered from the scan''s OCR text and page images). 2022 comes from allabrf.se, whose /dokument page links the
   public PDFs directly (tools/brf/allabrf.py); 2021 and 2023-2025 are not public: brflaken.se keeps its archive behind a member login (and blocked
   this IP after a crawl), and svenskbrf.se stops at 2020. With 2021 missing, 2022 is unchained (no CASH/DEBT check).
 

@@ -11,7 +11,7 @@ built_basis: byggnadsår
 registered: 1968
 fiscal_year: 07-01 – 06-30
 management: HSB Stockholm
-verified_through: 2024              # FY 2020/21–2024/25 chained, 2019/20 as opening balance
+verified_through: 2024              # FY 2017/18–2024/25 chained (fiscal years July–June)
 source: arsredovisning-2024-2025-brf-pluto2.pdf p2–5
 links:
   hsb: https://www.hsb.se/stockholm/brf/pluto/info/arsredovisning/
@@ -58,9 +58,14 @@ stambyte:                        # derived from pipe_works.csv; rubric in annual
     The pipe risk is gone for decades; the cost now sits in the loans and the fees (+2% 2024, +5% 2026).
 
 data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
+  FY 2017/18–2019/20 from HSB's folder and svenskbrf (2019/20 entered by hand from the scan). Nothing before 2017/18 is found:
+  HSB's folder has no older file under the usual names, and svenskbrf starts at 2017/18; FY 2025/26 is not yet published.
   The one-off 5.0 MSEK compensation to members with earlier renovated bathrooms (FY 2024/25) is
   stored under 30 Övriga driftkostnader, see checked_by_eye.csv.
   FY 2020/21 counts property differently (58 lokaler at 0 m², 266 parking and garage places combined);
   later years list garage, p-platser and förråd separately. FY 2020/21: the BR line Kortfristiga placeringar
   is OCR'd as 2 560 000; it is cited from note 12 (2 500 000), which the liquidity total confirms.
   FY 2020/21 Nettoomsättning is cited from note 1 because OCR loses the RR line.
+
+sources:                         # checked by tools/brf/source_gap.py
+  - {url: https://www.hsb.se/contentassets/f3bfccad60ed4c8485e2cbcf5c11b5ad/, note: "HSB archive folder (no listing page); arsredovisning-<y>-<y+1>.pdf from 2017/18"}

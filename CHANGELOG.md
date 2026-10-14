@@ -8,9 +8,23 @@ The deployed version is `API_VERSION` in [api/function_app.py](api/function_app.
 of the spec; `GET /health` returns it. A new endpoint or field is a minor version; a fix or a change in what
 data is served is a patch. Loading newly extracted annual reports (a new BRF or year, no change to the spec)
 is therefore a **patch**: bump `API_VERSION`, add a release entry here with the BRFs and years under **Data**,
-deploy the code (README), then `provision` + `flip`.
+deploy the code (README), then `provision` + `flip`. Release once per request, not per BRF or per report: finish the whole
+request (every BRF and year asked for), let the user verify the complete result, then commit, deploy and flip.
 
 ## [Unreleased]
+
+## [0.11.4] - 2026-10-15
+
+### Data
+- Gösen 2011–2016, 2022 and 2025, Pluto FY 2017/18–2019/20, Siken FY 2018/19, 2019/20 and 2025/26, Laken 2019 and Solhöjden
+  2017 (July 2017–December 2018), 2019 and 2020 extracted and verified. Ten Tyresö BRFs now have: Sjötungan, Gäddan,
+  Björkbacken 15 years; Gösen 14; Bergfoten 12; Pluto and Siken 8; Solhöjden 5; Laken 3; Almandinen 2.
+- Gösen 2014 and Solhöjden 2019–2020 have one-off items (a settlement, a tenant compensation, a land sale) that no category
+  holds; those years are `check_failed` with a note.
+
+### Changed
+- `tools/brf/validate.py` checks a year whose previous year is not stored when its opening is restated, and skips the debt
+  identity without a previous year.
 
 ## [0.11.3] - 2026-10-14
 
@@ -180,6 +194,7 @@ deploy the code (README), then `provision` + `flip`.
 
 ## Data
 
+- 2026-10-15 (0.11.4): 15-year request for ten Tyresö BRFs completed as far as reports are found (see the 0.11.4 entry).
 - 2026-10-14 (0.11.3): Bergfoten 2012, 2013, 2015, 2017, 2018 extracted and verified (12 years).
 - 2026-10-14 (0.11.2): Björkbacken 2010–2012 and 2014–2020 extracted and verified (15 years); `tools/brf/source_gap.py` lists
   documents on known source pages that are not imported yet; Gösen 2017–2018 and Solhöjden 2017–2020 imported, not extracted.

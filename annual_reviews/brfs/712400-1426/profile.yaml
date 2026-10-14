@@ -13,7 +13,7 @@ registered: 1961
 fiscal_year: 05-01 – 04-30
 management: HSB Stockholm (förvaltningsavtal)
 heating: district heating with heat recovery (återvinningsvärme) since 2018–2019
-verified_through: 2024        # 2020–2024 chained (fiscal years May–April), 2019 as opening balance
+verified_through: 2025        # 2018–2025 chained (fiscal years May–April)
 source: Arsredovisning-BRF-Siken-i-Tyreso-2024.pdf p2–4
 links:
   allabrf: https://www.allabrf.se/hsb-brf-siken-i-tyreso
@@ -63,7 +63,13 @@ stambyte:                        # derived from pipe_works.csv; rubric in annual
     the range; the underhållsplan would settle it.
 
 data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
+  2018 (scan) and 2019 entered by hand from the OCR text and page images; 2025 is 2025-2026---publik-arsredovisning.pdf in
+  HSB's folder. 2025: the note merges Fastighetsskötsel och förvaltning into one line, so 2 holds it (no 29) with Snö (55) as
+  its only split. Nothing before 2018/19 is found.
   2023: the 2023/24 report restates the opening cash (12 256 kr moved from Kassa och bank to Övriga fordringar); recorded in restatements.csv.
   2022 and earlier: the BR lists the HSB avräknings- and placeringskonto separately (states 3, 4), so 2 is Kassa och bank only; from 2023 2 is the KF total.
   2020: the report counts 14 lokaler (298 m²), later reports 2–3 (212–243 m²): a changed basis, stored as printed.
   Property care is one merged line in the report (skötsel, lokalvård och samfälligheter).
+
+sources:                         # checked by tools/brf/source_gap.py
+  - {url: https://www.hsb.se/contentassets/01cbe2f140c64d928887343d2128ba70/, note: "HSB archive folder (no listing page); names vary per year"}

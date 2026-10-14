@@ -1,0 +1,5 @@
+table,year,category_id,note
+financial_events,2018,20,"Avgifts- och hyresbortfall -267 177 + Hyresförluster -119 (Not 1), read from the page image (the scan is garbled for OCR)"
+financial_events,2018,21,"Reparationer 573 737 (Not 2), read from the page image"
+financial_events,2018,24,"Vatten 848 803 (Not 2), read from the page image"
+financial_events,2018,37,"Extern revision 19 288 (Not 3), read from the page image"

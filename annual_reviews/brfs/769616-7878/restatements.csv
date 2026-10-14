@@ -1,0 +1,2 @@
+year,category_id,amount,file,page,x,y,width,height,note
+2019,2,8643617,Arsredovisning_2019_Brf_Solhojden.pdf,17,392,425,51,8,"KF Likvida medel vid årets början. The previous fiscal year (2017-07-01 - 2018-12-31) is filed under 2017, so 2019 has no 2018 row to chain from; its opening liquidity is the 2019 KF figure (= the 2017 report closing 8 643 617)."
