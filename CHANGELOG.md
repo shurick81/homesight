@@ -12,6 +12,13 @@ deploy the code (README), then `provision` + `flip`.
 
 ## [Unreleased]
 
+## [0.11.1] - 2026-10-14
+
+### Data
+- Gäddan 2011–2015 (from HSB's archive) and Sjötungan 2011–2015 verified: both now have 15 verified fiscal years
+  (2011–2025). Sjötungan 2011–2012 were rebuilt from the year's own report; 2012 is `check_failed` (the report's own
+  cash flow is 906 kr off its balance sheet).
+
 ## [0.11.0] - 2026-10-14
 
 ### Added
@@ -160,6 +167,8 @@ deploy the code (README), then `provision` + `flip`.
 
 ## Data
 
+- 2026-10-14 (0.11.1): Gäddan and Sjötungan 2011–2015 extracted and verified (15 years each); Björkbacken, Gösen,
+  Solhöjden, Laken, Siken, Pluto, Bergfoten and Almandinen cannot reach 15 years from public sources found so far.
 - 2026-10-14 (0.10.1): 20 reports from allabrf.se extracted and verified, six of them for BRFs new to the data
   (Solhöjden, Pigghajen, Tyresö Trädgårdar, Steget, Kvarteret Skogsbacken, Sander); Steget and Skogsbacken print
   no cash flow statement, so their cash is not stored.
