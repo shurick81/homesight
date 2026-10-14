@@ -6,4 +6,4 @@ municipality: Tyresö
 verified_through: 2022
 data_notes: 'Fiscal year 1 September - 31 August, filed under the year it starts (2021 = 2021-09-01 - 2022-08-31). FY2021 and FY2022 from
   allabrf.se. The reports have no cash flow statement (Riksbyggen layout), so cat 2 and the KF items are not stored and the CASH check for 2022
-  reports an error that is expected (events hold only the RR items).'
+  does not run (validate.py says "not checked").'

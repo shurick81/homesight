@@ -3,9 +3,19 @@ name: HSB Brf Björkbacken i Tyresö
 short_name: Björkbacken
 orgnr: 712400-0139
 municipality: Tyresö
+verified_from: 2010           # 2006-2009 are imported but not extracted
 verified_through: 2025
-data_notes: '2020 is held for its closing balances only. The 2020-2022 reports have no cash flow statement, so cat 2 (cash) and the KF items are
-  not stored for those years and the CASH check cannot run for 2021-2022; the 2023 report''s opening liquidity (6 357 582) is in restatements.csv.
+data_notes: 'Own site brfbjorkbacken.se/sidor/arsredovisningar lists every report 2007-2025 (source_gap.py checks it). The reports before 2023 have no
+  cash flow statement (a "förändring likvida medel" table in 2016-2019), so cat 2 (cash) and the KF items are not stored for 2010-2022 and the
+  CASH check does not run; the 2023 report''s opening liquidity (6 357 582) is in restatements.csv.
+
+  Fiscal years: May-April until 2013 (a report is filed under the year it starts: 2010 = 2010-05-01 - 2011-04-30, 2012 = 2012-05-01 -
+  2013-04-30); the books then moved to the calendar year, with an 8-month period May-December 2013 for which no stand-alone report is
+  published (it is only the comparison column of the 2014 report), so 2013 is missing. 2010-2012 and 2014-2015 are scans entered by hand from
+  the OCR text and page images (the RR of 2010-2012 lists the cost groups as separate lines: 1 is their sum); 2015 has stray punctuation in
+  its numbers; 2016-2019 are in the SBC layout (Not 4 in sections with printed subtotals: 21 and 31 are the subtotals). 2018 has `ocr: force`
+  (its text layer lacks the minus glyph). Korttidsinventarier is cat 35 in 2010-2015 and part of 42 in 2016-2019. Only 2021 onwards has
+  property and board rows.
   HSB keeps most liquidity as klientmedel inside Övriga fordringar, so Kassa och bank alone understates cash.
 
   Notes: Driftkostnader are one note over two pages (p15-16); the remainder (cat 30) is taken from p15 and the maintenance lines (31) from p16.

@@ -12,6 +12,13 @@ deploy the code (README), then `provision` + `flip`.
 
 ## [Unreleased]
 
+## [0.11.2] - 2026-10-14
+
+### Data
+- Björkbacken 2010–2012 and 2014–2019 extracted and verified from the reports its own site lists (2020 completed): 15 fiscal
+  years 2010–2025 (the books changed from May–April to calendar year in 2013 and no report covers May–December 2013). Reports
+  without a cash flow statement now show `cash_not_stored` in `warnings`.
+
 ## [0.11.1] - 2026-10-14
 
 ### Data
@@ -167,6 +174,8 @@ deploy the code (README), then `provision` + `flip`.
 
 ## Data
 
+- 2026-10-14 (0.11.2): Björkbacken 2010–2012 and 2014–2020 extracted and verified (15 years); `tools/brf/source_gap.py` lists
+  documents on known source pages that are not imported yet; Gösen 2017–2018 and Solhöjden 2017–2020 imported, not extracted.
 - 2026-10-14 (0.11.1): Gäddan and Sjötungan 2011–2015 extracted and verified (15 years each); Björkbacken, Gösen,
   Solhöjden, Laken, Siken, Pluto, Bergfoten and Almandinen cannot reach 15 years from public sources found so far.
 - 2026-10-14 (0.10.1): 20 reports from allabrf.se extracted and verified, six of them for BRFs new to the data

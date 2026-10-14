@@ -10,7 +10,8 @@ event categories (e.g. Driftkostnader vs the sum of its sub-items), and the
 identities that chain consecutive years (see annual_reviews/brfs/README.md):
 
   CASH  sum of top-level financial_events(Y) == L(Y) - L(Y-1),  L = states 2+3+4+5
-        (an ERROR when off by more than CASH_TOLERANCE kr)
+        (an ERROR when off by more than CASH_TOLERANCE kr; INFO "not checked" when no liquidity is stored
+        for Y or for the year before it, e.g. a report without a cash flow statement)
   DEBT  event 3 (financing)(Y) == D(Y) - D(Y-1),  D = states 0+1
         (INFO when off: the difference is financing that is not loans, e.g. insatser)
   AREA  property total yta == sum of the area rows under it, when the report prints a total (ERROR when off)
@@ -162,13 +163,19 @@ def main():
             continue
         cur, prev, ev = all_states[y], all_states[y - 1], all_events[y]
         flows = sum(a for cid, a in ev.items() if cid in tops)
-        d_cash = sum(cur.get(c, 0) for c in LIQUIDITY) - opening(y, prev, LIQUIDITY)
-        diff = flows - d_cash
-        line = f"CASH  {y}: events {flows:>12}  vs  change in liquidity {d_cash:>12}  diff {diff:>10}"
-        if abs(diff) > CASH_TOLERANCE:
-            bad(line)
+        has_close = any(c in cur for c in LIQUIDITY)
+        has_open = any(c in prev for c in LIQUIDITY) or any(c in restated.get(y, {}) for c in LIQUIDITY)
+        if has_close and has_open:
+            d_cash = sum(cur.get(c, 0) for c in LIQUIDITY) - opening(y, prev, LIQUIDITY)
+            diff = flows - d_cash
+            line = f"CASH  {y}: events {flows:>12}  vs  change in liquidity {d_cash:>12}  diff {diff:>10}"
+            if abs(diff) > CASH_TOLERANCE:
+                bad(line)
+            else:
+                print("OK    " + line)
         else:
-            print("OK    " + line)
+            print(f"INFO  CASH  {y}: not checked, no liquidity stored for "
+                  f"{y if not has_close else y - 1} (the report has no cash flow statement)")
         if FINANCING in ev:
             d_debt = sum(cur.get(c, 0) for c in DEBT) - opening(y, prev, DEBT)
             gap = ev[FINANCING] - d_debt

@@ -2,7 +2,7 @@
   "openapi": "3.0.3",
   "info": {
     "title": "homesight BRF API",
-    "version": "0.11.1",
+    "version": "0.11.2",
     "description": "Read-only data for deciding which Swedish apartment to buy, built for LLM agents. Two layers:\n\n- **Market (Booli snapshot)** for Stockholm, Nacka, Solna and Tyresö: apartments and houses for sale (GET /advertisements), one row per BRF with an apartment for sale (GET /brfs), område/kommun/city statistics (GET /areas, /kommuns, /cities) and sold prices (GET /sales/stats/avg-price-per-sqm). These follow the contract of the Real Estate Data API (llm-brf.github.io); Booli's BRF figures are as Booli shows them, unverified.\n- **Verified BRF layer:** for BRFs whose annual reports (årsredovisningar) are extracted, every figure is taken from the report and verified, and links back to the page it came from: `brf_report_*` on /brfs and /advertisements rows, GET /brfs/{orgnr} (`report`) and GET /brfs/{orgnr}/financials. GET /brfs?has_report=true lists these BRFs.\n\nA BRF is identified by its organisationsnummer (orgnr, format NNNNNN-NNNN). Amounts are SEK, areas m², fees per month; a fiscal year that does not follow the calendar year is labelled by the year it starts. GET /llms.txt is a short guide."
   },
   "paths": {
