@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Build fee_timeline.json for fee_timeline.html: årsavgift per m² over the last 15 years for the largest BRFs
-of a municipality.
+"""Build fee_timeline.json for fee_timeline.html: årsavgift per m² and the average sale price per m² over the
+last 15 years for the largest BRFs of a municipality.
 
 Usage: build_fee_timeline.py [--municipality Tyresö] [--top 10] [--years 15]
        (reads annual_reviews/brfs/**, writes fee_timeline.json in the repo root)
@@ -12,19 +12,53 @@ areas under half the BRF's area are not building totals and are skipped. BRFs ar
 living_area_m2. Only years up to verified_through are used. A fiscal year that is not 12 months long (general_states
 0 Räkenskapsår, e.g. Solhöjden's 18-month 2017) is scaled to 12 months.
 
+Sale price per m² = the mean of final_price_kr / living_area_m2 over the year's sales of the BRF in the Booli snapshot
+(market/booli/, unverified listing data; Booli links each sale to its BRF, mapped to an orgnr by brf_details).
+Years with fewer than MIN_SALES sales are left out. The same mean over every bostadsrätt sale in the municipality
+(Booli's kommun) is the reference line.
+
 View: serve the repo root over http (fetch doesn't load from file://), e.g.
   python3 -m http.server 8001 --bind 127.0.0.1   # then open http://127.0.0.1:8001/fee_timeline.html
 """
-import argparse, csv, json, re
+import argparse, csv, gzip, json, re
 from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 BRFS = ROOT / "annual_reviews/brfs"
+BOOLI = ROOT / "market/booli"
 OUT = ROOT / "fee_timeline.json"
+MIN_SALES = 3
 
 def read(p):
     return list(csv.DictReader(p.open(encoding="utf-8"))) if p.exists() else []
+
+def read_gz(p):
+    with gzip.open(p, "rt", encoding="utf-8-sig") as f:
+        return list(csv.DictReader(f))
+
+def sale_prices(orgnrs, municipality, first_year, last_year):
+    """{orgnr: [{year, n, kr_m2}]}: mean sale price per m² per year from the Booli snapshot; the key
+    municipality holds the same over every sale in the municipality."""
+    org_of = {r["booli_brf_id"]: r["org_number"] for r in read_gz(BOOLI / "brf_details_booli.csv.gz")}
+    by = {}
+    for r in read_gz(BOOLI / "sales_booli.csv.gz"):
+        org = org_of.get(r["booli_brf_id"])
+        if r["object_type"] != "bostadsrätt":
+            continue
+        try:
+            price, area, year = float(r["final_price_kr"]), float(r["living_area_m2"]), int(r["sold_date"][:4])
+        except ValueError:
+            continue
+        if not (price > 0 and area > 0 and first_year <= year <= last_year):
+            continue
+        if org in orgnrs:
+            by.setdefault(org, {}).setdefault(year, []).append(price / area)
+        if r["kommun"] == municipality:
+            by.setdefault(municipality, {}).setdefault(year, []).append(price / area)
+    return {org: [{"year": y, "n": len(v), "kr_m2": round(sum(v) / len(v))}
+                  for y, v in sorted(years.items()) if len(v) >= MIN_SALES]
+            for org, years in by.items()}
 
 def short_name(name):
     n = re.sub(r"^(HSB |Riksbyggen )?(Bostadsrättsföreningen|Bostadsrättsförening|Brf|BRF)\s+", "", name)
@@ -81,13 +115,18 @@ def main():
                      "area": round(base), "points": points})
 
     first_year = last_year - a.years + 1
+    sales = sale_prices({b["orgnr"] for b in brfs}, a.municipality, first_year, last_year)
     for b in brfs:
         b["points"] = [p for p in b["points"] if p["year"] >= first_year]
+        b["sales"] = sales.get(b["orgnr"], [])
+    snapshot = re.search(r"sales:\s*\n\s*file:.*\n\s*snapshot:\s*(\S+)", (ROOT / "market/sources.yaml").read_text(encoding="utf-8"))
     OUT.write_text(json.dumps({"municipality": a.municipality, "first_year": first_year, "last_year": last_year,
-                               "built": date.today().isoformat(), "unranked": unranked, "brfs": brfs},
+                               "built": date.today().isoformat(),
+                               "sales_snapshot": snapshot.group(1) if snapshot else None, "min_sales": MIN_SALES,
+                               "municipality_sales": sales.get(a.municipality, []), "unranked": unranked, "brfs": brfs},
                               ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    n = sum(len(b["points"]) for b in brfs)
-    print(f"{OUT.relative_to(ROOT)}: {len(brfs)} BRFs, {n} BRF-years, {first_year}–{last_year}")
+    n, m = sum(len(b["points"]) for b in brfs), sum(len(b["sales"]) for b in brfs)
+    print(f"{OUT.relative_to(ROOT)}: {len(brfs)} BRFs, {n} fee years, {m} sale-price years, {first_year}–{last_year}")
 
 if __name__ == "__main__":
     main()
