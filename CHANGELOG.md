@@ -6,8 +6,9 @@ format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 The deployed version is `API_VERSION` in [api/function_app.py](api/function_app.py), also the `info.version`
 of the spec; `GET /health` returns it. A new endpoint or field is a minor version; a fix or a change in what
-data is served is a patch. Loading newly extracted annual reports (`provision` + `flip`) changes the data but
-not the API, and is listed under **Data**.
+data is served is a patch. Loading newly extracted annual reports (a new BRF or year, no change to the spec)
+is therefore a **patch**: bump `API_VERSION`, add a release entry here with the BRFs and years under **Data**,
+deploy the code (README), then `provision` + `flip`.
 
 ## [Unreleased]
 
