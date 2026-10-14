@@ -10,7 +10,7 @@ built_to: 1966
 built_basis: byggnadsår
 registered: 1965
 fiscal_year: 01-01 – 12-31
-verified_through: 2025              # 2020–2025 chained, 2019 as opening balance
+verified_through: 2025              # 2012-2013 and 2018-2025 chained; 2015 and 2017 unchained (2014, 2016 not found)
 source: bergfoten-arrsredovisning-2025.pdf p2–4
 
 major_works:                     # "Sedan föreningen startade har följande större åtgärder genomförts"
@@ -50,3 +50,11 @@ stambyte:                        # derived from pipe_works.csv; rubric in annual
 
 data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
   Property care and förvaltning are one merged line in the report.
+  2012, 2013, 2015, 2017 and 2018 come from HSB's folder (names in sources:); 2014 and 2016 are not found yet, so 2015 and 2017
+  are unchained. 2012-2013 use the old HSB layout: Drift (Not 2) includes a Personalkostnader line (stored as 6) and Fastighetsskatt
+  is its own RR line, so 1 is Drift minus personnel plus Fastighetsskatt and 30 is Övriga avgifter + Övriga driftskostnader. The
+  2012 KF books a new 5 MSEK kortfristig placering as an increase in receivables (liquidity = avräkningskonto + kassa); the 2013 KF
+  counts it as liquidity, so its opening liquidity (9 553 389) is in restatements.csv. 2012-2015 have one loan line (cat 1).
+
+sources:                         # listing pages checked by tools/brf/source_gap.py (files in HSB's folder are found by name, no listing page works)
+  - {url: https://www.hsb.se/contentassets/07df96ff83694b6d93f50ca191cd2514/, note: "HSB archive folder: arsredovisning-<year>.pdf 2019-, arsredovisning-bergfoten-<year>.pdf 2013/2015/2017, arsredov.-2019.pdf = FY2018, arsredovisning_12_bergfoten_21401.pdf = FY2012; 2011, 2014, 2016 not found"}

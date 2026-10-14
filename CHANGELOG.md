@@ -12,6 +12,12 @@ deploy the code (README), then `provision` + `flip`.
 
 ## [Unreleased]
 
+## [0.11.3] - 2026-10-14
+
+### Data
+- Bergfoten 2012, 2013, 2015, 2017 and 2018 extracted and verified (from HSB's archive folder): 12 fiscal years (2014 and 2016
+  not found).
+
 ## [0.11.2] - 2026-10-14
 
 ### Data
@@ -174,6 +180,7 @@ deploy the code (README), then `provision` + `flip`.
 
 ## Data
 
+- 2026-10-14 (0.11.3): Bergfoten 2012, 2013, 2015, 2017, 2018 extracted and verified (12 years).
 - 2026-10-14 (0.11.2): Björkbacken 2010–2012 and 2014–2020 extracted and verified (15 years); `tools/brf/source_gap.py` lists
   documents on known source pages that are not imported yet; Gösen 2017–2018 and Solhöjden 2017–2020 imported, not extracted.
 - 2026-10-14 (0.11.1): Gäddan and Sjötungan 2011–2015 extracted and verified (15 years each); Björkbacken, Gösen,

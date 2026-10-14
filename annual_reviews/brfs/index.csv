@@ -1,5 +1,5 @@
 orgnr,name,municipality,built_from,built_to,built_source,land_tenure,apartments,living_area_m2,fiscal_year,reports_held,extracted_fy,verified_through,stambyte_last,stambyte_next,stambyte_next_status,stambyte_next_confidence,stamspolning_done,stamspolning_next,stamspolning_regular
-712400-0089,HSB Bostadsrättsförening Bergfoten i Tyresö,Tyresö,1964,1966,"report byggnadsår (1964 och 1966, FY2025)",äganderätt,180,15909,01-01 – 12-31,2019–2025,2025,2025,2023–2024,2064–2074,estimated,low,2019,,once
+712400-0089,HSB Bostadsrättsförening Bergfoten i Tyresö,Tyresö,1964,1966,"report byggnadsår (1964 och 1966, FY2025)",äganderätt,180,15909,01-01 – 12-31,2012–2013;2015;2017–2025,2025,2025,2023–2024,2064–2074,estimated,low,2019,,once
 712400-0139,HSB Brf Björkbacken i Tyresö,Tyresö,1964,1964,"report byggnadsår (1964, FY2025)",äganderätt,383,33588,,2006–2012;2014–2025,2025,2025,,,,,,,
 712400-0444,HSB Brf Gösen i Tyresö,Tyresö,,,,äganderätt,,,,2017–2021;2023,2023,2023,,,,,,,
 712400-0808,HSB Brf Laken i Tyresö,Tyresö,1962,1962,"report byggnadsår (1962, FY2020)",,273,19500,,2019–2020;2022,2022,2022,,,,,,,

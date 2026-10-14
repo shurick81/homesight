@@ -21,7 +21,7 @@ import advertisements
 import brfs
 from params import _parse_brf_name_search, _parse_kommun, _parse_rooms, _parse_year
 
-API_VERSION = "0.11.2"
+API_VERSION = "0.11.3"
 HERE = Path(__file__).parent
 ORGNR_RE = re.compile(r"^\d{6}-\d{4}$")
 CORS = {"Access-Control-Allow-Origin": "*"}   # public read-only data, no credentials

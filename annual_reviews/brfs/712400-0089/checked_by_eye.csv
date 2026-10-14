@@ -1,0 +1,5 @@
+table,year,category_id,note
+financial_events,2015,20,"Avgifts- och hyresbortfall -50 997 + Hyresförluster -14 (Not 1); the scan prints the first as '-so 997' for OCR, but Not 1 then adds up to Nettoomsättning 12 843 677 (validate.py)"
+financial_events,2013,1,"Drift (RR, Not 2 total) minus the Personalkostnader line of Not 2 plus Fastighetsskatt (RR): the RR has no Personalkostnader line, so the personnel inside Drift is cat 6 and the tax joins Driftkostnader as in later years; the children then add up (validate.py)"
+financial_events,2012,1,"Drift (RR, Not 2 total) minus the Personalkostnader line of Not 2 plus Fastighetsskatt (RR): the RR has no Personalkostnader line, so the personnel inside Drift is cat 6 and the tax joins Driftkostnader as in later years; the children then add up (validate.py)"
+financial_events,2012,17,"Årsavgifter 12 025 920 plus El, enhetsmätning -524 (Not 1)"
