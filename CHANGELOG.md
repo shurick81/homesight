@@ -136,6 +136,7 @@ not the API, and is listed under **Data**.
 
 ## Data
 
+- 2026-10-14: HSB Brf Laken 2020 (and 2019 closing balances) extracted and verified; no later report is public.
 - 2026-10-13: Brf Fyrhöjden (Kärrtorp, Stockholm; tomträtt) 2021–2025 extracted and verified (2019–2020 held for
   closing balances); `tools/brf/pdfwords.py` also ignores the Visma e-signing stamp.
 - 2026-10-13: Centrala Tyresö: Tyresö View 1, Diamanten, Björkbacken, Delfinen, Skogslunden and Safiren
