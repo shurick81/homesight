@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Årsavgift per kvm i Tyresö</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+  /* One column: lede, the timeline, the year-by-year table, notes. Colours follow source_viewer.html's blue. */
+  :root {
+    --bg: #f7f9fd; --panel: #ffffff; --text: #2f3d52; --muted: #5e6b80; --border: #d5dfef; --grid: #e6ecf6;
+    --accent: #1f3f95; --rule: #8a97ad;
+    --s1: #1f5fbf; --s2: #d4692a; --s3: #2a8f60; --s4: #c23b56; --s5: #7650c0;
+    --s6: #8a6a3b; --s7: #c84a9c; --s8: #4f5d74; --s9: #9a9310; --s10: #15909e;
+    --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #10151f; --panel: #171e2b; --text: #dde4f0; --muted: #98a4b8; --border: #2a3446; --grid: #222b3a;
+      --accent: #8fb2f7; --rule: #6b7890;
+      --s1: #6ea2f5; --s2: #f29a5c; --s3: #5cc792; --s4: #ee6f88; --s5: #a988e8;
+      --s6: #c9a36a; --s7: #ef86c6; --s8: #a5b0c2; --s9: #d4cd4a; --s10: #4fcad6;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #10151f; --panel: #171e2b; --text: #dde4f0; --muted: #98a4b8; --border: #2a3446; --grid: #222b3a;
+    --accent: #8fb2f7; --rule: #6b7890;
+    --s1: #6ea2f5; --s2: #f29a5c; --s3: #5cc792; --s4: #ee6f88; --s5: #a988e8;
+    --s6: #c9a36a; --s7: #ef86c6; --s8: #a5b0c2; --s9: #d4cd4a; --s10: #4fcad6;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 var(--font); }
+  .page { max-width: 72rem; margin-inline: auto; padding: 32px 16px 48px; display: grid; gap: 24px; }
+  header { display: grid; gap: 8px; }
+  .eyebrow { margin: 0; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+  h1 { margin: 0; font-size: clamp(22px, 3.2vw, 30px); line-height: 1.2; text-wrap: balance; font-weight: 650; }
+  .lede { margin: 0; max-width: 64ch; font-size: 16px; }
+  .lede b { font-weight: 650; font-variant-numeric: tabular-nums; }
+  .def { margin: 0; max-width: 70ch; font-size: 13px; color: var(--muted); }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 20px; display: grid; gap: 14px; min-width: 0; }
+  h2 { margin: 0; font-size: 17px; font-weight: 600; }
+  .note { margin: 0; font-size: 13px; color: var(--muted); max-width: 72ch; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 8px; }
+  .chip { display: inline-flex; align-items: center; gap: 7px; font: inherit; font-size: 13px; color: var(--text); background: transparent;
+          border: 1px solid var(--border); border-radius: 999px; padding: 3px 11px; cursor: pointer; transition: opacity .2s, border-color .2s; }
+  .chip:hover { border-color: var(--rule); }
+  .chip:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .chip[aria-pressed="true"] { border-color: var(--text); font-weight: 600; }
+  .sw { width: 16px; height: 0; border-top: 2.5px solid currentColor; display: inline-block; flex: none; }
+  .chart { position: relative; min-height: 440px; }
+  .chart svg { display: block; overflow: visible; }
+  .chart text { font-family: var(--font); }
+  .tip { position: absolute; pointer-events: none; background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
+         box-shadow: 0 6px 20px rgb(0 0 0 / .14); padding: 8px 10px; font-size: 12.5px; min-width: 12rem; display: grid; gap: 2px; z-index: 2; }
+  .tip[hidden] { display: none; }
+  .tip-year { color: var(--muted); margin-bottom: 3px; }
+  .tip-row { display: grid; grid-template-columns: 16px 1fr auto; align-items: center; gap: 7px; font-variant-numeric: tabular-nums; }
+  .tip-row.focus { font-weight: 650; }
+  .tip-foot { color: var(--muted); margin-top: 4px; font-size: 11.5px; }
+  .tablewrap { overflow-x: auto; }
+  table { border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; width: 100%; }
+  th, td { padding: 7px 8px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--grid); }
+  th { color: var(--muted); font-weight: 600; position: sticky; top: 0; background: var(--panel); }
+  th:first-child, td:first-child { text-align: left; position: sticky; left: 0; background: var(--panel); z-index: 1; }
+  td a { color: inherit; text-decoration: none; border-bottom: 1px dotted var(--rule); }
+  td a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  td.gap { color: var(--muted); }
+  td.chg { font-weight: 650; }
+  .name { display: inline-flex; align-items: center; gap: 8px; }
+  .notes { margin: 0; padding-left: 1.1rem; display: grid; gap: 6px; font-size: 13.5px; color: var(--muted); max-width: 76ch; }
+  .error { color: var(--muted); font-size: 14px; }
+  footer { font-size: 12px; color: var(--muted); }
+  footer a { color: var(--accent); }
+  @media (prefers-reduced-motion: no-preference) {
+    .line { stroke-dashoffset: 0; animation: draw 900ms cubic-bezier(.2,.7,.2,1) both; }
+    @keyframes draw { from { opacity: 0; } to { opacity: 1; } }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <p class="eyebrow">Tyresö · bostadsrättsföreningar</p>
+    <h1>Årsavgift per kvm i Tyresös tio största föreningar</h1>
+    <p class="lede" id="lede">Läser data…</p>
+    <p class="def">Årsavgift per kvm är årets årsavgifter enligt not till nettoomsättningen, delat med föreningens bostadsrättsyta.
+      Alla år som visas är extraherade och kontrollerade mot årsredovisningen. Ett glapp betyder att årsredovisningen för det året saknas.</p>
+  </header>
+
+  <section class="card" id="tidslinje">
+    <h2 id="chart-title">Tidslinje</h2>
+    <p class="note">Kronor per kvm bostadsrättsyta och år. För muspekaren över diagrammet för att se alla föreningar ett visst år. Peka på en linje eller ett namn för att markera föreningen, och klicka på namnet för att låsa markeringen. Prickade linjer går över år som saknas.</p>
+    <div class="legend" id="legend"></div>
+    <div class="chart" id="chart"></div>
+  </section>
+
+  <section class="card" id="tabell">
+    <h2>År för år</h2>
+    <p class="note">Störst först, efter bostadsrättsyta. Klicka på ett värde för att öppna årsredovisningen i källvisaren. Förändringen är från 2021 till föreningens senaste år.</p>
+    <div class="tablewrap"><table id="table"></table></div>
+  </section>
+
+  <section class="card" id="att-veta">
+    <h2>Bra att veta</h2>
+    <ul class="notes" id="notes">
+      <li>Rangordningen bygger på bostadsrättsytan. Föreningar utan inläst yta kan inte rangordnas och saknas: <span id="unranked"></span>.</li>
+      <li>Ett år utan egen uppgift om bostadsrättsyta använder närmaste tidigare års yta, annars närmaste senare. Sjötungan redovisade före 2020 en större ”bostadsyta” på annan grund. Därför används den nuvarande bostadsrättsytan bakåt, så att linjen visar avgiftens förändring och inte ett byte av mätgrund.</li>
+      <li>Solhöjdens räkenskapsår 2017 omfattar 18 månader (2017-07-01 – 2018-12-31) och är omräknat till 12 månader.</li>
+      <li>Gäddans yta är hela bostadsytan inklusive hyresrätter, medan årsavgifterna bara kommer från bostadsrätterna. Gäddans värde är därför något för lågt.</li>
+      <li>Årsredovisningarnas egna nyckeltal kan skilja sig något, eftersom de vissa år räknar bort separat debiterade avgifter (el, bredband) eller använder total yta.</li>
+    </ul>
+  </section>
+
+  <footer id="footer">Data: <code>annual_reviews/brfs</code>, byggd med <code>tools/brf/build_fee_timeline.py</code>. Källor per värde: <a href="source_viewer.html">källvisaren</a>.</footer>
+</div>
+
+<script>
+(async function () {
+  const sv = (n) => d3.formatLocale({ decimal: ',', thousands: ' ', grouping: [3], currency: ['', ' kr'] }).format(n);
+  const fmt = sv(',');
+  const pct = sv('+.0%');
+  const pct0 = sv('.0%');
+  const colors = Array.from({ length: 10 }, (_, i) => `var(--s${i + 1})`);
+  let data;
+  try { data = await (await fetch('fee_timeline.json')).json(); }
+  catch (e) {
+    document.getElementById('lede').innerHTML = '<span class="error">Kunde inte läsa fee_timeline.json. Kör tools/brf/build_fee_timeline.py och öppna sidan över http.</span>';
+    return;
+  }
+  const F = data.first_year, L = data.last_year;
+  const series = data.brfs.map((b, i) => ({ ...b, color: colors[i % colors.length], last: b.points[b.points.length - 1] }));
+  let focused = null;   // clicked: stays until clicked again
+  let hovered = null;   // under the pointer: wins over focused while it lasts
+  const active = () => hovered ?? focused;
+  const setHover = (org) => { if (org !== hovered) { hovered = org; applyFocus(); } };
+
+  document.getElementById('chart-title').textContent = `Tidslinje ${F}–${L}`;
+  document.getElementById('unranked').textContent = data.unranked.length ? data.unranked.join(', ') : 'inga';
+  document.getElementById('footer').append(` Uppdaterad ${data.built}.`);
+
+  // Lede: median change 2021 → last year among BRFs with both, and the highest last-year fee.
+  const at = (b, y) => b.points.find((p) => p.year === y);
+  const both = series.filter((b) => at(b, 2021) && at(b, L));
+  const chg = both.map((b) => at(b, L).kr_m2 / at(b, 2021).kr_m2 - 1);
+  const top = series.filter((b) => at(b, L)).sort((a, b) => at(b, L).kr_m2 - at(a, L).kr_m2)[0];
+  const lede = document.getElementById('lede');
+  lede.textContent = '';
+  const B = (t) => { const el = document.createElement('b'); el.textContent = t; return el; };
+  lede.append(
+    `Från 2021 till ${L} steg årsavgiften per kvm med `, B(pct0(d3.median(chg))), ` i mediantal, bland de `, B(String(both.length)),
+    ` föreningar som har båda åren. Högst ${L}: `, B(top.short), ' med ', B(`${fmt(at(top, L).kr_m2)} kr/kvm`), '.'
+  );
+
+  // Legend chips double as focus toggles.
+  const legend = document.getElementById('legend');
+  for (const s of series) {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'chip'; b.dataset.org = s.orgnr;
+    const sw = document.createElement('span'); sw.className = 'sw'; sw.style.color = s.color;
+    b.append(sw, s.short);
+    b.addEventListener('click', () => { focused = focused === s.orgnr ? null : s.orgnr; applyFocus(); });
+    b.addEventListener('pointerenter', () => setHover(s.orgnr));
+    b.addEventListener('pointerleave', () => setHover(null));
+    legend.appendChild(b);
+  }
+  function applyFocus() {
+    document.querySelectorAll('.chip').forEach((c) => {
+      c.setAttribute('aria-pressed', String(c.dataset.org === focused));
+    });
+    const a = active();
+    d3.selectAll('.series .halo').attr('opacity', (d) => (d.orgnr === a ? 0.5 : 0));
+    d3.selectAll('.series .end').attr('font-weight', (d) => (d.orgnr === a ? 650 : null));
+    d3.selectAll('.series').filter((d) => d.orgnr === a).raise();
+    d3.selectAll('.tip-row').classed('focus', function () { return this.dataset.org === a; });
+  }
+
+  function draw() {
+    const box = document.getElementById('chart');
+    box.textContent = '';
+    const W = box.clientWidth || 700;
+    const narrow = W < 560;
+    const H = narrow ? 360 : 440;
+    box.style.minHeight = H + 'px';
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
+    const meas = svg.append('text').attr('font-size', 12);
+    const tw = (t) => { meas.text(t); return meas.node().getComputedTextLength(); };
+
+    const all = series.flatMap((s) => s.points.map((p) => p.kr_m2));
+    const y = d3.scaleLinear([Math.floor((d3.min(all) - 20) / 100) * 100, Math.ceil((d3.max(all) + 10) / 100) * 100], [0, 1]);
+    const yTicks = y.ticks(narrow ? 4 : 6);
+    const enders = series.filter((s) => s.last.year >= L - 1);
+    const label = (s) => (narrow ? s.short : `${s.short}  ${fmt(s.last.kr_m2)}`);
+    const m = { t: 10, b: 28, l: Math.max(...yTicks.map((t) => tw(fmt(t)))) + 10, r: Math.max(0, ...enders.map((s) => tw(label(s)))) + 18 };
+    meas.remove();
+    const x = d3.scaleLinear([F, L], [m.l, W - m.r]);
+    y.range([H - m.b, m.t]);
+
+    const grid = svg.append('g');
+    grid.selectAll('line').data(yTicks).join('line').attr('x1', m.l).attr('x2', W - m.r)
+      .attr('y1', (d) => y(d)).attr('y2', (d) => y(d)).attr('stroke', 'var(--grid)');
+    grid.selectAll('text').data(yTicks).join('text').attr('x', m.l - 8).attr('y', (d) => y(d)).attr('dy', '0.32em')
+      .attr('text-anchor', 'end').attr('font-size', 12).attr('fill', 'var(--muted)').text((d) => fmt(d));
+    const step = Math.ceil((L - F + 1) / Math.max(1, Math.floor((W - m.l - m.r) / 44)));
+    const years = d3.range(F, L + 1).filter((v) => (L - v) % step === 0);
+    const xa = svg.append('g').attr('transform', `translate(0,${H - m.b})`)
+      .call(d3.axisBottom(x).tickValues(years).tickFormat(d3.format('d')).tickSize(4).tickPadding(6));
+    xa.attr('font-size', null).attr('font-family', null);
+    xa.select('.domain').attr('stroke', 'var(--rule)');
+    xa.selectAll('.tick line').attr('stroke', 'var(--rule)');
+    xa.selectAll('.tick text').attr('fill', 'var(--muted)').attr('font-size', 12);
+
+    const rule = svg.append('line').attr('y1', m.t).attr('y2', H - m.b).attr('stroke', 'var(--rule)').attr('opacity', 0);
+
+    const full = (s) => d3.range(s.points[0].year, s.last.year + 1).map((yr) => ({ year: yr, v: at(s, yr)?.kr_m2 ?? null }));
+    const solid = d3.line().defined((d) => d.v != null).x((d) => x(d.year)).y((d) => y(d.v));
+    const bridge = d3.line().x((d) => x(d.year)).y((d) => y(d.kr_m2));
+    const g = svg.append('g').attr('class', 'lines').selectAll('.series').data(series).join('g').attr('class', 'series');
+    g.append('path').attr('class', 'bridge').attr('d', (s) => bridge(s.points)).attr('fill', 'none').attr('stroke', (s) => s.color)
+      .attr('stroke-width', 1.25).attr('stroke-dasharray', '1 4').attr('stroke-linecap', 'round');
+    g.append('path').attr('class', 'line').attr('d', (s) => solid(full(s))).attr('fill', 'none').attr('stroke', (s) => s.color)
+      .attr('stroke-width', 2).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round');
+    // Highlight: a wide translucent stroke over the whole line, bridges included; shown by applyFocus.
+    g.append('path').attr('class', 'halo').attr('d', (s) => bridge(s.points)).attr('fill', 'none').attr('stroke', (s) => s.color)
+      .attr('stroke-width', 12).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round').attr('opacity', 0)
+      .style('pointer-events', 'none');
+    g.selectAll('circle').data((s) => s.points.map((p) => ({ p, c: s.color }))).join('circle')
+      .attr('cx', (d) => x(d.p.year)).attr('cy', (d) => y(d.p.kr_m2)).attr('r', 2.5)
+      .attr('fill', (d) => d.c).attr('stroke', 'var(--panel)').attr('stroke-width', 1);
+
+    // End labels in the right margin, pushed apart so they never overlap.
+    const labs = enders.map((s) => ({ s, y0: y(s.last.kr_m2), y: y(s.last.kr_m2) })).sort((a, b) => a.y0 - b.y0);
+    const gap = 15;
+    for (let i = 1; i < labs.length; i++) labs[i].y = Math.max(labs[i].y, labs[i - 1].y + gap);
+    const over = labs.length ? labs[labs.length - 1].y - (H - m.b) : 0;
+    if (over > 0) {
+      labs[labs.length - 1].y -= over;
+      for (let i = labs.length - 2; i >= 0; i--) labs[i].y = Math.min(labs[i].y, labs[i + 1].y - gap);
+    }
+    const lx = W - m.r + 10;
+    g.each(function (s) {
+      const l = labs.find((q) => q.s === s);
+      if (!l) return;
+      const sel = d3.select(this);
+      sel.append('path').attr('d', `M${x(s.last.year) + 4},${l.y0} L${lx - 3},${l.y}`)
+        .attr('stroke', s.color).attr('fill', 'none').attr('opacity', 0.5);
+      const t = sel.append('text').attr('class', 'end').attr('x', lx).attr('y', l.y).attr('dy', '0.32em').attr('font-size', 12)
+        .attr('fill', 'var(--text)').style('cursor', 'pointer')
+        .on('click', () => { focused = focused === s.orgnr ? null : s.orgnr; applyFocus(); })
+        .on('pointerenter', () => setHover(s.orgnr))
+        .on('pointerleave', () => setHover(null));
+      t.append('tspan').text(s.short);
+      if (!narrow) t.append('tspan').attr('dx', 6).attr('fill', 'var(--muted)').text(fmt(s.last.kr_m2));
+    });
+
+    // Hover readout for the nearest year.
+    const tip = document.createElement('div');
+    tip.className = 'tip'; tip.hidden = true;
+    box.appendChild(tip);
+    const dots = svg.append('g').attr('class', 'dots');
+    // The line nearest the pointer, within 14 px, following dotted bridges over missing years too.
+    const yAt = (s, xv) => {
+      const i = s.points.findIndex((p) => p.year >= xv);
+      if (i < 0 || (i === 0 && s.points[0].year > xv)) return null;
+      if (s.points[i].year === xv || i === 0) return s.points[i].kr_m2;
+      const a = s.points[i - 1], b = s.points[i];
+      return a.kr_m2 + (b.kr_m2 - a.kr_m2) * (xv - a.year) / (b.year - a.year);
+    };
+    const nearest = (mx, my) => {
+      let best = null, bd = 14;
+      for (const s of series) {
+        const v = yAt(s, x.invert(mx));
+        if (v == null) continue;
+        const d = Math.abs(y(v) - my);
+        if (d < bd) { bd = d; best = s.orgnr; }
+      }
+      return best;
+    };
+    svg.append('rect').attr('x', m.l).attr('y', m.t).attr('width', W - m.l - m.r).attr('height', H - m.t - m.b).attr('fill', 'transparent')
+      .on('pointermove', (ev) => {
+        const [mx, my] = d3.pointer(ev);
+        const yr = Math.max(F, Math.min(L, Math.round(x.invert(mx))));
+        const vals = series.map((s) => ({ s, p: at(s, yr) })).filter((d) => d.p).sort((a, b) => b.p.kr_m2 - a.p.kr_m2);
+        rule.attr('x1', x(yr)).attr('x2', x(yr)).attr('opacity', 1);
+        dots.selectAll('circle').data(vals).join('circle').attr('cx', x(yr)).attr('cy', (d) => y(d.p.kr_m2)).attr('r', 4.5)
+          .attr('fill', (d) => d.s.color).attr('stroke', 'var(--panel)').attr('stroke-width', 1.5);
+        tip.textContent = '';
+        const head = document.createElement('div'); head.className = 'tip-year';
+        head.textContent = vals.length ? `${yr} · kr/kvm` : `${yr} · inga årsredovisningar`;
+        tip.appendChild(head);
+        for (const d of vals) {
+          const row = document.createElement('div'); row.className = 'tip-row'; row.dataset.org = d.s.orgnr;
+          const sw = document.createElement('span'); sw.className = 'sw'; sw.style.color = d.s.color;
+          const n = document.createElement('span'); n.textContent = d.s.short + (d.p.months !== 12 ? ` (${d.p.months} mån)` : '');
+          const v = document.createElement('span'); v.textContent = fmt(d.p.kr_m2);
+          row.append(sw, n, v); tip.appendChild(row);
+        }
+        hovered = nearest(mx, my); applyFocus();
+        tip.hidden = false;
+        const w = tip.offsetWidth, h = tip.offsetHeight;
+        let left = x(yr) + 14;
+        if (left + w > W) left = x(yr) - 14 - w;
+        tip.style.left = Math.max(0, left) + 'px';
+        tip.style.top = Math.max(0, Math.min(H - h, m.t)) + 'px';
+      })
+      .on('pointerleave', () => { tip.hidden = true; rule.attr('opacity', 0); dots.selectAll('circle').remove(); setHover(null); });
+    applyFocus();
+  }
+
+  function table() {
+    const t = document.getElementById('table');
+    const yrs = d3.range(F, L + 1);
+    const thead = t.createTHead().insertRow();
+    for (const h of ['Förening', 'Yta kvm', ...yrs.map(String), `2021–${L}`]) {
+      const th = document.createElement('th'); th.textContent = h; thead.appendChild(th);
+    }
+    const tb = t.createTBody();
+    for (const s of series) {
+      const tr = tb.insertRow();
+      const name = tr.insertCell();
+      const span = document.createElement('span'); span.className = 'name';
+      const sw = document.createElement('span'); sw.className = 'sw'; sw.style.color = s.color;
+      span.append(sw, s.short); name.appendChild(span); name.title = s.name;
+      tr.insertCell().textContent = fmt(s.area);
+      for (const yr of yrs) {
+        const td = tr.insertCell(), p = at(s, yr);
+        if (!p) { td.textContent = '–'; td.className = 'gap'; continue; }
+        const a = document.createElement('a');
+        a.href = `source_viewer.html#brf=${encodeURIComponent(s.orgnr)}&doc=${encodeURIComponent(p.file)}`;
+        a.textContent = fmt(p.kr_m2);
+        a.title = `Årsavgifter ${fmt(p.fee)} kr${p.months !== 12 ? ` på ${p.months} mån` : ''} / ${fmt(p.area)} kvm · ${p.file} s. ${p.page}`;
+        td.appendChild(a);
+      }
+      const c = tr.insertCell(); c.className = 'chg';
+      const a21 = at(s, 2021);
+      c.textContent = a21 && s.last.year > 2021 ? pct(s.last.kr_m2 / a21.kr_m2 - 1) + (s.last.year < L ? ` (${s.last.year})` : '') : '–';
+    }
+  }
+
+  table();
+  draw();
+  let rw;
+  window.addEventListener('resize', () => { clearTimeout(rw); rw = setTimeout(draw, 120); });
+})();
+</script>
+</body>
+</html>
