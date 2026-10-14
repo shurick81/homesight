@@ -10,3 +10,6 @@ data_notes: '2020 is held for its closing balances only. The 2020-2022 reports h
 
   Notes: Driftkostnader are one note over two pages (p15-16); the remainder (cat 30) is taken from p15 and the maintenance lines (31) from p16.
   2025 is a scanned report (OCR).'
+
+sources:                         # listing pages checked by tools/brf/source_gap.py
+  - {url: https://www.brfbjorkbacken.se/sidor/arsredovisningar, note: "own site: every report 2007-"}

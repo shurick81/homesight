@@ -327,6 +327,12 @@ per-m² measures (e.g. årsavgift per m², debt per m²) use `property_states`.
 
 ## Where reports are found
 
+**Import everything a source offers, not a window of years, and never call a report "not found" before
+`tools/brf/source_gap.py` has run.** It lists every document link on the BRF's known pages (`sources:` in its
+`profile.yaml`, plus allabrf and svenskbrf) that is not yet an imported report. When you find a page that lists a BRF's
+reports, add it to `sources:`. (Björkbacken's own site lists 2007–2025; only 2020–2025 were imported at first, and 2011–2019
+were reported as not found until someone pointed at the page.)
+
 Look in this order; check the org number and the fiscal year inside every PDF before importing (names repeat
 across kommuns: a "Brf Soluret" site can belong to Haninge).
 

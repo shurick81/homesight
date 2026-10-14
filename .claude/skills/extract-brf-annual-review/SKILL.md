@@ -64,6 +64,11 @@ does `tools/brf/build_index.py` after extraction and verification.
 Import the report for the year **before** the first year you extract too: its closing balances are
 the opening balances that the cash check needs (only its financial_states are needed).
 
+When asked for more years of a BRF, or before reporting a report as missing, run `python3 tools/brf/source_gap.py <orgnr>`:
+it lists every document its known source pages offer that is not imported yet. Import everything it lists (check org number
+and fiscal year in the PDF), not only the years you were asked about, and record any listing page you find in the BRF's
+`profile.yaml` under `sources:`.
+
 ## Scripts
 
 In `tools/brf/` (Python 3, pdfplumber, PyYAML; tesseract OCR with Swedish for scanned pages). OCR is cached in
