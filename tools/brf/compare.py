@@ -65,9 +65,8 @@ def area(prop):
         return None, "no property_states"
     if 7 in prop:
         return prop[7], "total yta"
-    parts = [prop[c] for c in (8, 9, 10, 11) if c in prop]
-    if parts:
-        return sum(parts), "sum of areas"
+    if 8 in prop or 9 in prop:  # lokalyta (10) alone is not a split basis: older reports pair it with 12
+        return sum(prop.get(c, 0) for c in (8, 9, 10, 11)), "sum of areas"
     if 12 in prop:
         return prop[12] + prop.get(10, 0), "bostadsyta totalt + lokalyta (older basis)"
     return None, "no area"

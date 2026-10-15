@@ -17,12 +17,22 @@ Sale price per m² = the mean of final_price_kr / living_area_m2 over the year's
 Years with fewer than MIN_SALES sales are left out. The same mean over every bostadsrätt sale in the municipality
 (Booli's kommun) is the reference line.
 
+Economy per m² (debt at year end, board/staff/admin, Driftkostnader, investments) uses compare.py's definitions and
+its total-area basis (Total yta, else the sum of the areas, else Bostadsyta totalt + Lokalyta), the area the
+reports' own kr/kvm key figures use. As for the fee, a year without an area uses the nearest stored year, areas under
+half the BRF's are skipped, and a BRF that later reports a split basis uses that basis for its older years too
+(Sjötungan before 2020). Flows are scaled to 12 months; debt is a balance and is not. Investments are left out
+for a year whose report has no cash-flow statement (no investing or financing line).
+
 View: serve the repo root over http (fetch doesn't load from file://), e.g.
   python3 -m http.server 8001 --bind 127.0.0.1   # then open http://127.0.0.1:8001/fee_timeline.html
 """
-import argparse, csv, gzip, json, re
+import argparse, csv, gzip, json, re, sys
 from datetime import date
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import compare  # noqa: E402  (the single definition of the cost buckets and the total area)
 
 ROOT = Path(__file__).resolve().parents[2]
 BRFS = ROOT / "annual_reviews/brfs"
@@ -60,6 +70,38 @@ def sale_prices(orgnrs, municipality, first_year, last_year):
                   for y, v in sorted(years.items()) if len(v) >= MIN_SALES]
             for org, years in by.items()}
 
+METRICS = {  # key: (compare.column line, is a flow)
+    "debt": ("Debt at year end", False),
+    "admin": ("Board, staff & admin", True),
+    "drift": (None, True),  # Driftkostnader as reported (event 1)
+    "invest": ("Investments", True),
+}
+
+def economy(org, years, spans, base):
+    """{metric: [{year, kr, area, v}]} per m² of total area for the BRF's verified years."""
+    ev, st, pr = (compare.load(org, f) for f in ("financial_events.csv", "financial_states.csv", "property_states.csv"))
+    areas = {y: a for y in pr for a, how in [compare.area(pr[y])] if a and a >= 0.5 * base}
+    split = {y: a for y, a in areas.items() if compare.area(pr[y])[1] != "bostadsyta totalt + lokalyta (older basis)"}
+    areas = split or areas
+    out = {k: [] for k in METRICS}
+    for y in years:
+        if y not in ev:
+            continue
+        col = compare.column(ev[y], st.get(y, {}))
+        area, _ = area_for(y, areas, None)
+        if not area:
+            continue
+        for key, (line, flow) in METRICS.items():
+            if key == "debt" and y not in st:
+                continue
+            if key == "invest" and compare.INVEST not in ev[y] and compare.FINANCING not in ev[y]:
+                continue  # no cash-flow statement that year: investments unknown, not zero
+            kr = -ev[y].get(compare.DRIFT, 0) if line is None else col[line]
+            scale = 12 / spans.get(y, 12) if flow else 1
+            out[key].append({"year": y, "kr": kr, "area": area, "months": spans.get(y, 12) if flow else 12,
+                             "v": round(kr * scale / area)})
+    return out
+
 def short_name(name):
     n = re.sub(r"^(HSB |Riksbyggen )?(Bostadsrättsföreningen|Bostadsrättsförening|Brf|BRF)\s+", "", name)
     return re.sub(r"\s+i Tyresö$", "", n)
@@ -92,13 +134,14 @@ def main():
     index.sort(key=lambda r: -float(r["living_area_m2"]))
     unranked = [r["name"] for r in read(BRFS / "index.csv") if r["municipality"] == a.municipality and not r["living_area_m2"]]
 
-    brfs, last_year = [], 0
+    brfs, last_year, spans_of = [], 0, {}
     for r in index[:a.top]:
         org, base = r["orgnr"], float(r["living_area_m2"])
         verified = int(r["verified_through"] or 0)
         stored = {int(p["year"]): float(p["amount"]) for p in read(BRFS / org / "property_states.csv")
                   if p["category_id"] == "8" and float(p["amount"]) >= 0.5 * base}
         spans = {int(g["year"]): months(g["value"]) for g in read(BRFS / org / "general_states.csv") if g["category_id"] == "0"}
+        spans_of[org] = spans
         points = []
         for e in read(BRFS / org / "financial_events.csv"):
             y = int(e["year"])
@@ -119,6 +162,7 @@ def main():
     for b in brfs:
         b["points"] = [p for p in b["points"] if p["year"] >= first_year]
         b["sales"] = sales.get(b["orgnr"], [])
+        b["economy"] = economy(b["orgnr"], [p["year"] for p in b["points"]], spans_of[b["orgnr"]], b["area"])
     snapshot = re.search(r"sales:\s*\n\s*file:.*\n\s*snapshot:\s*(\S+)", (ROOT / "market/sources.yaml").read_text(encoding="utf-8"))
     OUT.write_text(json.dumps({"municipality": a.municipality, "first_year": first_year, "last_year": last_year,
                                "built": date.today().isoformat(),
@@ -126,6 +170,8 @@ def main():
                                "municipality_sales": sales.get(a.municipality, []), "unranked": unranked, "brfs": brfs},
                               ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     n, m = sum(len(b["points"]) for b in brfs), sum(len(b["sales"]) for b in brfs)
+    for k in METRICS:
+        print(f"  {k}: {sum(len(b['economy'][k]) for b in brfs)} BRF-years")
     print(f"{OUT.relative_to(ROOT)}: {len(brfs)} BRFs, {n} fee years, {m} sale-price years, {first_year}–{last_year}")
 
 if __name__ == "__main__":

@@ -39,6 +39,7 @@
   .lede { margin: 0; max-width: 64ch; font-size: 16px; }
   .lede b { font-weight: 650; font-variant-numeric: tabular-nums; }
   .def { margin: 0; max-width: 70ch; font-size: 13px; color: var(--muted); }
+  .section-title { margin: 12px 0 -12px; font-size: 21px; font-weight: 650; }
   .card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 20px; display: grid; gap: 14px; min-width: 0; }
   h2 { margin: 0; font-size: 17px; font-weight: 600; }
   .note { margin: 0; font-size: 13px; color: var(--muted); max-width: 72ch; }
@@ -113,8 +114,39 @@
     <div class="chart" id="chart-price"></div>
   </section>
 
+  <h2 class="section-title" id="ekonomi">Ekonomi per kvm</h2>
+  <p class="def">Värdena nedan är per kvm <b>total yta</b> (bostäder och lokaler), samma yta som årsredovisningarnas egna kr/kvm-nyckeltal använder. Årsavgiften ovan är per kvm bostadsrättsyta. Alla år är kontrollerade mot årsredovisningen.</p>
+
+  <section class="card" id="lan">
+    <h2 id="title-debt">Lån per kvm</h2>
+    <p class="note">Skulder till kreditinstitut vid årets slut, per kvm total yta. Motsvarar årsredovisningarnas nyckeltal ”Skuldsättning kr/kvm”.</p>
+    <div class="chart-tools"><div class="legend" id="legend-debt"></div><div class="scale">Skala <span class="seg" role="group" aria-label="Skala" data-chart="chart-debt"><button type="button" data-zero="1" aria-pressed="true">Från 0</button><button type="button" data-zero="0" aria-pressed="false">Från lägsta värdet</button></span></div></div>
+    <div class="chart" id="chart-debt"></div>
+  </section>
+
+  <section class="card" id="admin">
+    <h2 id="title-admin">Styrelse, personal och administration per kvm</h2>
+    <p class="note">Personalkostnader (styrelsearvoden, löner, sociala avgifter) och övriga externa kostnader (revision, konsulter, administration) per kvm total yta och år.</p>
+    <div class="chart-tools"><div class="legend" id="legend-admin"></div><div class="scale">Skala <span class="seg" role="group" aria-label="Skala" data-chart="chart-admin"><button type="button" data-zero="1" aria-pressed="true">Från 0</button><button type="button" data-zero="0" aria-pressed="false">Från lägsta värdet</button></span></div></div>
+    <div class="chart" id="chart-admin"></div>
+  </section>
+
+  <section class="card" id="drift">
+    <h2 id="title-drift">Driftkostnader per kvm</h2>
+    <p class="note">Driftkostnader enligt resultaträkningen (skötsel, förvaltning, värme, el, vatten, reparationer, försäkring, fastighetsskatt med mera) per kvm total yta och år.</p>
+    <div class="chart-tools"><div class="legend" id="legend-drift"></div><div class="scale">Skala <span class="seg" role="group" aria-label="Skala" data-chart="chart-drift"><button type="button" data-zero="1" aria-pressed="true">Från 0</button><button type="button" data-zero="0" aria-pressed="false">Från lägsta värdet</button></span></div></div>
+    <div class="chart" id="chart-drift"></div>
+  </section>
+
+  <section class="card" id="investeringar">
+    <h2 id="title-invest">Investeringar per kvm</h2>
+    <p class="note">Investeringar enligt kassaflödesanalysen per kvm total yta och år. Enstaka stora projekt, som ett stambyte, ger höga toppar. År utan kassaflödesanalys visas inte.</p>
+    <div class="chart-tools"><div class="legend" id="legend-invest"></div><div class="scale">Skala <span class="seg" role="group" aria-label="Skala" data-chart="chart-invest"><button type="button" data-zero="1" aria-pressed="true">Från 0</button><button type="button" data-zero="0" aria-pressed="false">Från lägsta värdet</button></span></div></div>
+    <div class="chart" id="chart-invest"></div>
+  </section>
+
   <section class="card" id="tabell">
-    <h2>År för år</h2>
+    <h2>Årsavgift per kvm, år för år</h2>
     <p class="note">Störst först, efter bostadsrättsyta. Klicka på ett värde för att öppna årsredovisningen i källvisaren. Förändringen är från 2021 till föreningens senaste år.</p>
     <div class="tablewrap"><table id="table"></table></div>
   </section>
@@ -127,6 +159,8 @@
       <li>Solhöjdens räkenskapsår 2017 omfattar 18 månader (2017-07-01 – 2018-12-31) och är omräknat till 12 månader.</li>
       <li>Gäddans yta är hela bostadsytan inklusive hyresrätter, medan årsavgifterna bara kommer från bostadsrätterna. Gäddans värde är därför något för lågt.</li>
       <li>Kvadratmeterpriserna kommer från Booli och är inte kontrollerade mot andra källor. Små lägenheter säljs till högre pris per kvm, så en förening med många ettor (som Gösen) får ett högre snitt, och ett år med få försäljningar kan svänga mycket.</li>
+      <li>Ekonomin per kvm använder samma kategorier som <code>tools/brf/compare.py</code>. Vad som räknas som drift respektive administration varierar något mellan årsredovisningar, särskilt äldre, så ett hopp mellan två år kan bero på en ny uppställning.</li>
+      <li>Diamanten redovisar 2022 ett inflöde på 34,6 Mkr som ”Investeringar i fastigheter” i kassaflödesanalysen, och värdet visas som det är tryckt (negativa investeringar).</li>
       <li>Årsredovisningarnas egna nyckeltal kan skilja sig något, eftersom de vissa år räknar bort separat debiterade avgifter (el, bredband) eller använder total yta.</li>
     </ul>
   </section>
@@ -211,6 +245,13 @@
       extra: (p) => `${p.n} st`,
       ref: { ...kommun, pts: (data.municipality_sales || []).map((p) => ({ ...p, v: p.kr_m2 })) },
     },
+    ...['debt', 'admin', 'drift', 'invest'].map((k) => ({
+      box: `chart-${k}`, zero: true, unit: k === 'debt' ? 'kr/kvm vid årets slut' : 'kr/kvm',
+      empty: 'inga årsredovisningar',
+      pts: (b) => b.economy[k],
+      name: (s, p) => s.short + (p.months !== 12 ? ` (${p.months} mån)` : ''),
+      extra: () => '',
+    })),
   ];
 
   function draw(cfg) {
@@ -231,7 +272,7 @@
     const tw = (t) => { meas.text(t); return meas.node().getComputedTextLength(); };
 
     const all = ser.flatMap((s) => s.pts.map((p) => p.v));
-    const y = d3.scaleLinear(cfg.zero ? [0, d3.max(all)] : d3.extent(all), [0, 1]).nice();
+    const y = d3.scaleLinear(cfg.zero ? [Math.min(0, d3.min(all)), Math.max(0, d3.max(all))] : d3.extent(all), [0, 1]).nice();
     const yTicks = y.ticks(narrow ? 4 : 6);
     const enders = ser.filter((s) => s.last.year >= L - 1);
     const label = (s) => (narrow ? s.short : `${s.short}  ${fmt(s.last.v)}`);
@@ -274,13 +315,27 @@
 
     // End labels in the right margin, pushed apart so they never overlap.
     const labs = enders.map((s) => ({ s, y0: y(s.last.v), y: y(s.last.v) })).sort((a, b) => a.y0 - b.y0);
+    // Overlapping labels form a group stacked 15 px apart and centred on its lines' ends; groups that then
+    // touch merge, and the whole stack is kept inside the plot.
     const gap = 15;
-    for (let i = 1; i < labs.length; i++) labs[i].y = Math.max(labs[i].y, labs[i - 1].y + gap);
-    const over = labs.length ? labs[labs.length - 1].y - (H - m.b) : 0;
-    if (over > 0) {
-      labs[labs.length - 1].y -= over;
-      for (let i = labs.length - 2; i >= 0; i--) labs[i].y = Math.min(labs[i].y, labs[i + 1].y - gap);
+    let groups = labs.map((l) => ({ ls: [l], c: l.y0 }));
+    const top = (g) => g.c - (g.ls.length - 1) * gap / 2;
+    for (let merged = true; merged;) {
+      merged = false;
+      for (let i = 1; i < groups.length; i++) {
+        const a = groups[i - 1], b = groups[i];
+        if (top(b) < top(a) + a.ls.length * gap) {
+          const ls = [...a.ls, ...b.ls];
+          groups.splice(i - 1, 2, { ls, c: d3.mean(ls, (l) => l.y0) });
+          merged = true; break;
+        }
+      }
     }
+    for (const g of groups) g.ls.forEach((l, i) => { l.y = top(g) + i * gap; });
+    const lo = labs.length ? labs[labs.length - 1].y - (H - m.b) : 0;
+    if (lo > 0) labs.forEach((l) => { l.y -= lo; });
+    const hi = labs.length ? m.t - labs[0].y : 0;
+    if (hi > 0) labs.forEach((l) => { l.y += hi; });
     const lx = W - m.r + 10;
     g.each(function (s) {
       const l = labs.find((q) => q.s === s);
@@ -373,6 +428,10 @@
   document.getElementById('price-title').textContent = `Snittpris per kvm vid försäljning ${F}–${L}`;
   legend(document.getElementById('legend'));
   legend(document.getElementById('legend-price'), [kommun]);
+  ['debt', 'admin', 'drift', 'invest'].forEach((k) => {
+    legend(document.getElementById(`legend-${k}`));
+    const t = document.getElementById(`title-${k}`); t.textContent += ` ${F}–${L}`;
+  });
   if (data.sales_snapshot) document.getElementById('footer').append(` Booli-data hämtad ${data.sales_snapshot}.`);
 
   function table() {
