@@ -124,6 +124,13 @@
     <div class="chart" id="chart-debt"></div>
   </section>
 
+  <section class="card" id="rantor">
+    <h2 id="title-interest">Räntekostnader per kvm</h2>
+    <p class="note">Betalda räntor minus erhållna räntor per kvm total yta och år. Nettot används eftersom vissa årsredovisningar redovisar de två i en rad.</p>
+    <div class="chart-tools"><div class="legend" id="legend-interest"></div><div class="scale">Skala <span class="seg" role="group" aria-label="Skala" data-chart="chart-interest"><button type="button" data-zero="1" aria-pressed="true">Från 0</button><button type="button" data-zero="0" aria-pressed="false">Från lägsta värdet</button></span></div></div>
+    <div class="chart" id="chart-interest"></div>
+  </section>
+
   <section class="card" id="admin">
     <h2 id="title-admin">Styrelse, personal och administration per kvm</h2>
     <p class="note">Personalkostnader (styrelsearvoden, löner, sociala avgifter) och övriga externa kostnader (revision, konsulter, administration) per kvm total yta och år.</p>
@@ -245,7 +252,7 @@
       extra: (p) => `${p.n} st`,
       ref: { ...kommun, pts: (data.municipality_sales || []).map((p) => ({ ...p, v: p.kr_m2 })) },
     },
-    ...['debt', 'admin', 'drift', 'invest'].map((k) => ({
+    ...['debt', 'interest', 'admin', 'drift', 'invest'].map((k) => ({
       box: `chart-${k}`, zero: true, unit: k === 'debt' ? 'kr/kvm vid årets slut' : 'kr/kvm',
       empty: 'inga årsredovisningar',
       pts: (b) => b.economy[k],
@@ -428,7 +435,7 @@
   document.getElementById('price-title').textContent = `Snittpris per kvm vid försäljning ${F}–${L}`;
   legend(document.getElementById('legend'));
   legend(document.getElementById('legend-price'), [kommun]);
-  ['debt', 'admin', 'drift', 'invest'].forEach((k) => {
+  ['debt', 'interest', 'admin', 'drift', 'invest'].forEach((k) => {
     legend(document.getElementById(`legend-${k}`));
     const t = document.getElementById(`title-${k}`); t.textContent += ` ${F}–${L}`;
   });

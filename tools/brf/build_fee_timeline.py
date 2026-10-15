@@ -17,7 +17,7 @@ Sale price per m² = the mean of final_price_kr / living_area_m2 over the year's
 Years with fewer than MIN_SALES sales are left out. The same mean over every bostadsrätt sale in the municipality
 (Booli's kommun) is the reference line.
 
-Economy per m² (debt at year end, board/staff/admin, Driftkostnader, investments) uses compare.py's definitions and
+Economy per m² (debt at year end, net interest paid, board/staff/admin, Driftkostnader, investments) uses compare.py's definitions and
 its total-area basis (Total yta, else the sum of the areas, else Bostadsyta totalt + Lokalyta), the area the
 reports' own kr/kvm key figures use. As for the fee, a year without an area uses the nearest stored year, areas under
 half the BRF's are skipped, and a BRF that later reports a split basis uses that basis for its older years too
@@ -72,6 +72,7 @@ def sale_prices(orgnrs, municipality, first_year, last_year):
 
 METRICS = {  # key: (compare.column line, is a flow)
     "debt": ("Debt at year end", False),
+    "interest": ("Interest (net paid)", True),  # interest paid minus received: some reports net them
     "admin": ("Board, staff & admin", True),
     "drift": (None, True),  # Driftkostnader as reported (event 1)
     "invest": ("Investments", True),
