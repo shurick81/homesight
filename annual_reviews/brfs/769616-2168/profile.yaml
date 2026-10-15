@@ -1,0 +1,15 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Häradskär
+short_name: Häradskär
+orgnr: 769616-2168
+municipality: Stockholm
+verified_from: 2020
+verified_through: 2023
+data_notes: 'Kärrtorp, 59 bostadsrätter and 4-5 hyresrätter (4 052 kvm together) and 18-19 lokaler (860-872 kvm), on tomträtt.
+  SBC reports (notes 3/4-8 split the Driftskostnader). 2022: Not 2 lists all rörelseintäkter; the 3 714 of Övriga rörelseintäkter
+  is taken out of its Övriga intäkter line (19 = 2 000). 2023 has broken ligature glyphs and is read by OCR (ocr: force); OCR drops a
+  digit of the closing liquidity, which is corrected from the page image (checked_by_eye.csv). Liquidity includes SBC klientmedel.
+  2021, 2024 and 2025 are not found (hittabrf sells them) (the association''s own site blocks automated access). 2020 (svenskbrf) is like 2022: Not 2 lists all rörelseintäkter, so 3 383 of övriga rörelseintäkter is taken out of 19, and the RR line Rörelseintäkter (3 383) is 4.'
+sources:
+  - {url: https://www.allabrf.se/brf-haradskar-johanneshov/dokument, note: "allabrf, 2022-2023"}
+  - {url: https://www.svenskbrf.se/forening/johanneshov/karrtorp/haradskar/dokument/arsredovisning/, note: "svenskbrf, 2020"}

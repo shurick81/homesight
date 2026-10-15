@@ -1,0 +1,25 @@
+table,year,category_id,note
+financial_events,2021,1,"Sum of Notes 2 (reparationer), 3 (driftkostnader), 5 (planerat underhåll) and 6 (fastighetsavgift): the RR prints one line ""Övriga externa kostnader"" for Notes 2-6, so 1 is its operating part and 5 the Not 4 part; read from the page images"
+financial_events,2021,19,"Not 1 lines other than Årsavgifter and Parkering (TV/bredband, elbilsladdning, motorvärmare) net of the printed öresavrundning; read from the page image"
+financial_events,2021,2,"Sum of the Not 3 lines for 50-55 (trädgårdsskötsel/städdagar, snöröjning, trappstädning, hissar, fastighetsskötsel, besiktningar); read from the page images"
+financial_events,2022,1,"Sum of Notes 2 (reparationer), 3 (driftkostnader), 5 (planerat underhåll) and 6 (fastighetsavgift): the RR prints one line ""Övriga externa kostnader"" for Notes 2-6, so 1 is its operating part and 5 the Not 4 part; read from the page images"
+financial_events,2022,19,"Not 1 lines other than Årsavgifter and Parkering (TV/bredband, elbilsladdning, motorvärmare) net of the printed öresavrundning; read from the page image"
+financial_events,2022,51,Trappstädning plus Städning utöver avtal (Not 3); read from the page image
+financial_events,2022,2,"Sum of the Not 3 lines for 50-55 (trädgårdsskötsel/städdagar, snöröjning, trappstädning, hissar, fastighetsskötsel, besiktningar); read from the page images"
+financial_events,2023,1,"Sum of Notes 2 (reparationer), 3 (driftkostnader), 5 (planerat underhåll) and 6 (fastighetsavgift): the RR prints one line ""Övriga externa kostnader"" for Notes 2-6, so 1 is its operating part and 5 the Not 4 part; read from the page images"
+financial_events,2023,19,"Not 1 lines other than Årsavgifter and Parkering (TV/bredband, elbilsladdning, motorvärmare) net of the printed öresavrundning; read from the page image"
+financial_events,2023,51,Trappstädning plus Städning utöver avtal (Not 3); read from the page image
+financial_events,2023,2,"Sum of the Not 3 lines for 50-55 (trädgårdsskötsel/städdagar, snöröjning, trappstädning, hissar, fastighetsskötsel, besiktningar); read from the page images"
+financial_events,2024,1,"Sum of Notes 2 (reparationer), 3 (driftkostnader), 5 (planerat underhåll) and 6 (fastighetsavgift): the RR prints one line ""Övriga externa kostnader"" for Notes 2-6, so 1 is its operating part and 5 the Not 4 part; read from the page images"
+financial_events,2024,17,Read from the page image: the scan prints this number in a way OCR does not read; the note and statement totals tie (validate.py)
+financial_events,2024,19,"Not 1 lines other than Årsavgifter and Parkering (TV/bredband, elbilsladdning, motorvärmare) net of the printed öresavrundning; read from the page image"
+financial_events,2024,2,"Sum of the Not 3 lines for 50-55 (trädgårdsskötsel/städdagar, snöröjning, trappstädning, hissar, fastighetsskötsel, besiktningar); read from the page images"
+financial_events,2025,1,"Sum of Notes 2 (reparationer), 3 (driftkostnader), 5 (planerat underhåll) and 6 (fastighetsavgift): the RR prints one line ""Övriga externa kostnader"" for Notes 2-6, so 1 is its operating part and 5 the Not 4 part; read from the page images"
+financial_events,2025,3,Read from the page image: the scan prints this number in a way OCR does not read; the note and statement totals tie (validate.py)
+financial_events,2025,19,"Not 1 lines other than Årsavgifter and Parkering (TV/bredband, elbilsladdning, motorvärmare) net of the printed öresavrundning; read from the page image"
+financial_events,2025,51,Trappstädning plus Städning utöver avtal (Not 3); read from the page image
+financial_events,2025,2,"Sum of the Not 3 lines for 50-55 (trädgårdsskötsel/städdagar, snöröjning, trappstädning, hissar, fastighetsskötsel, besiktningar); read from the page images"
+financial_events,2025,36,Read from the page image: the scan prints this number in a way OCR does not read; the note and statement totals tie (validate.py)
+financial_events,2025,37,Read from the page image: the scan prints this number in a way OCR does not read; the note and statement totals tie (validate.py)
+financial_states,2025,0,Read from the page image: the scan prints this number in a way OCR does not read; the note and statement totals tie (validate.py)
+financial_states,2025,6,Read from the page image: the scan prints this number in a way OCR does not read; the note and statement totals tie (validate.py)

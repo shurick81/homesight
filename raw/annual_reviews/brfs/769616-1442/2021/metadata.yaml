@@ -1,0 +1,7 @@
+file: Arsredovisning_2021_Brf_Fyrskeppet.pdf
+document: årsredovisning
+fiscal_year: 2021
+source:
+  url: https://www.brffyrskeppet.se/storage/documents/%C3%85rsredovisning%202021.pdf
+sha256: 497abc567161df4bd107d9c9662422e1adbc0acdd5a959761accd705b2892a34
+ocr: force

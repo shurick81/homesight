@@ -1,0 +1,12 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Kringlan 2
+short_name: Kringlan 2
+orgnr: 716420-3098
+municipality: Tyresö
+verified_from: 2021
+verified_through: 2025
+data_notes: 'A small association (29 apartments). 2019-2025 are imported (scans); 2021-2025 are entered by hand from the page images,
+  since OCR loses most labels. The RR prints one line "Övriga externa kostnader" for Notes 2-6 (reparationer, drift, övriga
+  rörelsekostnader, planerat underhåll, fastighetsavgift): 1 is Notes 2, 3, 5 and 6 and 5 is Not 4. 2021-2022 have no cash flow
+  statement, so no cash is stored for them; the 2023 KF opening liquidity is in restatements.csv. Liquidity is kassa och bank (the
+  KF excludes the kortfristig placering of 151 520 until it is closed in 2024). 2025: Försäkringsersättningar (+2 938) offsets 32.'

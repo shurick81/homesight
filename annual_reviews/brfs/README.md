@@ -343,3 +343,19 @@ across kommuns: a "Brf Soluret" site can belong to Haninge).
    that crawls too fast.
 3. HSB's association pages (`hsb.se/stockholm/brf/<slug>/`, files under `/contentassets/`).
 4. svenskbrf.se (`/forening/<ort>/<omrade>/<slug>/dokument/arsredovisning/`), mostly up to 2020.
+5. Estate agents' listings: Fastighetsbyrån attaches the association's latest årsredovisning to each listing
+   (`https://media.fastighetsbyran.se/Fil/<id>`, stable links; the kommun listing page
+   `fastighetsbyran.com/sv/sverige/till-salu/stockholms-lan/<kommun>-kommun/` links the objects). Other agents
+   (Svenska Mäklarhuset `cdn.maklarhuset.se/object/files/...`; Bjurfors `bjurfors.se/contentassets/<hash>/...pdf`, linked
+   from its area listings such as `bjurfors.se/sv/tillsalu/stockholm/stockholm/karrtorp/`) do the same; their files
+   disappear when the listing is removed, so import them when found. MOHV (`mohv.se/objekt/<ort>/...`) links its
+   files on the Vitec CDN (`vitec.ready-cdn.se/M<id>/Documents/_F_ORG_...pdf`, public). HusmanHagberg
+   (`husmanhagberg.se/objekt/...`) lists each file's name and Vitec `fileId` in the page data; the Vitec link itself
+   needs a login, but the site's own proxy serves it:
+   `https://api.husmanhagberg.se/vitec/api/document/<objectReference>/<fileId>/<name>/<extension>`. Sold listings
+   lose their documents and are rarely archived, so scan the agents' current listings for the area (Fastighetsbyrån,
+   Bjurfors, MOHV, HusmanHagberg list them in plain HTML; Svensk Fastighetsförmedling, Skandiamäklarna and Notar
+   load them with JavaScript). Booli and Hemnet hold reports too but block scripted access (Cloudflare).
+   Many listing PDFs have a broken font (missing å/ä/ö or ligatures); check the figures against the page image.
+6. HSB folders not linked from the association page: a web search (extended mode) for `site:hsb.se årsredovisning
+   <name>` finds some; within a known folder, try the naming patterns of the files already found.

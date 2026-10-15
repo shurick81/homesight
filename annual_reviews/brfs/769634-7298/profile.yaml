@@ -1,0 +1,15 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Zickzack
+short_name: Zickzack
+orgnr: 769634-7298
+municipality: Stockholm
+verified_from: 2023
+verified_through: 2024
+data_notes: 'Kärrtorp, a new-build association: 93 bostadsrätter (6 252 kvm) and 3 lokaler (234 kvm), freehold, exempt from
+  fastighetsavgift for 15 years. SBC reports in tkr: every amount is stored x 1000 and listed in checked_by_eye.csv. 2023 has broken
+  ligature glyphs, so it is read by OCR (ocr: force); OCR misses most figures in the shaded current-year column, so 2023 is entered
+  by hand from the page images. Rounding to whole tkr leaves the cash flow off by 1 tkr in 2024. 2021, 2022 and 2025 are not found. The allabrf document ''Saknar beskrivning'' (GetFile (9).pdf) is the 2019 ekonomisk plan, not a report.'
+warnings:
+  2024: 'The report prints whole tkr; its cash flow items add up to the change in liquidity only within 1 tkr (rounding).'
+sources:
+  - {url: https://www.allabrf.se/brf-zickzack-johanneshov/dokument, note: "allabrf, 2023-2024"}

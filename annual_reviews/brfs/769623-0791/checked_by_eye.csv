@@ -1,0 +1,3 @@
+table,year,category_id,note
+financial_states,2020,6,Summa eget kapital 32 728 102 (p8): OCR splits the figure over two lines on this scan; read on the page image
+financial_events,2023,1,The verifier finds the amount but takes it for the comparison column (a note reference or a dash in the line shifts the columns); checked on the page: the amount is the current-year figure

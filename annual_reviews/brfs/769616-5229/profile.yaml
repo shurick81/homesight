@@ -1,0 +1,14 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Långe Jan 2 i Stockholm
+short_name: Långe Jan 2
+orgnr: 769616-5229
+municipality: Stockholm
+verified_from: 2020
+verified_through: 2025
+data_notes: 'Kärrtorp (Arkövägen), 86-87 bostadsrätter (6 519 kvm in 2023), 2-3 hyresrätter and 1-8 lokaler, on tomträtt. One
+  Drift- och fastighetskostnader note holds the whole RR line: drift, förvaltning (29) and the Underhåll section (the 2023 stambyte
+  of 18.1 Mkr is 31). 2023: a supplier debt for water damage from 2017 is reversed (-625 000 in the note, stored as +625 000 on 32).
+  The KF prints Erlagd ränta och ränteintäkter net, so interest is taken from the RR. 2021 and 2022 are not found. A 2024 report was
+  published by Bjurfors (contentassets/ec73435a572c439ab34dee98a184c29b) but is gone (404) and not archived. 2020 is a scan, entered by hand from OCR checked against the totals (no KF, so no cash for 2020).'
+sources:
+  - {url: https://www.allabrf.se/brf-lange-jan-2-i-stockholm-johanneshov/dokument, note: "allabrf, 2023"}

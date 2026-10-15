@@ -1,0 +1,12 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Bostadsrättsföreningen Malö
+short_name: Malö
+orgnr: 769600-6621
+municipality: Stockholm
+verified_from: 2019
+verified_through: 2020
+data_notes: 'Kärrtorp (Holmögaddsvägen), 23 bostadsrätter (1 755 kvm lägenhetsyta; all apartments are bostadsrätter) and 225 kvm
+  lokaler. SBC reports with no cash flow statement, so no cash is stored. Only 2019-2020 are free to download (svenskbrf); 2021-2025 are
+  not public (allabrf lists none, hittabrf sells 2022 and 2024).'
+sources:
+  - {url: https://www.svenskbrf.se/forening/johanneshov/karrtorp/malo/dokument/arsredovisning/, note: "svenskbrf, 2019-2020"}

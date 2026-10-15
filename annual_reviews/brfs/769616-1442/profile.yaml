@@ -1,0 +1,17 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Fyrskeppet
+short_name: Fyrskeppet
+orgnr: 769616-1442
+municipality: Stockholm
+verified_from: 2020
+verified_through: 2025
+data_notes: 'Kärrtorp, 240 apartments on tomträtt (about 220 bostadsrätter and a shrinking number of hyresrätter), managed by SBC.
+  2020-2022 have no cash flow statement, so no cash is stored for them; the 2023 KF opening liquidity is in restatements.csv.
+  Liquidity is the KF''s likvida medel: kassa och bank plus the SBC klientmedel (booked under Övriga fordringar). The 2021 file is
+  a copy annotated for the annual meeting (an image PDF read by OCR); it is entered by hand from the page images, with the printed
+  note subtotals. Until 2022 Not 4 holds every Driftkostnader line under sub-headings (Fastighetskostnader = 2, Reparationer = 21,
+  Periodiskt underhåll = 31); from 2023 they are separate notes 4-8. Interest is Erlagd/Erhållen ränta from the KF when there is one,
+  else the RR. Bostadsrätt area is not printed: 12 is the total residential area (bostadsrätter and hyresrätter). 2018-2019 are imported (svenskbrf) but not extracted.'
+sources:
+  - {url: https://www.brffyrskeppet.se/dokument, note: "own site, årsredovisningar 2020-"}
+  - {url: https://www.svenskbrf.se/forening/johanneshov/karrtorp/fyrskeppet/dokument/arsredovisning/, note: "svenskbrf, 2018-2020"}

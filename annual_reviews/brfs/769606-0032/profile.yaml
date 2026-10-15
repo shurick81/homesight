@@ -1,0 +1,13 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Bostadsrättsföreningen Rödkallen 3
+short_name: Rödkallen 3
+orgnr: 769606-0032
+municipality: Stockholm
+verified_from: 2019
+verified_through: 2025
+data_notes: 'Kärrtorp, a small association: 24 bostadsrätter (2 216 kvm), 1 hyresrätt (76 kvm), 13 parking places and 11 garages,
+  on tomträtt. Fastighetsägarna-style report: one Drift- och fastighetskostnader note (including förvaltning, 29) with an
+  Underhåll section. No cash flow statement, so no cash is stored. 2019 (a scan, entered by hand), 2022 and 2025 (attached to a Fastighetsbyrån listing; the 2025 KF opening liquidity is in restatements.csv) are found; 2020-2021 and 2023-2024 are not public. In 2025 the note prints no current-year insurance premium (2024: 27 398). In 2019 the Underhåll section (8 234 375, mostly a stambyte) is 31.'
+sources:
+  - {url: https://www.allabrf.se/bostadsrattsforeningen-rodkallen-3-johanneshov/dokument, note: "allabrf, 2019 and 2022"}
+  - {url: "https://www.fastighetsbyran.com/sv/sverige/till-salu/stockholms-lan/stockholms-stad/objekt/?objektID=3558353", note: "Fastighetsbyrån listing, 2025 (media.fastighetsbyran.se/Fil/16555811)"}

@@ -1,0 +1,7 @@
+file: Arsredovisning_2025_Brf_Tyreso_Tradgardar.pdf
+document: årsredovisning
+fiscal_year: 2025
+source:
+  url: https://api.husmanhagberg.se/vitec/api/document/OBJ5P5L3TG338QB64R7BQ/_F_ORG_T177_123691/%C3%85rsredovisning-2025/.pdf
+sha256: 5dfc5cf2f428d751db7bf4e47a55b67917c37374823b3932feb28dbe3e4d5aaf
+ocr: force

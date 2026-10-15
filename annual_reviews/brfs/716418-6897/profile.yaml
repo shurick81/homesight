@@ -3,6 +3,6 @@ name: HSB Brf Soluret i Tyresö
 short_name: Soluret
 orgnr: 716418-6897
 municipality: Tyresö
-verified_through: 2023
-data_notes: 'FY2021 and FY2023 from allabrf.se; 2019-2020 (svenskbrf.se) are imported but not extracted, 2022 and 2024-2025 are not public.
+verified_through: 2024
+data_notes: '2024 from an estate agent listing (media.fastighetsbyran.se). FY2021 and FY2023 from allabrf.se; 2019-2020 (svenskbrf.se) are imported but not extracted, 2022 and 2024-2025 are not public.
   Both years are unchained. Not to be confused with Brf Soluret in Haninge.'

@@ -1,0 +1,6 @@
+table,year,category_id,note
+financial_events,2020,21,"Reparation gemensamma utrymmen 59 528 + Rep underhåll av lokaler 2 459 (Not 3, first and last line of the note): the terms are too far apart for the verifier"
+financial_events,2020,30,"The Not 3 lines mapped to no other category (Dörrar och lås 11 057, Tvättstuga 24 323, Övriga driftskostnader 97 775, Vidarefakturering 333 398, VVS 103 981): too many terms for the verifier; Not 3 adds up to 3 801 141"
+financial_events,2023,30,Övriga driftkostnader: sum of 5 note lines on p15 (Sotning; Ovriga fastighetskostnader; Panter och overlatelser; Total forvaltning; Ovriga externa tjanster): too many terms for the verifier; the note adds up to its total (validate.py)
+financial_events,2023,32,The verifier finds the amount but takes it for the comparison column (a note reference or a dash in the line shifts the columns); checked on the page: the amount is the current-year figure
+financial_events,2025,30,Övriga driftkostnader: sum of 6 note lines on p15 (Sotning; Ovriga fastighetskostnader; Panter och overlatelser; Total forvaltning 383 631; Juridiska atgarder; Ovriga externa tjanster): too many terms for the verifier; the note adds up to its total (validate.py)

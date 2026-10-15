@@ -1,0 +1,17 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Gåsviken 1
+short_name: Gåsviken 1
+orgnr: 769624-5625
+municipality: Stockholm
+verified_from: 2020
+verified_through: 2025
+data_notes: 'Kärrtorp, 75 apartments (64 bostadsrätter in 2020, 68 in 2025; the rest hyresrätter) and about 10 lokaler on tomträtt;
+  4 643 kvm lägenhetsyta (bostadsrätter and hyresrätter: 12) and 881-886 kvm lokaler. 2020 is a scan entered by hand from the page
+  images (OCR misreads two amounts: Fastighetsskatt 157 515 and Ekonomisk förvaltning 103 049). The 2023-2025 files have a broken
+  font (ä printed as #), so they are read by OCR (ocr: force). Not 3 lists the façade and window projects of 2020-2021 (Fasader,
+  Fönsterrenovering) among the driftkostnader; they are 31. From 2023 the Nettoomsättning note also lists the övriga
+  rörelseintäkter (försäkringsersättning, elstöd); they are left to 4. 2020-2022 have no cash flow statement, so no cash is stored for
+  them; the 2023 KF opening liquidity is in restatements.csv. 2013-2019 are imported (own site) but not extracted.'
+sources:
+  - {url: https://www.gasviken1.se/ekonomi, note: "own site, årsredovisningar 2020-2022 and 2025"}
+  - {url: https://www.allabrf.se/brf-gasviken-1-johanneshov/dokument, note: "allabrf, 2023-2024"}

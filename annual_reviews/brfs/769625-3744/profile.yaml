@@ -3,7 +3,11 @@ name: Brf Tyresö Trädgårdar
 short_name: Tyresö Trädgårdar
 orgnr: 769625-3744
 municipality: Tyresö
-verified_through: 2022
-data_notes: 'Only FY2022 (allabrf.se, a scan). An own small-format report: the RR has Årsavgifter och hyror and one Driftskostnader line, whose
+verified_from: 2022
+verified_through: 2025
+data_notes: '114-115 bostadsrätter (8 507-8 554 kvm) and 2-3 guest flats over a shared garage, freehold, managed by HSB. 2022 (allabrf.se, a scan), 2023 (attached to an MOHV listing) and 2024-2025 (attached to HusmanHagberg listings, served by api.husmanhagberg.se) are held. 2023-2025 have a broken font and are read by OCR (ocr: force); OCR drops the Andrahandsuthyrning line of Not 2 in 2024-2025, so these years are entered by hand from the page images and checked against the note totals and the cash flow. 2019-2021 exist (hittabrf sells them) but are not free. An own small-format report: the RR has Årsavgifter och hyror and one Driftskostnader line, whose
   note (titled Övriga externa kostnader) also holds Redovisning (29), Styrelsearvoden and Revisionsarvoden, which therefore stay in cat 30 with
   the mixed lines Renhållning/städning/snö and Fastighetsförvaltning/reparation/underhåll. KF ''Betald skatt'' 8 425 is added to cat 12.'
+sources:
+  - {url: https://www.mohv.se/objekt/tyreso/bollmora-gardsvag-7/OBJ32631_2094177044/, note: "MOHV listing (Vitec CDN): 2023 report, stadgar, energideklaration"}
+  - {url: https://www.husmanhagberg.se/objekt/bollmora-gardsvag-9-tyreso-centrum/OBJ5P5L3TG338QB64R7BQ/, note: "HusmanHagberg listing: 2024 and 2025 reports"}

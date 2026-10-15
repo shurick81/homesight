@@ -12,7 +12,7 @@ built_basis: byggnadsår          # "uppfördes av Trivselhus på uppdrag av UTC
 registered: 2013
 fiscal_year: 01-01 – 12-31
 management: own (no förvaltare named); audited by a lay internal auditor only (Per Norén, "intern revisor")
-verified_through: 2025           # 2021 and 2025, both unchained (2020 and 2024 reports not held)
+verified_through: 2025           # 2021, 2024 and 2025 (2024-2025 chained; 2020, 2022-2023 not held)
 source: Arsredovisning_2025.pdf p3–4
 links:
   booli: https://www.booli.se/bostadsrattsforening/277087
@@ -50,7 +50,7 @@ stambyte:                        # derived from pipe_works.csv; rubric in annual
     increase announced for 2026. Three of the six homes were for sale in October 2026.
 
 data_notes: |                    # caveats about the extracted values, for whoever reads or re-checks them
-  Sources: 2025 from the Svensk Fastighetsförmedling listing of Åvägen 11E (public link); 2021 from Booli (document behind Booli login, link given by the user). Not held: 2018 (allabrf, login), 2022–2024.
+  Sources: 2025 from the Svensk Fastighetsförmedling listing of Åvägen 11E (public link); 2021 from Booli (document behind Booli login, link given by the user). 2024 from a HusmanHagberg listing (Åvägen 11A; file served by api.husmanhagberg.se), entered by hand from its text layer (the font drops å/ä/ö, the figures are intact; checked against the note totals and the cash flow). Not held: 2018 (allabrf, login), 2022–2023.
   2021 has no kassaflödesanalys and no notes on revenue or costs: only RR and BR lines are extracted; cash (2) is BR Kassa och bank.
   RR "Övriga rörelsekostnader" holds the operating costs (note 3: el, sophämtning, försäkring, förvaltning, underhåll) and is mapped to Driftkostnader (1).
   2025 BR shows long-term loans as −47 000 and short-term as 9 206 000 (stored as printed); together 9 159 000 = the loan note.

@@ -1,0 +1,15 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Bostadsrättsföreningen Nytorps Gärde
+short_name: Nytorps Gärde
+orgnr: 769617-4767
+municipality: Stockholm
+verified_from: 2023
+verified_through: 2025
+data_notes: 'Kärrtorp, 70 bostadsrätter (5 785 kvm boyta, no hyresrätter or lokaler) in four houses on tomträtt. The files have a
+  broken text layer ((cid:) glyphs, missing letters), so they are read by OCR (ocr: force). In 2023 OCR misses most current-year
+  figures of Not 5 and Not 6; those rows (36, 37, 41, 42, 44, 47) are entered from the page image. The KF line Betald skatt is stored
+  as 12. Liquidity is kassa, bank and the SBC klientmedel (the 2023 KF opening liquidity is in restatements.csv, since 2022 is not
+  held). 2025 is attached to a Bjurfors listing (read by OCR too; its Öresutjämning, -6, merges with the note total and is entered from the page). Board fees (Arvoden styrelse och internrevisor) are 44 in all years. 2021 and 2022 are not found (the association''s own site blocks automated access).'
+sources:
+  - {url: https://www.allabrf.se/bostadsrattsforeningen-nytorps-garde-johanneshov/dokument, note: "allabrf, 2023-2024"}
+  - {url: https://www.bjurfors.se/sv/tillsalu/stockholm/stockholm/karrtorp/karrtorpsvagen-7-3tr/, note: "Bjurfors listing, 2025"}

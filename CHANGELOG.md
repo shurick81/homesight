@@ -13,6 +13,23 @@ request (every BRF and year asked for), let the user verify the complete result,
 
 ## [Unreleased]
 
+## [0.11.5] - 2026-10-15
+
+### Data
+- Kärrtorp (Stockholm): ten BRFs added and extracted, plus Malö 2019–2020: Fyrskeppet 2020–2025, Grimskär 1 2020–2025,
+  Gåsviken 1 2020–2025, Landsort 2 2019–2020 and 2023–2025, Långe Jan 2 2020, 2023, 2025, Häradskär 2020, 2022, 2023,
+  Zickzack 2023–2024 (tkr, stored × 1000), Nytorps Gärde 2023–2025, Svenska Högarna 4 2020, 2023, Rödkallen 3 2019, 2022,
+  2025, Malö 2019–2020. With Fyrhöjden and Karlsön, 13 Kärrtorp BRFs are tracked.
+- Centrala Tyresö: Tyresö Trädgårdar 2023–2025, Kringlan 2 2021–2025, Kryddgården 2021 (new), Trädgården 278
+  2022–2024, Soluret 2024, Steget 2024/25, Rödingen 2025, Solhöjden 2021 and 2025, Stortorpet 1 2024 extracted.
+- Raw only (imported, not extracted): Fyrskeppet 2018–2019, Gåsviken 1 2013–2019, Tornsvalan 2015–2019.
+- Landsort 2 2020 (the report's KF adds back 170 320 kr more than the depreciation) and Zickzack 2024 (tkr rounding) are
+  `check_failed` with a note.
+
+### Changed
+- `tools/brf/allabrf.py` also finds Stockholm (Johanneshov) slugs. The BRF README lists estate-agent sources (Bjurfors,
+  MOHV/Vitec, HusmanHagberg's document proxy).
+
 ## [0.11.4] - 2026-10-15
 
 ### Data
@@ -194,6 +211,8 @@ request (every BRF and year asked for), let the user verify the complete result,
 
 ## Data
 
+- 2026-10-15 (0.11.5): Kärrtorp's 13 BRFs (latest five available reports) and another search round for Centrala Tyresö
+  (see the 0.11.5 entry).
 - 2026-10-15 (0.11.4): 15-year request for ten Tyresö BRFs completed as far as reports are found (see the 0.11.4 entry).
 - 2026-10-14 (0.11.3): Bergfoten 2012, 2013, 2015, 2017, 2018 extracted and verified (12 years).
 - 2026-10-14 (0.11.2): Björkbacken 2010–2012 and 2014–2020 extracted and verified (15 years); `tools/brf/source_gap.py` lists

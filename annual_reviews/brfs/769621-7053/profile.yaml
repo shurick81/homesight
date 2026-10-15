@@ -1,0 +1,16 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Stockholm Grimskär nr 1
+short_name: Grimskär 1
+orgnr: 769621-7053
+municipality: Stockholm
+verified_from: 2020
+verified_through: 2025
+data_notes: 'Kärrtorp, 126-127 apartments (103 bostadsrätter in 2020, 109 in 2025; the rest hyresrätter) and 22-23 lokaler on
+  tomträtt; total area 16 482 kvm (no bostadsrätt area is printed). Managed by Valorem/Wasberg. 2020-2022: the RR prints one line
+  Drifts- och fastighetskostnader for everything but personnel, so the administrative lines of Not 3 (revision, kameral förvaltning,
+  överlåtelse, bank) are children of 1 (29 for kameral förvaltning, the rest 30). From 2023 the RR has separate lines Reparationer och
+  underhåll (stored as 16: it holds both repairs and planned maintenance) and Övriga externa kostnader. 2020 is a scan read by OCR and
+  entered by hand. 2020-2021 have no cash flow statement, so no cash is stored for them; the 2022 KF opening liquidity is in
+  restatements.csv. Investments include the inbetalda insatser och upplåtelseavgifter from sold hyresrätter, as the KF prints them.'
+sources:
+  - {url: https://www.brfgrimskar.se/, note: "own site (WordPress uploads), årsredovisningar 2020-"}

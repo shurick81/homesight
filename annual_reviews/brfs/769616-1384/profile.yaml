@@ -1,0 +1,18 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Landsort 2 Kärrtorp
+short_name: Landsort 2
+orgnr: 769616-1384
+municipality: Stockholm
+verified_from: 2019
+verified_through: 2025
+data_notes: 'Kärrtorp, 169 apartments (about 152 bostadsrätter and 17 hyresrätter) and 9-11 lokaler, on tomträtt. 2023-2024 are
+  Fastighetsägarna-style reports (one Driftskostnader note plus Not 5 Periodiskt underhåll, both inside the RR Driftskostnader
+  line, so 31 is Not 5); 2025 is an SBC report (notes 4-8). Fastighetsskatt and fastighetsavgift are printed under Övriga externa
+  kostnader in 2023-2024 and are kept there (42). Liquidity is the KF''s likvida medel och avräkningskonto (kassa och bank plus the
+  avräkningskonto with the manager, booked under Övriga fordringar). The 2023-2024 reports give the total residential area with a
+  decimal (9 977,5 kvm), so only the hyresrätt area is stored for those years; 2025 gives 9 951 kvm. 2021-2022 are not found (hittabrf sells them). 2019 is a photographed scan, entered by hand from the page images; 2019-2020 come from svenskbrf.'
+warnings:
+  2020: 'The KF adds 6 531 320 of non-cash items back to the result, 170 320 more than the RR depreciation (6 361 000), with no explanation in the report; the cash flow therefore does not add up from the RR lines.'
+sources:
+  - {url: https://www.allabrf.se/brf-landsort-2-karrtorp-johanneshov/dokument, note: "allabrf, 2023-2024"}
+  - {url: https://www.svenskbrf.se/forening/johanneshov/karrtorp/landsort-2-karrtorp/dokument/arsredovisning/, note: "svenskbrf, 2019-2020"}

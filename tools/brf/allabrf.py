@@ -41,9 +41,11 @@ def candidates(orgnr, name):
     core = slugify(re.sub(r"(?i)\b(hsb|brf|riksbyggen|bostadsrättsföreningen|bostadsrättsförening)\b", "", name))
     core = re.sub(r"-i-[a-z]+$", "", core)
     kommun = re.search(r"-i-([a-z]+)$", base)
-    tails = ["", "-i-" + kommun.group(1)] if kommun else ["", "-i-tyreso"]
-    out = [base]
-    for prefix in ("brf-", "hsb-brf-", ""):
+    # Stockholm associations are named after the postal town: brf-landsort-2-karrtorp-johanneshov
+    tails = ["", "-i-" + kommun.group(1)] if kommun else ["", "-i-tyreso", "-i-stockholm", "-stockholm", "-johanneshov",
+                                                           "-karrtorp-johanneshov", "-enskede", "-bagarmossen"]
+    out = [base, base + "-johanneshov"]
+    for prefix in ("brf-", "hsb-brf-", "bostadsrattsforeningen-", ""):
         for tail in tails:
             out.append(prefix + core + tail)
     out.append(orgnr)

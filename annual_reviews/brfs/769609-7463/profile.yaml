@@ -10,3 +10,5 @@ data_notes: '2020 is held for its closing balances only (scan, OCR). 2021 is a s
 
   Fastighetsavgift is printed under Övriga externa kostnader and stays there (cat 42 remainder). The board is listed as ledamöter without roles.
   Property: 59 bostadsrättslägenheter, bostadsarea 3 738 kvm (prose, cat 12). Land tenure is not stated (the site is ''Järnet 8'', 6 794 kvm).'
+sources:
+  - {url: https://brftornsvalan.se/index.php/sidor/kopa-bostad, note: "own site (dokument/), årsredovisningar 2015-2022"}

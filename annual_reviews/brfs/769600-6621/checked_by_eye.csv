@@ -1,0 +1,2 @@
+table,year,category_id,note
+financial_events,2019,19,Övriga intäkter (nettoomsättning): sum of 2 note lines on p12 (Gastlagenhet; Oresutjamning 1 427 213): too many terms for the verifier; the note adds up to its total (validate.py)

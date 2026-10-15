@@ -1,0 +1,13 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Svenska Högarna 4
+short_name: Svenska Högarna 4
+orgnr: 769623-0791
+municipality: Stockholm
+verified_from: 2020
+verified_through: 2023
+data_notes: 'Kärrtorp, a small association: 26 bostadsrätter and 2 hyresrätter (1 815 kvm building area in total) and 6 parking
+  places, on tomträtt. SBC report with broken ligature glyphs, read by OCR (ocr: force). Not 2 lists all rörelseintäkter; the
+  Vidarefakturering and Elstöd lines (4 626) are the RR Övriga rörelseintäkter and are left out of 19. Not 4 Reparationer och
+  underhåll is part of the RR Driftskostnader (21 and 31). 2020 (a scan, entered by hand) and 2023 are found; 2021-2022 and 2024-2025 are not public (hittabrf sells them); the 2023 KF opening liquidity is in restatements.csv. 2020 has one RR revenue line, Årsavgifter och hyresintäkter, stored as 0.'
+sources:
+  - {url: https://www.allabrf.se/brf-svenska-hogarna-4-johanneshov/dokument, note: "allabrf, 2020 and 2023"}

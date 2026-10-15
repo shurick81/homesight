@@ -1,0 +1,12 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: HSB Brf Kryddgården nr 679 i Tyresö
+short_name: Kryddgården
+orgnr: 716421-5993
+municipality: Tyresö
+verified_through: 2021
+data_notes: 'Only FY2021 is found (HSB''s association page links arsredovisning_2021.pdf in its folder 56473e386d60420aab2ae53949e34f3e;
+  no other year is in that folder under the usual names). The RR prints Övriga externa kostnader -80 858 while Not 3 adds up to 73 920,
+  so 6 938 kr of 5 has no child.'
+
+sources:
+  - {url: https://www.hsb.se/stockholm/brf/kryddgarden/, note: "HSB association page; links the 2021 report"}

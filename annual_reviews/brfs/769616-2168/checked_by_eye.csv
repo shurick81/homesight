@@ -1,0 +1,5 @@
+table,year,category_id,note
+financial_states,2023,2,Likvida medel vid årets slut 3 531 744 (= Kassa och bank on p9): OCR of this scanned-from-broken-font page drops the leading 3; read on the page image
+financial_events,2022,19,Övriga intäkter 5 714 in Not 2 less the 3 714 of Övriga rörelseintäkter that the RR shows on its own line (Not 2 lists all rörelseintäkter; the RR Nettoomsättning is 3 696 138)
+financial_events,2020,19,Övriga intäkter 5 583 in Not 2 less the 3 383 of övriga rörelseintäkter that the RR shows on its own line (Not 2 lists all rörelseintäkter; the RR Nettoomsättning is 3 788 277)
+financial_events,2023,1,The verifier finds the amount but takes it for the comparison column (a note reference or a dash in the line shifts the columns); checked on the page: the amount is the current-year figure

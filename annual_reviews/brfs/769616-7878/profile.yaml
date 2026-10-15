@@ -3,9 +3,9 @@ name: Brf Solhöjden i Tyresö
 short_name: Solhöjden
 orgnr: 769616-7878
 municipality: Tyresö
-verified_through: 2024
+verified_through: 2025
 data_notes: 'FY2017 (2017-07-01 - 2018-12-31, an 18-month year after the change from July-June to calendar years), 2019 and 2020 from
-  svenskbrf.se; 2023 and 2024 from allabrf.se; 2021-2022 and 2025 are behind the members'' login. 2019 has no 2018 row to chain from, so its
+  svenskbrf.se; 2023 and 2024 from allabrf.se; 2025 from an estate agent listing (media.fastighetsbyran.se); 2021 from a Bjurfors listing (Granitvägen 2B); 2022 is behind the members'' login. 2019 has no 2018 row to chain from, so its
   opening liquidity (the 2019 KF) is in restatements.csv. 2019: Övriga rörelsekostnader -600 000 (Ersättning lokalhyresgäst, Not 5) and 2020:
   Extraordinära intäkter +69 223 125 (land sale) and Extraordinära kostnader -27 128 755 (of which 9 896 240 a non-cash write-off of land)
   have no category, so the cash checks of 2019 and 2020 are off by these. 2024 is a scan (OCR), where OCR splits Övriga externa kostnader as
