@@ -13,6 +13,14 @@ request (every BRF and year asked for), let the user verify the complete result,
 
 ## [Unreleased]
 
+## [0.11.6] - 2026-10-16
+
+### Data
+- Fyrhöjden 2012–2020 extracted and verified (2012–2018 imported from the association's own site; 2019–2020 were held with
+  closing balances only). Fyrhöjden now has 14 years, 2012–2025, with the cash flow chained throughout.
+- Fyrhöjden's total residential area (12 039 kvm, bostadsrätter and hyresrätter) is category 12 in all years; 2021–2025 had it
+  as bostadsrätt area (8). Values and per-m² figures are unchanged.
+
 ## [0.11.5] - 2026-10-15
 
 ### Data
@@ -211,6 +219,7 @@ request (every BRF and year asked for), let the user verify the complete result,
 
 ## Data
 
+- 2026-10-16 (0.11.6): Fyrhöjden 2012–2020 (14 years in all).
 - 2026-10-15 (0.11.5): Kärrtorp's 13 BRFs (latest five available reports) and another search round for Centrala Tyresö
   (see the 0.11.5 entry).
 - 2026-10-15 (0.11.4): 15-year request for ten Tyresö BRFs completed as far as reports are found (see the 0.11.4 entry).

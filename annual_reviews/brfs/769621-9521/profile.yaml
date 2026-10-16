@@ -3,12 +3,26 @@ name: Brf Fyrhöjden
 short_name: Fyrhöjden
 orgnr: 769621-9521
 municipality: Stockholm
+verified_from: 2012
 verified_through: 2025
 data_notes: 'Kärrtorp, Stockholm (not Tyresö). Land is a tomträtt from Stockholms stad (new agreement from 2019-01-01): Tomträttsavgäld 1 667
-  700 kr/year is category 57. Published on the BRF''s own site (brffyrhojden.se; 2023-2025 via Google Drive links) from 2012; 2019-2025 imported,
-  2019 and 2020 for closing balances only (2020 is a scan with a garbled text layer; only equity and cash were read).
+  700 kr/year is category 57. Published on the BRF''s own site (brffyrhojden.se; 2023-2025 via Google Drive links) from 2012; 2012-2025 imported and
+  extracted; the cash flow chains from 2012 to 2025 (2012 opens from a restatement, 2011 not held).
+
+  2012-2020 are scans (2013 has a text layer; 2020''s is garbled, so ocr: force) entered by hand from OCR checked against the note
+  totals, the cash flow and the page images. 2012-2013 use an older layout: the RR prints Driftskostnader, Underhållskostnader and
+  Planerat underhåll separately; to keep the series comparable with 2014-, 1 is their sum (21 and 31 are the two maintenance lines),
+  5 is Förvaltnings- och externa, Administrativa and Övriga kostnader, and 7 is both interest lines. 2014-2016 print the utilities
+  (el, värme, vatten, kabel-TV) as one Taxebundna kostnader line, stored in 30 with Övriga kostnader (no split in those reports).
+  From 2016 Not 2 lists all rörelseintäkter, so 19 is the rest of Not 2 less the RR Övriga rörelseintäkter. Personnel is one line
+  (styrelsearvoden och sociala avgifter), stored as 44. The 2012 KF closes 792 kr above the 2013 KF opening (its own fordringar
+  change differs from the 2013 comparison column); the 2013 opening is restated. Area: 12 039 kvm is the total residential area
+  (bostadsrätter and hyresrätter, category 12) in all years; 2012-2013 state the bostadsrätt area as 10 001 kvm, not stored, to
+  keep one area basis.
 
   2021-2023 use a flat HSB/Visma-style drift note (Fastighetsskötsel, Städning, sopor och dyl. and Sotning/OVK are aggregate lines, so category
   2 is their sum without a 50-55 split); 2024-2025 use the SBC note layout. 2023 is a scan with an e-signing stamp (OCR). Board marks (avgick)
   are not recorded for 2021-2023. Property: 187-188 bostadsrätter, 11-13 hyreslägenheter, 21-23 lokaler; 2025 total area is not stored (the printed
   14 335 kvm includes areas without a category).'
+sources:
+  - {url: https://brffyrhojden.se/, note: "own site (WordPress uploads and Google Drive links), årsredovisningar 2012-"}

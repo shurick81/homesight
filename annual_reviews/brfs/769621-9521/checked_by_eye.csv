@@ -4,3 +4,15 @@ financial_events,2022,2,Same lines as 2021; verifier subset limit
 financial_events,2023,2,Same lines as 2021; verifier subset limit
 financial_events,2025,19,"Sum of the Nettoomsättning lines other than årsavgifter and hyror (kabel-TV/bredband, övriga intäkter, statliga bidrag); verifier subset limit"
 financial_events,2021,9,Förändring av kortfristiga fordringar exkl klientmedelskonto -3 539 019: the 2021 scan/OCR splits the amount over two lines; read on the page and repeated as comparison in the 2022 report
+financial_events,2012,30,"Bevakningskostnader 27 881 + Främmande tjänst, tekn konsult 65 538 + Diverse övriga kostnader 59 565 (Not 2, a scan; the lines are not adjacent): read on the page image"
+financial_events,2013,19,"Hyresintäkter övrigt 8 442 + Övr ersättningar/intäkter 174 440 + Fakturerad fastighetsskatt 16 592 + Överlåtelse- och pantsättningsavgifter -42 042 (Not 1; the lines are not adjacent to each other): read on the page"
+financial_events,2013,30,"Bevakningskostnader 24 208 + Främmande tjänst 13 047 + Förbrukning fastighet 8 563 + Diverse övriga kostnader 183 251 (Not 2, over two pages): read on the page"
+financial_events,2016,19,"The other lines of Not 2 (bredband and övrigt) less the RR Övriga rörelseintäkter: Not 2 lists all rörelseintäkter, the RR splits off Övriga rörelseintäkter, which no single note line holds; a scan, read on the page"
+financial_events,2017,19,"The other lines of Not 2 (bredband and övrigt) less the RR Övriga rörelseintäkter: Not 2 lists all rörelseintäkter, the RR splits off Övriga rörelseintäkter, which no single note line holds; a scan, read on the page"
+financial_events,2018,19,"The other lines of Not 2 (bredband and övrigt) less the RR Övriga rörelseintäkter: Not 2 lists all rörelseintäkter, the RR splits off Övriga rörelseintäkter, which no single note line holds; a scan, read on the page"
+financial_events,2019,19,"The other lines of Not 2 (bredband and övrigt) less the RR Övriga rörelseintäkter: Not 2 lists all rörelseintäkter, the RR splits off Övriga rörelseintäkter, which no single note line holds; a scan, read on the page"
+financial_events,2020,19,"The other lines of Not 2 (bredband and övrigt) less the RR Övriga rörelseintäkter: Not 2 lists all rörelseintäkter, the RR splits off Övriga rörelseintäkter, which no single note line holds; a scan, read on the page"
+financial_events,2020,18,"Hyresintäkter bostäder 1 202 316 + lokaler 755 677 + parkeringsplatser 249 828 + garage 81 000 (Not 2, a scan with a garbled text layer read by OCR): read on the page"
+financial_events,2020,2,"Städning, sopor och dyl. 577 707 + Fastighetsskötsel 243 509 + Sotning 357 172 (Not 3, not adjacent): read on the page"
+restatements,2012,2,"Likvida medel vid årets början 2 294 628 (KF p14, a scan): the OCR splits the figure; read on the page image"
+property_states,2013,1,"30 hyresrätter (p3: the text layer reads 'och30hyresrätter', so the verifier does not find the number on its own): read on the page"

@@ -108,7 +108,7 @@ address tying for fifth-nearest. With `--data-repo-linking` only the ties and th
 | base URL | https://homesight-api.azurewebsites.net |
 | changes | [CHANGELOG.md](CHANGELOG.md) |
 | resource group | `homesight` (Sweden Central), subscription "Azure subscription 1" |
-| endpoints (0.11.5) | `GET /llms.txt`, `GET /health`, `GET /openapi.json`, `GET /brfs`, `GET /brfs/{orgnr}`, `GET /brfs/{orgnr}/financials`, `GET /advertisements`, `GET /cities`, `GET /kommuns`, `GET /areas`, `GET /sales/stats/avg-price-per-sqm` |
+| endpoints (0.11.6) | `GET /llms.txt`, `GET /health`, `GET /openapi.json`, `GET /brfs`, `GET /brfs/{orgnr}`, `GET /brfs/{orgnr}/financials`, `GET /advertisements`, `GET /cities`, `GET /kommuns`, `GET /areas`, `GET /sales/stats/avg-price-per-sqm` |
 
 **Same principles as the data repo.**
 - *Read model:* one container per resource, each document a finished response row. Everything a request
