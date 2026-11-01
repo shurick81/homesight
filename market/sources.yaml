@@ -28,3 +28,5 @@ inputs:
     file: data/processed/booli/booli_areas.csv
     snapshot: 2026-08-02
     commit: 7153879
+refreshed_here:
+  - {date: 2026-10-31, what: advertisements (Tyresö), by: tools/booli/refresh.py}
