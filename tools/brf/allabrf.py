@@ -42,7 +42,8 @@ def candidates(orgnr, name):
     core = re.sub(r"-i-[a-z]+$", "", core)
     kommun = re.search(r"-i-([a-z]+)$", base)
     # Stockholm associations are named after the postal town: brf-landsort-2-karrtorp-johanneshov
-    tails = ["", "-i-" + kommun.group(1)] if kommun else ["", "-i-tyreso", "-i-stockholm", "-stockholm", "-johanneshov",
+    # Tyresö associations are sometimes named without the "i": brf-turmalinen-tyreso
+    tails = ["", "-i-" + kommun.group(1), "-" + kommun.group(1)] if kommun else ["", "-i-tyreso", "-tyreso", "-i-stockholm", "-stockholm", "-johanneshov",
                                                            "-karrtorp-johanneshov", "-enskede", "-bagarmossen"]
     out = [base, base + "-johanneshov"]
     for prefix in ("brf-", "hsb-brf-", "bostadsrattsforeningen-", ""):

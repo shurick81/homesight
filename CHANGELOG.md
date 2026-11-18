@@ -13,6 +13,15 @@ request (every BRF and year asked for), let the user verify the complete result,
 
 ## [Unreleased]
 
+## [0.11.7] - 2026-11-18
+
+### Data
+- Turmalinen (Tyresö, 769601-3403) added: 2018, 2022, 2023 and 2025 extracted and verified (2018, 2022, 2023 in tkr, stored × 1000).
+  2023 is `check_failed` by 1 tkr of rounding, with a note.
+
+### Changed
+- `tools/brf/allabrf.py` also tries the `-<kommun>` slug without "i" (brf-turmalinen-tyreso).
+
 ## [0.11.6] - 2026-10-16
 
 ### Data
@@ -219,6 +228,7 @@ request (every BRF and year asked for), let the user verify the complete result,
 
 ## Data
 
+- 2026-11-18 (0.11.7): Turmalinen 2018, 2022, 2023, 2025.
 - 2026-10-16 (0.11.6): Fyrhöjden 2012–2020 (14 years in all).
 - 2026-10-15 (0.11.5): Kärrtorp's 13 BRFs (latest five available reports) and another search round for Centrala Tyresö
   (see the 0.11.5 entry).

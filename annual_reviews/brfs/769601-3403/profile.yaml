@@ -1,0 +1,17 @@
+# Profile of the BRF: stable facts, data notes. Not read by the verification scripts.
+name: Brf Turmalinen
+short_name: Turmalinen
+orgnr: 769601-3403
+municipality: Tyresö
+verified_from: 2018
+verified_through: 2025
+data_notes: 'Öringe, Tyresö (Sidvallsvägen 5-15): 35 bostadsrätter (2 377 kvm) and 40 carport/garage places, built 1997, land owned.
+  Reports held: 2018, 2022, 2023 (allabrf; 2018 and 2023 need a login there, the user supplied the files) and 2025 (an estate-agent
+  file on mspecsfiles2.blob.core.windows.net). 2019-2021 and 2024 are not held (hittabrf sells them). 2018, 2022 and 2023 are printed
+  in tkr: every amount is stored x 1000 and listed in checked_by_eye.csv. 2018 and 2022 are scans (2022 a photographed one) entered
+  from the page images; 2023 has broken ligature glyphs. 2018 and 2022 have no cash flow statement, so no cash is stored for them;
+  the 2023 and 2025 KF opening liquidities are in restatements.csv. The 2018 board names are printed surname first.'
+warnings:
+  2023: 'The report prints whole tkr; its cash flow items add up to the change in liquidity only within 1 tkr (rounding).'
+sources:
+  - {url: https://www.allabrf.se/brf-turmalinen-tyreso/dokument, note: "allabrf: 2022 public; 2018 and 2023 behind login"}
