@@ -13,6 +13,17 @@ request (every BRF and year asked for), let the user verify the complete result,
 
 ## [Unreleased]
 
+## [0.11.8] - 2026-11-18
+
+### Data
+- Turmalinen 2019, 2020, 2021 and 2024 extracted and verified, from the association's Nabo site; Turmalinen now has every
+  year 2018–2025. 2019–2021 are tkr reports (stored × 1000) entered from the page images. 2024's opening liquidity is
+  restated (exact kronor vs the rounded 2023 report).
+
+### Changed
+- BRF README: Nabo association sites (`hemsida.nabo.se`) and how to list their reports through the JSON API; an exact
+  org-number web search (`"769601-3403" 2024 årsredovisning`) to find report pages.
+
 ## [0.11.7] - 2026-11-18
 
 ### Data

@@ -340,7 +340,14 @@ across kommuns: a "Brf Soluret" site can belong to Haninge).
    association made public is linked from its `/dokument` page and downloads without login.
 2. The association's own site (`brf<name>.se`, `<name>.bostadsratterna.se`, `/showfile/?filID=` sites,
    WordPress uploads, Google Drive links); some answer only to a browser user-agent, and some block an IP
-   that crawls too fast.
+   that crawls too fast. Associations managed by Nabo have a site at `hemsida.nabo.se/<slug>/documents` that
+   renders with JavaScript; its JSON API lists the reports: `GET hemsida.nabo.se/api/public/website/configs/<slug>`
+   gives the `clientId`, then `/api/public/website/annual-reports/<clientId>` (and `/documents/<clientId>`) give
+   each file's `downloadUrl` (`/scripts/php/download.php?id=…&file=…`), which downloads from `https://portal.nabo.se`
+   (not from hemsida.nabo.se). Turmalinen's 2018–2025 were all there. Skip the Medlemsförteckning (personal data).
+   To find any of these pages, search Google for the org number in quotes with the year:
+   `"769601-3403" 2024 årsredovisning`. The exact org number finds the association's own and its manager's pages,
+   and skips the homonyms a name search brings up.
 3. HSB's association pages (`hsb.se/stockholm/brf/<slug>/`, files under `/contentassets/`).
 4. svenskbrf.se (`/forening/<ort>/<omrade>/<slug>/dokument/arsredovisning/`), mostly up to 2020.
 5. Estate agents' listings: Fastighetsbyrån attaches the association's latest årsredovisning to each listing
